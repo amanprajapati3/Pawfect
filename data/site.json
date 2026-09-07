@@ -1,0 +1,803 @@
+{
+  "PetIndustries": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Topbar": "PetTopbar1",
+          "Header": "PetHeader1",
+          "Footer": "PetFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              { "key": "Banner", "component": "PetBanner1" },
+              { "key": "ServiceAreas", "component": "PetServiceAreas1" },
+              { "key": "AboutSection", "component": "PetAboutSection1" },
+              { "key": "Services", "component": "PetServices1" },
+              { "key": "Team", "component": "PetTeam1" },
+              { "key": "Faq", "component": "PetFaq1" },
+              { "key": "WhyChooseUs", "component": "PetWhyChooseUs1" },
+              { "key": "Testimonial", "component": "PetTestimonial1" },
+              { "key": "Blog", "component": "PetBlog1" }
+            ]
+          },
+          "about": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "AboutSection", "component": "PetAboutSection1" },
+              { "key": "WhyChooseUs", "component": "PetWhyChooseUs1" },
+              { "key": "Team", "component": "PetTeam1" },
+              { "key": "CtaBanner", "component": "CtaBanner" }
+            ]
+          },
+          "services": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "Services", "component": "PetServices1" },
+              { "key": "WhyChooseUs", "component": "PetWhyChooseUs1" },
+              { "key": "CtaBanner", "component": "CtaBanner" }
+            ]
+          },
+          "gallery": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "GalleryGrid", "component": "ScrollReveal" }
+            ]
+          },
+          "team": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "TeamTitle", "component": "SectionHeader" },
+              { "key": "TeamGrid", "component": "PetTeam1" }
+            ]
+          },
+          "blogs": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "BlogSection", "component": "PetBlog1" },
+              { "key": "ScrollReveal", "component": "ScrollReveal" }
+            ]
+          },
+          "contacts": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "ContactTitle", "component": "SectionHeader" },
+              { "key": "ContactContent", "component": "ScrollReveal" }
+            ]
+          },
+          "faq": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "Faq", "component": "PetFaq1" },
+              { "key": "CtaBanner", "component": "CtaBanner" }
+            ]
+          },
+          "quote": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "QuoteTitle", "component": "SectionHeader" },
+              { "key": "QuoteContent", "component": "ScrollReveal" }
+            ]
+          },
+          "privacy-policy": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "LegalTitle", "component": "SectionHeader" },
+              { "key": "LegalContent", "component": "ScrollReveal" }
+            ]
+          },
+          "terms": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "LegalTitle", "component": "SectionHeader" },
+              { "key": "LegalContent", "component": "ScrollReveal" }
+            ]
+          },
+          "refund": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "LegalTitle", "component": "SectionHeader" },
+              { "key": "LegalContent", "component": "ScrollReveal" }
+            ]
+          },
+          "cookie": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "LegalTitle", "component": "SectionHeader" },
+              { "key": "LegalContent", "component": "ScrollReveal" }
+            ]
+          },
+          "careers": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "CareerContent", "component": "ScrollReveal" }
+            ]
+          },
+          "pricing": {
+            "components": [
+              { "key": "PageBanner", "component": "PageBanner" },
+              { "key": "PricingContent", "component": "ScrollReveal" }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "Header": {
+        "variants": {
+          "PetHeader1": {
+            "site": {
+              "siteName": "PawFect",
+              "tagline": "Happy Care, Happy Life",
+              "logo": { "light": "/logo.png" },
+              "TopBar": {
+                "address": "09 Jakt Street, Brooklyn, New York",
+                "email": "petcareinfo@pawfect.com",
+                "socialLinks": [
+                  { "label": "facebook", "href": "https://www.facebook.com/" },
+                  { "label": "twitter", "href": "https://www.twitter.com/" },
+                  {
+                    "label": "instagram",
+                    "href": "https://www.instagram.com/"
+                  },
+                  { "label": "youtube", "href": "https://www.youtube.com/" }
+                ],
+                "ctaButton": {
+                  "label": "Get A Quote",
+                  "href": "/quote"
+                }
+              },
+              "copyright": "© 2025 PawFect. All rights reserved."
+            },
+            "meta": {
+              "siteTitle": "PawFect | Trusted Pet Care & Wellness Services",
+              "siteDescription": "PawFect offers trusted veterinary care, grooming, pet sitting, and wellness services to keep your furry friends healthy and happy.",
+              "keywords": [
+                "pet care",
+                "veterinary services",
+                "pet grooming",
+                "pet sitting",
+                "pet walking",
+                "dog boarding",
+                "vaccinations",
+                "wellness exams",
+                "pet clinic",
+                "animal hospital"
+              ]
+            },
+            "nav": [
+              { "label": "Home", "href": "/" },
+              { "label": "About", "href": "/about" },
+              { "label": "Services", "href": "/services" },
+              { "label": "Gallery", "href": "/gallery" },
+              { "label": "Team", "href": "/team" },
+              { "label": "Blogs", "href": "/blogs" },
+              { "label": "Contacts", "href": "/contacts" }
+            ]
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "PetFooter1": {
+            "logoImage": "/logo.png",
+            "desc": "We provide loving care, expert veterinary services and helpful resources to ensure your pets live happy, healthy and fulfilling lives.",
+            "badges": [
+              { "icon": "paw", "label": "Trusted Care" },
+              { "icon": "shield-plus", "label": "Expert Veterinarians" },
+              { "icon": "heart", "label": "Happy Pets" }
+            ],
+            "columns": [
+              {
+                "title": "QUICK LINKS",
+                "links": [
+                  { "label": "Home", "href": "/" },
+                  { "label": "About Us", "href": "/about" },
+                  { "label": "Our Services", "href": "/services" },
+                  { "label": "Service Areas", "href": "/service-areas" },
+                  { "label": "Our Team", "href": "/team" },
+                  { "label": "Testimonials", "href": "/testimonials" },
+                  { "label": "Blogs", "href": "/blogs" },
+                  { "label": "Contact Us", "href": "/contact" }
+                ]
+              },
+              {
+                "title": "OUR SERVICES",
+                "links": [
+                  {
+                    "label": "Wellness Exams",
+                    "href": "/services/wellness-exams"
+                  },
+                  { "label": "Vaccinations", "href": "/services/vaccinations" },
+                  { "label": "Dental Care", "href": "/services/dental-care" },
+                  { "label": "Surgery", "href": "/services/surgery" },
+                  { "label": "Grooming", "href": "/services/grooming" },
+                  { "label": "Pet Boarding", "href": "/services/pet-boarding" },
+                  { "label": "Pet Sitting", "href": "/services/pet-sitting" },
+                  {
+                    "label": "Emergency Care",
+                    "href": "/services/emergency-care"
+                  }
+                ]
+              },
+              {
+                "title": "INFORMATION",
+                "links": [
+                  { "label": "FAQs", "href": "/faqs" },
+                  { "label": "How It Works", "href": "/how-it-works" },
+                  { "label": "Pricing / Packages", "href": "/pricing" },
+                  { "label": "Appointment", "href": "/appointment" },
+                  { "label": "Careers", "href": "/careers" },
+                  { "label": "Privacy Policy", "href": "/privacy-policy" },
+                  { "label": "Terms & Conditions", "href": "/terms" },
+                  { "label": "Contact Us", "href": "/contact" }
+                ]
+              }
+            ],
+            "footerContact": {
+              "phone": "+1 (123) 456-7890",
+              "phoneHref": "tel:+11234567890",
+              "phoneNote": "Call Us Anytime",
+              "email": "info@pawfect.com",
+              "emailNote": "We reply within 24 hours",
+              "address": "123 Pet Care Street,",
+              "addressNote": "Happy Paws City, CA 90210\nUnited States"
+            },
+            "socialLinks": [
+              { "label": "facebook", "href": "https://www.facebook.com/" },
+              { "label": "instagram", "href": "https://www.instagram.com/" },
+              { "label": "twitter", "href": "https://www.twitter.com/" }
+            ],
+            "copyright": "© 2026 PawFect. All rights reserved.",
+            "legalLinks": [
+              { "label": "Privacy Policy", "href": "/privacy-policy" },
+              { "label": "Terms & Conditions", "href": "/terms" },
+              { "label": "Refund Policy", "href": "/refund-policy" },
+              { "label": "Cookie Policy", "href": "/cookie-policy" }
+            ]
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "PetBanner1": {
+            "badge": "YOUR TRUSTED PARTNER IN PET WELLNESS",
+            "title": "Trusted Care,",
+            "highlightedTitle": "Happy Hearts",
+            "desc": "Discover trusted care, expert guidance, and quality pet essentials designed to keep your furry friends healthy, happy, and full of love every day.",
+            "buttons": [
+              {
+                "label": "Know More",
+                "href": "/about",
+                "variant": "primary"
+              }
+            ],
+            "bgImageUrl": "/dogs/dog12.jpg"
+          }
+        }
+      },
+      "ServiceAreas": {
+        "variants": {
+          "PetServiceAreas1": {
+            "badge": "OUR SERVICE AREAS",
+            "title": {
+              "normal": "Where We",
+              "highlighted": "Care For Pets"
+            },
+            "desc": "PawFect is providing trusted pet care services in multiple cities. Find a location near you and book our services today.",
+            "cities": [
+              {
+                "id": 1,
+                "name": "Delhi",
+                "state": "Delhi, India",
+                "image": "/cityImage/delhi.jpg",
+                "slug": "/locations/delhi"
+              },
+              {
+                "id": 2,
+                "name": "Noida",
+                "state": "Uttar Pradesh",
+                "image": "/cityImage/noid.jpg",
+                "slug": "/locations/noida"
+              },
+              {
+                "id": 3,
+                "name": "Gurugram",
+                "state": "Haryana",
+                "image": "/cityImage/gurugram.jpg",
+                "slug": "/locations/gurugram"
+              },
+              {
+                "id": 4,
+                "name": "Ghaziabad",
+                "state": "Uttar Pradesh",
+                "image": "/cityImage/Gaziabad.jpg",
+                "slug": "/locations/ghaziabad"
+              },
+              {
+                "id": 5,
+                "name": "Faridabad",
+                "state": "Haryana",
+                "image": "/cityImage/faridabad.jpg",
+                "slug": "/locations/Faridabad"
+              },
+              {
+                "id": 6,
+                "name": "Gurgaon",
+                "state": "Uttar Pradesh",
+                "image": "/cityImage/gurgaon.jpg",
+                "slug": "/locations/gurgaon"
+              },
+              {
+                "id": 7,
+                "name": "Mumbai",
+                "state": "Uttar Pradesh",
+                "image": "/cityImage/mumbai.jpg",
+                "slug": "/locations/mumbai"
+              },
+              {
+                "id": 8,
+                "name": "Meerut",
+                "state": "Uttar Pradesh",
+                "image": "/cityImage/meerut.jpg",
+                "slug": "/locations/meerut"
+              }
+            ]
+          }
+        }
+      },
+      "AboutSection": {
+        "variants": {
+          "PetAboutSection1": {
+            "badge": "ABOUT US",
+            "title": "Caring For Pets,",
+            "highlightedTitle": "Like Family",
+            "desc": "At PawFect, we believe every pet deserves love, care, and the best possible treatment. Our experienced team is dedicated to providing trusted and compassionate pet care services that keep your furry friends healthy, happy, and full of life.",
+            "features": [
+              {
+                "id": 1,
+                "iconName": "shield-check",
+                "title": "Trusted & Safe",
+                "desc": "Your pet's safety is our top priority."
+              },
+              {
+                "id": 2,
+                "iconName": "heart",
+                "title": "Loving Care",
+                "desc": "We treat every pet like our own."
+              },
+              {
+                "id": 3,
+                "iconName": "users",
+                "title": "Expert Team",
+                "desc": "Experienced professionals you can rely on."
+              }
+            ],
+            "button": {
+              "label": "Read More",
+              "href": "/about"
+            },
+            "sideImage": {
+              "src": "/dogs/dog1.jpg",
+              "alt": "Veterinary Checkup",
+              "caption": "Veterinary Checkup"
+            },
+            "statBadge": {
+              "number": "23K+",
+              "label": "Happy Pets & Parents"
+            },
+            "smallCaption": "We Enjoy What We Do",
+            "stats": [
+              {
+                "id": 1,
+                "number": "15",
+                "suffix": "+",
+                "label": "Years Of Experience",
+                "iconName": "calendar"
+              },
+              {
+                "id": 2,
+                "number": "23",
+                "suffix": "K+",
+                "label": "Happy Pets",
+                "iconName": "users"
+              },
+              {
+                "id": 3,
+                "number": "15",
+                "suffix": "K+",
+                "label": "Pet Parents Trust Us",
+                "iconName": "chat"
+              },
+              {
+                "id": 4,
+                "number": "100",
+                "suffix": "%",
+                "label": "Satisfaction Guarantee",
+                "iconName": "badgecheck"
+              }
+            ]
+          }
+        }
+      },
+      "Services": {
+        "variants": {
+          "PetServices1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Services",
+              "title": "Services",
+              "backgroundImage": "/petImage/services-banner.jpg",
+              "homeHref": "/"
+            },
+            "badge": "OUR SERVICES",
+            "title": {
+              "normal": "Complete Care",
+              "highlighted": "For Your Pets"
+            },
+            "description": "We offer a wide range of professional pet care services to keep your furry friends healthy, happy, and loved.",
+            "services": [
+              {
+                "id": "grooming",
+                "slug": "grooming",
+                "iconName": "scissors",
+                "title": "Grooming",
+                "description": "Professional grooming for a clean, fresh and healthy coat.",
+                "image": {
+                  "src": "/dogs/dog1.jpg",
+                  "alt": "Dog getting professional grooming"
+                },
+                "href": "/services/grooming",
+                "linkText": "Learn More"
+              },
+              {
+                "id": "bath-deshed",
+                "slug": "bath-deshed",
+                "iconName": "droplet",
+                "title": "Bath & Deshed",
+                "description": "Deep cleaning bath and deshedding to keep your pet comfortable.",
+                "image": {
+                  "src": "/dogs/dog8.jpg",
+                  "alt": "Dog getting a bath"
+                },
+                "href": "/services/bath-deshed",
+                "linkText": "Learn More"
+              },
+              {
+                "id": "pet-sitting",
+                "slug": "pet-sitting",
+                "iconName": "home-heart",
+                "title": "Pet Sitting",
+                "description": "Loving care and attention when you're away from your pets.",
+                "image": {
+                  "src": "/dogs/dog6.jpg",
+                  "alt": "Pet sitter caring for a dog"
+                },
+                "href": "/services/pet-sitting",
+                "linkText": "Learn More"
+              },
+              {
+                "id": "pet-walking",
+                "slug": "pet-walking",
+                "iconName": "footprints",
+                "title": "Pet Walking",
+                "description": "Safe and enjoyable walks to keep your pets active and happy.",
+                "image": {
+                  "src": "/dogs/dog5.jpg",
+                  "alt": "Person walking a dog outdoors"
+                },
+                "href": "/services/pet-walking",
+                "linkText": "Learn More"
+              },
+              {
+                "id": "veterinary",
+                "slug": "veterinary",
+                "iconName": "stethoscope",
+                "title": "Veterinary Care",
+                "description": "Routine checkups and urgent medical care for your pets.",
+                "image": {
+                  "src": "/dogs/dog4.jpg",
+                  "alt": "Vet examining a cat"
+                },
+                "href": "/services/veterinary",
+                "linkText": "Learn More"
+              },
+              {
+                "id": "training",
+                "slug": "training",
+                "iconName": "medal",
+                "title": "Behavior Training",
+                "description": "Positive reinforcement classes for obedience and socialization.",
+                "image": {
+                  "src": "/dogs/dog3.jpg",
+                  "alt": "Trainer working with a puppy"
+                },
+                "href": "/services/training",
+                "linkText": "Learn More"
+              },
+              {
+                "id": "daycare",
+                "slug": "daycare",
+                "iconName": "sun",
+                "title": "Pet Daycare",
+                "description": "A fun and supervised environment for your pet during the day.",
+                "image": {
+                  "src": "/dogs/dog2.jpg",
+                  "alt": "Dogs playing together in a daycare facility"
+                },
+                "href": "/services/daycare",
+                "linkText": "Learn More"
+              },
+              {
+                "id": "boarding",
+                "slug": "boarding",
+                "iconName": "building-heart",
+                "title": "Pet Boarding",
+                "description": "Safe, comfortable overnight stays while you are out of town.",
+                "image": {
+                  "src": "/dogs/dog1.jpg",
+                  "alt": "Cat lounging comfortably in a boarding suite"
+                },
+                "href": "/services/boarding",
+                "linkText": "Learn More"
+              }
+            ]
+          }
+        }
+      },
+      "Team": {
+        "variants": {
+          "PetTeam1": {
+            "badge": "OUR TEAM",
+            "title": {
+              "normal": "Meet Our",
+              "highlighted": "Expert Team"
+            },
+            "desc": "Our dedicated team of pet care professionals is passionate about providing the best service and support for your pets.",
+            "members": [
+              {
+                "id": 1,
+                "slug": "dr-sarah-mitchell",
+                "name": "Dr. Sarah Mitchell",
+                "role": "Chief Veterinarian",
+                "description": "10+ years of experience in animal health, wellness and preventive care.",
+                "image": "/personImage/women1.png"
+              },
+              {
+                "id": 2,
+                "slug": "dr-james-carter",
+                "name": "Dr. James Carter",
+                "role": "Veterinary Surgeon",
+                "description": "Specialized in surgery and emergency care with 8+ years of experience.",
+                "image": "/personImage/men2.png"
+              },
+              {
+                "id": 3,
+                "slug": "emily-davis",
+                "name": "Emily Davis",
+                "role": "Pet Care Specialist",
+                "description": "Expert in pet nutrition, behavior management and personalized care.",
+                "image": "/personImage/women2.png"
+              },
+              {
+                "id": 4,
+                "slug": "michael-brown",
+                "name": "Michael Brown",
+                "role": "Compassionate Nurse",
+                "description": "Compassionate care and support to keep pets happy and healthy.",
+                "image": "/personImage/men3.png"
+              },
+              {
+                "id": 5,
+                "slug": "olivia-wilson",
+                "name": "Olivia Wilson",
+                "role": "Vet Technician",
+                "description": "Focused on diagnostic treatment support and animal comfort.",
+                "image": "/personImage/women5.png"
+              },
+              {
+                "id": 6,
+                "slug": "daniel-thompson",
+                "name": "Daniel Thompson",
+                "role": "Animal Care Assistant",
+                "description": "Ensures pets receive the love, care and attention they deserve.",
+                "image": "/personImage/men5.png"
+              },
+              {
+                "id": 7,
+                "slug": "sophia-martinez",
+                "name": "Sophia Martinez",
+                "role": "Pet Nutritionist",
+                "description": "Creates healthy diet plans tailored to every pet's needs.",
+                "image": "/personImage/women4.png"
+              },
+              {
+                "id": 8,
+                "slug": "ava-thompson",
+                "name": "Ava Thompson",
+                "role": "Pet Groomer",
+                "description": "Professional grooming services for a clean and happy pet.",
+                "image": "/personImage/women2.png"
+              }
+            ]
+          }
+        }
+      },
+      "Faq": {
+        "variants": {
+          "PetFaq1": {
+            "badge": "FAQS",
+            "title": {
+              "normal": "Frequently Asked",
+              "highlighted": "Questions"
+            },
+            "description": "Find answers to common questions about our services, policies, and how we care for your pets.",
+            "faqs": [
+              {
+                "question": "What types of pets do you care for?",
+                "answer": "We provide care for a wide range of pets including dogs, cats, rabbits, birds, and small animals."
+              },
+              {
+                "question": "Do I need to book an appointment in advance?",
+                "answer": "We recommend booking in advance to guarantee availability, though walk-ins are welcome based on schedule."
+              },
+              {
+                "question": "What should I bring during my pet's visit?",
+                "answer": "Please bring any prior medical records, current medications, and your pet's favorite comfort item if needed."
+              },
+              {
+                "question": "Are your vets certified and experienced?",
+                "answer": "Yes, all of our veterinarians and staff are certified professionals with years of hands-on experience."
+              },
+              {
+                "question": "How do you ensure the safety of my pet?",
+                "answer": "We follow strict hygiene, handling, and safety protocols throughout every visit and service."
+              },
+              {
+                "question": "What are your clinic hours?",
+                "answer": "Our clinic is open seven days a week with extended hours for emergency care."
+              }
+            ],
+            "sideImage": {
+              "src": "/dogs/dog13.png",
+              "alt": "Golden retriever with paw prints"
+            },
+            "sideBubble": "We're here to help you and your pet every step of the way.",
+            "sideBadge": {
+              "title": "Trusted Care",
+              "desc": "Your pet's health and happiness are our top priorities."
+            },
+            "contactCta": {
+              "title": "Still Have Questions?",
+              "buttonText": "Ask a Question",
+              "phoneLabel": "Call Us Anytime",
+              "phone": "+1 (123) 456-7890",
+              "phoneHref": "tel:+11234567890"
+            }
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "PetWhyChooseUs1": {
+            "badge": "WHY CHOOSE US",
+            "title": {
+              "normal": "Trusted care,",
+              "highlighted": "tailored for every pet"
+            },
+            "description": "We're committed to delivering reliable care, expert guidance, and high-quality services that support your pet's health, comfort, and happiness at every stage of their life.",
+            "images": {
+              "main": "/petImage/vet-holding-dog.jpg",
+              "secondary": "/petImage/vet-team-cat.jpg"
+            },
+            "statBadge": {
+              "number": "98%",
+              "label": "Pets Receive Personalized Care"
+            },
+            "features": [
+              {
+                "id": "expert-vets",
+                "iconName": "stethoscope",
+                "title": "Expert Veterinarians",
+                "description": "Our certified team provides compassionate care and personalized attention."
+              },
+              {
+                "id": "modern-facility",
+                "iconName": "hospital",
+                "title": "Modern & Safe Facility",
+                "description": "Advanced tools and updated practices ensure safer, faster, and more effective treatment."
+              }
+            ],
+            "bulletPoints": [
+              "Preventive care through early detection, timely vaccinations, and wellness checks.",
+              "Customized care plans tailored to your pet's unique lifestyle and needs."
+            ],
+            "button": {
+              "label": "Discover More",
+              "href": "/about"
+            },
+            "phone": {
+              "label": "Call Us Anytime",
+              "number": "+1 (123) 456-7890",
+              "href": "tel:+11234567890"
+            }
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "PetTestimonial1": {
+            "badge": "CLIENT REVIEWS",
+            "title": {
+              "normal": "What",
+              "highlighted": "Pet Parents Say"
+            },
+            "desc": "Real stories from pet parents who trust us for exceptional care and support.",
+            "testimonialItems": [
+              {
+                "id": 1,
+                "name": "Sarah Jacob",
+                "role": "Pet Owner, New York",
+                "image": "/personImage/women1.png",
+                "quote": "The team is amazing! They took such great care of my pet and made the whole experience stress-free. Highly recommended for anyone who truly cares about their pets.",
+                "rating": 5
+              },
+              {
+                "id": 2,
+                "name": "Michael Brown",
+                "role": "Pet Owner, California",
+                "image": "/personImage/men1.png",
+                "quote": "Professional, caring, and always available when we need them. Our dog feels so comfortable here. We're so happy we found such a wonderful clinic!",
+                "rating": 5
+              }
+            ]
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "PetBlog1": {
+            "badge": "OUR BLOGS",
+            "title": {
+              "normal": "Pet Care Tips",
+              "highlighted": "& Insights"
+            },
+            "desc": "Helpful articles and expert advice to keep your pets happy, healthy, and thriving.",
+            "posts": [
+              {
+                "id": 1,
+                "slug": "blogs/10-essential-grooming-tips-for-a-happy-healthy-pet",
+                "image": "/petImage/blog-grooming.jpg",
+                "date": "May 20, 2025",
+                "author": "Admin",
+                "title": "10 Essential Grooming Tips for a Happy, Healthy Pet",
+                "description": "Regular grooming is more than just keeping your pet looking good—it's key for their overall health and wellbeing.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 2,
+                "slug": "blogs/how-to-introduce-a-new-pet-to-your-home-safely",
+                "image": "/petImage/blog-new-pet.jpg",
+                "date": "May 18, 2025",
+                "author": "Admin",
+                "title": "How to Introduce a New Pet to Your Home Safely",
+                "description": "Bringing a new pet home is exciting! Follow these simple steps to help them adjust and feel comfortable.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 3,
+                "slug": "blogs/signs-your-pet-needs-a-veterinary-check-up",
+                "image": "/petImage/blog-vet-checkup.jpg",
+                "date": "May 15, 2025",
+                "author": "Admin",
+                "title": "Signs Your Pet Needs a Veterinary Check-Up",
+                "description": "Pets can't tell us when something's wrong, but here are key signs that indicate it's time for a vet visit.",
+                "readMoreText": "Read More"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
