@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Mail, MapPin, Menu as MenuIcon, X } from "lucide-react";
+import { Mail, MapPin, Menu as MenuIcon, X, ChevronDown, ChevronUp } from "lucide-react";
 import {
   FaFacebookF,
   FaTwitter,
@@ -26,6 +26,7 @@ const socialIconMap: Record<string, React.ElementType> = {
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openNavIndex, setOpenNavIndex] = useState<number | null>(null);
   const pathname = usePathname();
 
   const { site: siteInfo, nav } = headerData;
@@ -109,23 +110,49 @@ export default function Header() {
           <nav className="hidden items-center gap-8 lg:flex">
             {nav.map((item, index) => {
               const isActive = pathname === item.href;
+              const hasChildren = item.children && item.children.length > 0;
               return (
-                <Link
-                  key={index}
-                  href={item.href || "#"}
-                  className={`group relative py-2 text-[15px] font-semibold transition-colors duration-300 ${
-                    isActive
-                      ? "text-[#6B21A8]"
-                      : "text-gray-700 hover:text-[#6B21A8]"
-                  }`}
-                >
-                  {item.label}
-                  <span
-                    className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-[#EC4899] transition-all duration-500 ease-out ${
-                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                <div key={index} className="group relative">
+                  <Link
+                    href={item.href || "#"}
+                    className={`flex items-center gap-1 py-2 text-[15px] font-semibold transition-colors duration-300 ${
+                      isActive
+                        ? "text-[#6B21A8]"
+                        : "text-gray-700 hover:text-[#6B21A8]"
                     }`}
-                  />
-                </Link>
+                  >
+                    {item.label}
+                    {hasChildren && (
+                      <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                    )}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-[#EC4899] transition-all duration-500 ease-out ${
+                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </Link>
+
+                  {hasChildren && (
+                    <div className="invisible absolute left-0 top-full z-50 min-w-[220px] translate-y-2 rounded-2xl border border-purple-100 bg-white p-2 opacity-0 shadow-[0_20px_50px_rgba(107,33,168,0.15)] transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                      {item.children!.map((child) => {
+                        const isChildActive = pathname === child.href;
+                        return (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className={`block rounded-xl px-4 py-2.5 text-[14px] font-medium transition-colors duration-200 ${
+                              isChildActive
+                                ? "bg-[#F3E8FF] text-[#6B21A8]"
+                                : "text-gray-700 hover:bg-[#F9F5FF] hover:text-[#6B21A8]"
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </nav>
@@ -204,19 +231,63 @@ export default function Header() {
         <div className="flex flex-1 flex-col px-5 py-3">
           {nav.map((item, index) => {
             const isActive = pathname === item.href;
+            const hasChildren = item.children && item.children.length > 0;
+            const isOpen = openNavIndex === index;
             return (
-              <Link
-                key={index}
-                href={item.href || "#"}
-                onClick={closeMenu}
-                className={`relative border-b border-gray-100 py-4 text-[15px] font-semibold transition-colors duration-300 last:border-0 ${
-                  isActive
-                    ? "text-[#6B21A8]"
-                    : "text-gray-700 hover:text-[#6B21A8]"
-                }`}
-              >
-                {item.label}
-              </Link>
+              <div key={index} className="border-b border-gray-100 last:border-0">
+                <div className="flex items-center justify-between">
+                  <Link
+                    href={item.href || "#"}
+                    onClick={() => {
+                      if (!hasChildren) closeMenu();
+                    }}
+                    className={`flex-1 py-4 text-[15px] font-semibold transition-colors duration-300 ${
+                      isActive
+                        ? "text-[#6B21A8]"
+                        : "text-gray-700 hover:text-[#6B21A8]"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                  {hasChildren && (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setOpenNavIndex(isOpen ? null : index)
+                      }
+                      className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F3E8FF] text-[#6B21A8]"
+                      aria-label={`Toggle ${item.label} menu`}
+                    >
+                      {isOpen ? (
+                        <ChevronUp className="h-4 w-4" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4" />
+                      )}
+                    </button>
+                  )}
+                </div>
+                {hasChildren && isOpen && (
+                  <div className="mb-2 flex flex-col gap-1 pl-4">
+                    {item.children!.map((child) => {
+                      const isChildActive = pathname === child.href;
+                      return (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={closeMenu}
+                          className={`rounded-lg px-3 py-2.5 text-[14px] font-medium transition-colors duration-200 ${
+                            isChildActive
+                              ? "bg-[#F3E8FF] text-[#6B21A8]"
+                              : "text-gray-600 hover:bg-[#F9F5FF] hover:text-[#6B21A8]"
+                          }`}
+                        >
+                          {child.label}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             );
           })}
         </div>

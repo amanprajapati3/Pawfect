@@ -1,0 +1,436 @@
+
+> my-app@0.1.0 dev
+> next dev --webpack
+
+▲ Next.js 16.3.4 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.243:3000
+✓ Ready in 1981ms
+✓ Running next.config.ts took 135ms
+
+○ Compiling /services/[slug] ...
+ GET /services/grooming 404 in 11.8s (next.js: 6.6s, generate-params: 3.8s, application-code: 1398ms)
+ GET /services/grooming 404 in 31.0s (next.js: 25.8s, generate-params: 3.8s, application-code: 1349ms)
+ GET /services/grooming 200 in 1078ms (next.js: 330ms, generate-params: 16ms, application-code: 732ms)
+ GET /services/grooming 200 in 914ms (next.js: 209ms, generate-params: 0.1ms, application-code: 705ms)
+ GET /services/grooming 200 in 694ms (next.js: 208ms, generate-params: 57ms, application-code: 430ms)
+ GET /services/grooming 200 in 1037ms (next.js: 8ms, generate-params: 12ms, application-code: 1017ms)
+ GET /services/bath-deshed 200 in 403ms (next.js: 8ms, generate-params: 9ms, application-code: 385ms)
+ GET /services/veterinary 200 in 343ms (next.js: 9ms, generate-params: 0.1ms, application-code: 333ms)
+ GET /services/daycare 200 in 353ms (next.js: 9ms, generate-params: 0.1ms, application-code: 344ms)
+ GET /services/boarding 200 in 329ms (next.js: 8ms, generate-params: 0.1ms, application-code: 321ms)
+ GET /services/pet-walking 200 in 500ms (next.js: 10ms, generate-params: 12ms, application-code: 478ms)
+ GET /services/does-not-exist 404 in 331ms (next.js: 8ms, generate-params: 12ms, application-code: 312ms)
+[browser] Image with src "/logo2.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+ GET /service 200 in 2.4s (next.js: 2.3s, application-code: 195ms)
+○ Compiling /about ...
+ GET /about 200 in 5.3s (next.js: 3.3s, application-code: 1988ms)
+ GET / 200 in 13.6s (next.js: 11.6s, application-code: 1954ms)
+ GET /about 200 in 18.7s (next.js: 17.5s, application-code: 1226ms)
+ GET / 200 in 881ms (next.js: 7ms, application-code: 874ms)
+ GET /service 200 in 51ms (next.js: 12ms, application-code: 39ms)
+ GET /services/bath-deshed 200 in 83ms (next.js: 11ms, generate-params: 14ms, application-code: 57ms)
+ GET /petImage/services-banner.jpg 404 in 5.1s (next.js: 3.3s, application-code: 1809ms)
+⨯ The requested resource isn't a valid image for /petImage/services-banner.jpg received null
+⨯ ./app/components/layout/serviceDetails/ServiceDetails.tsx
+Error:   x Unterminated string constant
+    ,-[C:\Users\Admin\Desktop\PawFact\my-app\app\components\layout\serviceDetails\ServiceDetails.tsx:75:1]
+ 72 |       {/* Dynamic Header Banner */}
+ 73 |       <Banner
+ 74 |         image="
+ 75 |         title={serviceTitle || "Services"}
+    :                                         ^^
+ 76 |         current={serviceTitle || "Services"}
+ 77 |       />
+ 77 | 
+    `----
+  x Expected '</', got 'string literal'
+    ,-[C:\Users\Admin\Desktop\PawFact\my-app\app\components\layout\serviceDetails\ServiceDetails.tsx:75:1]
+ 72 |       {/* Dynamic Header Banner */}
+ 73 |       <Banner
+ 74 |         image="
+ 75 |         title={serviceTitle || "Services"}
+    :                                         ^^
+ 76 |         current={serviceTitle || "Services"}
+ 77 |       />
+ 77 | 
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/components/layout/serviceDetails/ServiceDetails.tsx
+./app/services/[slug]/page.tsx
+[browser] ./app/components/layout/serviceDetails/ServiceDetails.tsx
+Error:   x Unterminated string constant
+    ,-[C:\Users\Admin\Desktop\PawFact\my-app\app\components\layout\serviceDetails\ServiceDetails.tsx:75:1]
+ 72 |       {/* Dynamic Header Banner */}
+ 73 |       <Banner
+ 74 |         image="
+ 75 |         title={serviceTitle || "Services"}
+    :                                         ^^
+ 76 |         current={serviceTitle || "Services"}
+ 77 |       />
+ 77 | 
+    `----
+  x Expected '</', got 'string literal'
+    ,-[C:\Users\Admin\Desktop\PawFact\my-app\app\components\layout\serviceDetails\ServiceDetails.tsx:75:1]
+ 72 |       {/* Dynamic Header Banner */}
+ 73 |       <Banner
+ 74 |         image="
+ 75 |         title={serviceTitle || "Services"}
+    :                                         ^^
+ 76 |         current={serviceTitle || "Services"}
+ 77 |       />
+ 77 | 
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/components/layout/serviceDetails/ServiceDetails.tsx
+./app/services/[slug]/page.tsx 
+○ Compiling /_error ...
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /services/bath-deshed 500 in 31.9s (next.js: 30.6s, application-code: 1307ms)
+ GET /services/bath-deshed 200 in 9.4s (next.js: 8.0s, generate-params: 15ms, application-code: 1396ms)
+ GET /services/bath-deshed 200 in 273ms (next.js: 51ms, generate-params: 0.1ms, application-code: 222ms)
+ GET /services/bath-deshed 200 in 1270ms (next.js: 10ms, generate-params: 0.0ms, application-code: 1260ms)
+ GET /services/bath-deshed 200 in 1015ms (next.js: 17ms, generate-params: 0.0ms, application-code: 998ms)
+ GET /service 200 in 63ms (next.js: 18ms, application-code: 45ms)
+ GET /services/grooming 200 in 70ms (next.js: 7ms, generate-params: 9ms, application-code: 55ms)
+ GET /services/grooming 200 in 1759ms (next.js: 1028ms, generate-params: 13ms, application-code: 718ms)
+[browser] Image with src "/dogs/dog1.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+ GET /services/grooming 200 in 1227ms (next.js: 326ms, generate-params: 19ms, application-code: 882ms)
+ GET /services/grooming 200 in 2.5s (next.js: 376ms, generate-params: 27ms, application-code: 2.1s)
+ GET /services/grooming 200 in 664ms (next.js: 255ms, generate-params: 0.1ms, application-code: 409ms)
+ GET /services/grooming 200 in 1461ms (next.js: 471ms, generate-params: 24ms, application-code: 966ms)
+ GET /services/grooming 200 in 1312ms (next.js: 207ms, generate-params: 0.1ms, application-code: 1105ms)
+ GET /services/grooming 200 in 1291ms (next.js: 482ms, generate-params: 16ms, application-code: 794ms)
+ GET /services/grooming 200 in 603ms (next.js: 236ms, generate-params: 0.1ms, application-code: 367ms)
+ GET /services/grooming 200 in 1083ms (next.js: 171ms, generate-params: 22ms, application-code: 890ms)
+ GET /services/grooming 200 in 521ms (next.js: 132ms, generate-params: 12ms, application-code: 377ms)
+ GET /services/grooming 200 in 589ms (next.js: 167ms, generate-params: 15ms, application-code: 407ms)
+ GET /services/grooming 200 in 577ms (next.js: 138ms, generate-params: 12ms, application-code: 426ms)
+ GET /services/grooming 200 in 474ms (next.js: 130ms, generate-params: 12ms, application-code: 332ms)
+ GET /services/grooming 200 in 1310ms (next.js: 359ms, generate-params: 96ms, application-code: 855ms)
+ GET /services/grooming 200 in 1979ms (next.js: 166ms, generate-params: 12ms, application-code: 1801ms)
+ GET /services/grooming 200 in 657ms (next.js: 310ms, generate-params: 0.1ms, application-code: 347ms)
+ GET /services/grooming 200 in 596ms (next.js: 113ms, generate-params: 9ms, application-code: 474ms)
+ GET /services/grooming 200 in 598ms (next.js: 131ms, generate-params: 14ms, application-code: 453ms)
+ GET /services/grooming 200 in 951ms (next.js: 109ms, generate-params: 11ms, application-code: 831ms)
+ GET /services/grooming 200 in 615ms (next.js: 242ms, generate-params: 0.1ms, application-code: 373ms)
+ GET /services/grooming 200 in 583ms (next.js: 142ms, generate-params: 17ms, application-code: 425ms)
+ GET /services/grooming 200 in 573ms (next.js: 139ms, generate-params: 30ms, application-code: 404ms)
+ GET /services/grooming 200 in 658ms (next.js: 178ms, generate-params: 13ms, application-code: 467ms)
+ GET /services/grooming 200 in 856ms (next.js: 424ms, generate-params: 12ms, application-code: 420ms)
+ GET /services/grooming 200 in 503ms (next.js: 117ms, generate-params: 12ms, application-code: 374ms)
+ GET /services/grooming 200 in 613ms (next.js: 148ms, generate-params: 13ms, application-code: 451ms)
+ GET /services/grooming 200 in 924ms (next.js: 137ms, generate-params: 30ms, application-code: 758ms)
+ GET /services/grooming 200 in 636ms (next.js: 206ms, generate-params: 0.1ms, application-code: 429ms)
+ GET /services/grooming 200 in 1596ms (next.js: 874ms, generate-params: 22ms, application-code: 700ms)
+ GET /services/grooming 200 in 530ms (next.js: 138ms, generate-params: 10ms, application-code: 382ms)
+ GET /services/grooming 200 in 782ms (next.js: 152ms, generate-params: 15ms, application-code: 615ms)
+ GET /services/grooming 200 in 1783ms (next.js: 312ms, generate-params: 11ms, application-code: 1460ms)
+ GET /services/grooming 200 in 545ms (next.js: 10ms, generate-params: 0.0ms, application-code: 534ms)
+ GET /services/grooming 200 in 581ms (next.js: 190ms, generate-params: 13ms, application-code: 378ms)
+ GET /services/grooming 200 in 1693ms (next.js: 521ms, generate-params: 42ms, application-code: 1130ms)
+ GET /services/grooming 200 in 838ms (next.js: 504ms, generate-params: 0.1ms, application-code: 334ms)
+ GET /services/grooming 200 in 520ms (next.js: 112ms, generate-params: 13ms, application-code: 395ms)
+ GET /services/grooming 200 in 541ms (next.js: 171ms, generate-params: 12ms, application-code: 357ms)
+ GET /services/grooming 200 in 582ms (next.js: 170ms, generate-params: 13ms, application-code: 399ms)
+ GET /services/grooming 200 in 993ms (next.js: 616ms, generate-params: 11ms, application-code: 366ms)
+ GET /services/grooming 200 in 565ms (next.js: 113ms, generate-params: 14ms, application-code: 437ms)
+ GET /services/grooming 200 in 537ms (next.js: 139ms, generate-params: 12ms, application-code: 386ms)
+ GET /services/grooming 200 in 565ms (next.js: 160ms, generate-params: 16ms, application-code: 389ms)
+ GET /services/grooming 200 in 971ms (next.js: 608ms, generate-params: 12ms, application-code: 350ms)
+ GET /services/grooming 200 in 535ms (next.js: 123ms, generate-params: 13ms, application-code: 399ms)
+ GET /services/grooming 200 in 766ms (next.js: 364ms, generate-params: 13ms, application-code: 389ms)
+ GET /services/grooming 200 in 753ms (next.js: 264ms, generate-params: 9ms, application-code: 480ms)
+ GET /services/grooming 200 in 506ms (next.js: 104ms, generate-params: 11ms, application-code: 392ms)
+ GET /services/grooming 200 in 645ms (next.js: 215ms, generate-params: 14ms, application-code: 416ms)
+ GET /services/grooming 200 in 1043ms (next.js: 655ms, generate-params: 13ms, application-code: 375ms)
+ GET /services/grooming 200 in 510ms (next.js: 128ms, generate-params: 12ms, application-code: 369ms)
+ GET /services/grooming 200 in 582ms (next.js: 182ms, generate-params: 32ms, application-code: 367ms)
+ GET /services/grooming 200 in 500ms (next.js: 109ms, generate-params: 14ms, application-code: 377ms)
+ GET /services/grooming 200 in 1446ms (next.js: 218ms, generate-params: 67ms, application-code: 1161ms)
+ GET /services/grooming 200 in 711ms (next.js: 166ms, generate-params: 0.1ms, application-code: 544ms)
+ GET /services/grooming 200 in 549ms (next.js: 122ms, generate-params: 12ms, application-code: 414ms)
+ GET /services/grooming 200 in 1057ms (next.js: 95ms, generate-params: 11ms, application-code: 950ms)
+ GET /services/grooming 200 in 645ms (next.js: 109ms, generate-params: 11ms, application-code: 525ms)
+ GET /services/grooming 200 in 189ms (next.js: 9ms, generate-params: 0.1ms, application-code: 180ms)
+○ Compiling / ...
+ GET / 200 in 13.1s (next.js: 9.7s, application-code: 3.3s)
+ GET / 200 in 1300ms (next.js: 463ms, application-code: 837ms)
+ GET / 200 in 679ms (next.js: 8ms, application-code: 671ms)
+ GET /service 200 in 212ms (next.js: 149ms, application-code: 63ms)
+ GET /services/pet-walking 200 in 109ms (next.js: 23ms, generate-params: 14ms, application-code: 73ms)
+ GET /services/pet-walking 200 in 1245ms (next.js: 409ms, generate-params: 9ms, application-code: 827ms)
+ GET /services/pet-walking 200 in 1043ms (next.js: 413ms, generate-params: 55ms, application-code: 576ms)
+ GET /services/pet-walking 200 in 2.4s (next.js: 464ms, generate-params: 158ms, application-code: 1818ms)
+ GET /services/pet-walking 200 in 1753ms (next.js: 370ms, generate-params: 0.1ms, application-code: 1383ms)
+ GET /services/pet-walking 200 in 1453ms (next.js: 353ms, generate-params: 7ms, application-code: 1093ms)
+ GET /services/pet-walking 200 in 430ms (next.js: 102ms, generate-params: 11ms, application-code: 317ms)
+ GET /services/pet-walking 200 in 484ms (next.js: 145ms, generate-params: 12ms, application-code: 327ms)
+ GET /services/pet-walking 200 in 3.4s (next.js: 2.3s, generate-params: 9ms, application-code: 1084ms)
+ GET /services/pet-walking 200 in 660ms (next.js: 214ms, generate-params: 0.1ms, application-code: 446ms)
+ GET /services/pet-walking 200 in 1404ms (next.js: 340ms, generate-params: 12ms, application-code: 1053ms)
+ GET /services/pet-walking 200 in 390ms (next.js: 104ms, generate-params: 9ms, application-code: 277ms)
+ GET /services/pet-walking 200 in 1070ms (next.js: 216ms, generate-params: 100ms, application-code: 754ms)
+ GET /services/pet-walking 200 in 525ms (next.js: 219ms, generate-params: 12ms, application-code: 295ms)
+ GET /services/pet-walking 200 in 970ms (next.js: 644ms, generate-params: 10ms, application-code: 316ms)
+ GET /services/pet-walking 200 in 480ms (next.js: 137ms, generate-params: 8ms, application-code: 335ms)
+ GET /services/pet-walking 200 in 726ms (next.js: 432ms, generate-params: 8ms, application-code: 286ms)
+ GET /services/pet-walking 200 in 4.8s (next.js: 3.5s, generate-params: 18ms, application-code: 1235ms)
+ GET /services/pet-walking 200 in 452ms (next.js: 13ms, generate-params: 0.1ms, application-code: 439ms)
+ GET /services/pet-walking 200 in 2.3s (next.js: 147ms, generate-params: 19ms, application-code: 2.1s)
+ GET /services/pet-walking 200 in 752ms (next.js: 351ms, generate-params: 0.1ms, application-code: 401ms)
+ GET /services/pet-walking 200 in 607ms (next.js: 140ms, generate-params: 14ms, application-code: 453ms)
+ GET /services/pet-walking 200 in 368ms (next.js: 119ms, generate-params: 15ms, application-code: 234ms)
+ GET /services/pet-walking 200 in 1689ms (next.js: 765ms, generate-params: 21ms, application-code: 902ms)
+ GET /services/pet-walking 200 in 1459ms (next.js: 199ms, generate-params: 0.1ms, application-code: 1260ms)
+ GET /services/pet-walking 200 in 719ms (next.js: 201ms, generate-params: 11ms, application-code: 507ms)
+ GET /services/pet-walking 200 in 562ms (next.js: 228ms, generate-params: 11ms, application-code: 323ms)
+ GET /services/pet-walking 200 in 432ms (next.js: 86ms, generate-params: 7ms, application-code: 339ms)
+ GET /services/pet-walking 200 in 1130ms (next.js: 130ms, generate-params: 113ms, application-code: 888ms)
+ GET /services/pet-walking 200 in 537ms (next.js: 173ms, generate-params: 12ms, application-code: 352ms)
+ GET /services/pet-walking 200 in 441ms (next.js: 92ms, generate-params: 9ms, application-code: 339ms)
+ GET /services/pet-walking 200 in 751ms (next.js: 254ms, generate-params: 52ms, application-code: 445ms)
+ GET /services/pet-walking 200 in 636ms (next.js: 194ms, generate-params: 59ms, application-code: 383ms)
+ GET /services/pet-walking 200 in 561ms (next.js: 155ms, generate-params: 12ms, application-code: 395ms)
+ GET /services/pet-walking 200 in 514ms (next.js: 169ms, generate-params: 19ms, application-code: 326ms)
+ GET /services/pet-walking 200 in 799ms (next.js: 170ms, generate-params: 24ms, application-code: 606ms)
+ GET /services/pet-walking 200 in 548ms (next.js: 196ms, generate-params: 14ms, application-code: 339ms)
+ GET /services/pet-walking 200 in 1264ms (next.js: 192ms, generate-params: 12ms, application-code: 1060ms)
+ GET /services/pet-walking 200 in 488ms (next.js: 140ms, generate-params: 11ms, application-code: 336ms)
+ GET /services/pet-walking 200 in 731ms (next.js: 143ms, generate-params: 12ms, application-code: 575ms)
+ GET /services/pet-walking 200 in 897ms (next.js: 145ms, generate-params: 11ms, application-code: 741ms)
+ GET /services/pet-walking 200 in 461ms (next.js: 122ms, generate-params: 11ms, application-code: 329ms)
+ GET /services/pet-walking 200 in 826ms (next.js: 124ms, generate-params: 13ms, application-code: 689ms)
+ GET /services/pet-walking 200 in 2.1s (next.js: 155ms, generate-params: 0.1ms, application-code: 1922ms)
+ GET /services/pet-walking 200 in 513ms (next.js: 179ms, generate-params: 11ms, application-code: 322ms)
+ GET /services/pet-walking 200 in 477ms (next.js: 128ms, generate-params: 14ms, application-code: 334ms)
+ GET /services/pet-walking 200 in 1056ms (next.js: 329ms, generate-params: 17ms, application-code: 710ms)
+ GET /services/pet-walking 200 in 451ms (next.js: 132ms, generate-params: 0.0ms, application-code: 318ms)
+ GET /services/pet-walking 200 in 542ms (next.js: 170ms, generate-params: 12ms, application-code: 360ms)
+ GET /services/pet-walking 200 in 465ms (next.js: 112ms, generate-params: 9ms, application-code: 343ms)
+ GET /services/pet-walking 200 in 473ms (next.js: 116ms, generate-params: 13ms, application-code: 344ms)
+ GET /services/pet-walking 200 in 572ms (next.js: 113ms, generate-params: 11ms, application-code: 448ms)
+ GET /services/pet-walking 200 in 636ms (next.js: 226ms, generate-params: 58ms, application-code: 352ms)
+ GET /services/pet-walking 200 in 458ms (next.js: 113ms, generate-params: 11ms, application-code: 334ms)
+ GET /services/pet-walking 200 in 881ms (next.js: 170ms, generate-params: 18ms, application-code: 693ms)
+ GET /services/pet-walking 200 in 541ms (next.js: 148ms, generate-params: 13ms, application-code: 380ms)
+ GET /services/pet-walking 200 in 612ms (next.js: 190ms, generate-params: 11ms, application-code: 411ms)
+ GET /services/pet-walking 200 in 1221ms (next.js: 96ms, generate-params: 10ms, application-code: 1115ms)
+ GET /services/pet-walking 200 in 421ms (next.js: 124ms, generate-params: 10ms, application-code: 287ms)
+ GET /services/pet-walking 200 in 684ms (next.js: 155ms, generate-params: 14ms, application-code: 515ms)
+ GET /services/pet-walking 200 in 598ms (next.js: 178ms, generate-params: 23ms, application-code: 396ms)
+[browser] Received `true` for a non-boolean attribute `clas`.
+
+If you want to write it to the DOM, pass a string instead: clas="true" or clas={value.toString()}. 
+ GET /services/pet-walking 200 in 1194ms (next.js: 506ms, generate-params: 20ms, application-code: 668ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] Uncaught ReferenceError: CalendarIcon is not defined
+    at ServiceDetailsView (app\components\layout\serviceDetails\ServiceDetails.tsx:274:16)
+    at ServiceDetailPage (app\services\[slug]\page.tsx:29:7)
+  272 |             {/* Icon Container - aligned to the top of the text */}
+  273 |             <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-700 flex items-center justify-center">
+> 274 |               <CalendarIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+      |                ^
+  275 |             </div>
+  276 |
+  277 |             {/* Text Block */}
+⨯ ReferenceError: CalendarIcon is not defined
+    at ServiceDetailsView (app\components\layout\serviceDetails\ServiceDetails.tsx:274:16)
+  272 |             {/* Icon Container - aligned to the top of the text */}
+  273 |             <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-700 flex items-center justify-center">
+> 274 |               <CalendarIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+      |                ^
+  275 |             </div>
+  276 |
+  277 |             {/* Text Block */} {
+  digest: '549112509'
+}
+ GET /services/pet-walking 500 in 3.6s (next.js: 1300ms, generate-params: 10ms, application-code: 2.3s)
+[browser] Uncaught ReferenceError: CalendarIcon is not defined
+    at ServiceDetailsView (app\components\layout\serviceDetails\ServiceDetails.tsx:274:16)
+    at ServiceDetailPage (app\services\[slug]\page.tsx:29:7)
+  272 |             {/* Icon Container - aligned to the top of the text */}
+  273 |             <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-700 flex items-center justify-center">
+> 274 |               <CalendarIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+      |                ^
+  275 |             </div>
+  276 |
+  277 |             {/* Text Block */}
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /services/pet-walking 200 in 3.9s (next.js: 2.4s, generate-params: 10ms, application-code: 1426ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] Uncaught ReferenceError: CalendarIcon is not defined
+    at ServiceDetailsView (app\components\layout\serviceDetails\ServiceDetails.tsx:274:16)
+    at ServiceDetailPage (app\services\[slug]\page.tsx:29:7)
+  272 |             {/* Icon Container */}
+  273 |             <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-700 flex items-center justify-center">
+> 274 |               <CalendarIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+      |                ^
+  275 |             </div>
+  276 |
+  277 |             {/* Text Block */}
+⨯ ReferenceError: CalendarIcon is not defined
+    at ServiceDetailsView (app\components\layout\serviceDetails\ServiceDetails.tsx:274:16)
+  272 |             {/* Icon Container */}
+  273 |             <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-700 flex items-center justify-center">
+> 274 |               <CalendarIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+      |                ^
+  275 |             </div>
+  276 |
+  277 |             {/* Text Block */} {
+  digest: '549112509'
+}
+ GET /services/pet-walking 500 in 4.6s (next.js: 3.1s, generate-params: 12ms, application-code: 1471ms)
+[browser] Uncaught ReferenceError: CalendarIcon is not defined
+    at ServiceDetailsView (app\components\layout\serviceDetails\ServiceDetails.tsx:274:16)
+    at ServiceDetailPage (app\services\[slug]\page.tsx:29:7)
+  272 |             {/* Icon Container - aligned to the top of the text */}
+  273 |             <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-700 flex items-center justify-center">
+> 274 |               <CalendarIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+      |                ^
+  275 |             </div>
+  276 |
+  277 |             {/* Text Block */}
+ GET /services/pet-walking 200 in 2.5s (next.js: 263ms, generate-params: 8ms, application-code: 2.2s)
+ GET /services/pet-walking 200 in 781ms (next.js: 223ms, generate-params: 8ms, application-code: 550ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: CalendarIcon is not defined
+    at ServiceDetailsView (app\components\layout\serviceDetails\ServiceDetails.tsx:304:16)
+  302 |             {/* Calendar Icon Container */}
+  303 |             <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-700 flex items-center justify-center shadow-sm">
+> 304 |               <CalendarIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+      |                ^
+  305 |             </div>
+  306 |
+  307 |             {/* Text Block */} {
+  digest: '549112509'
+}
+ GET /services/pet-walking 500 in 3.6s (next.js: 1823ms, generate-params: 11ms, application-code: 1781ms)
+[browser] Uncaught ReferenceError: CalendarIcon is not defined
+    at ServiceDetailsView (app\components\layout\serviceDetails\ServiceDetails.tsx:304:16)
+    at ServiceDetailPage (app\services\[slug]\page.tsx:29:7)
+  302 |             {/* Calendar Icon Container */}
+  303 |             <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-700 flex items-center justify-center shadow-sm">
+> 304 |               <CalendarIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+      |                ^
+  305 |             </div>
+  306 |
+  307 |             {/* Text Block */}
+ GET /services/pet-walking 200 in 1516ms (next.js: 222ms, generate-params: 8ms, application-code: 1286ms)
+ GET /services/pet-walking 200 in 860ms (next.js: 248ms, generate-params: 11ms, application-code: 601ms)
+ GET /services/pet-walking 200 in 2.2s (next.js: 404ms, generate-params: 85ms, application-code: 1698ms)
+ GET /services/pet-walking 200 in 732ms (next.js: 289ms, generate-params: 0.1ms, application-code: 443ms)
+ GET /services/pet-walking 200 in 1053ms (next.js: 355ms, generate-params: 15ms, application-code: 683ms)
+ GET /services/pet-walking 200 in 752ms (next.js: 230ms, generate-params: 12ms, application-code: 510ms)
+ GET /services/pet-walking 200 in 881ms (next.js: 267ms, generate-params: 13ms, application-code: 601ms)
+ GET /services/pet-walking 200 in 1205ms (next.js: 337ms, generate-params: 8ms, application-code: 860ms)
+ GET /services/pet-walking 200 in 740ms (next.js: 235ms, generate-params: 13ms, application-code: 492ms)
+ GET /services/pet-walking 200 in 1206ms (next.js: 566ms, generate-params: 18ms, application-code: 622ms)
+ GET /services/pet-walking 200 in 1082ms (next.js: 441ms, generate-params: 9ms, application-code: 633ms)
+ GET /services/pet-walking 200 in 1599ms (next.js: 993ms, generate-params: 15ms, application-code: 591ms)
+ GET /services/pet-walking 200 in 879ms (next.js: 353ms, generate-params: 11ms, application-code: 516ms)
+ GET /service 200 in 66ms (next.js: 18ms, application-code: 48ms)
+ GET /services/pet-walking 200 in 55ms (next.js: 6ms, generate-params: 7ms, application-code: 42ms)
+ GET /services/training 200 in 58ms (next.js: 5ms, generate-params: 8ms, application-code: 45ms)
+ GET /services/training 200 in 158ms (next.js: 9ms, generate-params: 9ms, application-code: 140ms)
+ GET /services/training 200 in 2.4s (next.js: 14ms, generate-params: 42ms, application-code: 2.4s)
+ GET /services/training 200 in 1314ms (next.js: 356ms, generate-params: 9ms, application-code: 949ms)
+ GET /services/training 200 in 148ms (next.js: 10ms, generate-params: 0.0ms, application-code: 138ms)
+ GET /services/training 200 in 178ms (next.js: 9ms, generate-params: 11ms, application-code: 158ms)
+ GET /services/training 200 in 467ms (next.js: 11ms, generate-params: 12ms, application-code: 444ms)
+ GET /services/training 200 in 362ms (next.js: 12ms, generate-params: 12ms, application-code: 338ms)
+ GET /services/training 200 in 168ms (next.js: 11ms, generate-params: 0.1ms, application-code: 156ms)
+ GET /services/training 200 in 266ms (next.js: 10ms, generate-params: 11ms, application-code: 245ms)
+ GET / 200 in 74ms (next.js: 24ms, application-code: 50ms)
+ GET / 200 in 152ms (next.js: 10ms, application-code: 142ms)
+ GET / 200 in 138ms (next.js: 9ms, application-code: 130ms)
+ GET / 200 in 119ms (next.js: 9ms, application-code: 109ms)
+ GET / 200 in 157ms (next.js: 10ms, application-code: 147ms)
+ GET / 200 in 134ms (next.js: 11ms, application-code: 123ms)
+[browser] Image with src "/personImage/women2.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/personImage/women1.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/personImage/men2.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/personImage/men3.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/personImage/men5.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/personImage/women5.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/personImage/women4.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+ GET /services/vaccinations 200 in 225ms (next.js: 8ms, generate-params: 9ms, application-code: 208ms)
+ GET /services/surgery 200 in 58ms (next.js: 5ms, generate-params: 7ms, application-code: 46ms)
+ GET /services/grooming 200 in 44ms (next.js: 7ms, generate-params: 0.0ms, application-code: 38ms)
+ GET /services/emergency-care 200 in 556ms (next.js: 441ms, generate-params: 47ms, application-code: 68ms)
+ GET /services/pet-sitting 200 in 111ms (next.js: 8ms, generate-params: 11ms, application-code: 92ms)
+ GET / 200 in 145ms (next.js: 18ms, application-code: 126ms)
+ GET / 200 in 262ms (next.js: 9ms, application-code: 254ms)
+ GET / 200 in 1241ms (next.js: 547ms, application-code: 694ms)
+ GET / 200 in 145ms (next.js: 11ms, application-code: 134ms)
+ GET / 200 in 249ms (next.js: 9ms, application-code: 240ms)
+ GET / 200 in 259ms (next.js: 9ms, application-code: 250ms)
+ GET / 200 in 186ms (next.js: 9ms, application-code: 177ms)
+ GET / 200 in 1155ms (next.js: 528ms, application-code: 628ms)
+ GET / 200 in 231ms (next.js: 10ms, application-code: 221ms)
+ GET / 200 in 339ms (next.js: 98ms, application-code: 241ms)
+ GET / 200 in 411ms (next.js: 167ms, application-code: 244ms)
+○ Compiling /gallery ...
+ GET /gallery 200 in 6.0s (next.js: 5.6s, application-code: 350ms)
+[browser] Uncaught Error: Invalid src prop (https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at eval (app\components\layout\gallery\Gallery.tsx:171:17)
+    at Array.map (<anonymous>)
+    at Gallery (app\components\layout\gallery\Gallery.tsx:165:29)
+    at GalleryPage (app\gallery\page.tsx:8:9)
+  169 |                 className="group relative h-[240px] sm:h-[260px] w-full cursor-pointer overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+  170 |               >
+> 171 |                 <Image
+      |                 ^
+  172 |                   src={item.src}
+  173 |                   alt={item.alt}
+  174 |                   fill
+ GET /services/training 200 in 88ms (next.js: 17ms, generate-params: 11ms, application-code: 60ms)
+ GET /services/training 200 in 1086ms (next.js: 5ms, generate-params: 8ms, application-code: 1072ms)
+ GET /gallery 200 in 37ms (next.js: 5ms, application-code: 31ms)
+[browser] Uncaught Error: Invalid src prop (https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at eval (app\components\layout\gallery\Gallery.tsx:171:17)
+    at Array.map (<anonymous>)
+    at Gallery (app\components\layout\gallery\Gallery.tsx:165:29)
+    at GalleryPage (app\gallery\page.tsx:8:9)
+  169 |                 className="group relative h-[240px] sm:h-[260px] w-full cursor-pointer overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+  170 |               >
+> 171 |                 <Image
+      |                 ^
+  172 |                   src={item.src}
+  173 |                   alt={item.alt}
+  174 |                   fill
+ GET /services/training 200 in 332ms (next.js: 5ms, generate-params: 9ms, application-code: 318ms)
+ GET /gallery 200 in 44ms (next.js: 8ms, application-code: 36ms)
+[browser] Uncaught Error: Invalid src prop (https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80) on `next/image`, hostname "images.unsplash.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at eval (app\components\layout\gallery\Gallery.tsx:171:17)
+    at Array.map (<anonymous>)
+    at Gallery (app\components\layout\gallery\Gallery.tsx:165:29)
+    at GalleryPage (app\gallery\page.tsx:8:9)
+  169 |                 className="group relative h-[240px] sm:h-[260px] w-full cursor-pointer overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+  170 |               >
+> 171 |                 <Image
+      |                 ^
+  172 |                   src={item.src}
+  173 |                   alt={item.alt}
+  174 |                   fill
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.3.4 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.243:3000
+✓ Ready in 1956ms
+✓ Running next.config.ts took 291ms
+
+○ Compiling /gallery ...

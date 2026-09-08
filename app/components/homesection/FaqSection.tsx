@@ -283,7 +283,7 @@ export default function FaqSection({ data }: FaqSectionProps) {
                     <p className="text-[15px] font-bold text-[#1E1B4B]">
                       {sideBadge.title}
                     </p>
-                    <p className="mt-0.5 text-[12px] leading-[1.4] text-[#64748B]">
+                    <p className="text-[13px] font-medium leading-[1.45] text-[#37336b]">
                       {sideBadge.desc}
                     </p>
                   </div>

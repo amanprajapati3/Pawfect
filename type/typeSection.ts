@@ -133,6 +133,7 @@ export interface PetServiceAreaCity {
 
 export interface PetServiceAreasData {
   badge: string;
+  banner?: PetServicesBanner;
   title: {
     normal: string;
     highlighted: string;
@@ -230,6 +231,7 @@ export interface PetTeamMember {
 
 export interface PetTeamData {
   badge: string;
+  banner?: PetServicesBanner;
   title: {
     normal: string;
     highlighted: string;
@@ -292,12 +294,19 @@ export interface PetWhyChooseUsPhone {
   href: string;
 }
 
+export interface PetWhyChooseUsBanner {
+  breadcrumbCurrent: string;
+  breadcrumbHome: string;
+  bgImageUrl: string;
+}
+
 export interface PetWhyChooseUsData {
   badge: string;
   title: {
     normal: string;
     highlighted: string;
   };
+  banner: PetWhyChooseUsBanner;
   description: string;
   images: {
     main: string;
@@ -349,10 +358,223 @@ export interface PetBlogPost {
 
 export interface PetBlogData {
   badge: string;
+  banner?: PetServicesBanner;
   title: {
     normal: string;
     highlighted: string;
   };
   desc: string;
   posts: PetBlogPost[];
+}
+
+export interface PetAboutFeature {
+  id: string;
+  iconName: string;
+  title: string;
+  description: string;
+}
+
+export interface PetAboutBanner{
+  breadcrumbCurrent:string;
+  breadcrumbHome:string;
+  bgImageUrl:string;
+}
+
+export interface PetAboutData {
+  badge: string;
+  title: {
+    normal: string;
+    highlighted: string;
+  };
+  paragraphs: string[];
+  images: {
+    main: string;
+    secondary: string;
+  };
+  banner:PetAboutBanner;
+  features: PetAboutFeature[];
+}
+
+export interface PetMissionCard {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  badgeIcon: string;
+}
+
+export interface PetValueItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface PetMissionBanner {
+  breadcrumbCurrent: string;
+  breadcrumbHome: string;
+  bgImageUrl: string;
+}
+
+export interface PetMissionData {
+  badge: string;
+  title: {
+    normal: string;
+    highlighted: string;
+  };
+  banner: PetMissionBanner;
+  subtitle: string;
+  cards: PetMissionCard[];
+  values: PetValueItem[];
+}
+
+export interface ServiceDetailsQuickBenefit {
+  id: string;
+  title: string;
+}
+
+export interface ServiceDetailsBenefitItem {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface ServiceDetailsProcessStep {
+  step: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface ServiceDetailsData {
+  badge: string;
+  title: string;
+  description: string[];
+
+  quickBenefits: ServiceDetailsQuickBenefit[];
+
+  gallery: {
+    mainImage: string;
+    badgeText: string;
+    badgeSubtext: string;
+    sideImages: string[];
+  };
+
+  benefitsSection: {
+    title: string;
+    items: ServiceDetailsBenefitItem[];
+  };
+
+  whatsIncluded: {
+    title: string;
+    list: string[];
+  };
+
+  processSection: {
+    title: string;
+    steps: ServiceDetailsProcessStep[];
+  };
+
+  ctaBanner: {
+    title: string;
+    subtitle: string;
+    image: string;
+  };
+}
+
+
+export interface ServiceDetailsItem {
+  id: string;
+  slug: string;
+  iconName: string;
+  title: string;
+  description: string;
+
+  image: {
+    src: string;
+    alt: string;
+  };
+
+  href: string;
+  linkText: string;
+
+  detailData: ServiceDetailsData;
+}
+
+
+export interface ServiceDetailsBanner {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  title: string;
+  backgroundImage: string;
+  homeHref: string;
+}
+
+export interface ServiceDetailsPageData {
+  banner: ServiceDetailsBanner;
+
+  badge: string;
+
+  title: {
+    normal: string;
+    highlighted: string;
+  };
+
+  description: string;
+
+  services: ServiceDetailsItem[];
+}
+
+export interface ServiceDetailsVariants {
+  PetServices1: ServiceDetailsPageData;
+}
+
+export interface ServiceDetails {
+  variants: ServiceDetailsVariants;
+}
+
+export interface GalleryImageItem {
+  id: number | string;
+  src: string;
+  alt: string;
+  category: string;
+}
+
+export interface GalleryVideoItem {
+  id: number | string;
+  thumbnail: string;
+  videoUrl: string;
+  title: string;
+  duration: string;
+}
+
+export interface GalleryData {
+  badge: string;
+  banner: {
+    breadcrumbHome: string;
+    breadcrumbCurrent: string;
+    title: string;
+    backgroundImage: string;
+    homeHref: string;
+  };
+  imageGallery: {
+    badge: string;
+    title: {
+      normal: string;
+      highlighted: string;
+    };
+    desc: string;
+    categories: string[];
+    items: GalleryImageItem[];
+  };
+  videoGallery: {
+    badge: string;
+    title: {
+      normal: string;
+      highlighted: string;
+    };
+    desc: string;
+    items: GalleryVideoItem[];
+  };
 }

@@ -38,11 +38,11 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#FAFAFC] text-[#2D234C] font-sans border-t border-gray-100">
       {/* Main Container */}
-      <div className="mx-auto  sm:px-6 px-3 py-5 lg:px-8 ">
-        <div className="grid grid-cols-1  gap-5 lg:grid-cols-12">
+      <div className="mx-auto sm:px-6 px-3 py-5  ">
+        <div className="grid grid-cols-1  gap-5 md:gap-0 lg:grid-cols-12">
           
           {/* Brand & Left Info Section */}
-          <div className="flex flex-col justify-between lg:col-span-4 ">
+          <div className="flex flex-col sm:flex-row md:flex-col justify-between lg:col-span-4 ">
             <div>
               {/* Logo */}
               <Link href="/" className="inline-block  mb-4">
@@ -52,7 +52,7 @@ export default function Footer() {
                     alt="PawFect"
                     width={180}
                     height={60}
-                    className="h-14 sm:h-36 w-auto object-contain"
+                    className="h-14 sm:h-28 w-auto object-contain"
                   />
                 ) : (
                   <span className="text-3xl font-extrabold text-[#3B1578]">
@@ -63,13 +63,13 @@ export default function Footer() {
 
 
               {/* Description */}
-              <p className="text-[15px]  sm:max-w-[250px] leading-relaxed text-[#000000] max-w-sm mb-8">
+              <p className="text-[15px]  sm:max-w-[250px]  text-[#252525] max-w-sm mb-8 md:ml-3">
                 {desc}
               </p>
             </div>
 
             {/* Bottom 3 Badges */}
-            <div className="grid grid-cols-3  gap-0 pt-4 border-t border-gray-200/60">
+            <div className="grid grid-cols-3  gap-0 md:gap-7 pt-4 border-t border-gray-200/60">
               <div className="flex items-center  gap-2.5">
                 <div className="flex sm:h-12 h-8 w-8 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
                   <FaPaw className="sm:h-6 h-4 w-4 sm:w-6" />
@@ -100,15 +100,15 @@ export default function Footer() {
           </div>
 
           {/* Nav Links Grid & Contact (Right side) */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-4 lg:border-l lg:border-gray-200/80 lg:pl-10">
+          <div className="grid grid-cols-1 items-center gap-8 text-center sm:grid-cols-2 sm:items-start sm:text-left lg:col-span-8 lg:grid-cols-4 lg:border-l lg:border-gray-200/80 lg:pl-10">
             
             {/* Dynamic Link Columns */}
             {columns?.map((col, i) => (
-              <div key={i} className="flex flex-col">
+              <div key={i} className="flex flex-col items-center sm:items-start">
                 <h3 className="mb-3 text-[15px] font-bold uppercase tracking-wider text-[#1C0D3F]">
                   {col.title}
                 </h3>
-                <div className="mb-4 h-[2px] w-8 bg-[#3B1578]"></div>
+                <div className="mb-3 h-[2px] w-8 bg-[#3B1578] sm:mb-3"></div>
 
                 <ul className="flex flex-col gap-2.5">
                   {col.links.map((link, j) => (
@@ -127,7 +127,7 @@ export default function Footer() {
             ))}
 
             {/* Get In Touch Column */}
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center gap-6 sm:items-start">
               <h3 className="mb-3 text-[15px] font-bold uppercase tracking-wider text-[#1C0D3F]">
                 GET IN TOUCH
               </h3>
@@ -205,7 +205,7 @@ export default function Footer() {
 
       {/* Bottom Bar Section */}
       <div className="border-t border-gray-200/80 bg-white pt-4">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-4 px-6 sm:flex-row lg:px-12">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-4 px-6 md:flex-row lg:px-12">
           
           {/* Copyright & Tagline */}
           <div className="flex flex-wrap items-center justify-center gap-2 text-md text-gray-600 sm:justify-start">

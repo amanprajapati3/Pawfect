@@ -1,9 +1,9 @@
 import petData from "./site.json";
 import {
-  PetServiceItem,
   PetBlogPost,
   PetTeamMember,
   PetServiceAreaCity,
+  ServiceDetailsItem,
 } from "@/type/typeSection";
 
 export type RawPetData = typeof petData;
@@ -39,6 +39,14 @@ export type PetTestimonialData =
   typeof petData.PetIndustries.sections.Testimonial.variants.PetTestimonial1;
 export type PetBlogData =
   typeof petData.PetIndustries.sections.Blog.variants.PetBlog1;
+export type PetAboutUsData =
+  typeof petData.PetIndustries.sections.AboutUs.variants.PetAboutUs1;
+
+export type PetMissionData =
+  typeof petData.PetIndustries.sections.Mission.variants.PetMission1;
+
+export type PetGalleryData =
+  typeof petData.PetIndustries.sections.Gallery.variants.PetGallery1;
 
 const sec = petData.PetIndustries.sections;
 
@@ -54,16 +62,26 @@ export const site = {
   whyChooseUs: sec.WhyChooseUs.variants.PetWhyChooseUs1,
   testimonial: sec.Testimonial.variants.PetTestimonial1,
   blog: sec.Blog.variants.PetBlog1,
+  aboutUs: sec.AboutUs.variants.PetAboutUs1,
+  mission: sec.Mission.variants.PetMission1,
+  gallery: sec.Gallery.variants.PetGallery1,
+
 };
 
-export function getServiceBySlug(slug: string): PetServiceItem | null {
-  const services = sec.Services.variants.PetServices1.services as PetServiceItem[];
-  return services.find((service) => service.slug === slug) || null;
+const serviceDetailItems =
+  sec.ServiceDetails.variants.PetServices1.services as ServiceDetailsItem[];
+
+export function getServiceBySlug(slug: string): ServiceDetailsItem | null {
+  return serviceDetailItems.find((service) => service.slug === slug) || null;
+}
+
+export function getServiceSlugs(): ServiceDetailsItem[] {
+  return serviceDetailItems;
 }
 
 export function getBlogBySlug(slug: string): PetBlogPost | null {
   const posts = sec.Blog.variants.PetBlog1.posts as PetBlogPost[];
-  return posts.find((post) => post.slug === slug) || null;
+  return posts.find((post ) => post.slug === slug) || null;
 }
 
 export function getTeamMemberBySlug(slug: string): PetTeamMember | null {

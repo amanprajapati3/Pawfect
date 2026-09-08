@@ -5,10 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaMapMarkerAlt, FaPaw } from "react-icons/fa";
-import type { PetServiceAreasData } from "@/type/typeSection";
+import type { PetServiceAreasData, PetServiceAreaCity } from "@/type/typeSection";
 
 interface LocationProps {
   data: PetServiceAreasData;
+  layout?: "home" | "grid";
 }
 
 // Custom hook to handle swiping
@@ -49,11 +50,12 @@ function useSwipe(onSwipeLeft: () => void, onSwipeRight: () => void) {
   };
 }
 
-export default function Location({ data }: LocationProps) {
+export default function Location({ data, layout = "home" }: LocationProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { badge, title, desc, cities = [] } = data || {};
+  const isGrid = layout === "grid";
 
   // Total number of cities/cards
   const totalCities = cities.length;
@@ -79,6 +81,42 @@ export default function Location({ data }: LocationProps) {
 
   // Integration swipe hook
   const swipeHandlers = useSwipe(handleNext, handlePrev);
+
+  const renderCityCard = (city: PetServiceAreaCity) => (
+    <Link
+      href={`/service-areas/${city.slug}`}
+      className="group flex flex-col items-center text-center w-full"
+    >
+      {/* CIRCULAR IMAGE CONTAINER */}
+      <div className="relative mb-6 flex items-center justify-center w-full">
+        <div className="relative flex h-[140px] w-[140px] items-center justify-center rounded-full border border-[#3B1264] p-1.5 transition-transform duration-300 group-hover:scale-105 sm:h-[160px] sm:w-[160px] lg:h-[175px] lg:w-[175px]">
+          <div className="relative h-full w-full overflow-hidden rounded-full">
+            <Image
+              src={city.image}
+              alt={city.name}
+              fill
+              sizes="(max-width: 640px) 140px, (max-width: 1024px) 160px, 175px"
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              draggable="false"
+            />
+          </div>
+
+          {/* BOTTOM LOCATION ICON */}
+          <div className="absolute -bottom-3 left-1/2 z-10 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full border-2 border-white bg-white text-[#3B1264] shadow-md">
+            <FaMapMarkerAlt className="h-4 md:h-5 md:w-5 w-4 fill-current stroke-none" />
+          </div>
+        </div>
+      </div>
+
+      {/* TEXT CONTENT */}
+      <h3 className="mt-1 text-[16px] font-extrabold text-[#1C0D3F] transition-colors group-hover:text-[#3B1264] sm:text-[18px]">
+        {city.name}
+      </h3>
+      <p className="mt-0.5 text-[13px] font-medium text-gray-500">
+        {city.state}
+      </p>
+    </Link>
+  );
 
   return (
     <section className="w-full bg-white py-8 md:py-12 overflow-hidden">
@@ -108,7 +146,20 @@ export default function Location({ data }: LocationProps) {
           )}
         </div>
 
-        {/* SLIDER & CITIES CONTAINER */}
+        {isGrid ? (
+          /* CITIES GRID: 4 per row desktop / 2 tablet / 1 mobile */
+          <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {cities.map((city) => (
+              <div
+                key={city.id}
+                className="flex justify-center rounded-3xl border border-gray-200 bg-white p-5 transition-shadow duration-300 hover:shadow-lg"
+              >
+                {renderCityCard(city)}
+              </div>
+            ))}
+          </div>
+        ) : (
+        /* SLIDER & CITIES CONTAINER */
         <div className="relative mt-8" ref={containerRef}>
           {/* LEFT CHEVRON BUTTON */}
           <button
@@ -127,67 +178,22 @@ export default function Location({ data }: LocationProps) {
           >
             <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
-
-          {/* CITIES CAROUSEL TRACK */}
-          {/* Main overflow container */}
           <div className="overflow-hidden py-6">
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{
-                // Responsive translateX handling:
-                // Default (Mobile): calc translation based on 2 items per view.
-                // We use percentage here based on the total width of the track.
-                // Mobile translation needs precise calculation to prevent cut-off.
-                // We calculate translation as (Index / Total Items) * 100% of the track.
                 transform: `translateX(-${
                   currentIndex * (100 / (totalCities || 1))
                 }%)`,
               }}
-              // Swipe handlers attached directly to the moving track
               {...swipeHandlers}
             >
               {cities.map((city) => (
-                // Individual Card Container
                 <div
                   key={city.id}
-                  // Responsive widths: Phone: 50% (2 items), Tablet: 25% (4 items), Desktop: 16.66% (6 items)
-                  // Use aspect-ratio to keep cards square and consistent.
                   className="w-1/2 shrink-0 aspect-[4/5] sm:aspect-auto px-2 sm:w-1/4 lg:w-1/6 sm:px-3 flex justify-center items-center"
                 >
-                  <Link
-                    href={`/service-areas/${city.slug}`}
-                    className="group flex flex-col items-center text-center w-full"
-                  >
-                    {/* CIRCULAR IMAGE CONTAINER */}
-                    <div className="relative mb-6 flex items-center justify-center w-full">
-                      <div className="relative flex h-[140px] w-[140px] items-center justify-center rounded-full border border-[#3B1264] p-1.5 transition-transform duration-300 group-hover:scale-105 sm:h-[160px] sm:w-[160px] lg:h-[175px] lg:w-[175px]">
-                        <div className="relative h-full w-full overflow-hidden rounded-full">
-                          <Image
-                            src={city.image}
-                            alt={city.name}
-                            fill
-                            sizes="(max-width: 640px) 140px, (max-width: 1024px) 160px, 175px"
-                            className="object-cover transition-transform duration-500 group-hover:scale-110"
-                            // Prevent native drag on images interfering with swipe
-                            draggable="false"
-                          />
-                        </div>
-
-                        {/* BOTTOM LOCATION ICON */}
-                        <div className="absolute -bottom-3 left-1/2 z-10 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full border-2 border-white bg-white text-[#3B1264] shadow-md">
-                          <FaMapMarkerAlt className="h-4 md:h-5 md:w-5 w-4 fill-current stroke-none" />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* TEXT CONTENT */}
-                    <h3 className="mt-1 text-[16px] font-extrabold text-[#1C0D3F] transition-colors group-hover:text-[#3B1264] sm:text-[18px]">
-                      {city.name}
-                    </h3>
-                    <p className="mt-0.5 text-[13px] font-medium text-gray-500">
-                      {city.state}
-                    </p>
-                  </Link>
+                  {renderCityCard(city)}
                 </div>
               ))}
             </div>
@@ -209,6 +215,7 @@ export default function Location({ data }: LocationProps) {
             ))}
           </div>
         </div>
+        )}
       </div>
     </section>
   );

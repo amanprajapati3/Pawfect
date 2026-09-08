@@ -129,7 +129,7 @@
             "site": {
               "siteName": "PawFect",
               "tagline": "Happy Care, Happy Life",
-              "logo": { "light": "/logo.png" },
+              "logo": { "light": "/logo2.png" },
               "TopBar": {
                 "address": "09 Jakt Street, Brooklyn, New York",
                 "email": "petcareinfo@pawfect.com",
@@ -167,8 +167,15 @@
             },
             "nav": [
               { "label": "Home", "href": "/" },
-              { "label": "About", "href": "/about" },
-              { "label": "Services", "href": "/services" },
+              {
+                "label": "About",
+                "href": "/about",
+                "children": [
+                  { "label": "Mission & Vision", "href": "/mission" },
+                  { "label": "Why Choose", "href": "/whychoose" }
+                ]
+              },
+              { "label": "Services", "href": "/service" },
               { "label": "Gallery", "href": "/gallery" },
               { "label": "Team", "href": "/team" },
               { "label": "Blogs", "href": "/blogs" },
@@ -180,7 +187,7 @@
       "Footer": {
         "variants": {
           "PetFooter1": {
-            "logoImage": "/logo.png",
+            "logoImage": "/logo2.png",
             "desc": "We provide loving care, expert veterinary services and helpful resources to ensure your pets live happy, healthy and fulfilling lives.",
             "badges": [
               { "icon": "paw", "label": "Trusted Care" },
@@ -193,7 +200,7 @@
                 "links": [
                   { "label": "Home", "href": "/" },
                   { "label": "About Us", "href": "/about" },
-                  { "label": "Our Services", "href": "/services" },
+                  { "label": "Our Services", "href": "/service" },
                   { "label": "Service Areas", "href": "/service-areas" },
                   { "label": "Our Team", "href": "/team" },
                   { "label": "Testimonials", "href": "/testimonials" },
@@ -205,18 +212,18 @@
                 "title": "OUR SERVICES",
                 "links": [
                   {
-                    "label": "Wellness Exams",
-                    "href": "/services/wellness-exams"
+                    "label": "Grooming",
+                    "href": "/services/grooming"
                   },
-                  { "label": "Vaccinations", "href": "/services/vaccinations" },
-                  { "label": "Dental Care", "href": "/services/dental-care" },
-                  { "label": "Surgery", "href": "/services/surgery" },
-                  { "label": "Grooming", "href": "/services/grooming" },
-                  { "label": "Pet Boarding", "href": "/services/pet-boarding" },
+                  { "label": "Bath & Deshed", "href": "/services/bath-deshed" },
                   { "label": "Pet Sitting", "href": "/services/pet-sitting" },
+                  { "label": "Pet Walking", "href": "/services/pet-walking" },
+                  { "label": "Veterinary Care", "href": "/services/veterinary" },
+                  { "label": "Training", "href": "/services/training" },
+                  { "label": "Pet Daycare", "href": "/services/daycare" },
                   {
-                    "label": "Emergency Care",
-                    "href": "/services/emergency-care"
+                    "label": "Pet Boarding",
+                    "href": "/services/boarding"
                   }
                 ]
               },
@@ -280,6 +287,13 @@
         "variants": {
           "PetServiceAreas1": {
             "badge": "OUR SERVICE AREAS",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Service Areas",
+              "title": "Service Areas",
+              "backgroundImage": "/cityImage/delhi.jpg",
+              "homeHref": "/"
+            },
             "title": {
               "normal": "Where We",
               "highlighted": "Care For Pets"
@@ -427,7 +441,7 @@
               "breadcrumbHome": "Home",
               "breadcrumbCurrent": "Services",
               "title": "Services",
-              "backgroundImage": "/petImage/services-banner.jpg",
+              "backgroundImage": "/dogs/dog1.jpg",
               "homeHref": "/"
             },
             "badge": "OUR SERVICES",
@@ -545,10 +559,923 @@
           }
         }
       },
+      "ServiceDetails": {
+        "variants": {
+          "PetServices1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Services",
+              "title": "Services",
+              "backgroundImage": "/petImage/services-banner.jpg",
+              "homeHref": "/"
+            },
+            "badge": "OUR SERVICES",
+            "title": {
+              "normal": "Complete Care",
+              "highlighted": "For Your Pets"
+            },
+            "description": "We offer a wide range of professional pet care services to keep your furry friends healthy, happy, and loved.",
+            "services": [
+              {
+                "id": "grooming",
+                "slug": "grooming",
+                "iconName": "scissors",
+                "title": "Grooming",
+                "description": "Professional grooming for a clean, fresh and healthy coat.",
+                "image": {
+                  "src": "/dogs/dog1.jpg",
+                  "alt": "Dog getting professional grooming"
+                },
+                "href": "/services/grooming",
+                "linkText": "Learn More",
+                "detailData": {
+                  "badge": "About Grooming",
+                  "title": "More Than Just a Pretty Look",
+                  "description": [
+                    "Regular grooming is essential for your pet's overall health and well-being. It helps maintain a clean coat, healthy skin, and prevents issues like matting, infections, and parasites. Our experienced groomers use gentle techniques and pet-safe products to ensure a stress-free and enjoyable experience for your furry friend."
+                  ],
+                  "quickBenefits": [
+                    { "id": "1", "title": "Reduces shedding and tangles" },
+                    { "id": "2", "title": "Promotes healthy skin & coat" },
+                    {
+                      "id": "3",
+                      "title": "Prevents infections and skin issues"
+                    },
+                    { "id": "4", "title": "Boosts comfort and confidence" }
+                  ],
+                  "gallery": {
+                    "mainImage": "/dogs/dog1.jpg",
+                    "badgeText": "Gentle Care",
+                    "badgeSubtext": "Happy Pets",
+                    "sideImages": [
+                      "/dogs/dog8.jpg",
+                      "/dogs/dog6.jpg",
+                      "/dogs/dog5.jpg"
+                    ]
+                  },
+                  "benefitsSection": {
+                    "title": "Benefits of Regular Grooming",
+                    "items": [
+                      {
+                        "id": "1",
+                        "icon": "dog",
+                        "title": "Healthy Skin & Coat",
+                        "description": "Removes dirt and dead hair, promoting soft, shiny and healthy fur."
+                      },
+                      {
+                        "id": "2",
+                        "icon": "shield-cross",
+                        "title": "Early Problem Detection",
+                        "description": "Helps identify skin issues, parasites, or other health concerns early."
+                      },
+                      {
+                        "id": "3",
+                        "icon": "heart",
+                        "title": "Better Hygiene",
+                        "description": "Reduces odor, keeps nails trimmed and ears clean for better hygiene."
+                      },
+                      {
+                        "id": "4",
+                        "icon": "smile",
+                        "title": "Happy & Comfortable Pets",
+                        "description": "A well-groomed pet feels more comfortable, relaxed and confident."
+                      }
+                    ]
+                  },
+                  "whatsIncluded": {
+                    "title": "What's Included",
+                    "list": [
+                      "Bath with premium pet-safe shampoo",
+                      "Hair brushing & de-shedding",
+                      "Nail trimming",
+                      "Ear cleaning",
+                      "Teeth brushing (optional)",
+                      "Coat trimming & styling",
+                      "Finishing with perfume"
+                    ]
+                  },
+                  "processSection": {
+                    "title": "Our Grooming Process",
+                    "steps": [
+                      {
+                        "step": "01",
+                        "title": "Bath",
+                        "description": "Gentle bath with pet-safe shampoo to cleanse the coat.",
+                        "icon": "bath"
+                      },
+                      {
+                        "step": "02",
+                        "title": "Brush & Dry",
+                        "description": "Thorough brushing to remove tangles & loose hair, then blow dry.",
+                        "icon": "dryer"
+                      },
+                      {
+                        "step": "03",
+                        "title": "Trim & Style",
+                        "description": "Nail trimming, hair cutting and styling as per your pet's breed & needs.",
+                        "icon": "scissors"
+                      },
+                      {
+                        "step": "04",
+                        "title": "Finishing Touch",
+                        "description": "Ear cleaning, perfume spray & a final check for a perfect look.",
+                        "icon": "sparkles"
+                      }
+                    ]
+                  },
+                  "ctaBanner": {
+                    "title": "Pamper Your Pet Today!",
+                    "subtitle": "Book a grooming session and give your pet the care they deserve.",
+                    "image": "/servicedog.png"
+                  }
+                }
+              },
+              {
+                "id": "bath-deshed",
+                "slug": "bath-deshed",
+                "iconName": "droplet",
+                "title": "Bath & Deshed",
+                "description": "Deep cleaning bath and deshedding to keep your pet comfortable.",
+                "image": {
+                  "src": "/dogs/dog8.jpg",
+                  "alt": "Dog getting a bath"
+                },
+                "href": "/services/bath-deshed",
+                "linkText": "Learn More",
+                "detailData": {
+                  "badge": "Deep Hydro Therapy",
+                  "title": "Refreshing Hydro-Baths & Coat Revitalization",
+                  "description": [
+                    "Our specialized bathing and de-shedding treatments target undercoat buildup directly. By utilizing organic hypoallergenic conditioners and high-velocity blowout equipment, we eliminate trapped loose dander and revitalize your dog's skin barrier."
+                  ],
+                  "quickBenefits": [
+                    { "id": "1", "title": "Up to 90% fur reduction" },
+                    { "id": "2", "title": "Deep hair follicle cleansing" },
+                    { "id": "3", "title": "Hypoallergenic formulas" },
+                    { "id": "4", "title": "Eliminates pet odor sources" }
+                  ],
+                  "gallery": {
+                    "mainImage": "/dogs/dog8.jpg",
+                    "badgeText": "Hydro Wash",
+                    "badgeSubtext": "Deep Clean",
+                    "sideImages": [
+                      "/dogs/dog1.jpg",
+                      "/dogs/dog2.jpg",
+                      "/dogs/dog3.jpg"
+                    ]
+                  },
+                  "benefitsSection": {
+                    "title": "Why Bath & Deshedding Matters",
+                    "items": [
+                      {
+                        "id": "1",
+                        "icon": "droplet",
+                        "title": "Follicle Hydration",
+                        "description": "Replenishes essential skin oils to avoid scaling and persistent itching."
+                      },
+                      {
+                        "id": "2",
+                        "icon": "shield-cross",
+                        "title": "Undercoat Clearance",
+                        "description": "Prevents severe matting before it suffocates delicate skin layers."
+                      },
+                      {
+                        "id": "3",
+                        "icon": "heart",
+                        "title": "Home Cleanliness",
+                        "description": "Drastically reduces hair accumulation across furniture and flooring."
+                      },
+                      {
+                        "id": "4",
+                        "icon": "smile",
+                        "title": "Cooler Body Temp",
+                        "description": "Helps double-coated breeds regulate core body heat during summer months."
+                      }
+                    ]
+                  },
+                  "whatsIncluded": {
+                    "title": "Package Details",
+                    "list": [
+                      "Warm hydro-massage bath",
+                      "De-shedding botanical shampoo treatment",
+                      "Deep coat conditioning mask",
+                      "High-velocity blow dry technique",
+                      "15-minute rake & slicker coat brush out",
+                      "Sanitary pad flush",
+                      "Fresh scented mist spray"
+                    ]
+                  },
+                  "processSection": {
+                    "title": "Our De-Shedding Steps",
+                    "steps": [
+                      {
+                        "step": "01",
+                        "title": "Hydro Soak",
+                        "description": "Infusing deep coat layers with essential oils and warm water pressure.",
+                        "icon": "bath"
+                      },
+                      {
+                        "step": "02",
+                        "title": "Fur Loosening",
+                        "description": "Lathering specialized de-shedding conditioner deep into thick fur.",
+                        "icon": "sparkles"
+                      },
+                      {
+                        "step": "03",
+                        "title": "High Blow Out",
+                        "description": "Forcing dead undercoat hairs free with precision air blowers.",
+                        "icon": "dryer"
+                      },
+                      {
+                        "step": "04",
+                        "title": "Undercoat Rake",
+                        "description": "Thorough hand brushing to ensure zero leftover loose hair.",
+                        "icon": "scissors"
+                      }
+                    ]
+                  },
+                  "ctaBanner": {
+                    "title": "Say Goodbye to Excessive Shedding!",
+                    "subtitle": "Book a bath and de-shed appointment for a cleaner home and happier pet.",
+                    "image": "/servicedog.png"
+                  }
+                }
+              },
+              {
+                "id": "pet-sitting",
+                "slug": "pet-sitting",
+                "iconName": "home-heart",
+                "title": "Pet Sitting",
+                "description": "Loving care and attention when you're away from your pets.",
+                "image": {
+                  "src": "/dogs/dog6.jpg",
+                  "alt": "Pet sitter caring for a dog"
+                },
+                "href": "/services/pet-sitting",
+                "linkText": "Learn More",
+                "detailData": {
+                  "badge": "In-Home Companionship",
+                  "title": "Stress-Free Care in the Comfort of Home",
+                  "description": [
+                    "Pets thrive best in familiar surroundings. Our dedicated pet sitting service provides personalized one-on-one attention, timely meal schedules, exercise routines, and cozy companionship inside your home while you are away."
+                  ],
+                  "quickBenefits": [
+                    { "id": "1", "title": "Zero travel anxiety" },
+                    { "id": "2", "title": "Maintained daily routines" },
+                    { "id": "3", "title": "Home security presence" },
+                    { "id": "4", "title": "Real-time updates & photos" }
+                  ],
+                  "gallery": {
+                    "mainImage": "/dogs/dog6.jpg",
+                    "badgeText": "100% Loved",
+                    "badgeSubtext": "Safe at Home",
+                    "sideImages": [
+                      "/dogs/dog5.jpg",
+                      "/dogs/dog4.jpg",
+                      "/dogs/dog2.jpg"
+                    ]
+                  },
+                  "benefitsSection": {
+                    "title": "Benefits of Professional Sitting",
+                    "items": [
+                      {
+                        "id": "1",
+                        "icon": "heart",
+                        "title": "Individualized Attention",
+                        "description": "Your pet receives undivided affection, play, and cuddle sessions."
+                      },
+                      {
+                        "id": "2",
+                        "icon": "shield-cross",
+                        "title": "Medication Accuracy",
+                        "description": "Timely administration of supplements, pills, or insulin doses."
+                      },
+                      {
+                        "id": "3",
+                        "icon": "smile",
+                        "title": "Reduced Stress",
+                        "description": "Avoids exposure to external facility noise and cage anxiety."
+                      },
+                      {
+                        "id": "4",
+                        "icon": "dog",
+                        "title": "Home Care Integration",
+                        "description": "Includes bringing in mail, watering plants, and alternating light settings."
+                      }
+                    ]
+                  },
+                  "whatsIncluded": {
+                    "title": "What Sitting Covers",
+                    "list": [
+                      "Customized meal preparation & fresh water replenishment",
+                      "Sublingual/oral medication administration",
+                      "30–60 minute play & exercise sessions",
+                      "Litter box cleaning or yard waste removal",
+                      "Detailed daily visit report with photos",
+                      "Home safety and security monitoring"
+                    ]
+                  },
+                  "processSection": {
+                    "title": "How In-Home Sitting Works",
+                    "steps": [
+                      {
+                        "step": "01",
+                        "title": "Meet & Greet",
+                        "description": "In-home initial visit to get acquainted with your pet and routine.",
+                        "icon": "sparkles"
+                      },
+                      {
+                        "step": "02",
+                        "title": "Custom Schedule",
+                        "description": "Tailoring sitting intervals to match exact feeding and walking times.",
+                        "icon": "bath"
+                      },
+                      {
+                        "step": "03",
+                        "title": "Attentive Visit",
+                        "description": "Executing feeds, walkies, cuddle sessions, and medication.",
+                        "icon": "dryer"
+                      },
+                      {
+                        "step": "04",
+                        "title": "Photo Update",
+                        "description": "Sending live updates so you know your pet is thriving.",
+                        "icon": "scissors"
+                      }
+                    ]
+                  },
+                  "ctaBanner": {
+                    "title": "Planning Your Next Trip?",
+                    "subtitle": "Reserve a certified pet sitter to watch over your home and fur family.",
+                    "image": "/servicedog.png"
+                  }
+                }
+              },
+              {
+                "id": "pet-walking",
+                "slug": "pet-walking",
+                "iconName": "footprints",
+                "title": "Pet Walking",
+                "description": "Safe and enjoyable walks to keep your pets active and happy.",
+                "image": {
+                  "src": "/dogs/dog5.jpg",
+                  "alt": "Person walking a dog outdoors"
+                },
+                "href": "/services/pet-walking",
+                "linkText": "Learn More",
+                "detailData": {
+                  "badge": "Active Outings",
+                  "title": "Daily Adventures & Healthy Exercise Outings",
+                  "description": [
+                    "A tired dog is a happy dog! Our professional dog walkers offer structured private or small group walks designed to keep your pet physically fit, mentally stimulated, and socially fulfilled throughout the week."
+                  ],
+                  "quickBenefits": [
+                    { "id": "1", "title": "GPS tracked route maps" },
+                    { "id": "2", "title": "Flexible 30/60 min slots" },
+                    { "id": "3", "title": "Reinforced leash manners" },
+                    { "id": "4", "title": "Individual or solo options" }
+                  ],
+                  "gallery": {
+                    "mainImage": "/dogs/dog5.jpg",
+                    "badgeText": "Daily Fitness",
+                    "badgeSubtext": "Happy Paws",
+                    "sideImages": [
+                      "/dogs/dog3.jpg",
+                      "/dogs/dog6.jpg",
+                      "/dogs/dog1.jpg"
+                    ]
+                  },
+                  "benefitsSection": {
+                    "title": "Benefits of Regular Walking",
+                    "items": [
+                      {
+                        "id": "1",
+                        "icon": "dog",
+                        "title": "Weight Management",
+                        "description": "Consistent cardio exercises maintain healthy joint motility and ideal weight."
+                      },
+                      {
+                        "id": "2",
+                        "icon": "smile",
+                        "title": "Prevents Boredom",
+                        "description": "Cuts out destructive chewing, barking, and hyperactive behavior."
+                      },
+                      {
+                        "id": "3",
+                        "icon": "heart",
+                        "title": "Mental Stimulation",
+                        "description": "Exploring outdoors engages olfactory senses and cognitive awareness."
+                      },
+                      {
+                        "id": "4",
+                        "icon": "shield-cross",
+                        "title": "Urinary Health",
+                        "description": "Prevents UTIs and accidents by providing timely relief opportunities."
+                      }
+                    ]
+                  },
+                  "whatsIncluded": {
+                    "title": "Walk Breakdown",
+                    "list": [
+                      "30 or 60 minutes of uninterrupted exercise walk",
+                      "Fresh water refill and bowl rinse",
+                      "Paw wipe-down after dirty weather walks",
+                      "Treat dispensing (owner approved)",
+                      "GPS path track & live check-in report",
+                      "Waste pick-up and proper disposal"
+                    ]
+                  },
+                  "processSection": {
+                    "title": "Our Walking Routine",
+                    "steps": [
+                      {
+                        "step": "01",
+                        "title": "Punctual Arrival",
+                        "description": "Walker arrives safely equipped with extra leashes and waste bags.",
+                        "icon": "bath"
+                      },
+                      {
+                        "step": "02",
+                        "title": "Paws on Turf",
+                        "description": "Engaging in dynamic pace walks tailored to your dog's energy level.",
+                        "icon": "dryer"
+                      },
+                      {
+                        "step": "03",
+                        "title": "Hydrate & Clean",
+                        "description": "Towel drying paws and refreshing water bowl upon returning.",
+                        "icon": "scissors"
+                      },
+                      {
+                        "step": "04",
+                        "title": "Report Card",
+                        "description": "Instant notification sent with potty details and route stats.",
+                        "icon": "sparkles"
+                      }
+                    ]
+                  },
+                  "ctaBanner": {
+                    "title": "Give Your Pet the Exercise They Crave!",
+                    "subtitle": "Schedule recurring weekday walks with our background-checked team.",
+                    "image": "/servicedog.png"
+                  }
+                }
+              },
+              {
+                "id": "veterinary",
+                "slug": "veterinary",
+                "iconName": "stethoscope",
+                "title": "Veterinary Care",
+                "description": "Routine checkups and urgent medical care for your pets.",
+                "image": {
+                  "src": "/dogs/dog4.jpg",
+                  "alt": "Vet examining a cat"
+                },
+                "href": "/services/veterinary",
+                "linkText": "Learn More",
+                "detailData": {
+                  "badge": "Medical Excellence",
+                  "title": "Comprehensive Healthcare & Preventive Clinical Services",
+                  "description": [
+                    "From puppy vaccinations and annual health checkups to emergency diagnostics and surgical procedures, our fully equipped veterinary care team delivers compassionate and skilled medical treatment for every stage of your pet's life."
+                  ],
+                  "quickBenefits": [
+                    { "id": "1", "title": "Licensed vet specialists" },
+                    { "id": "2", "title": "State-of-the-art diagnostic lab" },
+                    { "id": "3", "title": "Preventive health plans" },
+                    { "id": "4", "title": "Emergency triage ready" }
+                  ],
+                  "gallery": {
+                    "mainImage": "/dogs/dog4.jpg",
+                    "badgeText": "Trusted Vets",
+                    "badgeSubtext": "Top Health",
+                    "sideImages": [
+                      "/dogs/dog1.jpg",
+                      "/dogs/dog3.jpg",
+                      "/dogs/dog8.jpg"
+                    ]
+                  },
+                  "benefitsSection": {
+                    "title": "Complete Clinical Coverage",
+                    "items": [
+                      {
+                        "id": "1",
+                        "icon": "shield-cross",
+                        "title": "Early Disease Screen",
+                        "description": "Identify internal imbalances early through advanced bloodwork analysis."
+                      },
+                      {
+                        "id": "2",
+                        "icon": "heart",
+                        "title": "Vaccination Protection",
+                        "description": "Shield your pets against rabies, parvo, distemper, and feline leukemia."
+                      },
+                      {
+                        "id": "3",
+                        "icon": "dog",
+                        "title": "Dental Wellness",
+                        "description": "Ultrasound scaling and extractions to stop oral bacteria propagation."
+                      },
+                      {
+                        "id": "4",
+                        "icon": "smile",
+                        "title": "Senior Pet Care",
+                        "description": "Specialized arthritis and dietary plans for aging companion animals."
+                      }
+                    ]
+                  },
+                  "whatsIncluded": {
+                    "title": "Services Offered",
+                    "list": [
+                      "Nose-to-tail physical examinations",
+                      "Core and non-core booster vaccinations",
+                      "Digital X-Ray and diagnostic ultrasounds",
+                      "In-house blood chemistry and urinalysis lab",
+                      "Spay, neuter, and soft tissue surgery",
+                      "Microchipping & registration"
+                    ]
+                  },
+                  "processSection": {
+                    "title": "Your Veterinary Visit",
+                    "steps": [
+                      {
+                        "step": "01",
+                        "title": "Triage & Vitals",
+                        "description": "Recording weight, body temperature, heart rate, and history.",
+                        "icon": "bath"
+                      },
+                      {
+                        "step": "02",
+                        "title": "Doctor Exam",
+                        "description": "Comprehensive check of eyes, ears, teeth, joints, and internal organs.",
+                        "icon": "dryer"
+                      },
+                      {
+                        "step": "03",
+                        "title": "Diagnostics",
+                        "description": "Performing necessary blood tests, X-Rays, or vaccinations.",
+                        "icon": "scissors"
+                      },
+                      {
+                        "step": "04",
+                        "title": "Care Plan",
+                        "description": "Clear prescriptions and wellness guidance for home care.",
+                        "icon": "sparkles"
+                      }
+                    ]
+                  },
+                  "ctaBanner": {
+                    "title": "Prioritize Your Pet's Longevity Today!",
+                    "subtitle": "Book a comprehensive wellness checkup with our experienced veterinary team.",
+                    "image": "/servicedog.png"
+                  }
+                }
+              },
+              {
+                "id": "training",
+                "slug": "training",
+                "iconName": "medal",
+                "title": "Behavior Training",
+                "description": "Positive reinforcement classes for obedience and socialization.",
+                "image": {
+                  "src": "/dogs/dog3.jpg",
+                  "alt": "Trainer working with a puppy"
+                },
+                "href": "/services/training",
+                "linkText": "Learn More",
+                "detailData": {
+                  "badge": "Positive Reinforcement",
+                  "title": "Transform Behavior & Build Unbreakable Bonds",
+                  "description": [
+                    "Unlock your dog's true potential through science-based positive reinforcement training. Whether resolving leash reactivity or establishing puppy obedience foundations, our certified trainers empower clear communication between you and your pet."
+                  ],
+                  "quickBenefits": [
+                    { "id": "1", "title": "Certified behavior consultants" },
+                    { "id": "2", "title": "Fear-free method guaranteed" },
+                    { "id": "3", "title": "Private & group settings" },
+                    { "id": "4", "title": "Customized correction plans" }
+                  ],
+                  "gallery": {
+                    "mainImage": "/dogs/dog3.jpg",
+                    "badgeText": "Smart Pets",
+                    "badgeSubtext": "Pro Trainers",
+                    "sideImages": [
+                      "/dogs/dog5.jpg",
+                      "/dogs/dog2.jpg",
+                      "/dogs/dog1.jpg"
+                    ]
+                  },
+                  "benefitsSection": {
+                    "title": "Why Training Works",
+                    "items": [
+                      {
+                        "id": "1",
+                        "icon": "smile",
+                        "title": "Improved Safety",
+                        "description": "Mastering impulse control and rapid recall command saves lives."
+                      },
+                      {
+                        "id": "2",
+                        "icon": "heart",
+                        "title": "Stronger Bonding",
+                        "description": "Mutual trust and reward-based training deepen your emotional connection."
+                      },
+                      {
+                        "id": "3",
+                        "icon": "dog",
+                        "title": "Socialization",
+                        "description": "Teaches proper manners when encountering strange people and dogs."
+                      },
+                      {
+                        "id": "4",
+                        "icon": "shield-cross",
+                        "title": "Anxiety Reduction",
+                        "description": "Overcomes separation anxiety and fear through gentle desensitization."
+                      }
+                    ]
+                  },
+                  "whatsIncluded": {
+                    "title": "Training Curriculums",
+                    "list": [
+                      "Puppy foundation skills (sit, stay, recall, potty manners)",
+                      "Loose leash walking & heel mechanics",
+                      "Reactivity management & distraction training",
+                      "Barking and boundary jumping resolution",
+                      "AKC Canine Good Citizen preparation",
+                      "Lifetime support access via trainer portal"
+                    ]
+                  },
+                  "processSection": {
+                    "title": "Our Training Roadmap",
+                    "steps": [
+                      {
+                        "step": "01",
+                        "title": "Evaluation",
+                        "description": "Assessing trigger points, temperament, and learning goals.",
+                        "icon": "bath"
+                      },
+                      {
+                        "step": "02",
+                        "title": "Marker Mechanics",
+                        "description": "Establishing clicker / verbal markers and high-value reward systems.",
+                        "icon": "dryer"
+                      },
+                      {
+                        "step": "03",
+                        "title": "Skill Building",
+                        "description": "Practicing core behaviors in controlled low-distraction spaces.",
+                        "icon": "scissors"
+                      },
+                      {
+                        "step": "04",
+                        "title": "Real-World Proof",
+                        "description": "Testing commands in outdoor environments for reliable obedience.",
+                        "icon": "sparkles"
+                      }
+                    ]
+                  },
+                  "ctaBanner": {
+                    "title": "Ready to Experience a Well-Behaved Pet?",
+                    "subtitle": "Enroll in our top-rated obedience or behavioral transformation program.",
+                    "image": "/servicedog.png"
+                  }
+                }
+              },
+              {
+                "id": "daycare",
+                "slug": "daycare",
+                "iconName": "sun",
+                "title": "Pet Daycare",
+                "description": "A fun and supervised environment for your pet during the day.",
+                "image": {
+                  "src": "/dogs/dog2.jpg",
+                  "alt": "Dogs playing together in a daycare facility"
+                },
+                "href": "/services/daycare",
+                "linkText": "Learn More",
+                "detailData": {
+                  "badge": "Daily Play & Fun",
+                  "title": "Active Socialization & All-Day Supervised Play",
+                  "description": [
+                    "Give your pet the ultimate day out! Our climate-controlled indoor parks and rubberized outdoor yards provide supervised social play, agility obstacles, rest intervals, and webcams for complete peace of mind while you work."
+                  ],
+                  "quickBenefits": [
+                    { "id": "1", "title": "Tempered playgroup matching" },
+                    { "id": "2", "title": "Live webcam streaming" },
+                    { "id": "3", "title": "Antimicrobial turf zones" },
+                    { "id": "4", "title": "Constant attendant supervision" }
+                  ],
+                  "gallery": {
+                    "mainImage": "/dogs/dog2.jpg",
+                    "badgeText": "Play All Day",
+                    "badgeSubtext": "Safe Environment",
+                    "sideImages": [
+                      "/dogs/dog3.jpg",
+                      "/dogs/dog5.jpg",
+                      "/dogs/dog8.jpg"
+                    ]
+                  },
+                  "benefitsSection": {
+                    "title": "Daycare Advantages",
+                    "items": [
+                      {
+                        "id": "1",
+                        "icon": "dog",
+                        "title": "Social Development",
+                        "description": "Builds healthy play style habits under professional supervision."
+                      },
+                      {
+                        "id": "2",
+                        "icon": "smile",
+                        "title": "Energy Burn",
+                        "description": "Prevents home destruction caused by high energy and loneliness."
+                      },
+                      {
+                        "id": "3",
+                        "icon": "shield-cross",
+                        "title": "Safe Play Yards",
+                        "description": "Sanitized daily with veterinary-grade double filtration systems."
+                      },
+                      {
+                        "id": "4",
+                        "icon": "heart",
+                        "title": "Structured Rest",
+                        "description": "Includes mandatory nap sessions with soothing classical music."
+                      }
+                    ]
+                  },
+                  "whatsIncluded": {
+                    "title": "Daycare Perks",
+                    "list": [
+                      "Full-day or half-day flexible play passes",
+                      "Temperament testing & group placement by size/energy",
+                      "Agility tunnels, ramps, and water splash zones",
+                      "Dedicated rest suites during nap time",
+                      "HD Live streaming webcam login",
+                      "Complementary end-of-day coat brush"
+                    ]
+                  },
+                  "processSection": {
+                    "title": "Daycare Daily Schedule",
+                    "steps": [
+                      {
+                        "step": "01",
+                        "title": "Check-In",
+                        "description": "Morning arrival, quick health check, and entry into play yard.",
+                        "icon": "bath"
+                      },
+                      {
+                        "step": "02",
+                        "title": "Morning Play",
+                        "description": "Agility games, group games, and active play with best buddies.",
+                        "icon": "dryer"
+                      },
+                      {
+                        "step": "03",
+                        "title": "Nap & Lunch",
+                        "description": "Dimmed lights, mid-day nap, individual feeding in private suites.",
+                        "icon": "scissors"
+                      },
+                      {
+                        "step": "04",
+                        "title": "Happy Pickup",
+                        "description": "Cleaned, tired, and ready to go home happy with you.",
+                        "icon": "sparkles"
+                      }
+                    ]
+                  },
+                  "ctaBanner": {
+                    "title": "Treat Your Dog to a Fun Day Out!",
+                    "subtitle": "Book a free first-time temperament evaluation today.",
+                    "image": "/servicedog.png"
+                  }
+                }
+              },
+              {
+                "id": "boarding",
+                "slug": "boarding",
+                "iconName": "building-heart",
+                "title": "Pet Boarding",
+                "description": "Safe, comfortable overnight stays while you are out of town.",
+                "image": {
+                  "src": "/dogs/dog1.jpg",
+                  "alt": "Cat lounging comfortably in a boarding suite"
+                },
+                "href": "/services/boarding",
+                "linkText": "Learn More",
+                "detailData": {
+                  "badge": "Luxury Overnight Stays",
+                  "title": "5-Star Suites & Loving Overnight Hospitality",
+                  "description": [
+                    "Enjoy your vacation knowing your pet is having one too! Our luxury boarding resort features climate-controlled private suites, orthopedic bedding, customized feeding routines, and 24/7 staff monitoring."
+                  ],
+                  "quickBenefits": [
+                    { "id": "1", "title": "24/7 On-site care staff" },
+                    { "id": "2", "title": "Private climate suites" },
+                    { "id": "3", "title": "Orthopedic bedding included" },
+                    { "id": "4", "title": "Included daily play sessions" }
+                  ],
+                  "gallery": {
+                    "mainImage": "/dogs/dog1.jpg",
+                    "badgeText": "5-Star Resort",
+                    "badgeSubtext": "Sweet Dreams",
+                    "sideImages": [
+                      "/dogs/dog6.jpg",
+                      "/dogs/dog4.jpg",
+                      "/dogs/dog8.jpg"
+                    ]
+                  },
+                  "benefitsSection": {
+                    "title": "Why Choose Our Boarding",
+                    "items": [
+                      {
+                        "id": "1",
+                        "icon": "heart",
+                        "title": "Comfort of Home",
+                        "description": "Individual luxury suites equipped with plush bedding and ambient sound."
+                      },
+                      {
+                        "id": "2",
+                        "icon": "shield-cross",
+                        "title": "Continuous Medical Care",
+                        "description": "Staff trained to give complex medications and monitor vitals round-the-clock."
+                      },
+                      {
+                        "id": "3",
+                        "icon": "smile",
+                        "title": "Customized Fun",
+                        "description": "Choose between group daycare play or private human cuddle time."
+                      },
+                      {
+                        "id": "4",
+                        "icon": "dog",
+                        "title": "Nightly Updates",
+                        "description": "Receive daily picture journals and status reports straight to your phone."
+                      }
+                    ]
+                  },
+                  "whatsIncluded": {
+                    "title": "Boarding Amenities",
+                    "list": [
+                      "Spacious private room with glass suite doors",
+                      "Kuranda elevated orthopedic beds & fresh linens",
+                      "3 Turn-out play and potty breaks per day",
+                      "Customized meal preparation following home schedule",
+                      "Daily room sanitization & fresh water changes",
+                      "Bedtime turn-down treats and night tuck-in"
+                    ]
+                  },
+                  "processSection": {
+                    "title": "The Boarding Journey",
+                    "steps": [
+                      {
+                        "step": "01",
+                        "title": "Suite Setup",
+                        "description": "Personalizing your pet's suite with toys, bedding, and food schedule.",
+                        "icon": "bath"
+                      },
+                      {
+                        "step": "02",
+                        "title": "Play & Exercise",
+                        "description": "Engaging in daytime play yard sessions with new friends.",
+                        "icon": "dryer"
+                      },
+                      {
+                        "step": "03",
+                        "title": "Gourmet Dining",
+                        "description": "Serving meals exactly as instructed with medication if needed.",
+                        "icon": "scissors"
+                      },
+                      {
+                        "step": "04",
+                        "title": "Nightly Tuck-In",
+                        "description": "Evening potty break, soothing tunes, night-time treat, and bedtime.",
+                        "icon": "sparkles"
+                      }
+                    ]
+                  },
+                  "ctaBanner": {
+                    "title": "Heading Out of Town?",
+                    "subtitle": "Book a luxury suite for your pet and travel with complete peace of mind.",
+                    "image": "/servicedog.png"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
       "Team": {
         "variants": {
           "PetTeam1": {
             "badge": "OUR TEAM",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Our Team",
+              "title": "Our Team",
+              "backgroundImage": "/dogs/dog4.jpg",
+              "homeHref": "/"
+            },
             "title": {
               "normal": "Meet Our",
               "highlighted": "Expert Team"
@@ -685,10 +1612,15 @@
               "normal": "Trusted care,",
               "highlighted": "tailored for every pet"
             },
+            "banner": {
+              "breadcrumbCurrent": "Why Choose Us",
+              "breadcrumbHome": "Home",
+              "bgImageUrl": "/dogs/dog2.jpg"
+            },
             "description": "We're committed to delivering reliable care, expert guidance, and high-quality services that support your pet's health, comfort, and happiness at every stage of their life.",
             "images": {
-              "main": "/petImage/vet-holding-dog.jpg",
-              "secondary": "/petImage/vet-team-cat.jpg"
+              "main": "/dogs/dog2.jpg",
+              "secondary": "/dogs/dog3.jpg"
             },
             "statBadge": {
               "number": "98%",
@@ -710,6 +1642,7 @@
             ],
             "bulletPoints": [
               "Preventive care through early detection, timely vaccinations, and wellness checks.",
+              "Customized care plans tailored to your pet's unique lifestyle and needs.",
               "Customized care plans tailored to your pet's unique lifestyle and needs."
             ],
             "button": {
@@ -746,8 +1679,40 @@
                 "id": 2,
                 "name": "Michael Brown",
                 "role": "Pet Owner, California",
-                "image": "/personImage/men1.png",
+                "image": "/personImage/man1.png",
                 "quote": "Professional, caring, and always available when we need them. Our dog feels so comfortable here. We're so happy we found such a wonderful clinic!",
+                "rating": 5
+              },
+              {
+                "id": 3,
+                "name": "Emily Carter",
+                "role": "Pet Owner, Chicago",
+                "image": "/personImage/women2.png",
+                "quote": "I couldn't be happier with the care my cat received. Everyone was kind, patient, and genuinely concerned about her wellbeing. The entire experience was wonderful.",
+                "rating": 5
+              },
+              {
+                "id": 4,
+                "name": "David Wilson",
+                "role": "Pet Owner, Texas",
+                "image": "/personImage/men2.png",
+                "quote": "From the moment we walked in, we felt welcomed and cared for. The staff explained everything clearly and treated our puppy like family. Excellent service!",
+                "rating": 5
+              },
+              {
+                "id": 5,
+                "name": "Olivia Martinez",
+                "role": "Pet Owner, Florida",
+                "image": "/personImage/women3.png",
+                "quote": "The level of care and attention is outstanding. My dog is usually nervous around new people, but the team made him feel completely comfortable. Truly a fantastic place.",
+                "rating": 5
+              },
+              {
+                "id": 6,
+                "name": "James Anderson",
+                "role": "Pet Owner, Seattle",
+                "image": "/personImage/men3.png",
+                "quote": "Reliable, friendly, and incredibly caring. They always take the time to answer our questions and make sure our pet gets the best possible care. Highly recommended!",
                 "rating": 5
               }
             ]
@@ -758,6 +1723,13 @@
         "variants": {
           "PetBlog1": {
             "badge": "OUR BLOGS",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Our Blogs",
+              "title": "Our Blogs",
+              "backgroundImage": "/dogs/dog1.jpg",
+              "homeHref": "/"
+            },
             "title": {
               "normal": "Pet Care Tips",
               "highlighted": "& Insights"
@@ -767,7 +1739,7 @@
               {
                 "id": 1,
                 "slug": "blogs/10-essential-grooming-tips-for-a-happy-healthy-pet",
-                "image": "/petImage/blog-grooming.jpg",
+                "image": "/dogs/dog6.jpg",
                 "date": "May 20, 2025",
                 "author": "Admin",
                 "title": "10 Essential Grooming Tips for a Happy, Healthy Pet",
@@ -777,7 +1749,7 @@
               {
                 "id": 2,
                 "slug": "blogs/how-to-introduce-a-new-pet-to-your-home-safely",
-                "image": "/petImage/blog-new-pet.jpg",
+                "image": "/dogs/dog5.jpg",
                 "date": "May 18, 2025",
                 "author": "Admin",
                 "title": "How to Introduce a New Pet to Your Home Safely",
@@ -787,14 +1759,293 @@
               {
                 "id": 3,
                 "slug": "blogs/signs-your-pet-needs-a-veterinary-check-up",
-                "image": "/petImage/blog-vet-checkup.jpg",
+                "image": "/dogs/dog4.jpg",
                 "date": "May 15, 2025",
                 "author": "Admin",
                 "title": "Signs Your Pet Needs a Veterinary Check-Up",
                 "description": "Pets can't tell us when something's wrong, but here are key signs that indicate it's time for a vet visit.",
                 "readMoreText": "Read More"
+              },
+              {
+                "id": 4,
+                "slug": "blogs/best-foods-to-keep-your-pet-healthy-and-active",
+                "image": "/dogs/dog3.jpg",
+                "date": "May 12, 2025",
+                "author": "Admin",
+                "title": "Best Foods to Keep Your Pet Healthy and Active",
+                "description": "Learn about healthy food choices and essential nutrients that can help your pet stay energetic and maintain a strong, healthy lifestyle.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 5,
+                "slug": "blogs/how-to-keep-your-pet-active-and-entertained",
+                "image": "/dogs/dog2.jpg",
+                "date": "May 10, 2025",
+                "author": "Admin",
+                "title": "How to Keep Your Pet Active and Entertained",
+                "description": "Discover simple games, activities, and exercise ideas that can keep your pet physically active, mentally stimulated, and happy.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 6,
+                "slug": "blogs/understanding-your-pets-behavior-and-body-language",
+                "image": "/dogs/dog1.jpg",
+                "date": "May 8, 2025",
+                "author": "Admin",
+                "title": "Understanding Your Pet's Behavior and Body Language",
+                "description": "Learn how to understand common pet behaviors and body language so you can better recognize their needs, emotions, and comfort levels.",
+                "readMoreText": "Read More"
               }
             ]
+          }
+        }
+      },
+      "AboutUs": {
+        "variants": {
+          "PetAboutUs1": {
+            "badge": "ABOUT US",
+            "title": {
+              "normal": "Compassionate Care,",
+              "highlighted": "Happy Pets, Every Day."
+            },
+            "banner": {
+              "breadcrumbCurrent": "About Us",
+              "breadcrumbHome": "Home",
+              "bgImageUrl": "/dogs/dog12.jpg"
+            },
+            "paragraphs": [
+              "At PawFect, we believe pets are family. That's why we are committed to providing loving care, expert guidance, and trusted services that support their health, happiness, and well-being at every stage of life.",
+              "With a team of experienced professionals and a pet-first approach, we create a safe, comfortable, and joyful environment where pets can thrive and owners can have complete peace of mind."
+            ],
+            "images": {
+              "main": "/dogs/dog1.jpg",
+              "secondary": "/dogs/dog2.jpg"
+            },
+            "features": [
+              {
+                "id": "1",
+                "iconName": "shield",
+                "title": "Expert & Trusted Care",
+                "description": "Experienced professionals dedicated to your pet's health and happiness."
+              },
+              {
+                "id": "2",
+                "iconName": "heart",
+                "title": "Safe & Loving Environment",
+                "description": "A clean, secure, and comfortable space where pets feel at home."
+              },
+              {
+                "id": "3",
+                "iconName": "paw",
+                "title": "Complete Pet Well-being",
+                "description": "From prevention to care, we're with you in every step of your pet's journey."
+              }
+            ]
+          }
+        }
+      },
+      "Mission": {
+        "variants": {
+          "PetMission1": {
+            "badge": "OUR PURPOSE",
+            "title": {
+              "normal": "Our",
+              "highlighted": "Vision & Mission"
+            },
+            "banner": {
+              "breadcrumbCurrent": "Mission Vision",
+              "breadcrumbHome": "Home",
+              "bgImageUrl": "/dogs/dog12.jpg"
+            },
+            "subtitle": "Guided by love and driven by purpose, we are committed to making every pet's life healthier, happier and more fulfilling.",
+            "cards": [
+              {
+                "id": "vision",
+                "title": "Our Vision",
+                "description": "To be the most trusted and compassionate pet care service, creating a world where every pet lives a healthy, happy, and fulfilling life.",
+                "image": "/dogs/dog1.jpg",
+                "badgeIcon": "eye"
+              },
+              {
+                "id": "mission",
+                "title": "Our Mission",
+                "description": "To provide exceptional pet care services with love, integrity, and expertise while building lasting relationships with pets and their families.",
+                "image": "/dogs/dog4.jpg",
+                "badgeIcon": "target"
+              }
+            ],
+            "values": [
+              {
+                "id": "love",
+                "title": "Love",
+                "description": "We treat every pet like family.",
+                "icon": "heart"
+              },
+              {
+                "id": "integrity",
+                "title": "Integrity",
+                "description": "Honest, transparent and reliable care.",
+                "icon": "shield"
+              },
+              {
+                "id": "excellence",
+                "title": "Excellence",
+                "description": "Committed to the highest standards in pet care.",
+                "icon": "award"
+              },
+              {
+                "id": "compassion",
+                "title": "Compassion",
+                "description": "We care deeply about pets and their well-being.",
+                "icon": "users"
+              }
+            ]
+          }
+        }
+      },
+      "Gallery": {
+        "variants": {
+          "PetGallery1": {
+            "badge": "IMAGE GALLERY",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Gallery",
+              "title": "Gallery",
+              "backgroundImage": "/dogs/dog8.jpg",
+              "homeHref": "/"
+            },
+            "imageGallery": {
+              "badge": "IMAGE GALLERY",
+              "title": {
+                "normal": "Happy Moments",
+                "highlighted": "Captured"
+              },
+              "desc": "Glimpses of the love, care and joy we bring to every pet.",
+              "categories": [
+                "All",
+                "Grooming",
+                "Veterinary Care",
+                "Boarding",
+                "Play Time",
+                "Events"
+              ],
+              "items": [
+                {
+                  "id": 1,
+                  "src": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80",
+                  "alt": "Golden Retriever drying after bath with blue towel",
+                  "category": "Grooming"
+                },
+                {
+                  "id": 2,
+                  "src": "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=800&q=80",
+                  "alt": "Female vet examining a small beige dog with stethoscope",
+                  "category": "Veterinary Care"
+                },
+                {
+                  "id": 3,
+                  "src": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80",
+                  "alt": "Playful dog running with a tennis ball in grass",
+                  "category": "Play Time"
+                },
+                {
+                  "id": 4,
+                  "src": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80",
+                  "alt": "Professional groomer styling a fluffy dog",
+                  "category": "Grooming"
+                },
+                {
+                  "id": 5,
+                  "src": "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=800&q=80",
+                  "alt": "Happy golden retriever resting indoors comfortably",
+                  "category": "Boarding"
+                },
+                {
+                  "id": 6,
+                  "src": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&q=80",
+                  "alt": "Curious tabby cat looking out from a cozy carpet tunnel",
+                  "category": "Boarding"
+                },
+                {
+                  "id": 7,
+                  "src": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=80",
+                  "alt": "Owner hugging a fluffy white cat closely",
+                  "category": "Events"
+                },
+                {
+                  "id": 8,
+                  "src": "https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?auto=format&fit=crop&w=800&q=80",
+                  "alt": "Beagle jumping happily through an agility hoop ring",
+                  "category": "Play Time"
+                }
+              ]
+            },
+            "videoGallery": {
+              "badge": "VIDEO GALLERY",
+              "title": {
+                "normal": "Watch Our",
+                "highlighted": "Care in Action"
+              },
+              "desc": "Short videos that show how we care, train and pamper your pets.",
+              "items": [
+                {
+                  "id": 1,
+                  "thumbnail": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "title": "Relaxing Bath Time",
+                  "duration": "01:24"
+                },
+                {
+                  "id": 2,
+                  "thumbnail": "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=800&q=80",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "title": "Health Checkup Process",
+                  "duration": "01:58"
+                },
+                {
+                  "id": 3,
+                  "thumbnail": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "title": "Grooming & Styling Session",
+                  "duration": "01:35"
+                },
+                {
+                  "id": 4,
+                  "thumbnail": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "title": "Fun Playtime Activities",
+                  "duration": "01:12"
+                },
+                {
+                  "id": 5,
+                  "thumbnail": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=80",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "title": "Basic Obedience Training",
+                  "duration": "02:05"
+                },
+                {
+                  "id": 6,
+                  "thumbnail": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&q=80",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "title": "Cat Care & Handling",
+                  "duration": "01:30"
+                },
+                {
+                  "id": 7,
+                  "thumbnail": "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=800&q=80",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "title": "Happy Pets, Happy Families",
+                  "duration": "01:45"
+                },
+                {
+                  "id": 8,
+                  "thumbnail": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=800&q=80",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "title": "Vet Tips for Pet Parents",
+                  "duration": "02:10"
+                }
+              ]
+            }
           }
         }
       }
