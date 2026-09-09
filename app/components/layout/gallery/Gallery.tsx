@@ -113,9 +113,8 @@ export default function Gallery({ data }: GalleryProps) {
         current={banner.breadcrumbCurrent}
       />
 
-      <div className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-[1240px] px-4 py-8 md:py-12 sm:px-6 lg:px-8">
         
-        {/* ================= SECTION 1: IMAGE GALLERY ================= */}
         <div className="text-center">
           {/* Section Sub-heading Badge */}
           <div className="inline-flex items-center justify-center gap-2 mb-2">
@@ -185,7 +184,6 @@ export default function Gallery({ data }: GalleryProps) {
           </div>
         </div>
 
-        {/* ================= SECTION 2: VIDEO GALLERY ================= */}
         <div className="mt-20 sm:mt-24 text-center">
           {/* Section Sub-heading Badge */}
           <div className="inline-flex items-center justify-center gap-2 mb-2">
@@ -251,7 +249,6 @@ export default function Gallery({ data }: GalleryProps) {
 
       </div>
 
-      {/* ================= MODAL 1: IMAGE SLIDER LIGHTBOX ================= */}
       {isImageModalOpen && filteredImages.length > 0 && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4">
           {/* Close Button */}
@@ -299,7 +296,6 @@ export default function Gallery({ data }: GalleryProps) {
         </div>
       )}
 
-      {/* ================= MODAL 2: VIDEO PLAYER ================= */}
       {selectedVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4">
           <div className="relative w-full max-w-4xl rounded-2xl bg-black overflow-hidden shadow-2xl">

@@ -225,8 +225,6 @@ export default function AboutSection({ data }: AboutSectionProps) {
               {/* Outer dashed circle (top-left accent like reference) */}
               <div className="absolute -left-3 -top-3 h-[70%] w-[70%] rounded-full border-[2.5px] border-dashed border-[#A946D3]/70 sm:left-5 sm:top-4" />
 
-              {/* Main outer solid purple ring */}
-
               {/* Middle/inner solid purple ring */}
               <div className="absolute inset-[12px] rounded-full border-[4px] border-[#8128C1]/90 sm:inset-[14px]" />
 

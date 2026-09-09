@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, TouchEvent } from "react";
+import React, { useState, useRef, useEffect, TouchEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -17,11 +17,10 @@ function useSwipe(onSwipeLeft: () => void, onSwipeRight: () => void) {
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
 
-  // Minimum distance required for a swipe to register
   const minSwipeDistance = 50;
 
   const onTouchStart = (e: TouchEvent<HTMLDivElement>) => {
-    touchEndX.current = null; // Reset end position
+    touchEndX.current = null;
     touchStartX.current = e.targetTouches[0].clientX;
   };
 
@@ -52,6 +51,7 @@ function useSwipe(onSwipeLeft: () => void, onSwipeRight: () => void) {
 
 export default function Location({ data, layout = "home" }: LocationProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(6); // Default for SSR / desktop
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { badge, title, desc, cities = [] } = data || {};
@@ -60,23 +60,37 @@ export default function Location({ data, layout = "home" }: LocationProps) {
   // Total number of cities/cards
   const totalCities = cities.length;
 
-  // Items per view based on breakpoints (tailwind conventions)
-  // Default (Phone): 2
-  // SM (Tablet): 4
-  // LG (Desktop): 6
-  // These are handled by the aspect-ratio and width classes below.
+  // Handle responsiveness to adjust visible items & max index
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCards(2); // Mobile
+      } else if (window.innerWidth < 1024) {
+        setVisibleCards(4); // Tablet
+      } else {
+        setVisibleCards(6); // Desktop
+      }
+    };
+
+    updateVisibleCards();
+    window.addEventListener("resize", updateVisibleCards);
+    return () => window.removeEventListener("resize", updateVisibleCards);
+  }, []);
+
+  // Calculate maximum index so slider doesn't overshoot white-space
+  const maxIndex = Math.max(0, totalCities - visibleCards);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? totalCities - 1 : prev - 1));
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === totalCities - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
   };
 
-  // Dot navigation
+  // Dot navigation (Clamped to prevent scrolling past valid maxIndex)
   const handleDotClick = (index: number) => {
-    setCurrentIndex(index);
+    setCurrentIndex(Math.min(index, maxIndex));
   };
 
   // Integration swipe hook
@@ -84,7 +98,7 @@ export default function Location({ data, layout = "home" }: LocationProps) {
 
   const renderCityCard = (city: PetServiceAreaCity) => (
     <Link
-      href={`/service-areas/${city.slug}`}
+      href={`${city.slug}`}
       className="group flex flex-col items-center text-center w-full"
     >
       {/* CIRCULAR IMAGE CONTAINER */}
@@ -159,62 +173,63 @@ export default function Location({ data, layout = "home" }: LocationProps) {
             ))}
           </div>
         ) : (
-        /* SLIDER & CITIES CONTAINER */
-        <div className="relative mt-8" ref={containerRef}>
-          {/* LEFT CHEVRON BUTTON */}
-          <button
-            onClick={handlePrev}
-            aria-label="Previous Slide"
-            className="absolute -left-2 cursor-pointer hidden top-[35%] z-20 sm:flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#3B1264]/20 bg-white text-[#3B1264] shadow-md transition-all hover:bg-[#3B1264] hover:text-white sm:-left-5 sm:h-12 sm:w-12"
-          >
-            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
-          </button>
-
-          {/* RIGHT CHEVRON BUTTON */}
-          <button
-            onClick={handleNext}
-            aria-label="Next Slide"
-            className="absolute cursor-pointer -right-2 hidden top-[35%] z-20 sm:flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#3B1264]/20 bg-white text-[#3B1264] shadow-md transition-all hover:bg-[#3B1264] hover:text-white sm:-right-5 sm:h-12 sm:w-12"
-          >
-            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
-          </button>
-          <div className="overflow-hidden py-6">
-            <div
-              className="flex transition-transform duration-500 ease-out"
-              style={{
-                transform: `translateX(-${
-                  currentIndex * (100 / (totalCities || 1))
-                }%)`,
-              }}
-              {...swipeHandlers}
+          /* SLIDER & CITIES CONTAINER */
+          <div className="relative mt-8" ref={containerRef}>
+            {/* LEFT CHEVRON BUTTON */}
+            <button
+              onClick={handlePrev}
+              disabled={currentIndex === 0}
+              aria-label="Previous Slide"
+              className="absolute -left-2 top-[35%] z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border opacity-30 hover:opacity-100 cursor-pointer border-[#3B1264]/20 bg-white text-[#3B1264] shadow-md transition-all hover:bg-[#3B1264] hover:text-white sm:-left-5 sm:h-12 sm:w-12 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#3B1264]"
             >
-              {cities.map((city) => (
-                <div
-                  key={city.id}
-                  className="w-1/2 shrink-0 aspect-[4/5] sm:aspect-auto px-2 sm:w-1/4 lg:w-1/6 sm:px-3 flex justify-center items-center"
-                >
-                  {renderCityCard(city)}
-                </div>
+              <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+            </button>
+
+            {/* RIGHT CHEVRON BUTTON */}
+            <button
+              onClick={handleNext}
+              disabled={currentIndex >= maxIndex}
+              aria-label="Next Slide"
+              className="absolute -right-2 top-[35%] z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border opacity-30 hover:opacity-100 cursor-pointer border-[#3B1264]/20 bg-white text-[#3B1264] shadow-md transition-all hover:bg-[#3B1264] hover:text-white sm:-right-5 sm:h-12 sm:w-12 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#3B1264]"
+            >
+              <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+            </button>
+
+            <div className="overflow-hidden py-6">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{
+                  transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
+                }}
+                {...swipeHandlers}
+              >
+                {cities.map((city) => (
+                  <div
+                    key={city.id}
+                    className="w-1/2 sm:w-1/4 lg:w-1/6 shrink-0 aspect-[4/5] sm:aspect-auto px-2 sm:px-3 flex justify-center items-center"
+                  >
+                    {renderCityCard(city)}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* BOTTOM PAGINATION DOTS (HIDDEN ON DESKTOP `lg:hidden`) */}
+            <div className="mt-3 flex items-center justify-center gap-2 lg:hidden">
+              {cities.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleDotClick(idx)}
+                  aria-label={`Go to slide ${idx + 1}`}
+                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    currentIndex === idx
+                      ? "w-2.5 bg-[#3B1264]"
+                      : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                  }`}
+                />
               ))}
             </div>
           </div>
-
-          {/* BOTTOM PAGINATION DOTS */}
-          <div className="mt-3 flex items-center justify-center gap-2">
-            {cities.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleDotClick(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-                className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  currentIndex === idx
-                    ? "w-2.5 bg-[#3B1264]"
-                    : "w-2.5 bg-gray-300 hover:bg-gray-400"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
         )}
       </div>
     </section>

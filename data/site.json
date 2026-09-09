@@ -144,7 +144,7 @@
                 ],
                 "ctaButton": {
                   "label": "Get A Quote",
-                  "href": "/quote"
+                  "href": "/contact-us"
                 }
               },
               "copyright": "© 2025 PawFect. All rights reserved."
@@ -179,7 +179,7 @@
               { "label": "Gallery", "href": "/gallery" },
               { "label": "Team", "href": "/team" },
               { "label": "Blogs", "href": "/blogs" },
-              { "label": "Contacts", "href": "/contacts" }
+              { "label": "Contacts", "href": "/contact-us" }
             ]
           }
         }
@@ -203,9 +203,9 @@
                   { "label": "Our Services", "href": "/service" },
                   { "label": "Service Areas", "href": "/service-areas" },
                   { "label": "Our Team", "href": "/team" },
-                  { "label": "Testimonials", "href": "/testimonials" },
+                  { "label": "Testimonials", "href": "/testimonial" },
                   { "label": "Blogs", "href": "/blogs" },
-                  { "label": "Contact Us", "href": "/contact" }
+                  { "label": "Contact Us", "href": "/contact-us" }
                 ]
               },
               {
@@ -218,7 +218,10 @@
                   { "label": "Bath & Deshed", "href": "/services/bath-deshed" },
                   { "label": "Pet Sitting", "href": "/services/pet-sitting" },
                   { "label": "Pet Walking", "href": "/services/pet-walking" },
-                  { "label": "Veterinary Care", "href": "/services/veterinary" },
+                  {
+                    "label": "Veterinary Care",
+                    "href": "/services/veterinary"
+                  },
                   { "label": "Training", "href": "/services/training" },
                   { "label": "Pet Daycare", "href": "/services/daycare" },
                   {
@@ -230,14 +233,14 @@
               {
                 "title": "INFORMATION",
                 "links": [
-                  { "label": "FAQs", "href": "/faqs" },
-                  { "label": "How It Works", "href": "/how-it-works" },
+                  { "label": "FAQs", "href": "/faq" },
+                  { "label": "Partners", "href": "/partners" },
                   { "label": "Pricing / Packages", "href": "/pricing" },
                   { "label": "Appointment", "href": "/appointment" },
-                  { "label": "Careers", "href": "/careers" },
+                  { "label": "Disclaimer", "href": "/disclaimer" },
                   { "label": "Privacy Policy", "href": "/privacy-policy" },
                   { "label": "Terms & Conditions", "href": "/terms" },
-                  { "label": "Contact Us", "href": "/contact" }
+                  { "label": "Site Map", "href": "/sitemap" }
                 ]
               }
             ],
@@ -259,7 +262,7 @@
             "legalLinks": [
               { "label": "Privacy Policy", "href": "/privacy-policy" },
               { "label": "Terms & Conditions", "href": "/terms" },
-              { "label": "Refund Policy", "href": "/refund-policy" },
+              { "label": "Disclaimer", "href": "/disclaimer" },
               { "label": "Cookie Policy", "href": "/cookie-policy" }
             ]
           }
@@ -305,56 +308,56 @@
                 "name": "Delhi",
                 "state": "Delhi, India",
                 "image": "/cityImage/delhi.jpg",
-                "slug": "/locations/delhi"
+                "slug": "/service-area/delhi"
               },
               {
                 "id": 2,
                 "name": "Noida",
                 "state": "Uttar Pradesh",
                 "image": "/cityImage/noid.jpg",
-                "slug": "/locations/noida"
+                "slug": "service-area/noida"
               },
               {
                 "id": 3,
                 "name": "Gurugram",
                 "state": "Haryana",
                 "image": "/cityImage/gurugram.jpg",
-                "slug": "/locations/gurugram"
+                "slug": "service-area/gurugram"
               },
               {
                 "id": 4,
                 "name": "Ghaziabad",
                 "state": "Uttar Pradesh",
                 "image": "/cityImage/Gaziabad.jpg",
-                "slug": "/locations/ghaziabad"
+                "slug": "service-area/ghaziabad"
               },
               {
                 "id": 5,
                 "name": "Faridabad",
                 "state": "Haryana",
                 "image": "/cityImage/faridabad.jpg",
-                "slug": "/locations/Faridabad"
+                "slug": "service-area/Faridabad"
               },
               {
                 "id": 6,
                 "name": "Gurgaon",
                 "state": "Uttar Pradesh",
                 "image": "/cityImage/gurgaon.jpg",
-                "slug": "/locations/gurgaon"
+                "slug": "service-area/gurgaon"
               },
               {
                 "id": 7,
                 "name": "Mumbai",
                 "state": "Uttar Pradesh",
                 "image": "/cityImage/mumbai.jpg",
-                "slug": "/locations/mumbai"
+                "slug": "service-area/mumbai"
               },
               {
                 "id": 8,
                 "name": "Meerut",
                 "state": "Uttar Pradesh",
                 "image": "/cityImage/meerut.jpg",
-                "slug": "/locations/meerut"
+                "slug": "service-area/meerut"
               }
             ]
           }
@@ -1484,7 +1487,7 @@
             "members": [
               {
                 "id": 1,
-                "slug": "dr-sarah-mitchell",
+                "slug": "teams/dr-sarah-mitchell",
                 "name": "Dr. Sarah Mitchell",
                 "role": "Chief Veterinarian",
                 "description": "10+ years of experience in animal health, wellness and preventive care.",
@@ -1492,7 +1495,7 @@
               },
               {
                 "id": 2,
-                "slug": "dr-james-carter",
+                "slug": "teams/dr-james-carter",
                 "name": "Dr. James Carter",
                 "role": "Veterinary Surgeon",
                 "description": "Specialized in surgery and emergency care with 8+ years of experience.",
@@ -1500,7 +1503,7 @@
               },
               {
                 "id": 3,
-                "slug": "emily-davis",
+                "slug": "teams/emily-davis",
                 "name": "Emily Davis",
                 "role": "Pet Care Specialist",
                 "description": "Expert in pet nutrition, behavior management and personalized care.",
@@ -1508,7 +1511,7 @@
               },
               {
                 "id": 4,
-                "slug": "michael-brown",
+                "slug": "teams/michael-brown",
                 "name": "Michael Brown",
                 "role": "Compassionate Nurse",
                 "description": "Compassionate care and support to keep pets happy and healthy.",
@@ -1516,7 +1519,7 @@
               },
               {
                 "id": 5,
-                "slug": "olivia-wilson",
+                "slug": "teams/olivia-wilson",
                 "name": "Olivia Wilson",
                 "role": "Vet Technician",
                 "description": "Focused on diagnostic treatment support and animal comfort.",
@@ -1524,7 +1527,7 @@
               },
               {
                 "id": 6,
-                "slug": "daniel-thompson",
+                "slug": "teams/daniel-thompson",
                 "name": "Daniel Thompson",
                 "role": "Animal Care Assistant",
                 "description": "Ensures pets receive the love, care and attention they deserve.",
@@ -1532,7 +1535,7 @@
               },
               {
                 "id": 7,
-                "slug": "sophia-martinez",
+                "slug": "teams/sophia-martinez",
                 "name": "Sophia Martinez",
                 "role": "Pet Nutritionist",
                 "description": "Creates healthy diet plans tailored to every pet's needs.",
@@ -1540,11 +1543,859 @@
               },
               {
                 "id": 8,
-                "slug": "ava-thompson",
+                "slug": "teams/ava-thompson",
                 "name": "Ava Thompson",
                 "role": "Pet Groomer",
                 "description": "Professional grooming services for a clean and happy pet.",
                 "image": "/personImage/women2.png"
+              }
+            ]
+          }
+        }
+      },
+      "TeamDetails": {
+        "variants": {
+          "PetTeamDetails1": {
+            "badge": "OUR TEAM",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Team Detail",
+              "title": "Team Detail",
+              "backgroundImage": "/dogs/dog8.jpg",
+              "homeHref": "/"
+            },
+            "members": [
+              {
+                "id": 1,
+                "slug": "dr-sarah-mitchell",
+                "name": {
+                  "first": "Dr. Sarah",
+                  "last": "Mitchell"
+                },
+                "role": "Chief Veterinarian",
+                "badge": "OUR TEAM",
+                "bio": "Dr. Sarah Mitchell is a passionate and experienced veterinarian with over 10 years of experience in animal health, wellness, and preventive care. She is dedicated to providing the highest quality medical care with compassion and building strong relationships with pets and their families.",
+                "image": "/personImage/women1.png",
+                "quickInfo": [
+                  {
+                    "icon": "education",
+                    "title": "Education",
+                    "value": "DVM, University of California, Davis"
+                  },
+                  {
+                    "icon": "experience",
+                    "title": "Experience",
+                    "value": "10+ Years in Veterinary Care"
+                  },
+                  {
+                    "icon": "specialization",
+                    "title": "Specialization",
+                    "value": "Preventive Care, Internal Medicine"
+                  },
+                  {
+                    "icon": "languages",
+                    "title": "Languages",
+                    "value": "English, Spanish"
+                  }
+                ],
+                "about": {
+                  "title": "About Dr. Sarah",
+                  "paragraphs": [
+                    "Dr. Sarah believes every pet deserves gentle, personalized care and a healthy, happy life. Her expertise spans preventive medicine, diagnostics, and wellness programs tailored to each pet's unique needs. She stays up-to-date with the latest advancements in veterinary medicine to ensure the best outcomes for her patients.",
+                    "When she's not in the clinic, Dr. Sarah enjoys hiking with her dog, reading, and volunteering for animal rescue organizations."
+                  ],
+                  "stats": [
+                    {
+                      "icon": "paw",
+                      "value": "5000+",
+                      "label": "Happy Pets Treated"
+                    },
+                    {
+                      "icon": "smile",
+                      "value": "98%",
+                      "label": "Client Satisfaction"
+                    }
+                  ]
+                },
+                "skills": {
+                  "title": "Professional Skills",
+                  "items": [
+                    {
+                      "name": "Preventive Care",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Diagnostics",
+                      "percentage": 92
+                    },
+                    {
+                      "name": "Surgery Assistance",
+                      "percentage": 90
+                    },
+                    {
+                      "name": "Pet Wellness",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Client Communication",
+                      "percentage": 96
+                    }
+                  ]
+                },
+                "areasOfExpertise": {
+                  "badge": "AREAS OF EXPERTISE",
+                  "title": "Areas of Expertise",
+                  "items": [
+                    {
+                      "icon": "stethoscope",
+                      "title": "Preventive Care",
+                      "description": "Wellness exams, vaccinations, parasite prevention, and health monitoring."
+                    },
+                    {
+                      "icon": "heart",
+                      "title": "Internal Medicine",
+                      "description": "Diagnosis and treatment of internal health conditions for pets."
+                    },
+                    {
+                      "icon": "microscope",
+                      "title": "Diagnostics",
+                      "description": "Advanced diagnostic techniques for accurate health assessments."
+                    },
+                    {
+                      "icon": "paw",
+                      "title": "Wellness Programs",
+                      "description": "Personalized wellness plans to support long-term pet health."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 2,
+                "slug": "dr-james-carter",
+                "name": {
+                  "first": "Dr. James",
+                  "last": "Carter"
+                },
+                "role": "Veterinary Surgeon",
+                "badge": "OUR TEAM",
+                "bio": "Dr. James Carter specializes in small and large animal surgeries, critical care monitoring, and surgical rehabilitation with over 8 years of surgical clinic leadership.",
+                "image": "/personImage/men2.png",
+                "quickInfo": [
+                  {
+                    "icon": "education",
+                    "title": "Education",
+                    "value": "DVM, Cornell University"
+                  },
+                  {
+                    "icon": "experience",
+                    "title": "Experience",
+                    "value": "8+ Years in Surgery"
+                  },
+                  {
+                    "icon": "specialization",
+                    "title": "Specialization",
+                    "value": "Orthopedic & Soft Tissue Surgery"
+                  },
+                  {
+                    "icon": "languages",
+                    "title": "Languages",
+                    "value": "English, French"
+                  }
+                ],
+                "about": {
+                  "title": "About Dr. James",
+                  "paragraphs": [
+                    "Dr. James is committed to minimal-pain surgical procedures and rapid post-operative recovery for all household pets.",
+                    "In his free time, James loves mountain biking and participating in local pet adoption rallies."
+                  ],
+                  "stats": [
+                    {
+                      "icon": "paw",
+                      "value": "3200+",
+                      "label": "Surgeries Performed"
+                    },
+                    {
+                      "icon": "smile",
+                      "value": "99%",
+                      "label": "Success Rate"
+                    }
+                  ]
+                },
+                "skills": {
+                  "title": "Professional Skills",
+                  "items": [
+                    {
+                      "name": "Soft Tissue Surgery",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Emergency Care",
+                      "percentage": 94
+                    },
+                    {
+                      "name": "Anesthesia",
+                      "percentage": 96
+                    },
+                    {
+                      "name": "Orthopedics",
+                      "percentage": 91
+                    },
+                    {
+                      "name": "Post-Op Rehab",
+                      "percentage": 93
+                    }
+                  ]
+                },
+                "areasOfExpertise": {
+                  "badge": "AREAS OF EXPERTISE",
+                  "title": "Areas of Expertise",
+                  "items": [
+                    {
+                      "icon": "stethoscope",
+                      "title": "Surgical Care",
+                      "description": "Advanced surgical solutions for emergency and elective treatments."
+                    },
+                    {
+                      "icon": "heart",
+                      "title": "Critical Care",
+                      "description": "Round-the-clock vital monitoring and emergency interventions."
+                    },
+                    {
+                      "icon": "microscope",
+                      "title": "Pre-Op Imaging",
+                      "description": "Precise digital X-rays and ultrasound diagnostics."
+                    },
+                    {
+                      "icon": "paw",
+                      "title": "Pain Management",
+                      "description": "Tailored multi-modal therapy for comfort post-surgery."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 3,
+                "slug": "emily-davis",
+                "name": {
+                  "first": "Emily",
+                  "last": "Davis"
+                },
+                "role": "Pet Care Specialist",
+                "badge": "OUR TEAM",
+                "bio": "Emily Davis is a dedicated pet care specialist with extensive experience in nutrition, behavior management, and personalized daily care. She works closely with pet families to create practical care routines that support the health and happiness of every animal.",
+                "image": "/personImage/women2.png",
+                "quickInfo": [
+                  {
+                    "icon": "education",
+                    "title": "Education",
+                    "value": "BSc, Animal Science, University of Florida"
+                  },
+                  {
+                    "icon": "experience",
+                    "title": "Experience",
+                    "value": "7+ Years in Pet Care"
+                  },
+                  {
+                    "icon": "specialization",
+                    "title": "Specialization",
+                    "value": "Pet Nutrition, Behavior Management"
+                  },
+                  {
+                    "icon": "languages",
+                    "title": "Languages",
+                    "value": "English, Spanish"
+                  }
+                ],
+                "about": {
+                  "title": "About Emily",
+                  "paragraphs": [
+                    "Emily is passionate about helping pets live healthier and more comfortable lives through proper nutrition, positive behavior training, and consistent daily routines. She believes that understanding each pet's personality is the key to providing truly personalized care.",
+                    "Outside the clinic, Emily enjoys cooking healthy meals, spending time with her rescue pets, and attending community animal welfare events."
+                  ],
+                  "stats": [
+                    {
+                      "icon": "paw",
+                      "value": "2800+",
+                      "label": "Pets Supported"
+                    },
+                    {
+                      "icon": "smile",
+                      "value": "97%",
+                      "label": "Client Satisfaction"
+                    }
+                  ]
+                },
+                "skills": {
+                  "title": "Professional Skills",
+                  "items": [
+                    {
+                      "name": "Pet Nutrition",
+                      "percentage": 97
+                    },
+                    {
+                      "name": "Behavior Management",
+                      "percentage": 94
+                    },
+                    {
+                      "name": "Daily Pet Care",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Wellness Planning",
+                      "percentage": 93
+                    },
+                    {
+                      "name": "Client Guidance",
+                      "percentage": 96
+                    }
+                  ]
+                },
+                "areasOfExpertise": {
+                  "badge": "AREAS OF EXPERTISE",
+                  "title": "Areas of Expertise",
+                  "items": [
+                    {
+                      "icon": "stethoscope",
+                      "title": "Pet Nutrition",
+                      "description": "Balanced nutrition plans designed around each pet's age, lifestyle, and health needs."
+                    },
+                    {
+                      "icon": "heart",
+                      "title": "Behavior Care",
+                      "description": "Positive behavior strategies that help pets feel confident, comfortable, and well-adjusted."
+                    },
+                    {
+                      "icon": "microscope",
+                      "title": "Health Monitoring",
+                      "description": "Regular observation and tracking to identify changes in a pet's health and wellbeing."
+                    },
+                    {
+                      "icon": "paw",
+                      "title": "Personalized Care",
+                      "description": "Individual care routines designed to meet the unique needs of every pet."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 4,
+                "slug": "michael-brown",
+                "name": {
+                  "first": "Michael",
+                  "last": "Brown"
+                },
+                "role": "Compassionate Nurse",
+                "badge": "OUR TEAM",
+                "bio": "Michael Brown is a compassionate veterinary nurse who provides attentive hands-on care and emotional support to pets during examinations, treatments, and recovery. His calm and caring approach helps animals feel safe and comfortable throughout their visit.",
+                "image": "/personImage/men3.png",
+                "quickInfo": [
+                  {
+                    "icon": "education",
+                    "title": "Education",
+                    "value": "BSc, Veterinary Nursing, Colorado State University"
+                  },
+                  {
+                    "icon": "experience",
+                    "title": "Experience",
+                    "value": "6+ Years in Veterinary Nursing"
+                  },
+                  {
+                    "icon": "specialization",
+                    "title": "Specialization",
+                    "value": "Patient Care, Recovery Support"
+                  },
+                  {
+                    "icon": "languages",
+                    "title": "Languages",
+                    "value": "English"
+                  }
+                ],
+                "about": {
+                  "title": "About Michael",
+                  "paragraphs": [
+                    "Michael takes pride in creating a calm and supportive environment for pets before, during, and after treatment. He is especially passionate about recovery care and making sure every animal receives the patience and attention they need.",
+                    "Away from work, Michael enjoys photography, hiking, and volunteering at local animal shelters."
+                  ],
+                  "stats": [
+                    {
+                      "icon": "paw",
+                      "value": "2400+",
+                      "label": "Pets Cared For"
+                    },
+                    {
+                      "icon": "smile",
+                      "value": "98%",
+                      "label": "Care Satisfaction"
+                    }
+                  ]
+                },
+                "skills": {
+                  "title": "Professional Skills",
+                  "items": [
+                    {
+                      "name": "Patient Care",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Recovery Support",
+                      "percentage": 96
+                    },
+                    {
+                      "name": "Medication Assistance",
+                      "percentage": 94
+                    },
+                    {
+                      "name": "Animal Handling",
+                      "percentage": 97
+                    },
+                    {
+                      "name": "Client Support",
+                      "percentage": 95
+                    }
+                  ]
+                },
+                "areasOfExpertise": {
+                  "badge": "AREAS OF EXPERTISE",
+                  "title": "Areas of Expertise",
+                  "items": [
+                    {
+                      "icon": "stethoscope",
+                      "title": "Patient Care",
+                      "description": "Gentle and attentive nursing care throughout examinations and treatment."
+                    },
+                    {
+                      "icon": "heart",
+                      "title": "Recovery Support",
+                      "description": "Comfort-focused monitoring and support to help pets recover safely."
+                    },
+                    {
+                      "icon": "microscope",
+                      "title": "Treatment Assistance",
+                      "description": "Reliable assistance with veterinary procedures, medications, and treatments."
+                    },
+                    {
+                      "icon": "paw",
+                      "title": "Animal Comfort",
+                      "description": "Calm handling and compassionate interaction to reduce stress and anxiety."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 5,
+                "slug": "olivia-wilson",
+                "name": {
+                  "first": "Olivia",
+                  "last": "Wilson"
+                },
+                "role": "Vet Technician",
+                "badge": "OUR TEAM",
+                "bio": "Olivia Wilson is a skilled veterinary technician focused on diagnostic support, treatment preparation, and animal comfort. She works closely with veterinarians to ensure procedures are performed efficiently while keeping every pet calm and cared for.",
+                "image": "/personImage/women5.png",
+                "quickInfo": [
+                  {
+                    "icon": "education",
+                    "title": "Education",
+                    "value": "BSc, Veterinary Technology, Purdue University"
+                  },
+                  {
+                    "icon": "experience",
+                    "title": "Experience",
+                    "value": "5+ Years in Veterinary Technology"
+                  },
+                  {
+                    "icon": "specialization",
+                    "title": "Specialization",
+                    "value": "Diagnostics, Treatment Support"
+                  },
+                  {
+                    "icon": "languages",
+                    "title": "Languages",
+                    "value": "English, Spanish"
+                  }
+                ],
+                "about": {
+                  "title": "About Olivia",
+                  "paragraphs": [
+                    "Olivia has a strong interest in veterinary diagnostics and enjoys supporting the clinical team during examinations and treatment procedures. Her attention to detail helps ensure accurate information is available to veterinarians when making care decisions.",
+                    "In her spare time, Olivia enjoys painting, reading, and spending weekends with her family and pets."
+                  ],
+                  "stats": [
+                    {
+                      "icon": "paw",
+                      "value": "2100+",
+                      "label": "Pets Assisted"
+                    },
+                    {
+                      "icon": "smile",
+                      "value": "97%",
+                      "label": "Client Satisfaction"
+                    }
+                  ]
+                },
+                "skills": {
+                  "title": "Professional Skills",
+                  "items": [
+                    {
+                      "name": "Diagnostic Support",
+                      "percentage": 96
+                    },
+                    {
+                      "name": "Laboratory Assistance",
+                      "percentage": 94
+                    },
+                    {
+                      "name": "Treatment Preparation",
+                      "percentage": 97
+                    },
+                    {
+                      "name": "Animal Handling",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Clinical Documentation",
+                      "percentage": 93
+                    }
+                  ]
+                },
+                "areasOfExpertise": {
+                  "badge": "AREAS OF EXPERTISE",
+                  "title": "Areas of Expertise",
+                  "items": [
+                    {
+                      "icon": "stethoscope",
+                      "title": "Diagnostic Support",
+                      "description": "Assistance with diagnostic procedures and accurate clinical assessments."
+                    },
+                    {
+                      "icon": "heart",
+                      "title": "Pet Comfort",
+                      "description": "Gentle handling and calming techniques to keep pets comfortable."
+                    },
+                    {
+                      "icon": "microscope",
+                      "title": "Laboratory Support",
+                      "description": "Careful preparation and processing of samples for veterinary testing."
+                    },
+                    {
+                      "icon": "paw",
+                      "title": "Treatment Support",
+                      "description": "Professional assistance with treatment plans and veterinary procedures."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 6,
+                "slug": "daniel-thompson",
+                "name": {
+                  "first": "Daniel",
+                  "last": "Thompson"
+                },
+                "role": "Animal Care Assistant",
+                "badge": "OUR TEAM",
+                "bio": "Daniel Thompson is a caring animal care assistant who helps maintain a safe, clean, and welcoming environment for pets. He is dedicated to providing daily attention, comfort, and support to animals throughout their time at the clinic.",
+                "image": "/personImage/men5.png",
+                "quickInfo": [
+                  {
+                    "icon": "education",
+                    "title": "Education",
+                    "value": "Diploma in Animal Care, Austin Community College"
+                  },
+                  {
+                    "icon": "experience",
+                    "title": "Experience",
+                    "value": "5+ Years in Animal Care"
+                  },
+                  {
+                    "icon": "specialization",
+                    "title": "Specialization",
+                    "value": "Daily Care, Animal Handling"
+                  },
+                  {
+                    "icon": "languages",
+                    "title": "Languages",
+                    "value": "English"
+                  }
+                ],
+                "about": {
+                  "title": "About Daniel",
+                  "paragraphs": [
+                    "Daniel believes that every pet deserves patience, kindness, and individual attention. He supports the veterinary team with daily animal care and helps ensure that pets remain comfortable and relaxed during their stay.",
+                    "Outside of work, Daniel enjoys outdoor activities, playing with his dogs, and supporting local pet adoption programs."
+                  ],
+                  "stats": [
+                    {
+                      "icon": "paw",
+                      "value": "1900+",
+                      "label": "Pets Supported"
+                    },
+                    {
+                      "icon": "smile",
+                      "value": "98%",
+                      "label": "Care Satisfaction"
+                    }
+                  ]
+                },
+                "skills": {
+                  "title": "Professional Skills",
+                  "items": [
+                    {
+                      "name": "Animal Handling",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Daily Pet Care",
+                      "percentage": 97
+                    },
+                    {
+                      "name": "Kennel Management",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Pet Monitoring",
+                      "percentage": 94
+                    },
+                    {
+                      "name": "Team Support",
+                      "percentage": 96
+                    }
+                  ]
+                },
+                "areasOfExpertise": {
+                  "badge": "AREAS OF EXPERTISE",
+                  "title": "Areas of Expertise",
+                  "items": [
+                    {
+                      "icon": "stethoscope",
+                      "title": "Animal Handling",
+                      "description": "Safe and gentle handling techniques for pets of different sizes and temperaments."
+                    },
+                    {
+                      "icon": "heart",
+                      "title": "Daily Pet Care",
+                      "description": "Consistent feeding, comfort, exercise, and general daily care for pets."
+                    },
+                    {
+                      "icon": "microscope",
+                      "title": "Pet Monitoring",
+                      "description": "Careful observation of behavior and wellbeing throughout the day."
+                    },
+                    {
+                      "icon": "paw",
+                      "title": "Comfort & Support",
+                      "description": "Compassionate attention that helps pets feel secure and relaxed."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 7,
+                "slug": "sophia-martinez",
+                "name": {
+                  "first": "Sophia",
+                  "last": "Martinez"
+                },
+                "role": "Pet Nutritionist",
+                "badge": "OUR TEAM",
+                "bio": "Sophia Martinez is a passionate pet nutritionist who creates balanced and practical diet plans tailored to the individual needs of pets. She combines nutritional knowledge with a compassionate approach to help families make healthier choices for their animals.",
+                "image": "/personImage/women4.png",
+                "quickInfo": [
+                  {
+                    "icon": "education",
+                    "title": "Education",
+                    "value": "MSc, Animal Nutrition, University of Guelph"
+                  },
+                  {
+                    "icon": "experience",
+                    "title": "Experience",
+                    "value": "6+ Years in Pet Nutrition"
+                  },
+                  {
+                    "icon": "specialization",
+                    "title": "Specialization",
+                    "value": "Pet Nutrition, Weight Management"
+                  },
+                  {
+                    "icon": "languages",
+                    "title": "Languages",
+                    "value": "English, Spanish"
+                  }
+                ],
+                "about": {
+                  "title": "About Sophia",
+                  "paragraphs": [
+                    "Sophia is dedicated to helping pets thrive through balanced nutrition and healthy lifestyle choices. She develops individualized diet recommendations based on age, breed, activity level, lifestyle, and specific wellness goals.",
+                    "When she's away from work, Sophia enjoys cooking, gardening, and spending time with her family and two rescue dogs."
+                  ],
+                  "stats": [
+                    {
+                      "icon": "paw",
+                      "value": "2600+",
+                      "label": "Nutrition Plans"
+                    },
+                    {
+                      "icon": "smile",
+                      "value": "98%",
+                      "label": "Client Satisfaction"
+                    }
+                  ]
+                },
+                "skills": {
+                  "title": "Professional Skills",
+                  "items": [
+                    {
+                      "name": "Nutrition Planning",
+                      "percentage": 99
+                    },
+                    {
+                      "name": "Weight Management",
+                      "percentage": 96
+                    },
+                    {
+                      "name": "Diet Assessment",
+                      "percentage": 97
+                    },
+                    {
+                      "name": "Wellness Planning",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Client Education",
+                      "percentage": 98
+                    }
+                  ]
+                },
+                "areasOfExpertise": {
+                  "badge": "AREAS OF EXPERTISE",
+                  "title": "Areas of Expertise",
+                  "items": [
+                    {
+                      "icon": "stethoscope",
+                      "title": "Pet Nutrition",
+                      "description": "Balanced meal recommendations designed around each pet's nutritional requirements."
+                    },
+                    {
+                      "icon": "heart",
+                      "title": "Weight Management",
+                      "description": "Healthy nutrition strategies to help pets maintain an ideal body condition."
+                    },
+                    {
+                      "icon": "microscope",
+                      "title": "Diet Assessment",
+                      "description": "Detailed evaluation of existing diets to identify nutritional gaps and improvements."
+                    },
+                    {
+                      "icon": "paw",
+                      "title": "Wellness Nutrition",
+                      "description": "Long-term nutrition strategies that support energy, growth, and overall wellbeing."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 8,
+                "slug": "ava-thompson",
+                "name": {
+                  "first": "Ava",
+                  "last": "Thompson"
+                },
+                "role": "Pet Groomer",
+                "badge": "OUR TEAM",
+                "bio": "Ava Thompson is a professional pet groomer who combines grooming expertise with a gentle and patient approach. She provides comfortable grooming experiences that help pets look their best while supporting healthy skin, coats, nails, and overall hygiene.",
+                "image": "/personImage/women2.png",
+                "quickInfo": [
+                  {
+                    "icon": "education",
+                    "title": "Education",
+                    "value": "Certified Professional Pet Groomer"
+                  },
+                  {
+                    "icon": "experience",
+                    "title": "Experience",
+                    "value": "6+ Years in Pet Grooming"
+                  },
+                  {
+                    "icon": "specialization",
+                    "title": "Specialization",
+                    "value": "Breed Grooming, Coat Care"
+                  },
+                  {
+                    "icon": "languages",
+                    "title": "Languages",
+                    "value": "English"
+                  }
+                ],
+                "about": {
+                  "title": "About Ava",
+                  "paragraphs": [
+                    "Ava believes grooming should be a positive and comfortable experience for every pet. She specializes in breed-specific grooming, coat maintenance, nail care, and gentle hygiene treatments tailored to each animal.",
+                    "Outside the grooming room, Ava enjoys photography, visiting dog parks, and learning about new pet grooming techniques."
+                  ],
+                  "stats": [
+                    {
+                      "icon": "paw",
+                      "value": "3500+",
+                      "label": "Pets Groomed"
+                    },
+                    {
+                      "icon": "smile",
+                      "value": "99%",
+                      "label": "Client Satisfaction"
+                    }
+                  ]
+                },
+                "skills": {
+                  "title": "Professional Skills",
+                  "items": [
+                    {
+                      "name": "Professional Grooming",
+                      "percentage": 99
+                    },
+                    {
+                      "name": "Coat Care",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Breed Styling",
+                      "percentage": 96
+                    },
+                    {
+                      "name": "Nail Care",
+                      "percentage": 97
+                    },
+                    {
+                      "name": "Pet Handling",
+                      "percentage": 98
+                    }
+                  ]
+                },
+                "areasOfExpertise": {
+                  "badge": "AREAS OF EXPERTISE",
+                  "title": "Areas of Expertise",
+                  "items": [
+                    {
+                      "icon": "stethoscope",
+                      "title": "Professional Grooming",
+                      "description": "Complete grooming services designed to keep pets clean, comfortable, and healthy."
+                    },
+                    {
+                      "icon": "heart",
+                      "title": "Coat & Skin Care",
+                      "description": "Gentle coat and skin care routines that support healthy and comfortable pets."
+                    },
+                    {
+                      "icon": "microscope",
+                      "title": "Breed Styling",
+                      "description": "Breed-appropriate grooming styles tailored to each pet's coat and appearance."
+                    },
+                    {
+                      "icon": "paw",
+                      "title": "Pet Comfort",
+                      "description": "Patient and gentle grooming techniques that create a calm experience for pets."
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -1738,7 +2589,7 @@
             "posts": [
               {
                 "id": 1,
-                "slug": "blogs/10-essential-grooming-tips-for-a-happy-healthy-pet",
+                "slug": "10-essential-grooming-tips-for-a-happy-healthy-pet",
                 "image": "/dogs/dog6.jpg",
                 "date": "May 20, 2025",
                 "author": "Admin",
@@ -1748,7 +2599,7 @@
               },
               {
                 "id": 2,
-                "slug": "blogs/how-to-introduce-a-new-pet-to-your-home-safely",
+                "slug": "how-to-introduce-a-new-pet-to-your-home-safely",
                 "image": "/dogs/dog5.jpg",
                 "date": "May 18, 2025",
                 "author": "Admin",
@@ -1758,7 +2609,7 @@
               },
               {
                 "id": 3,
-                "slug": "blogs/signs-your-pet-needs-a-veterinary-check-up",
+                "slug": "signs-your-pet-needs-a-veterinary-check-up",
                 "image": "/dogs/dog4.jpg",
                 "date": "May 15, 2025",
                 "author": "Admin",
@@ -1778,7 +2629,7 @@
               },
               {
                 "id": 5,
-                "slug": "blogs/how-to-keep-your-pet-active-and-entertained",
+                "slug": "how-to-keep-your-pet-active-and-entertained",
                 "image": "/dogs/dog2.jpg",
                 "date": "May 10, 2025",
                 "author": "Admin",
@@ -1788,13 +2639,156 @@
               },
               {
                 "id": 6,
-                "slug": "blogs/understanding-your-pets-behavior-and-body-language",
+                "slug": "understanding-your-pets-behavior-and-body-language",
                 "image": "/dogs/dog1.jpg",
                 "date": "May 8, 2025",
                 "author": "Admin",
                 "title": "Understanding Your Pet's Behavior and Body Language",
                 "description": "Learn how to understand common pet behaviors and body language so you can better recognize their needs, emotions, and comfort levels.",
                 "readMoreText": "Read More"
+              }
+            ]
+          }
+        }
+      },
+      "BlogDetails": {
+        "variants": {
+          "PetBlogDetails1": {
+            "badge": "BLOGS DETAIL",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Blogs Detail",
+              "title": "Blogs Detail",
+              "backgroundImage": "/dogs/dog1.jpg",
+              "homeHref": "/"
+            },
+            "posts": [
+              {
+                "id": 1,
+                "slug": "10-essential-grooming-tips-for-a-happy-healthy-pet",
+                "title": {
+                  "normal": "10 Essential Grooming Tips For A",
+                  "highlighted": "Happy, Healthy Pet"
+                },
+                "author": "Jordan Park",
+                "date": "24 Jun, 2025",
+                "category": "Health Care",
+                "readTime": "8 Min Read",
+                "mainImage": "/dogs/dog6.jpg",
+                "content": [
+                  "Our pets rely on us for their health, happiness, and overall well-being. Just like humans, they need consistent care throughout the year to stay healthy and active. A little attention every day can go a long way in ensuring a longer, happier life for your furry companions.",
+                  "A balanced diet is one of the most important factors in your pet's health. Choose high-quality food that suits their age, size, and activity level. Proper nutrition helps maintain a healthy weight, strong immunity, and good energy levels.",
+                  "Regular exercise keeps pets physically fit and mentally stimulated. Dogs enjoy daily walks, runs, and playtime, while cats benefit from interactive toys and climbing activities. Physical activity helps prevent obesity and reduces behavioral issues.",
+                  "Routine veterinary checkups are essential, even if your pet seems perfectly healthy. Regular vaccinations, parasite prevention, and dental care can help detect potential problems early and keep your pet protected from common illnesses.",
+                  "Don't forget grooming and hygiene. Brushing your pet's coat, trimming nails, cleaning ears, and maintaining oral hygiene are important for their comfort and health. It also helps strengthen the bond between you and your pet.",
+                  "Most importantly, give your pet love, attention, and a safe environment. Emotional well-being is just as important as physical health.",
+                  "By following these simple habits, you can help your pet live a longer, healthier, and happier life. Remember, a little care every day makes a big difference in their world."
+                ]
+              },
+              {
+                "id": 2,
+                "slug": "how-to-introduce-a-new-pet-to-your-home-safely",
+                "title": {
+                  "normal": "How To Introduce A New Pet To",
+                  "highlighted": "Your Home Safely"
+                },
+                "author": "Jordan Park",
+                "date": "18 Jun, 2025",
+                "category": "Pet Care",
+                "readTime": "6 Min Read",
+                "mainImage": "/dogs/dog5.jpg",
+                "content": [
+                  "Our pets rely on us for their health, happiness, and overall well-being. Just like humans, they need consistent care throughout the year to stay healthy and active. A little attention every day can go a long way in ensuring a longer, happier life for your furry companions.",
+                  "A balanced diet is one of the most important factors in your pet's health. Choose high-quality food that suits their age, size, and activity level. Proper nutrition helps maintain a healthy weight, strong immunity, and good energy levels.",
+                  "Regular exercise keeps pets physically fit and mentally stimulated. Dogs enjoy daily walks, runs, and playtime, while cats benefit from interactive toys and climbing activities. Physical activity helps prevent obesity and reduces behavioral issues.",
+                  "Routine veterinary checkups are essential, even if your pet seems perfectly healthy. Regular vaccinations, parasite prevention, and dental care can help detect potential problems early and keep your pet protected from common illnesses.",
+                  "Don't forget grooming and hygiene. Brushing your pet's coat, trimming nails, cleaning ears, and maintaining oral hygiene are important for their comfort and health. It also helps strengthen the bond between you and your pet.",
+                  "Most importantly, give your pet love, attention, and a safe environment. Emotional well-being is just as important as physical health."
+                ]
+              },
+              {
+                "id": 3,
+                "slug": "signs-your-pet-needs-a-veterinary-check-up",
+                "title": {
+                  "normal": "Signs Your Pet Needs A",
+                  "highlighted": "Veterinary Check-Up"
+                },
+                "author": "Jordan Park",
+                "date": "15 Jun, 2025",
+                "category": "Medical Advice",
+                "readTime": "5 Min Read",
+                "mainImage": "/dogs/dog4.jpg",
+                "content": [
+                  "Our pets rely on us for their health, happiness, and overall well-being. Just like humans, they need consistent care throughout the year to stay healthy and active. A little attention every day can go a long way in ensuring a longer, happier life for your furry companions.",
+                  "A balanced diet is one of the most important factors in your pet's health. Choose high-quality food that suits their age, size, and activity level. Proper nutrition helps maintain a healthy weight, strong immunity, and good energy levels.",
+                  "Regular exercise keeps pets physically fit and mentally stimulated. Dogs enjoy daily walks, runs, and playtime, while cats benefit from interactive toys and climbing activities. Physical activity helps prevent obesity and reduces behavioral issues.",
+                  "Routine veterinary checkups are essential, even if your pet seems perfectly healthy. Regular vaccinations, parasite prevention, and dental care can help detect potential problems early and keep your pet protected from common illnesses.",
+                  "Don't forget grooming and hygiene. Brushing your pet's coat, trimming nails, cleaning ears, and maintaining oral hygiene are important for their comfort and health. It also helps strengthen the bond between you and your pet.",
+                  "Most importantly, give your pet love, attention, and a safe environment. Emotional well-being is just as important as physical health."
+                ]
+              },
+              {
+                "id": 4,
+                "slug": "best-foods-to-keep-your-pet-healthy-and-active",
+                "title": {
+                  "normal": "Best Foods To Keep Your Pet",
+                  "highlighted": "Healthy And Active"
+                },
+                "author": "Jordan Park",
+                "date": "12 Jun, 2025",
+                "category": "Nutrition",
+                "readTime": "7 Min Read",
+                "mainImage": "/dogs/dog3.jpg",
+                "content": [
+                  "Our pets rely on us for their health, happiness, and overall well-being. Just like humans, they need consistent care throughout the year to stay healthy and active. A little attention every day can go a long way in ensuring a longer, happier life for your furry companions.",
+                  "A balanced diet is one of the most important factors in your pet's health. Choose high-quality food that suits their age, size, and activity level. Proper nutrition helps maintain a healthy weight, strong immunity, and good energy levels.",
+                  "Regular exercise keeps pets physically fit and mentally stimulated. Dogs enjoy daily walks, runs, and playtime, while cats benefit from interactive toys and climbing activities. Physical activity helps prevent obesity and reduces behavioral issues.",
+                  "Routine veterinary checkups are essential, even if your pet seems perfectly healthy. Regular vaccinations, parasite prevention, and dental care can help detect potential problems early and keep your pet protected from common illnesses.",
+                  "Don't forget grooming and hygiene. Brushing your pet's coat, trimming nails, cleaning ears, and maintaining oral hygiene are important for their comfort and health. It also helps strengthen the bond between you and your pet.",
+                  "Most importantly, give your pet love, attention, and a safe environment. Emotional well-being is just as important as physical health."
+                ]
+              },
+              {
+                "id": 5,
+                "slug": "how-to-keep-your-pet-active-and-entertained",
+                "title": {
+                  "normal": "How To Keep Your Pet",
+                  "highlighted": "Active And Entertained"
+                },
+                "author": "Jordan Park",
+                "date": "10 Jun, 2025",
+                "category": "Activities",
+                "readTime": "6 Min Read",
+                "mainImage": "/dogs/dog2.jpg",
+                "content": [
+                  "Our pets rely on us for their health, happiness, and overall well-being. Just like humans, they need consistent care throughout the year to stay healthy and active. A little attention every day can go a long way in ensuring a longer, happier life for your furry companions.",
+                  "A balanced diet is one of the most important factors in your pet's health. Choose high-quality food that suits their age, size, and activity level. Proper nutrition helps maintain a healthy weight, strong immunity, and good energy levels.",
+                  "Regular exercise keeps pets physically fit and mentally stimulated. Dogs enjoy daily walks, runs, and playtime, while cats benefit from interactive toys and climbing activities. Physical activity helps prevent obesity and reduces behavioral issues.",
+                  "Routine veterinary checkups are essential, even if your pet seems perfectly healthy. Regular vaccinations, parasite prevention, and dental care can help detect potential problems early and keep your pet protected from common illnesses.",
+                  "Don't forget grooming and hygiene. Brushing your pet's coat, trimming nails, cleaning ears, and maintaining oral hygiene are important for their comfort and health. It also helps strengthen the bond between you and your pet.",
+                  "Most importantly, give your pet love, attention, and a safe environment. Emotional well-being is just as important as physical health."
+                ]
+              },
+              {
+                "id": 6,
+                "slug": "understanding-your-pets-behavior-and-body-language",
+                "title": {
+                  "normal": "Understanding Your Pet's Behavior",
+                  "highlighted": "& Body Language"
+                },
+                "author": "Jordan Park",
+                "date": "08 Jun, 2025",
+                "category": "Behavior",
+                "readTime": "9 Min Read",
+                "mainImage": "/dogs/dog1.jpg",
+                "content": [
+                  "Our pets rely on us for their health, happiness, and overall well-being. Just like humans, they need consistent care throughout the year to stay healthy and active. A little attention every day can go a long way in ensuring a longer, happier life for your furry companions.",
+                  "A balanced diet is one of the most important factors in your pet's health. Choose high-quality food that suits their age, size, and activity level. Proper nutrition helps maintain a healthy weight, strong immunity, and good energy levels.",
+                  "Regular exercise keeps pets physically fit and mentally stimulated. Dogs enjoy daily walks, runs, and playtime, while cats benefit from interactive toys and climbing activities. Physical activity helps prevent obesity and reduces behavioral issues.",
+                  "Routine veterinary checkups are essential, even if your pet seems perfectly healthy. Regular vaccinations, parasite prevention, and dental care can help detect potential problems early and keep your pet protected from common illnesses.",
+                  "Don't forget grooming and hygiene. Brushing your pet's coat, trimming nails, cleaning ears, and maintaining oral hygiene are important for their comfort and health. It also helps strengthen the bond between you and your pet.",
+                  "Most importantly, give your pet love, attention, and a safe environment. Emotional well-being is just as important as physical health."
+                ]
               }
             ]
           }
@@ -2046,6 +3040,1449 @@
                 }
               ]
             }
+          }
+        }
+      },
+      "ServiceAreaDetails": {
+        "variants": {
+          "PetServiceAreaDetails1": {
+            "badge": "LOCATIONS DETAIL",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Loctions Details",
+              "title": "Loctions Details",
+              "backgroundImage": "/dogs/dog4.jpg",
+              "homeHref": "/"
+            },
+            "locations": [
+              {
+                "id": 1,
+                "slug": "delhi",
+                "name": "Delhi",
+                "state": "Delhi, India",
+                "image": "/cityImage/delhi.jpg",
+                "aboutImage": "/cityImage/delhi.jpg",
+                "description": "PawFect is proud to offer trusted and professional pet care services across Delhi. From grooming to veterinary care, we ensure your furry friends receive the best care, right here in your city.",
+                "stats": [
+                  { "icon": "location", "value": "20+", "label": "Locations" },
+                  { "icon": "smile", "value": "5000+", "label": "Happy Pets" },
+                  { "icon": "award", "value": "10+", "label": "Years of Trust" }
+                ],
+                "services": [
+                  {
+                    "icon": "paw",
+                    "title": "Pet Grooming",
+                    "description": "Professional grooming to keep your pet clean, fresh and adorable."
+                  },
+                  {
+                    "icon": "stethoscope",
+                    "title": "Veterinary Care",
+                    "description": "Expert medical care and consultations for your pet's good health."
+                  },
+                  {
+                    "icon": "home",
+                    "title": "Pet Boarding",
+                    "description": "Safe, comfortable and loving stay for your pet while you're away."
+                  },
+                  {
+                    "icon": "heart",
+                    "title": "Pet Day Care",
+                    "description": "Fun and supervised day care to keep your pet happy and active."
+                  },
+                  {
+                    "icon": "walking",
+                    "title": "Pet Walking",
+                    "description": "Regular walks and exercise to keep your pet fit and healthy."
+                  },
+                  {
+                    "icon": "sitting",
+                    "title": "Pet Sitting",
+                    "description": "In-home pet sitting with personalized care and attention."
+                  },
+                  {
+                    "icon": "bath",
+                    "title": "Pet Spa",
+                    "description": "Relaxing spa treatments for your pet's overall well-being."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Vaccination",
+                    "description": "Complete vaccination services to keep your pet protected."
+                  }
+                ],
+                "about": {
+                  "title": "About Pet Care in Delhi",
+                  "description": "Delhi is a vibrant city and so are the pets that live here! Our team is dedicated to providing top-quality pet care services across all major areas in Delhi. Whether you need a quick grooming session or advanced medical care, we're just around the corner.",
+                  "features": [
+                    "Experienced & Caring Professionals",
+                    "Hygienic & Safe Environment",
+                    "Affordable & Transparent Pricing",
+                    "24/7 Customer Support"
+                  ]
+                },
+                "subRegions": [
+                  { "name": "South Delhi" },
+                  { "name": "North Delhi" },
+                  { "name": "East Delhi" },
+                  { "name": "West Delhi" },
+                  { "name": "Central Delhi" },
+                  { "name": "New Delhi" },
+                  { "name": "Dwarka" },
+                  { "name": "Rohini" },
+                  { "name": "Janakpuri" },
+                  { "name": "Vasant Kunj" },
+                  { "name": "Saket" },
+                  { "name": "Lajpat Nagar" }
+                ]
+              },
+              {
+                "id": 2,
+                "slug": "noida",
+                "name": "Noida",
+                "state": "Uttar Pradesh",
+                "image": "/cityImage/noid.jpg",
+                "aboutImage": "/cityImage/noid.jpg",
+                "description": "PawFect delivers top-tier pet health, grooming, and boarding services right to your doorstep across all sectors in Noida.",
+                "stats": [
+                  { "icon": "location", "value": "15+", "label": "Locations" },
+                  { "icon": "smile", "value": "3500+", "label": "Happy Pets" },
+                  { "icon": "award", "value": "8+", "label": "Years of Trust" }
+                ],
+                "services": [
+                  {
+                    "icon": "paw",
+                    "title": "Pet Grooming",
+                    "description": "Professional grooming to keep your pet clean, fresh and adorable."
+                  },
+                  {
+                    "icon": "stethoscope",
+                    "title": "Veterinary Care",
+                    "description": "Expert medical care and consultations for your pet's good health."
+                  },
+                  {
+                    "icon": "home",
+                    "title": "Pet Boarding",
+                    "description": "Safe, comfortable and loving stay for your pet while you're away."
+                  },
+                  {
+                    "icon": "heart",
+                    "title": "Pet Day Care",
+                    "description": "Fun and supervised day care to keep your pet happy and active."
+                  },
+                  {
+                    "icon": "walking",
+                    "title": "Pet Walking",
+                    "description": "Regular walks and exercise to keep your pet fit and healthy."
+                  },
+                  {
+                    "icon": "sitting",
+                    "title": "Pet Sitting",
+                    "description": "In-home pet sitting with personalized care and attention."
+                  },
+                  {
+                    "icon": "bath",
+                    "title": "Pet Spa",
+                    "description": "Relaxing spa treatments for your pet's overall well-being."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Vaccination",
+                    "description": "Complete vaccination services to keep your pet protected."
+                  }
+                ],
+                "about": {
+                  "title": "About Pet Care in Noida",
+                  "description": "Noida pet parents trust PawFect for high quality, hygienic, and convenient pet care solutions close to home.",
+                  "features": [
+                    "Experienced & Caring Professionals",
+                    "Hygienic & Safe Environment",
+                    "Affordable & Transparent Pricing",
+                    "24/7 Customer Support"
+                  ]
+                },
+                "subRegions": [
+                  { "name": "South Delhi" },
+                  { "name": "North Delhi" },
+                  { "name": "East Delhi" },
+                  { "name": "West Delhi" },
+                  { "name": "Central Delhi" },
+                  { "name": "New Delhi" },
+                  { "name": "Dwarka" },
+                  { "name": "Rohini" },
+                  { "name": "Janakpuri" },
+                  { "name": "Vasant Kunj" },
+                  { "name": "Saket" },
+                  { "name": "Lajpat Nagar" }
+                ]
+              },
+              {
+                "id": 3,
+                "slug": "gurugram",
+                "name": "Gurugram",
+                "state": "Haryana",
+                "image": "/cityImage/gurugram.jpg",
+                "aboutImage": "/cityImage/gurugram.jpg",
+                "description": "Comprehensive veterinary, grooming, and luxury boarding options for pets across all major Cyber City hubs in Gurugram.",
+                "stats": [
+                  { "icon": "location", "value": "18+", "label": "Locations" },
+                  { "icon": "smile", "value": "4200+", "label": "Happy Pets" },
+                  { "icon": "award", "value": "9+", "label": "Years of Trust" }
+                ],
+                "services": [
+                  {
+                    "icon": "paw",
+                    "title": "Pet Grooming",
+                    "description": "Professional grooming to keep your pet clean, fresh and adorable."
+                  },
+                  {
+                    "icon": "stethoscope",
+                    "title": "Veterinary Care",
+                    "description": "Expert medical care and consultations for your pet's good health."
+                  },
+                  {
+                    "icon": "home",
+                    "title": "Pet Boarding",
+                    "description": "Safe, comfortable and loving stay for your pet while you're away."
+                  },
+                  {
+                    "icon": "heart",
+                    "title": "Pet Day Care",
+                    "description": "Fun and supervised day care to keep your pet happy and active."
+                  },
+                  {
+                    "icon": "walking",
+                    "title": "Pet Walking",
+                    "description": "Regular walks and exercise to keep your pet fit and healthy."
+                  },
+                  {
+                    "icon": "sitting",
+                    "title": "Pet Sitting",
+                    "description": "In-home pet sitting with personalized care and attention."
+                  },
+                  {
+                    "icon": "bath",
+                    "title": "Pet Spa",
+                    "description": "Relaxing spa treatments for your pet's overall well-being."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Vaccination",
+                    "description": "Complete vaccination services to keep your pet protected."
+                  }
+                ],
+                "about": {
+                  "title": "About Pet Care in Gurugram",
+                  "description": "From modern clinics to dedicated dog parks, Gurugram offers exceptional pet healthcare infrastructure powered by PawFect.",
+                  "features": [
+                    "Experienced & Caring Professionals",
+                    "Hygienic & Safe Environment",
+                    "Affordable & Transparent Pricing",
+                    "24/7 Customer Support"
+                  ]
+                },
+                "subRegions": [
+                  { "name": "South Delhi" },
+                  { "name": "North Delhi" },
+                  { "name": "East Delhi" },
+                  { "name": "West Delhi" },
+                  { "name": "Central Delhi" },
+                  { "name": "New Delhi" },
+                  { "name": "Dwarka" },
+                  { "name": "Rohini" },
+                  { "name": "Janakpuri" },
+                  { "name": "Vasant Kunj" },
+                  { "name": "Saket" },
+                  { "name": "Lajpat Nagar" }
+                ]
+              },
+              {
+                "id": 4,
+                "slug": "ghaziabad",
+                "name": "Ghaziabad",
+                "state": "Uttar Pradesh",
+                "image": "/cityImage/Gaziabad.jpg",
+                "aboutImage": "/cityImage/Gaziabad.jpg",
+                "description": "Loving and reliable pet care services tailored for households in Indirapuram, Vaishali, and surrounding Ghaziabad areas.",
+                "stats": [
+                  { "icon": "location", "value": "12+", "label": "Locations" },
+                  { "icon": "smile", "value": "2800+", "label": "Happy Pets" },
+                  { "icon": "award", "value": "7+", "label": "Years of Trust" }
+                ],
+                "services": [
+                  {
+                    "icon": "paw",
+                    "title": "Pet Grooming",
+                    "description": "Professional grooming to keep your pet clean, fresh and adorable."
+                  },
+                  {
+                    "icon": "stethoscope",
+                    "title": "Veterinary Care",
+                    "description": "Expert medical care and consultations for your pet's good health."
+                  },
+                  {
+                    "icon": "home",
+                    "title": "Pet Boarding",
+                    "description": "Safe, comfortable and loving stay for your pet while you're away."
+                  },
+                  {
+                    "icon": "heart",
+                    "title": "Pet Day Care",
+                    "description": "Fun and supervised day care to keep your pet happy and active."
+                  },
+                  {
+                    "icon": "walking",
+                    "title": "Pet Walking",
+                    "description": "Regular walks and exercise to keep your pet fit and healthy."
+                  },
+                  {
+                    "icon": "sitting",
+                    "title": "Pet Sitting",
+                    "description": "In-home pet sitting with personalized care and attention."
+                  },
+                  {
+                    "icon": "bath",
+                    "title": "Pet Spa",
+                    "description": "Relaxing spa treatments for your pet's overall well-being."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Vaccination",
+                    "description": "Complete vaccination services to keep your pet protected."
+                  }
+                ],
+                "about": {
+                  "title": "About Pet Care in Ghaziabad",
+                  "description": "PawFect provides reliable veterinary support and pet hygiene routines for pet lovers across Ghaziabad.",
+                  "features": [
+                    "Experienced & Caring Professionals",
+                    "Hygienic & Safe Environment",
+                    "Affordable & Transparent Pricing",
+                    "24/7 Customer Support"
+                  ]
+                },
+                "subRegions": [
+                  { "name": "South Delhi" },
+                  { "name": "North Delhi" },
+                  { "name": "East Delhi" },
+                  { "name": "West Delhi" },
+                  { "name": "Central Delhi" },
+                  { "name": "New Delhi" },
+                  { "name": "Dwarka" },
+                  { "name": "Rohini" },
+                  { "name": "Janakpuri" },
+                  { "name": "Vasant Kunj" },
+                  { "name": "Saket" },
+                  { "name": "Lajpat Nagar" }
+                ]
+              },
+              {
+                "id": 5,
+                "slug": "faridabad",
+                "name": "Faridabad",
+                "state": "Haryana",
+                "image": "/cityImage/faridabad.jpg",
+                "aboutImage": "/cityImage/faridabad.jpg",
+                "description": "Dedicated pet welfare and vet consultation centers servicing pet owners throughout Faridabad.",
+                "stats": [
+                  { "icon": "location", "value": "10+", "label": "Locations" },
+                  { "icon": "smile", "value": "2100+", "label": "Happy Pets" },
+                  { "icon": "award", "value": "6+", "label": "Years of Trust" }
+                ],
+                "services": [
+                  {
+                    "icon": "paw",
+                    "title": "Pet Grooming",
+                    "description": "Professional grooming to keep your pet clean, fresh and adorable."
+                  },
+                  {
+                    "icon": "stethoscope",
+                    "title": "Veterinary Care",
+                    "description": "Expert medical care and consultations for your pet's good health."
+                  },
+                  {
+                    "icon": "home",
+                    "title": "Pet Boarding",
+                    "description": "Safe, comfortable and loving stay for your pet while you're away."
+                  },
+                  {
+                    "icon": "heart",
+                    "title": "Pet Day Care",
+                    "description": "Fun and supervised day care to keep your pet happy and active."
+                  },
+                  {
+                    "icon": "walking",
+                    "title": "Pet Walking",
+                    "description": "Regular walks and exercise to keep your pet fit and healthy."
+                  },
+                  {
+                    "icon": "sitting",
+                    "title": "Pet Sitting",
+                    "description": "In-home pet sitting with personalized care and attention."
+                  },
+                  {
+                    "icon": "bath",
+                    "title": "Pet Spa",
+                    "description": "Relaxing spa treatments for your pet's overall well-being."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Vaccination",
+                    "description": "Complete vaccination services to keep your pet protected."
+                  }
+                ],
+                "about": {
+                  "title": "About Pet Care in Faridabad",
+                  "description": "Our certified vet assistants and groomers make sure pets in Faridabad live active and healthy lives.",
+                  "features": [
+                    "Experienced & Caring Professionals",
+                    "Hygienic & Safe Environment",
+                    "Affordable & Transparent Pricing",
+                    "24/7 Customer Support"
+                  ]
+                },
+                "subRegions": [
+                  { "name": "South Delhi" },
+                  { "name": "North Delhi" },
+                  { "name": "East Delhi" },
+                  { "name": "West Delhi" },
+                  { "name": "Central Delhi" },
+                  { "name": "New Delhi" },
+                  { "name": "Dwarka" },
+                  { "name": "Rohini" },
+                  { "name": "Janakpuri" },
+                  { "name": "Vasant Kunj" },
+                  { "name": "Saket" },
+                  { "name": "Lajpat Nagar" }
+                ]
+              },
+              {
+                "id": 6,
+                "slug": "gurgaon",
+                "name": "Gurgaon",
+                "state": "Haryana",
+                "image": "/cityImage/gurgaon.jpg",
+                "aboutImage": "/cityImage/gurgaon.jpg",
+                "description": "Convenient vet clinics and full pet wellness centers operating across Gurgaon.",
+                "stats": [
+                  { "icon": "location", "value": "14+", "label": "Locations" },
+                  { "icon": "smile", "value": "3900+", "label": "Happy Pets" },
+                  { "icon": "award", "value": "8+", "label": "Years of Trust" }
+                ],
+                "services": [
+                  {
+                    "icon": "paw",
+                    "title": "Pet Grooming",
+                    "description": "Professional grooming to keep your pet clean, fresh and adorable."
+                  },
+                  {
+                    "icon": "stethoscope",
+                    "title": "Veterinary Care",
+                    "description": "Expert medical care and consultations for your pet's good health."
+                  },
+                  {
+                    "icon": "home",
+                    "title": "Pet Boarding",
+                    "description": "Safe, comfortable and loving stay for your pet while you're away."
+                  },
+                  {
+                    "icon": "heart",
+                    "title": "Pet Day Care",
+                    "description": "Fun and supervised day care to keep your pet happy and active."
+                  },
+                  {
+                    "icon": "walking",
+                    "title": "Pet Walking",
+                    "description": "Regular walks and exercise to keep your pet fit and healthy."
+                  },
+                  {
+                    "icon": "sitting",
+                    "title": "Pet Sitting",
+                    "description": "In-home pet sitting with personalized care and attention."
+                  },
+                  {
+                    "icon": "bath",
+                    "title": "Pet Spa",
+                    "description": "Relaxing spa treatments for your pet's overall well-being."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Vaccination",
+                    "description": "Complete vaccination services to keep your pet protected."
+                  }
+                ],
+                "about": {
+                  "title": "About Pet Care in Gurgaon",
+                  "description": "PawFect helps pet parents in Gurgaon manage busy schedules through active pet walking and in-home pet sitting.",
+                  "features": [
+                    "Experienced & Caring Professionals",
+                    "Hygienic & Safe Environment",
+                    "Affordable & Transparent Pricing",
+                    "24/7 Customer Support"
+                  ]
+                },
+                "subRegions": [
+                  { "name": "South Delhi" },
+                  { "name": "North Delhi" },
+                  { "name": "East Delhi" },
+                  { "name": "West Delhi" },
+                  { "name": "Central Delhi" },
+                  { "name": "New Delhi" },
+                  { "name": "Dwarka" },
+                  { "name": "Rohini" },
+                  { "name": "Janakpuri" },
+                  { "name": "Vasant Kunj" },
+                  { "name": "Saket" },
+                  { "name": "Lajpat Nagar" }
+                ]
+              },
+              {
+                "id": 7,
+                "slug": "mumbai",
+                "name": "Mumbai",
+                "state": "Maharashtra",
+                "image": "/cityImage/mumbai.jpg",
+                "aboutImage": "/cityImage/mumbai.jpg",
+                "description": "Premier pet grooming and medical care centers operating across central and suburban Mumbai.",
+                "stats": [
+                  { "icon": "location", "value": "25+", "label": "Locations" },
+                  { "icon": "smile", "value": "6500+", "label": "Happy Pets" },
+                  { "icon": "award", "value": "12+", "label": "Years of Trust" }
+                ],
+                "services": [
+                  {
+                    "icon": "paw",
+                    "title": "Pet Grooming",
+                    "description": "Professional grooming to keep your pet clean, fresh and adorable."
+                  },
+                  {
+                    "icon": "stethoscope",
+                    "title": "Veterinary Care",
+                    "description": "Expert medical care and consultations for your pet's good health."
+                  },
+                  {
+                    "icon": "home",
+                    "title": "Pet Boarding",
+                    "description": "Safe, comfortable and loving stay for your pet while you're away."
+                  },
+                  {
+                    "icon": "heart",
+                    "title": "Pet Day Care",
+                    "description": "Fun and supervised day care to keep your pet happy and active."
+                  },
+                  {
+                    "icon": "walking",
+                    "title": "Pet Walking",
+                    "description": "Regular walks and exercise to keep your pet fit and healthy."
+                  },
+                  {
+                    "icon": "sitting",
+                    "title": "Pet Sitting",
+                    "description": "In-home pet sitting with personalized care and attention."
+                  },
+                  {
+                    "icon": "bath",
+                    "title": "Pet Spa",
+                    "description": "Relaxing spa treatments for your pet's overall well-being."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Vaccination",
+                    "description": "Complete vaccination services to keep your pet protected."
+                  }
+                ],
+                "about": {
+                  "title": "About Pet Care in Mumbai",
+                  "description": "From Bandra to Navi Mumbai, PawFect ensures luxury treatment and quick emergency vet assistance for your beloved pets.",
+                  "features": [
+                    "Experienced & Caring Professionals",
+                    "Hygienic & Safe Environment",
+                    "Affordable & Transparent Pricing",
+                    "24/7 Customer Support"
+                  ]
+                },
+                "subRegions": [
+                  { "name": "South Delhi" },
+                  { "name": "North Delhi" },
+                  { "name": "East Delhi" },
+                  { "name": "West Delhi" },
+                  { "name": "Central Delhi" },
+                  { "name": "New Delhi" },
+                  { "name": "Dwarka" },
+                  { "name": "Rohini" },
+                  { "name": "Janakpuri" },
+                  { "name": "Vasant Kunj" },
+                  { "name": "Saket" },
+                  { "name": "Lajpat Nagar" }
+                ]
+              },
+              {
+                "id": 8,
+                "slug": "meerut",
+                "name": "Meerut",
+                "state": "Uttar Pradesh",
+                "image": "/cityImage/meerut.jpg",
+                "aboutImage": "/cityImage/meerut.jpg",
+                "description": "Quality veterinary care and pet health services available throughout Meerut.",
+                "stats": [
+                  { "icon": "location", "value": "8+", "label": "Locations" },
+                  { "icon": "smile", "value": "1800+", "label": "Happy Pets" },
+                  { "icon": "award", "value": "5+", "label": "Years of Trust" }
+                ],
+                "services": [
+                  {
+                    "icon": "paw",
+                    "title": "Pet Grooming",
+                    "description": "Professional grooming to keep your pet clean, fresh and adorable."
+                  },
+                  {
+                    "icon": "stethoscope",
+                    "title": "Veterinary Care",
+                    "description": "Expert medical care and consultations for your pet's good health."
+                  },
+                  {
+                    "icon": "home",
+                    "title": "Pet Boarding",
+                    "description": "Safe, comfortable and loving stay for your pet while you're away."
+                  },
+                  {
+                    "icon": "heart",
+                    "title": "Pet Day Care",
+                    "description": "Fun and supervised day care to keep your pet happy and active."
+                  },
+                  {
+                    "icon": "walking",
+                    "title": "Pet Walking",
+                    "description": "Regular walks and exercise to keep your pet fit and healthy."
+                  },
+                  {
+                    "icon": "sitting",
+                    "title": "Pet Sitting",
+                    "description": "In-home pet sitting with personalized care and attention."
+                  },
+                  {
+                    "icon": "bath",
+                    "title": "Pet Spa",
+                    "description": "Relaxing spa treatments for your pet's overall well-being."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Vaccination",
+                    "description": "Complete vaccination services to keep your pet protected."
+                  }
+                ],
+                "about": {
+                  "title": "About Pet Care in Meerut",
+                  "description": "PawFect brings world-class pet care, vaccinations, and grooming facilities closer to pet owners in Meerut.",
+                  "features": [
+                    "Experienced & Caring Professionals",
+                    "Hygienic & Safe Environment",
+                    "Affordable & Transparent Pricing",
+                    "24/7 Customer Support"
+                  ]
+                },
+                "subRegions": [
+                  { "name": "South Delhi" },
+                  { "name": "North Delhi" },
+                  { "name": "East Delhi" },
+                  { "name": "West Delhi" },
+                  { "name": "Central Delhi" },
+                  { "name": "New Delhi" },
+                  { "name": "Dwarka" },
+                  { "name": "Rohini" },
+                  { "name": "Janakpuri" },
+                  { "name": "Vasant Kunj" },
+                  { "name": "Saket" },
+                  { "name": "Lajpat Nagar" }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "FaqPage": {
+        "variants": {
+          "PetFaqPage1": {
+            "badge": "FAQS",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "FAQS",
+              "title": "FAQS",
+              "backgroundImage": "/dogs/dog4.jpg",
+              "homeHref": "/"
+            },
+            "heading": {
+              "normal": "Frequently",
+              "highlighted": "Asked Questions"
+            },
+            "description": "Find answers to common questions about our pet care services, appointments, and policies.",
+            "questions": [
+              {
+                "id": "1",
+                "number": "01",
+                "question": "How often should I take my pet to the vet?",
+                "answer": "For most pets, a yearly checkup is recommended to monitor their overall health, update vaccinations, and catch early signs of illness. Senior pets or those with chronic conditions may require more frequent visits."
+              },
+              {
+                "id": "2",
+                "number": "02",
+                "question": "How can I book an appointment for emergency treatment?",
+                "answer": "You can book emergency treatment by calling our 24/7 emergency hotline directly or using our online booking portal. Our emergency vet team is ready around the clock to provide immediate medical attention."
+              },
+              {
+                "id": "3",
+                "number": "03",
+                "question": "How often should I bathe my pet?",
+                "answer": "In general, bathing every 4 to 6 weeks is ideal for most dogs. However, this depends on their breed, coat type, and activity level. Cats typically groom themselves but may need occasional specialized baths."
+              },
+              {
+                "id": "4",
+                "number": "04",
+                "question": "What should I do if my pet eats something toxic?",
+                "answer": "Immediately contact our emergency line or bring your pet directly to our nearest clinic. Do not attempt to induce vomiting without professional guidance. Bring the packaging or item if possible."
+              },
+              {
+                "id": "5",
+                "number": "05",
+                "question": "Is it normal for pets to be anxious or fearful?",
+                "answer": "Occasional anxiety in new environments or during thunderstorms is normal. However, severe or ongoing anxiety may require behavioral consultation and tailored calming techniques from our specialists."
+              }
+            ],
+            "contactBox": {
+              "title": "Didn't Find the Answer?",
+              "subtitle": "Ask us Question!",
+              "phone": {
+                "label": "Free Call",
+                "value": "+1 (555) 123-4567",
+                "subtext": "Available 24/7 for booking & travel assistance"
+              },
+              "email": {
+                "label": "Email Address",
+                "value": "support@pawfect.com",
+                "subtext": "custom packages, or general questions"
+              },
+              "location": {
+                "label": "Office Location",
+                "address": "123 Explorer Avenue, Suite 501, Los Angeles, CA 90001, USA"
+              }
+            },
+            "callout": {
+              "title": "Still Have Questions?",
+              "subtitle": "We're here to help! Our team is happy to assist you with anything you need to know.",
+              "buttonText": "Contact Us Now",
+              "buttonHref": "/contact"
+            }
+          }
+        }
+      },
+      "ContactPage": {
+        "variants": {
+          "PetContactPage1": {
+            "badge": "CONTACT US",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Contact Us",
+              "title": "Contact Us",
+              "backgroundImage": "/dogs/dog4.jpg",
+              "homeHref": "/"
+            },
+            "heading": {
+              "normal": "We Are Always Available For",
+              "highlighted": "You & Your Pets"
+            },
+            "description": "Have questions or need assistance? Our caring team is here to help you and your furry friends. Get in touch with us anytime!",
+            "infoCards": [
+              {
+                "icon": "phone",
+                "title": "Call Us",
+                "value": "+123 8989 444",
+                "subtext": "Mon - Sat: 9:00 AM - 7:00 PM"
+              },
+              {
+                "icon": "location",
+                "title": "Visit Us",
+                "value": "256 Avenue, Newyork City, NY 10001, USA",
+                "subtext": ""
+              },
+              {
+                "icon": "email",
+                "title": "Email Us",
+                "value": "info@gmail.com",
+                "subtext": "We reply within 24 hours"
+              },
+              {
+                "icon": "clock",
+                "title": "Working Hours",
+                "value": "Mon - Sat: 9:00 AM - 7:00 PM",
+                "subtext": "Sunday: Closed"
+              }
+            ],
+            "socials": [
+              {
+                "platform": "facebook",
+                "icon": "facebook",
+                "url": "https://facebook.com"
+              },
+              {
+                "platform": "twitter",
+                "icon": "twitter",
+                "url": "https://twitter.com"
+              },
+              {
+                "platform": "instagram",
+                "icon": "instagram",
+                "url": "https://instagram.com"
+              },
+              {
+                "platform": "whatsapp",
+                "icon": "whatsapp",
+                "url": "https://whatsapp.com"
+              },
+              {
+                "platform": "youtube",
+                "icon": "youtube",
+                "url": "https://youtube.com"
+              }
+            ],
+            "form": {
+              "title": "Send Us a Message",
+              "subtitle": "Have a question or need help? Fill out the form below and we'll get back to you soon.",
+              "submitButtonText": "Send Message"
+            },
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280006547!2d-74.11976373946229!3d40.69766371900028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1680000000000!5m2!1sen!2s",
+            "immediateAssistance": {
+              "title": "Need Immediate Assistance?",
+              "subtitle": "Call us anytime. We're always here for you and your pets.",
+              "phone": "+123 8989 444"
+            }
+          }
+        }
+      },
+      "AppointmentPage": {
+        "variants": {
+          "PetAppointmentPage1": {
+            "badge": "OUR APPOINTMENT",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Book an Appointment",
+              "title": "Book an Appointment",
+              "backgroundImage": "/dogs/dog4.jpg",
+              "homeHref": "/"
+            },
+            "heading": {
+              "normal": "Schedule your pet's visit",
+              "highlighted": "in minutes today"
+            },
+            "description": "Booking an appointment with our clinic is quick, simple & stress-free. Whether your pet needs a routine checkup, vaccination, grooming or urgent medical attention.",
+            "card": {
+              "image": "/dogs/dog4.jpg",
+              "badgeIcon": "paw",
+              "title": "24/7 Emergency Veterinary",
+              "highlightTitle": "Care for Your Pets",
+              "description": "Booking an appointment with our clinic is quick, simple, and stress-free. Whether your pet needs a routine checkup, vaccination, grooming, or urgent medical attention.",
+              "features": [
+                { "title": "Quick Response Team Always Ready" },
+                { "title": "Advanced Diagnostic Fast Treatment" },
+                { "title": "Immediate Help for Critical Pets" },
+                { "title": "Round-the-Clock Expert" }
+              ]
+            },
+            "form": {
+              "serviceOptions": [
+                { "value": "", "label": "Select a Service" },
+                { "value": "wellness-exams", "label": "Wellness Exams" },
+                { "value": "vaccinations", "label": "Vaccinations" },
+                { "value": "dental-care", "label": "Dental Care" },
+                { "value": "surgery", "label": "Surgery" },
+                { "value": "grooming", "label": "Grooming" },
+                { "value": "emergency-care", "label": "Emergency Care" }
+              ],
+              "submitButtonText": "Send Message"
+            },
+            "bottomNotice": {
+              "priorityTitle": "Your Pet's Health is Our Priority",
+              "prioritySubtitle": "Our team is dedicated to providing the best care for your furry friends.",
+              "phoneTitle": "Need Immediate Assistance?",
+              "phoneNumber": "+91 98765 43210",
+              "phoneSubtext": "We are available 24/7"
+            }
+          }
+        }
+      },
+      "PricingPage": {
+        "variants": {
+          "PetPricingPage1": {
+            "badge": "OUR PRICING",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Pricing",
+              "title": "Pricing",
+              "backgroundImage": "/dogs/dog3.jpg",
+              "homeHref": "/"
+            },
+            "heading": {
+              "normal": "Care That Fits",
+              "highlighted": "Every Need"
+            },
+            "subtitle1": "Simple, transparent pricing for exceptional care.",
+            "subtitle2": "Choose the plan that's perfect for your furry friend.",
+            "plans": [
+              {
+                "id": "starter",
+                "title": "Starter",
+                "subtitle": "Essential care to keep your pet happy and healthy.",
+                "price": "19",
+                "period": "/mo",
+                "features": [
+                  { "title": "Pet Grooming" },
+                  { "title": "Physical Exam" },
+                  { "title": "Body Trimming / Styling" },
+                  { "title": "Paw Massage" },
+                  { "title": "3x Vaccination (7 in 1)" }
+                ],
+                "dogImage": "/dogs/dog13.png",
+                "buttonText": "Choose Plan",
+                "isPopular": false
+              },
+              {
+                "id": "basic",
+                "badge": "MOST POPULAR",
+                "title": "Basic",
+                "subtitle": "Complete care for regular health and well-being.",
+                "price": "29",
+                "period": "/mo",
+                "features": [
+                  { "title": "Pet Grooming" },
+                  { "title": "Physical Exam" },
+                  { "title": "Body Trimming / Styling" },
+                  { "title": "Paw Massage" },
+                  { "title": "3x Vaccination (7 in 1)" }
+                ],
+                "dogImage": "/dogs/dog13.png",
+                "buttonText": "Choose Plan",
+                "isPopular": true
+              },
+              {
+                "id": "professional",
+                "title": "Professional",
+                "subtitle": "Advanced care for a healthy, active and happy pet.",
+                "price": "99",
+                "period": "/mo",
+                "features": [
+                  { "title": "Pet Grooming" },
+                  { "title": "Physical Exam" },
+                  { "title": "Body Trimming / Styling" },
+                  { "title": "Paw Massage" },
+                  { "title": "3x Vaccination (7 in 1)" }
+                ],
+                "dogImage": "/dogs/dog13.png",
+                "buttonText": "Choose Plan",
+                "isPopular": false
+              }
+            ],
+            "ctaBanner": {
+              "needDifferent": {
+                "title": "Need something different?",
+                "description": "All plans are customizable. Contact us for a tailored plan that suits your pet's unique needs."
+              },
+              "consultation": {
+                "title": "Book a Free Consultation",
+                "description": "Talk to our experts and find the perfect plan for your pet.",
+                "buttonText": "Contact Us",
+                "buttonHref": "/contact"
+              }
+            }
+          }
+        }
+      },
+      "TestimonialPage": {
+        "variants": {
+          "PetTestimonialPage1": {
+            "badge": "CLIENT REVIEWS",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Testimonials",
+              "title": "Testimonials",
+              "backgroundImage": "/dogs/dog8.jpg",
+              "homeHref": "/"
+            },
+            "heading": {
+              "normal": "What",
+              "highlighted": "Pet Parents Say"
+            },
+            "description": "Real stories from pet parents who trust us for exceptional care and support.",
+            "testimonialItems": [
+              {
+                "id": 1,
+                "name": "Sarah Jacob",
+                "role": "Pet Owner, New York",
+                "image": "/personImage/women1.png",
+                "quote": "The team is amazing! They took such great care of my pet and made the whole experience stress-free. Highly recommended for anyone who truly cares about their pets.",
+                "rating": 5
+              },
+              {
+                "id": 2,
+                "name": "Michael Brown",
+                "role": "Pet Owner, California",
+                "image": "/personImage/man1.png",
+                "quote": "Professional, caring, and always available when we need them. Our dog feels so comfortable here. We're so happy we found such a wonderful clinic!",
+                "rating": 5
+              },
+              {
+                "id": 3,
+                "name": "Emily Carter",
+                "role": "Pet Owner, Chicago",
+                "image": "/personImage/women2.png",
+                "quote": "I couldn't be happier with the care my cat received. Everyone was kind, patient, and genuinely concerned about her wellbeing. The entire experience was wonderful.",
+                "rating": 5
+              },
+              {
+                "id": 4,
+                "name": "David Wilson",
+                "role": "Pet Owner, Texas",
+                "image": "/personImage/men2.png",
+                "quote": "From the moment we walked in, we felt welcomed and cared for. The staff explained everything clearly and treated our puppy like family. Excellent service!",
+                "rating": 5
+              },
+              {
+                "id": 5,
+                "name": "Olivia Martinez",
+                "role": "Pet Owner, Florida",
+                "image": "/personImage/women3.png",
+                "quote": "The level of care and attention is outstanding. My dog is usually nervous around new people, but the team made him feel completely comfortable. Truly a fantastic place.",
+                "rating": 5
+              },
+              {
+                "id": 6,
+                "name": "James Anderson",
+                "role": "Pet Owner, Seattle",
+                "image": "/personImage/men3.png",
+                "quote": "Reliable, friendly, and incredibly caring. They always take the time to answer our questions and make sure our pet gets the best possible care. Highly recommended!",
+                "rating": 5
+              }
+            ]
+          }
+        }
+      },
+      "PartnersPage": {
+        "variants": {
+          "PetPartnersPage1": {
+            "badge": "OUR PARTNERS",
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Partners",
+              "title": "Partners",
+              "backgroundImage": "/dogs/dog2.jpg",
+              "homeHref": "/"
+            },
+            "heading": {
+              "normal": "Trusted Partners",
+              "highlighted": "We Work With"
+            },
+            "subtitle": "We collaborate with leading pet care brands and veterinary experts to keep your pets healthy and happy.",
+            "features": [
+              {
+                "icon": "trophy",
+                "title": "Trusted Brands",
+                "subtitle": "Quality You Can Rely On"
+              },
+              {
+                "icon": "paw",
+                "title": "Pet Wellness First",
+                "subtitle": "Better Care Together"
+              },
+              {
+                "icon": "heart",
+                "title": "Long-Term Support",
+                "subtitle": "A Healthy Pet, A Happy Life"
+              }
+            ],
+            "partners": [
+              {
+                "id": "1",
+                "name": "Royal Canin",
+                "logo": "/partners/royal.jpg",
+                "subtitle": "Pet Nutrition Partner"
+              },
+              {
+                "id": "2",
+                "name": "Lino",
+                "logo": "/partners/lino.jpg",
+                "subtitle": "Pet Food Partner"
+              },
+              {
+                "id": "3",
+                "name": "nonna",
+                "logo": "/partners/nonna.jpg",
+                "subtitle": "Pet Care Partner"
+              },
+              {
+                "id": "4",
+                "name": "Paws",
+                "logo": "/partners/paws.jpg",
+                "subtitle": "Cat Care Partner"
+              },
+              {
+                "id": "5",
+                "name": "PetShop",
+                "logo": "/partners/petshop.jpg",
+                "subtitle": "Animal Health Partner"
+              },
+              {
+                "id": "6",
+                "name": "Pettrix",
+                "logo": "/partners/pettrix.jpg",
+                "subtitle": "Veterinary Partner"
+              },
+              {
+                "id": "7",
+                "name": "Plates",
+                "logo": "/partners/plates.jpg",
+                "subtitle": "Safety Partner"
+              },
+              {
+                "id": "8",
+                "name": "Pet",
+                "logo": "/partners/pet.jpg",
+                "subtitle": "Nutrition Partner"
+              }
+            ],
+            "ctaBanner": {
+              "title": "Partner With Us",
+              "description": "Join our growing network of pet care professionals and brands.",
+              "buttonText": "Become a Partner",
+              "buttonHref": "/contact"
+            }
+          }
+        }
+      },
+      "LegalPage": {
+        "variants": {
+          "PetTermsAndConditionsPage1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Terms and Conditions",
+              "title": "Terms and Conditions",
+              "backgroundImage": "/dogs/dog3.jpg",
+              "homeHref": "/"
+            },
+            "sections": [
+              {
+                "id": 1,
+                "title": "1. Acceptance of Terms",
+                "content": "By using our website or availing of our pet care services, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, please do not use our services."
+              },
+              {
+                "id": 2,
+                "title": "2. Services",
+                "content": "We provide pet care services including but not limited to grooming, boarding, daycare, training, walking, and veterinary coordination. The specific details of each service will be communicated at the time of booking."
+              },
+              {
+                "id": 3,
+                "title": "3. User Responsibilities",
+                "content": "You agree to provide accurate information about your pet, including health history, behavior, and any special needs. You are responsible for ensuring that your pet is up to date on vaccinations and is free from contagious illnesses before availing our services."
+              },
+              {
+                "id": 4,
+                "title": "4. Bookings and Payments",
+                "content": "All bookings are subject to availability and confirmation. Payment must be made in full or as specified at the time of booking. We reserve the right to cancel or reschedule services in case of non-payment or invalid information."
+              },
+              {
+                "id": 5,
+                "title": "5. Cancellations and Refunds",
+                "content": "Cancellations made within 24 hours of the scheduled service may be subject to a cancellation fee. Refunds, if applicable, will be processed as per our refund policy. Please review our Cancellation & Refund Policy for more details."
+              },
+              {
+                "id": 6,
+                "title": "6. Pet Safety and Care",
+                "content": "We take the utmost care to ensure the safety and well-being of your pets. However, we are not liable for any injuries, illness, or accidents that may occur due to unforeseen circumstances. In case of a medical emergency, we will make every effort to contact you and seek veterinary care."
+              },
+              {
+                "id": 7,
+                "title": "7. Limitation of Liability",
+                "content": "Our liability is limited to the amount paid for the service. We are not responsible for any indirect, incidental, or consequential damages arising from the use of our services."
+              },
+              {
+                "id": 8,
+                "title": "8. Changes to Terms",
+                "content": "We reserve the right to update or modify these Terms & Conditions at any time without prior notice. The updated terms will be effective immediately upon posting on our website."
+              },
+              {
+                "id": 9,
+                "title": "9. Governing Law",
+                "content": "These Terms & Conditions shall be governed by and construed in accordance with the laws of our jurisdiction."
+              },
+              {
+                "id": 10,
+                "title": "10. Contact Us",
+                "content": "If you have any questions or concerns about these Terms & Conditions, please contact us through our Contact Us page."
+              }
+            ]
+          },
+          "PetPrivacyPolicyPage1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Privacy Policy",
+              "title": "Privacy Policy",
+              "backgroundImage": "/dogs/dog3.jpg",
+              "homeHref": "/"
+            },
+            "sections": [
+              {
+                "id": 1,
+                "title": "1. Acceptance of Terms",
+                "content": "By using our website or availing of our pet care services, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, please do not use our services."
+              },
+              {
+                "id": 2,
+                "title": "2. Services",
+                "content": "We provide pet care services including but not limited to grooming, boarding, daycare, training, walking, and veterinary coordination. The specific details of each service will be communicated at the time of booking."
+              },
+              {
+                "id": 3,
+                "title": "3. User Responsibilities",
+                "content": "You agree to provide accurate information about your pet, including health history, behavior, and any special needs. You are responsible for ensuring that your pet is up to date on vaccinations and is free from contagious illnesses before availing our services."
+              },
+              {
+                "id": 4,
+                "title": "4. Bookings and Payments",
+                "content": "All bookings are subject to availability and confirmation. Payment must be made in full or as specified at the time of booking. We reserve the right to cancel or reschedule services in case of non-payment or invalid information."
+              },
+              {
+                "id": 5,
+                "title": "5. Cancellations and Refunds",
+                "content": "Cancellations made within 24 hours of the scheduled service may be subject to a cancellation fee. Refunds, if applicable, will be processed as per our refund policy. Please review our Cancellation & Refund Policy for more details."
+              },
+              {
+                "id": 6,
+                "title": "6. Pet Safety and Care",
+                "content": "We take the utmost care to ensure the safety and well-being of your pets. However, we are not liable for any injuries, illness, or accidents that may occur due to unforeseen circumstances. In case of a medical emergency, we will make every effort to contact you and seek veterinary care."
+              },
+              {
+                "id": 7,
+                "title": "7. Limitation of Liability",
+                "content": "Our liability is limited to the amount paid for the service. We are not responsible for any indirect, incidental, or consequential damages arising from the use of our services."
+              },
+              {
+                "id": 8,
+                "title": "8. Changes to Terms",
+                "content": "We reserve the right to update or modify these Terms & Conditions at any time without prior notice. The updated terms will be effective immediately upon posting on our website."
+              },
+              {
+                "id": 9,
+                "title": "9. Governing Law",
+                "content": "These Terms & Conditions shall be governed by and construed in accordance with the laws of our jurisdiction."
+              },
+              {
+                "id": 10,
+                "title": "10. Contact Us",
+                "content": "If you have any questions or concerns about these Terms & Conditions, please contact us through our Contact Us page."
+              }
+            ]
+          },
+          "PetCookiePolicyPage1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Cookie Policy",
+              "title": "Cookie Policy",
+              "backgroundImage": "/dogs/dog3.jpg",
+              "homeHref": "/"
+            },
+            "sections": [
+              {
+                "id": 1,
+                "title": "1. Acceptance of Terms",
+                "content": "By using our website or availing of our pet care services, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, please do not use our services."
+              },
+              {
+                "id": 2,
+                "title": "2. Services",
+                "content": "We provide pet care services including but not limited to grooming, boarding, daycare, training, walking, and veterinary coordination. The specific details of each service will be communicated at the time of booking."
+              },
+              {
+                "id": 3,
+                "title": "3. User Responsibilities",
+                "content": "You agree to provide accurate information about your pet, including health history, behavior, and any special needs. You are responsible for ensuring that your pet is up to date on vaccinations and is free from contagious illnesses before availing our services."
+              },
+              {
+                "id": 4,
+                "title": "4. Bookings and Payments",
+                "content": "All bookings are subject to availability and confirmation. Payment must be made in full or as specified at the time of booking. We reserve the right to cancel or reschedule services in case of non-payment or invalid information."
+              },
+              {
+                "id": 5,
+                "title": "5. Cancellations and Refunds",
+                "content": "Cancellations made within 24 hours of the scheduled service may be subject to a cancellation fee. Refunds, if applicable, will be processed as per our refund policy. Please review our Cancellation & Refund Policy for more details."
+              },
+              {
+                "id": 6,
+                "title": "6. Pet Safety and Care",
+                "content": "We take the utmost care to ensure the safety and well-being of your pets. However, we are not liable for any injuries, illness, or accidents that may occur due to unforeseen circumstances. In case of a medical emergency, we will make every effort to contact you and seek veterinary care."
+              },
+              {
+                "id": 7,
+                "title": "7. Limitation of Liability",
+                "content": "Our liability is limited to the amount paid for the service. We are not responsible for any indirect, incidental, or consequential damages arising from the use of our services."
+              },
+              {
+                "id": 8,
+                "title": "8. Changes to Terms",
+                "content": "We reserve the right to update or modify these Terms & Conditions at any time without prior notice. The updated terms will be effective immediately upon posting on our website."
+              },
+              {
+                "id": 9,
+                "title": "9. Governing Law",
+                "content": "These Terms & Conditions shall be governed by and construed in accordance with the laws of our jurisdiction."
+              },
+              {
+                "id": 10,
+                "title": "10. Contact Us",
+                "content": "If you have any questions or concerns about these Terms & Conditions, please contact us through our Contact Us page."
+              }
+            ]
+          },
+          "PetDisclaimerPage1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Disclaimer",
+              "title": "Disclaimer",
+              "backgroundImage": "/dogs/dog3.jpg",
+              "homeHref": "/"
+            },
+            "sections": [
+              {
+                "id": 1,
+                "title": "1. Acceptance of Terms",
+                "content": "By using our website or availing of our pet care services, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, please do not use our services."
+              },
+              {
+                "id": 2,
+                "title": "2. Services",
+                "content": "We provide pet care services including but not limited to grooming, boarding, daycare, training, walking, and veterinary coordination. The specific details of each service will be communicated at the time of booking."
+              },
+              {
+                "id": 3,
+                "title": "3. User Responsibilities",
+                "content": "You agree to provide accurate information about your pet, including health history, behavior, and any special needs. You are responsible for ensuring that your pet is up to date on vaccinations and is free from contagious illnesses before availing our services."
+              },
+              {
+                "id": 4,
+                "title": "4. Bookings and Payments",
+                "content": "All bookings are subject to availability and confirmation. Payment must be made in full or as specified at the time of booking. We reserve the right to cancel or reschedule services in case of non-payment or invalid information."
+              },
+              {
+                "id": 5,
+                "title": "5. Cancellations and Refunds",
+                "content": "Cancellations made within 24 hours of the scheduled service may be subject to a cancellation fee. Refunds, if applicable, will be processed as per our refund policy. Please review our Cancellation & Refund Policy for more details."
+              },
+              {
+                "id": 6,
+                "title": "6. Pet Safety and Care",
+                "content": "We take the utmost care to ensure the safety and well-being of your pets. However, we are not liable for any injuries, illness, or accidents that may occur due to unforeseen circumstances. In case of a medical emergency, we will make every effort to contact you and seek veterinary care."
+              },
+              {
+                "id": 7,
+                "title": "7. Limitation of Liability",
+                "content": "Our liability is limited to the amount paid for the service. We are not responsible for any indirect, incidental, or consequential damages arising from the use of our services."
+              },
+              {
+                "id": 8,
+                "title": "8. Changes to Terms",
+                "content": "We reserve the right to update or modify these Terms & Conditions at any time without prior notice. The updated terms will be effective immediately upon posting on our website."
+              },
+              {
+                "id": 9,
+                "title": "9. Governing Law",
+                "content": "These Terms & Conditions shall be governed by and construed in accordance with the laws of our jurisdiction."
+              },
+              {
+                "id": 10,
+                "title": "10. Contact Us",
+                "content": "If you have any questions or concerns about these Terms & Conditions, please contact us through our Contact Us page."
+              }
+            ]
+          }
+        }
+      },
+      "SitemapPage": {
+        "variants": {
+          "PetSitemapPage1": {
+            "banner": {
+              "breadcrumbHome": "Home",
+              "breadcrumbCurrent": "Site Map",
+              "title": "Site Map",
+              "backgroundImage": "/dogs/dog12.jpg",
+              "homeHref": "/"
+            },
+            "badge": "SITE MAP",
+            "heading": {
+              "normal": "Site",
+              "highlighted": "Map"
+            },
+            "description": "Explore all the pages and sections of our website. Find what you need quickly and easily navigate through our pet care services.",
+            "sections": [
+              {
+                "id": 1,
+                "title": "Main Pages",
+                "pages": [
+                  { "label": "Home", "href": "/" },
+                  { "label": "About Us", "href": "/about" },
+                  { "label": "Services", "href": "/service" },
+                  { "label": "Service Areas", "href": "/service-areas" },
+                  { "label": "Our Team", "href": "/team" },
+                  { "label": "Gallery", "href": "/gallery" },
+                  { "label": "Blogs", "href": "/blogs" },
+                  { "label": "Contact Us", "href": "/contact-us" }
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Services",
+                "pages": [
+                  { "label": "Grooming", "href": "/services/grooming" },
+                  { "label": "Bath & Deshed", "href": "/services/bath-deshed" },
+                  { "label": "Pet Sitting", "href": "/services/pet-sitting" },
+                  { "label": "Pet Walking", "href": "/services/pet-walking" },
+                  { "label": "Veterinary Care", "href": "/services/veterinary" },
+                  { "label": "Training", "href": "/services/training" },
+                  { "label": "Pet Daycare", "href": "/services/daycare" },
+                  { "label": "Pet Boarding", "href": "/services/boarding" }
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Information",
+                "pages": [
+                  { "label": "FAQs", "href": "/faq" },
+                  { "label": "Testimonials", "href": "/testimonial" },
+                  { "label": "Pricing / Packages", "href": "/pricing" },
+                  { "label": "Partners", "href": "/partners" },
+                  { "label": "Appointment", "href": "/appointment" },
+                  { "label": "Mission & Vision", "href": "/mission" },
+                  { "label": "Why Choose Us", "href": "/whychoose" }
+                ]
+              },
+              {
+                "id": 4,
+                "title": "Legal",
+                "pages": [
+                  { "label": "Privacy Policy", "href": "/privacy-policy" },
+                  { "label": "Terms & Conditions", "href": "/terms" },
+                  { "label": "Disclaimer", "href": "/disclaimer" },
+                  { "label": "Cookie Policy", "href": "/cookie-policy" }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "NotFoundPage": {
+        "variants": {
+          "PetNotFoundPage1": {
+            "image": "/mouseImage.png",
+            "title": "OOPS! Nothing Was Found",
+            "description": "Oops! It Could Be You Or Us. There Is No Page Here. It Might Have Been Moved Or Deleted. Back To Home",
+            "buttonText": "Back To Home Page",
+            "buttonHref": "/"
           }
         }
       }

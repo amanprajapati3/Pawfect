@@ -79,7 +79,6 @@ export default function FaqSection({ data }: FaqSectionProps) {
     <section className="w-full overflow-hidden bg-[#FAFAFC] py-8 md:py-12">
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-16">
-          {/* ===================== LEFT: FAQ CONTENT ===================== */}
           <div className="lg:col-span-6 xl:col-span-7">
             {/* Badge */}
             {badge && (
@@ -221,7 +220,6 @@ export default function FaqSection({ data }: FaqSectionProps) {
             )}
           </div>
 
-          {/* ===================== RIGHT: IMAGE + GRAPHICS ===================== */}
           <div className="relative flex justify-center lg:col-span-6 -mt-32 md:mt-28 xl:col-span-5 lg:justify-end">
             <div className="relative h-[420px] w-full max-w-[420px] sm:h-[480px] sm:max-w-[460px] lg:h-[520px] lg:max-w-[500px]">
               {/* Purple Arch Background */}

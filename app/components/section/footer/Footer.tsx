@@ -100,11 +100,11 @@ export default function Footer() {
           </div>
 
           {/* Nav Links Grid & Contact (Right side) */}
-          <div className="grid grid-cols-1 items-center gap-8 text-center sm:grid-cols-2 sm:items-start sm:text-left lg:col-span-8 lg:grid-cols-4 lg:border-l lg:border-gray-200/80 lg:pl-10">
+          <div className="grid grid-cols-2  flex-wrap items-center gap-2 text-center sm:grid-cols-2 sm:items-start sm:text-left lg:col-span-8 lg:grid-cols-4 lg:border-l lg:border-gray-200/80 md:pl-5">
             
             {/* Dynamic Link Columns */}
             {columns?.map((col, i) => (
-              <div key={i} className="flex flex-col items-center sm:items-start">
+              <div key={i} className="flex -ml-5 md:ml-3 flex-col items-center sm:items-start">
                 <h3 className="mb-3 text-[15px] font-bold uppercase tracking-wider text-[#1C0D3F]">
                   {col.title}
                 </h3>
@@ -127,13 +127,13 @@ export default function Footer() {
             ))}
 
             {/* Get In Touch Column */}
-            <div className="flex flex-col items-center gap-6 sm:items-start">
-              <h3 className="mb-3 text-[15px] font-bold uppercase tracking-wider text-[#1C0D3F]">
+            <div className="flex  flex-col items-center gap-3 sm:items-start">
+              <h3 className="mb-0 text-[15px] font-bold uppercase tracking-wider text-[#1C0D3F]">
                 GET IN TOUCH
               </h3>
-              <div className="mb-6 h-[2px] w-8 bg-[#3B1578]"></div>
+              <div className="mb-0 h-[2px] w-8 bg-[#3B1578]"></div>
 
-              <div className="flex flex-col gap-6">
+              <div className="flex  flex-col gap-6">
                 {/* Phone */}
                 {footerContact?.phone && (
                   <div className="flex items-center gap-3.5">

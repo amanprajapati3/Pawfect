@@ -164,7 +164,7 @@ export default function Header() {
             </div>
             {siteInfo.TopBar?.ctaButton && (
               <Link
-                href={siteInfo.TopBar.ctaButton.href || "/quote"}
+                href={siteInfo.TopBar.ctaButton.href || "/contact-us"}
                 className=""
               >
                 {siteInfo.TopBar.ctaButton.label || "Get A Quote"}

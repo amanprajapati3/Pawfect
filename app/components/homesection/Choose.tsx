@@ -219,7 +219,6 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
             </div>
           </div>
 
-          {/* ===================== RIGHT SIDE: CONTENT & DETAILS ===================== */}
           <div className="lg:col-span-6 flex flex-col justify-between py-1">
             <div>
               {/* Category Badge */}

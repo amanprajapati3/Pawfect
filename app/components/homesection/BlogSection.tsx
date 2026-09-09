@@ -88,7 +88,7 @@ export default function BlogSection({ data, layout = "home" }: BlogSectionProps)
         {/* Read More Button */}
         <div className="flex md:justify-end">
           <Link
-            href={`/blog/${post.slug}`}
+            href={`/blog-details/${post.slug}`}
             className="inline-flex items-center gap-2 rounded-xl bg-[#3436a1] px-4 sm:px-6 sm:py-3 py-2 text-[13px] font-semibold text-white transition-all hover:bg-[#4F46E5]"
           >
             {post.readMoreText}
@@ -142,7 +142,7 @@ export default function BlogSection({ data, layout = "home" }: BlogSectionProps)
         {/* Read More Button */}
         <div className="mt-auto pt-2">
           <Link
-            href={`/blog/${post.slug}`}
+            href={`/blog-details/${post.slug}`}
             className="inline-flex items-center gap-2 rounded-xl bg-[#3436a1] px-5 py-2.5 text-[13px] font-semibold text-white transition-all hover:bg-[#4F46E5]"
           >
             {post.readMoreText}
@@ -244,7 +244,7 @@ export default function BlogSection({ data, layout = "home" }: BlogSectionProps)
                     {/* Read More Button */}
                     <div>
                       <Link
-                        href={`/blog/${featuredPost.slug}`}
+                        href={`/blog-details/${featuredPost.slug}`}
                         className="inline-flex items-center gap-2 rounded-xl bg-[#6366F1] px-5 py-2.5 text-[14px] font-semibold text-white transition-all hover:bg-[#4F46E5]"
                       >
                         {featuredPost.readMoreText}
