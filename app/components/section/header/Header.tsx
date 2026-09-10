@@ -97,7 +97,7 @@ export default function Header() {
                 width={180}
                 height={60}
                 sizes="(max-width: 640px) 120px, 240px"
-                className="h-10 w-auto object-contain sm:h-20"
+                className="h-16 w-auto object-contain sm:h-20"
               />
             ) : (
               <span className="text-2xl font-extrabold tracking-tight text-[#6B21A8] sm:text-3xl">
@@ -207,10 +207,10 @@ export default function Header() {
               <Image
                 src={siteInfo.logo.light}
                 alt={siteInfo.siteName || "PawFect"}
-                width={150}
-                height={50}
-                sizes="108px"
-                className="h-9 w-auto object-contain"
+                width={200}
+                height={70}
+                sizes="128px"
+                className="h-16 w-auto object-contain"
               />
             ) : (
               <span className="text-xl font-extrabold tracking-tight text-[#6B21A8]">

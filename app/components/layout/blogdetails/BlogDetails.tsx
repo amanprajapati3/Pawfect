@@ -30,7 +30,7 @@ export default function BlogDetails({ data: post, variant }: BlogDetailsProps) {
         current={variant.banner.breadcrumbCurrent}
       />
 
-      <div className="mx-auto max-w-[1270px] px-4 py-8 sm:px-6 md:py-12">
+      <div className="mx-auto max-w-[1270px] px-4 py-12 sm:px-6">
         {/* Main Article Title */}
         <ScrollReveal direction="up">
         <h1 className="text-3xl sm:text-4xl lg:text-[46px] max-w-[900px]  font-bold leading-tight text-[#1E1B4B] tracking-tight">

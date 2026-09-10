@@ -58,7 +58,7 @@ export default function Appointment({ data }: AppointmentProps) {
         current={appointmentData.banner.breadcrumbCurrent}
       />
 
-      <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 md:py-12">
+      <div className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* LEFT: Card Component */}
           <ScrollReveal

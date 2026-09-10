@@ -36,7 +36,7 @@ export default function Faq({ data }: FaqProps) {
         current={faqData.banner.breadcrumbCurrent}
       />
 
-      <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 md:py-12 space-y-12">
+      <div className="mx-auto max-w-[1240px] px-4  sm:px-6 lg:px-8 py-12 space-y-12">
         <SectionHeader
           badge={faqData.badge}
           title={faqData.heading}

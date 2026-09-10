@@ -104,6 +104,16 @@ export default function Gallery({ data }: GalleryProps) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isImageModalOpen, prevImage, nextImage]);
 
+  const getYoutubeEmbedUrl = (url: string) => {
+  const videoId = url.includes("youtu.be/")
+    ? url.split("youtu.be/")[1].split("?")[0]
+    : url.includes("youtube.com/embed/")
+      ? url.split("youtube.com/embed/")[1].split("?")[0]
+      : "";
+
+  return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1` : url;
+};
+
   return (
     <div className="w-full bg-[#FAFAFC] font-sans text-[#1E1B4B]">
       {/* Dynamic Header Banner */}
@@ -114,7 +124,7 @@ export default function Gallery({ data }: GalleryProps) {
         current={banner.breadcrumbCurrent}
       />
 
-      <div className="mx-auto max-w-[1240px] px-4 py-8 md:py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1240px] px-4 py-12 md:py-12 sm:px-6 lg:px-8">
         
         <div className="text-center">
           {/* Section Header */}
@@ -150,7 +160,7 @@ export default function Gallery({ data }: GalleryProps) {
               <ScrollReveal key={item.id} direction="up" staggerChildren={0.1} index={idx} className="h-full">
               <div
                 onClick={() => openImageModal(idx)}
-                className="h-full group relative h-[240px] sm:h-[260px] w-full cursor-pointer overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="group relative h-[240px] sm:h-[260px] w-full cursor-pointer overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <Image
                   src={item.src}
@@ -170,7 +180,7 @@ export default function Gallery({ data }: GalleryProps) {
           </div>
         </div>
 
-        <div className="mt-20 sm:mt-24 text-center">
+        <div className="mt-12 text-center">
           {/* Section Header */}
           <SectionHeader
             badge={videoGallery.badge}
@@ -286,7 +296,7 @@ export default function Gallery({ data }: GalleryProps) {
             {/* Video Iframe Container */}
             <div className="relative aspect-video w-full">
               <iframe
-                src={`${selectedVideo.videoUrl}?autoplay=1`}
+                src={getYoutubeEmbedUrl(selectedVideo.videoUrl)}
                 title={selectedVideo.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

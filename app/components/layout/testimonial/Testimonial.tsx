@@ -24,7 +24,7 @@ export default function Testimonial({ data }: TestimonialProps) {
         current={testimonialData.banner.breadcrumbCurrent}
       />
 
-      <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 md:py-12">
+      <div className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:px-8">
         <SectionHeader
           badge={testimonialData.badge}
           title={testimonialData.heading}

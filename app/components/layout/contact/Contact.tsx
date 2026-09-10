@@ -87,7 +87,7 @@ export default function Contact({ data }: ContactProps) {
         current={contactData.banner.breadcrumbCurrent}
       />
 
-      <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 md:py-12 space-y-12">
+      <div className="mx-auto max-w-[1240px] px-4  sm:px-6 lg:px-8 py-12 space-y-12">
         <SectionHeader
           badge={contactData.badge}
           title={contactData.heading}

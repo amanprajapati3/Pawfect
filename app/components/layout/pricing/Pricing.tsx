@@ -28,7 +28,7 @@ export default function Pricing({ data }: PricingProps) {
         current={pricingData.banner.breadcrumbCurrent}
       />
 
-      <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+      <div className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:px-8">
         <SectionHeader
           badge={pricingData.badge}
           title={pricingData.heading}

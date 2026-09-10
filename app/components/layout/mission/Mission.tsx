@@ -140,9 +140,9 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
               </div>
 
               {/* Card Body */}
-              <div className="flex-1 text-left relative">
+              <div className="flex-1 md:text-left text-center relative">
                 {/* Decorative Top Bar & Paw */}
-                <div className="flex flex-col items-start gap-1 mb-2">
+                <div className="flex flex-col md:items-start items-center gap-1 mb-2">
                   <span className="h-[2px] w-8 bg-[#6B21A8]" />
                   <h3 className="text-2xl sm:text-4xl font-bold text-[#6B21A8] mt-1">
                     {card.title}

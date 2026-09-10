@@ -76,7 +76,7 @@ export default function Partners({ data }: PartnersProps) {
         current={partnerData.banner.breadcrumbCurrent}
       />
 
-      <div className="relative mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 md:py-12">
+      <div className="relative mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:px-8">
         {/* Decorative Background Paw Prints */}
         <div className="absolute top-12 left-2 text-[#F0E8FF] opacity-80 pointer-events-none hidden lg:block">
           <FaPaw className="h-32 w-32 rotate-[-20deg]" />

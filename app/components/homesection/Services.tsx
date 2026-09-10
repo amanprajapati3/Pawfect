@@ -174,7 +174,7 @@ export default function ServicesPage({ data, layout = "slider" }: ServicesPagePr
         </div>
 
         {/* TEXT */}
-        <div className="mt-12 flex flex-grow flex-col items-center text-center sm:mb-6">
+        <div className="mt-12 flex flex-grow flex-col items-center text-center mb-6">
           <h3 className="mb-0 text-[22px] font-bold tracking-tight text-[#1C0D3F]">
             {service.title}
           </h3>

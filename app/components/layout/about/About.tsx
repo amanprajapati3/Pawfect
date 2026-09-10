@@ -36,7 +36,7 @@ export default function About({ data }: AboutProps) {
       />
 
       {/* Main Content Section */}
-      <section className="mx-auto max-w-[1280px] px-5 py-8 md:py-12">
+      <section className="mx-auto max-w-[1280px] px-5 py-12">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-12 items-center">
           {/* LEFT COLUMN: COMPOSITE IMAGES WITH OVERLAYS & DOT MATRIX */}
           <ScrollReveal direction="right" className="lg:col-span-6 relative flex justify-center">

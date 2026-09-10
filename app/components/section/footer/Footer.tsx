@@ -138,7 +138,7 @@ export default function Footer() {
                 {/* Phone */}
                 {footerContact?.phone && (
                   <div className="flex items-center gap-3.5">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
+                    <div className=" hidden sm:flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
                       <Phone className="h-6 w-6 fill-current stroke-none" />
                     </div>
                     <div>
@@ -160,7 +160,7 @@ export default function Footer() {
                 {/* Email */}
                 {footerContact?.email && (
                   <div className="flex items-center gap-3.5">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
+                    <div className="flex hidden sm:flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
                       <Mail className="h-6 w-6" />
                     </div>
                     <div>
@@ -182,7 +182,7 @@ export default function Footer() {
                 {/* Address */}
                 {footerContact?.address && (
                   <div className="flex items-start gap-3.5">
-                    <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
+                    <div className="mt-0.5 hidden sm:flex flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
                       <MapPin className="h-6 w-6" />
                     </div>
                     <div className="text-xs leading-relaxed">
