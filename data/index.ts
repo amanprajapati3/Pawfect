@@ -12,87 +12,87 @@ import {
   // PetFaqPageVariant,
 } from "@/type/typeSection";
 
-// export type RawPetData = typeof petData;
+export type RawPetData = typeof petData;
 
-// export interface SectionProps<T = unknown> {
-//   data?: T;
-//   className?: string;
-//   contentClassName?: string;
-//   variant?: string;
-//   isEditable?: boolean;
-//   onUpdate?: (newData: Partial<T>) => void;
-// }
+export interface SectionProps<T = unknown> {
+  data?: T;
+  className?: string;
+  contentClassName?: string;
+  variant?: string;
+  isEditable?: boolean;
+  onUpdate?: (newData: Partial<T>) => void;
+}
 
-// export type PetHeaderData =
-//   typeof petData.PetIndustries.sections.Header.variants.PetHeader1;
-// export type PetFooterData =
-//   typeof petData.PetIndustries.sections.Footer.variants.PetFooter1;
-// export type PetBannerData =
-//   typeof petData.PetIndustries.sections.Banner.variants.PetBanner1;
+export type PetHeaderData =
+  typeof petData.PetIndustries.sections.Header.variants.PetHeader1;
+export type PetFooterData =
+  typeof petData.PetIndustries.sections.Footer.variants.PetFooter1;
+export type PetBannerData =
+  typeof petData.PetIndustries.sections.Banner.variants.PetBanner1;
 export type PetServiceAreasData =
   typeof petData.PetIndustries.sections.ServiceAreas.variants.PetServiceAreas1;
-// export type PetAboutSectionData =
-//   typeof petData.PetIndustries.sections.AboutSection.variants.PetAboutSection1;
+export type PetAboutSectionData =
+  typeof petData.PetIndustries.sections.AboutSection.variants.PetAboutSection1;
 export type PetServicesData =
   typeof petData.PetIndustries.sections.Services.variants.PetServices1;
 export type PetTeamData =
   typeof petData.PetIndustries.sections.Team.variants.PetTeam1;
-// export type PetFaqData =
-//   typeof petData.PetIndustries.sections.Faq.variants.PetFaq1;
-// export type PetWhyChooseUsData =
-//   typeof petData.PetIndustries.sections.WhyChooseUs.variants.PetWhyChooseUs1;
-// export type PetTestimonialData =
-//   typeof petData.PetIndustries.sections.Testimonial.variants.PetTestimonial1;
+export type PetFaqData =
+  typeof petData.PetIndustries.sections.Faq.variants.PetFaq1;
+export type PetWhyChooseUsData =
+  typeof petData.PetIndustries.sections.WhyChooseUs.variants.PetWhyChooseUs1;
+export type PetTestimonialData =
+  typeof petData.PetIndustries.sections.Testimonial.variants.PetTestimonial1;
 export type PetBlogData =
   typeof petData.PetIndustries.sections.Blog.variants.PetBlog1;
 export type PetAboutUsData =
   typeof petData.PetIndustries.sections.AboutUs.variants.PetAboutUs1;
 
-// export type PetMissionData =
-//   typeof petData.PetIndustries.sections.Mission.variants.PetMission1;
+export type PetMissionData =
+  typeof petData.PetIndustries.sections.Mission.variants.PetMission1;
 
-// export type PetGalleryData =
-//   typeof petData.PetIndustries.sections.Gallery.variants.PetGallery1;
+export type PetGalleryData =
+  typeof petData.PetIndustries.sections.Gallery.variants.PetGallery1;
 
-// export type PetBlogDetailsData =
-//   typeof petData.PetIndustries.sections.BlogDetails.variants.PetBlogDetails1;
+export type PetBlogDetailsData =
+  typeof petData.PetIndustries.sections.BlogDetails.variants.PetBlogDetails1;
 
-// export type PetServiceAreaDetailsData =
-//   typeof petData.PetIndustries.sections.ServiceAreaDetails.variants.PetServiceAreaDetails1;
-// export type PetFaqPageData =
-//   typeof petData.PetIndustries.sections.FaqPage.variants.PetFaqPage1;
-// export type ContactPageData =
-//   typeof petData.PetIndustries.sections.ContactPage.variants.PetContactPage1;
+export type PetServiceAreaDetailsData =
+  typeof petData.PetIndustries.sections.ServiceAreaDetails.variants.PetServiceAreaDetails1;
+export type PetFaqPageData =
+  typeof petData.PetIndustries.sections.FaqPage.variants.PetFaqPage1;
+export type ContactPageData =
+  typeof petData.PetIndustries.sections.ContactPage.variants.PetContactPage1;
 
-// export type PetAppointmentData =
-//   typeof petData.PetIndustries.sections.AppointmentPage.variants.PetAppointmentPage1;
+export type PetAppointmentData =
+  typeof petData.PetIndustries.sections.AppointmentPage.variants.PetAppointmentPage1;
 
-// export type PetPricingData =
-//   typeof petData.PetIndustries.sections.PricingPage.variants.PetPricingPage1;
+export type PetPricingData =
+  typeof petData.PetIndustries.sections.PricingPage.variants.PetPricingPage1;
 
-// export type PetTestimonialPageData =
-//   typeof petData.PetIndustries.sections.TestimonialPage.variants.PetTestimonialPage1;
+export type PetTestimonialPageData =
+  typeof petData.PetIndustries.sections.TestimonialPage.variants.PetTestimonialPage1;
 
-// export type PetPartnersPageData =
-//   typeof petData.PetIndustries.sections.PartnersPage.variants.PetPartnersPage1;
+export type PetPartnersPageData =
+  typeof petData.PetIndustries.sections.PartnersPage.variants.PetPartnersPage1;
 
-// export type PetTermsAndConditionsPageData =
-//   typeof petData.PetIndustries.sections.LegalPage.variants.PetTermsAndConditionsPage1;
+export type PetTermsAndConditionsPageData =
+  typeof petData.PetIndustries.sections.LegalPage.variants.PetTermsAndConditionsPage1;
 
-// export type PetPrivacyPolicyPageData =
-//   typeof petData.PetIndustries.sections.LegalPage.variants.PetPrivacyPolicyPage1;
+export type PetPrivacyPolicyPageData =
+  typeof petData.PetIndustries.sections.LegalPage.variants.PetPrivacyPolicyPage1;
 
-// export type PetCookiePolicyPageData =
-//   typeof petData.PetIndustries.sections.LegalPage.variants.PetCookiePolicyPage1;
+export type PetCookiePolicyPageData =
+  typeof petData.PetIndustries.sections.LegalPage.variants.PetCookiePolicyPage1;
 
-// export type PetDisclaimerPageData =
-//   typeof petData.PetIndustries.sections.LegalPage.variants.PetDisclaimerPage1;
+export type PetDisclaimerPageData =
+  typeof petData.PetIndustries.sections.LegalPage.variants.PetDisclaimerPage1;
 
-// export type PetNotFoundPageData =
-//   typeof petData.PetIndustries.sections.NotFoundPage.variants.PetNotFoundPage1;
+export type PetNotFoundPageData =
+  typeof petData.PetIndustries.sections.NotFoundPage.variants.PetNotFoundPage1;
 
-// export type PetSitemapPageData =
-//   typeof petData.PetIndustries.sections.SitemapPage.variants.PetSitemapPage1;
+export type PetSitemapPageData =
+  typeof petData.PetIndustries.sections.SitemapPage.variants.PetSitemapPage1;
 
 const sec = petData.PetIndustries.sections;
 

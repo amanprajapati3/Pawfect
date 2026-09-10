@@ -15,3 +15,16 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+@media (min-width: 768px) {
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  [role="button"],
+  summary {
+    cursor: none !important;
+  }
+}
