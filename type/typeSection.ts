@@ -929,6 +929,7 @@ export interface PricingPlan {
   features: PricingFeature[];
   dogImage: string;
   buttonText: string;
+  buttonHref:string;
   isPopular?: boolean;
 }
 

@@ -141,7 +141,7 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
                 {testimonialItems.map((testimonial) => (
                   <div
                     key={testimonial.id}
-                    className="relative flex-[0_0_100%] px-3 min-w-0 md:flex-[0_0_50%]"
+                    className="relative flex-[0_0_100%] px-3 min-w-0 sm:flex-[0_0_50%]"
                   >
                     <div className="flex h-full flex-col justify-between rounded-[20px] bg-white p-8 shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all hover:shadow-[0_8px_40px_rgba(0,0,0,0.06)] lg:p-10">
                       <div>
@@ -175,7 +175,7 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
                           <h4 className="text-[17px] font-bold tracking-tight text-[#1C0D3F]">
                             {testimonial.name}
                           </h4>
-                          <div className="flex items-center gap-1.5 mt-0.5 text-xs text-gray-500">
+                          <div className="flex items-center gap-1.5 mt-0.5 text-sm text-gray-500">
                              <MapPin className="h-3.5 w-3.5 text-[#3B1264]/70"/>
                              <span className="font-medium text-gray-600">
                                 {testimonial.role}

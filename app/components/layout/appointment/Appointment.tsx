@@ -131,7 +131,7 @@ export default function Appointment({ data }: AppointmentProps) {
             <div className="h-full w-full rounded-[28px] bg-white p-3 sm:p-8 md:p-10 border border-gray-100 shadow-xs flex flex-col justify-between">
               <div>
                 {/* Section Badge */}
-                <div className="flex items-center justify-center lg:justify-start gap-2 text-xs font-extrabold uppercase tracking-widest text-[#5B21B6] mb-2">
+                <div className="flex items-center justify-center lg:justify-start gap-2 text-sm font-extrabold uppercase tracking-widest text-[#5B21B6] mb-2">
                   <FaPaw className="h-3.5 w-3.5" />
                   <span>{appointmentData.badge}</span>
                 </div>

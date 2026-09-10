@@ -142,6 +142,7 @@ export default function Pricing({ data }: PricingProps) {
 
                   {/* Choose Plan Button (Aligned Right beside the Dog) */}
                   <div className="z-10 mr-20 mb-6 shrink-0">
+                  <a href={plan.buttonHref}>
                     <button
                       type="button"
                       className="flex items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#4C1D95] to-[#5B21B6] py-3 px-5 sm:px-6 text-[13px] sm:text-[14px] font-bold text-white shadow-md hover:opacity-95 transition-all cursor-pointer"
@@ -149,6 +150,7 @@ export default function Pricing({ data }: PricingProps) {
                       <span>{plan.buttonText}</span>
                       <FaArrowRight className="h-3 w-3" />
                     </button>
+                    </a>
                   </div>
                 </div>
               </div>

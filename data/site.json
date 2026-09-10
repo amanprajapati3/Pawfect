@@ -335,8 +335,8 @@
                 "id": 5,
                 "name": "Faridabad",
                 "state": "Haryana",
-                "image": "/cityImage/faridabad.jpg",
-                "slug": "service-area/Faridabad"
+                "image": "/cityImage/gurgaon.jpg",
+                "slug": "service-area/faridabad"
               },
               {
                 "id": 6,
@@ -3940,6 +3940,7 @@
                   { "title": "3x Vaccination (7 in 1)" }
                 ],
                 "dogImage": "/dogs/dog13.png",
+                "buttonHref": "/contact-us",
                 "buttonText": "Choose Plan",
                 "isPopular": false
               },
@@ -3959,6 +3960,7 @@
                 ],
                 "dogImage": "/dogs/dog13.png",
                 "buttonText": "Choose Plan",
+                "buttonHref": "/contact-us",
                 "isPopular": true
               },
               {
@@ -3976,6 +3978,7 @@
                 ],
                 "dogImage": "/dogs/dog13.png",
                 "buttonText": "Choose Plan",
+                "buttonHref": "/contact-us",
                 "isPopular": false
               }
             ],

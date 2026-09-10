@@ -146,6 +146,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
                 </span>
               </div>
             )}
+
             <h2 className="max-w-[590px] text-center text-[40px] font-extrabold leading-[1.08] tracking-tight sm:text-[48px] lg:text-left lg:text-[52px] xl:text-[56px]">
               {title}
               <br />
@@ -280,49 +281,50 @@ export default function AboutSection({ data }: AboutSectionProps) {
               ref={statsRef}
               className="mt-12 rounded-[17px] border border-white/5 bg-[#06255B]/80 px-0 py-5 sm:px-6 lg:mt-14 lg:px-7 lg:py-6"
             >
-            <div className="grid grid-cols-2 md:grid-cols-4">
-              {stats.map((stat: PetAboutStat, index: number) => {
-                const Icon = statsIconMap[stat.iconName.toLowerCase()] || Users;
+              <div className="grid grid-cols-2 md:grid-cols-4">
+                {stats.map((stat: PetAboutStat, index: number) => {
+                  const Icon =
+                    statsIconMap[stat.iconName.toLowerCase()] || Users;
 
-                return (
-                  <div
-                    key={stat.id}
-                    className={`flex items-center gap-1 px-2 sm:gap-4 sm:px-5 lg:px-6 ${
-                      index >= 2 ? "mt-7 md:mt-0" : ""
-                    } ${index % 2 !== 0 ? "border-l border-white/10" : ""} ${
-                      index > 0 ? "md:border-l md:border-white/10" : ""
-                    }`}
-                  >
-                    <div className="flex sm:h-[48px] sm:w-[48px] shrink-0 items-center justify-center text-[#A23BD1] sm:h-[54px] sm:w-[54px]">
-                      <Icon
-                        className="h-7 w-7 sm:h-11 sm:w-11"
-                        strokeWidth={1.4}
-                      />
-                    </div>
-
-                    <div className="min-w-0">
-                      <div className="flex items-baseline">
-                        <span className="sm:text-[25px] text-[20px] font-bold leading-none text-white sm:text-[28px] lg:text-[30px]">
-                          {statsInView
-                            ? (counts[stat.id] ?? 0).toLocaleString()
-                            : "0"}
-                        </span>
-
-                        {stat.suffix && (
-                          <span className="ml-0.5 sm:text-[25px] text-[18px] font-bold leading-none text-white sm:text-[28px] lg:text-[30px]">
-                            {stat.suffix}
-                          </span>
-                        )}
+                  return (
+                    <div
+                      key={stat.id}
+                      className={`flex items-center gap-1 px-2 sm:gap-4 sm:px-5 lg:px-6 ${
+                        index >= 2 ? "mt-7 md:mt-0" : ""
+                      } ${index % 2 !== 0 ? "border-l border-white/10" : ""} ${
+                        index > 0 ? "md:border-l md:border-white/10" : ""
+                      }`}
+                    >
+                      <div className="flex sm:h-[48px] sm:w-[48px] shrink-0 items-center justify-center text-[#A23BD1] sm:h-[54px] sm:w-[54px]">
+                        <Icon
+                          className="h-7 w-7 sm:h-11 sm:w-11"
+                          strokeWidth={1.4}
+                        />
                       </div>
 
-                      <span className="mt-1 block whitespace-nowrap text-[10px] font-medium leading-tight text-[#D3D8E4] sm:text-[11px] lg:text-[12px]">
-                        {stat.label}
-                      </span>
+                      <div className="min-w-0">
+                        <div className="flex items-baseline">
+                          <span className="sm:text-[25px] text-[20px] font-bold leading-none text-white sm:text-[28px] lg:text-[30px]">
+                            {statsInView
+                              ? (counts[stat.id] ?? 0).toLocaleString()
+                              : "0"}
+                          </span>
+
+                          {stat.suffix && (
+                            <span className="ml-0.5 sm:text-[25px] text-[18px] font-bold leading-none text-white sm:text-[28px] lg:text-[30px]">
+                              {stat.suffix}
+                            </span>
+                          )}
+                        </div>
+
+                        <span className="mt-1 block whitespace-nowrap text-[10px] font-medium leading-tight text-[#D3D8E4] sm:text-[11px] lg:text-[12px]">
+                          {stat.label}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
             </div>
           </ScrollReveal>
         ) : null}

@@ -75,7 +75,7 @@ export default function Footer() {
                 <div className="flex sm:h-12 h-8 w-8 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
                   <FaPaw className="sm:h-6 h-4 w-4 sm:w-6" />
                 </div>
-                <span className="sm:text-sm text-xs font-bold text-[#3B1578] leading-tight">
+                <span className="sm:text-sm text-sm font-bold text-[#3B1578] leading-tight">
                   Trusted<br />Care
                 </span>
               </div>
@@ -84,7 +84,7 @@ export default function Footer() {
                 <div className="flex sm:h-12 h-8 w-8 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
                   <IoShieldCheckmarkSharp className="sm:h-6 h-4 w-4 sm:w-6" />
                 </div>
-                <span className="sm:text-sm text-xs font-bold text-[#3B1578] leading-tight">
+                <span className="sm:text-sm text-sm font-bold text-[#3B1578] leading-tight">
                   Expert<br />Veterinarians
                 </span>
               </div>
@@ -93,7 +93,7 @@ export default function Footer() {
                 <div className="flex sm:h-12 h-8 w-8 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
                   <FaHeart className="sm:h-6 h-4 w-4 sm:w-6" />
                 </div>
-                <span className="sm:text-sm text-xs font-bold text-[#3B1578] leading-tight">
+                <span className="sm:text-sm text-sm font-bold text-[#3B1578] leading-tight">
                   Happy<br />Pets
                 </span>
               </div>
@@ -149,7 +149,7 @@ export default function Footer() {
                         {footerContact.phone}
                       </a>
                       {footerContact.phoneNote && (
-                        <span className="text-xs text-gray-500 font-medium">
+                        <span className="text-sm text-gray-500 font-medium">
                           {footerContact.phoneNote}
                         </span>
                       )}
@@ -171,7 +171,7 @@ export default function Footer() {
                         {footerContact.email}
                       </a>
                       {footerContact.emailNote && (
-                        <span className="text-xs text-gray-500 font-medium">
+                        <span className="text-sm text-gray-500 font-medium">
                           {footerContact.emailNote}
                         </span>
                       )}
@@ -185,7 +185,7 @@ export default function Footer() {
                     <div className="mt-0.5 hidden sm:flex flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
                       <MapPin className="h-6 w-6" />
                     </div>
-                    <div className="text-xs leading-relaxed">
+                    <div className="text-sm leading-relaxed">
                       <span className="block font-bold text-[#1C0D3F]">
                         {footerContact.address}
                       </span>

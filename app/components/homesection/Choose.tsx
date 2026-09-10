@@ -247,11 +247,11 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
               {/* Bullet Points Container */}
               <div className="mt-7 flex flex-col gap-3.5 rounded-[20px] bg-white p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100/80">
                 {bulletPoints.map((pt, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#EFE9FA]">
-                      <FaPaw className="h-3 w-3 text-[#5B34A3]" />
+                  <div key={idx} className="flex  gap-3">
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#EFE9FA]">
+                      <FaPaw className="h-5 w-5 text-[#5B34A3]" />
                     </div>
-                    <p className="text-[13.5px] font-medium leading-tight text-[#3F3F46]">
+                    <p className="text-[15px] font-medium leading-tight text-[#3F3F46]">
                       {pt}
                     </p>
                   </div>

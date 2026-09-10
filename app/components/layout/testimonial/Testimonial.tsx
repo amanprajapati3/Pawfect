@@ -79,7 +79,7 @@ export default function Testimonial({ data }: TestimonialProps) {
                   <h4 className="text-[17px] font-bold tracking-tight text-[#1C0D3F]">
                     {testimonial.name}
                   </h4>
-                  <div className="flex items-center gap-1.5 mt-0.5 text-xs text-gray-500">
+                  <div className="flex items-center gap-1.5 mt-0.5 text-sm text-gray-500">
                     <MapPin className="h-3.5 w-3.5 text-[#3B1264]/70" />
                     <span className="font-medium text-gray-600">
                       {testimonial.role}
