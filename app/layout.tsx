@@ -14,9 +14,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`h-full antialiased`}
+      className="h-full overflow-x-clip antialiased"
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col overflow-x-clip">
         <SmoothScroll/>
         <Header/>
         {children}

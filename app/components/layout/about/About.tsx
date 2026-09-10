@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { FaPaw, FaHeart, FaShieldAlt } from "react-icons/fa";
 import Banner from "../../shared/BannerPage"; // Adjust path according to project structure
+import ScrollReveal from "../../shared/ScrollReveal";
 import type { PetAboutUsData } from "@/data";
 
 interface AboutProps {
@@ -38,8 +39,8 @@ export default function About({ data }: AboutProps) {
       <section className="mx-auto max-w-[1280px] px-5 py-8 md:py-12">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-12 items-center">
           {/* LEFT COLUMN: COMPOSITE IMAGES WITH OVERLAYS & DOT MATRIX */}
-          <div className="lg:col-span-6 relative flex justify-center">
-            <div className="relative w-full max-w-[500px] lg:max-w-none min-h-[480px] sm:min-h-[560px]">
+          <ScrollReveal direction="right" className="lg:col-span-6 relative flex justify-center">
+            <div className="relative w-full max-w-[500px] mt-10 lg:max-w-none min-h-[480px] sm:min-h-[560px]">
               {/* Decorative Yellow Arc (Top-Left Background Accent) */}
               <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 h-48 w-48 sm:w-70 rounded-t-[60px] border-l-4 border-t-4 border-[#FBBF24] pointer-events-none" />
 
@@ -86,10 +87,10 @@ export default function About({ data }: AboutProps) {
                 />
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT COLUMN: TEXT CONTENT & FEATURE CARDS */}
-          <div className="lg:col-span-6 flex flex-col justify-center relative">
+          <ScrollReveal direction="left" className="lg:col-span-6 flex flex-col justify-center relative">
             {/* Background Watermark Paw Icon */}
             <div className="absolute -top-10 right-0 opacity-5 pointer-events-none">
               <FaPaw className="h-44 w-44 text-[#5B21B6]" />
@@ -121,10 +122,10 @@ export default function About({ data }: AboutProps) {
             {/* Features Row */}
             <div className="mt-8 grid grid-cols-1 gap-6 pt-8 sm:grid-cols-3">
               {" "}
-              {features.map((feature) => (
+              {features.map((feature, index) => (
+                <ScrollReveal key={feature.id} direction="up" staggerChildren={0.1} index={index} className="h-full">
                 <div
-                  key={feature.id}
-                  className="flex flex-col border-r-1 border-r-gray-200 last:border-r-white items-center text-center sm:items-start sm:text-left"
+                  className="h-full flex flex-col border-r-1 border-r-gray-200 last:border-r-white items-center text-center sm:items-start sm:text-left"
                 >
                   {" "}
                   <div className="mb-3.5 flex h-12 w-12 md:w-16 md:h-16 items-center justify-center rounded-full bg-[#F3E8FF]">
@@ -140,9 +141,10 @@ export default function About({ data }: AboutProps) {
                     {feature.description}{" "}
                   </p>{" "}
                 </div>
+                </ScrollReveal>
               ))}{" "}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>

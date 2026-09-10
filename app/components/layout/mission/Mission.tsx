@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaPaw, FaHeart, FaShieldAlt, FaAward, FaUsers } from "react-icons/fa";
 import { LuEye, LuTarget } from "react-icons/lu";
 import Banner from "../../shared/BannerPage";
+import ScrollReveal from "../../shared/ScrollReveal";
 import type { PetMissionData, PetMissionCard, PetValueItem } from "@/type/typeSection";
 
 interface MissionProps {
@@ -114,10 +115,11 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
 
         {/* VISION & MISSION CARDS GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-          {(cards as PetMissionCard[]).map((card) => (
+          {(cards as PetMissionCard[]).map((card, index) => (
+            <ScrollReveal key={card.id} direction="up" staggerChildren={0.1} index={index} className="h-full">
             <div
               key={card.id}
-              className="relative bg-white rounded-3xl p-6 sm:p-8 border border-purple-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex flex-col sm:flex-row items-center gap-6"
+              className="h-full relative bg-white rounded-3xl p-6 sm:p-8 border border-purple-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex flex-col sm:flex-row items-center gap-6"
             >
               {/* Circular Image Container with Overlapping Icon Badge */}
               <div className="relative flex-shrink-0">
@@ -164,6 +166,7 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           ))}
         </div>
 
@@ -171,9 +174,10 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
         <div className="bg-white rounded-2xl border border-purple-100 p-6 sm:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
             {(values as PetValueItem[]).map((val, idx) => (
+              <ScrollReveal key={val.id} direction="up" staggerChildren={0.1} index={idx} className="h-full">
               <div
                 key={val.id}
-                className={`flex items-start gap-4 ${
+                className={`h-full flex items-start gap-4 ${
                   idx !== 0 ? "pt-4 sm:pt-0 md:pl-6" : ""
                 }`}
               >
@@ -194,6 +198,7 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
                   </p>
                 </div>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

@@ -12,6 +12,7 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 import Banner from "../../shared/BannerPage";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { PetAppointmentVariant } from "@/type/typeSection";
 
 interface AppointmentProps {
@@ -60,7 +61,10 @@ export default function Appointment({ data }: AppointmentProps) {
       <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 md:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* LEFT: Card Component */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
+          <ScrollReveal
+            direction="right"
+            className="lg:col-span-5 flex flex-col justify-between"
+          >
             <div className="h-full w-full rounded-[28px] bg-[#F8F6FE] overflow-hidden border border-purple-100/60 shadow-xs flex flex-col text-center lg:text-left">
               {/* Image Section with Overlay Icon */}
               <div className="relative w-full h-[260px] sm:h-[300px] shrink-0">
@@ -68,6 +72,7 @@ export default function Appointment({ data }: AppointmentProps) {
                   src={appointmentData.card.image}
                   alt={appointmentData.card.title}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-center"
                 />
                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 lg:left-1/2 lg:-translate-x-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-[#5B21B6] text-white shadow-md border-4 border-[#F8F6FE]">
@@ -116,10 +121,13 @@ export default function Appointment({ data }: AppointmentProps) {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT: Booking Form & Notice Container */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
+          <ScrollReveal
+            direction="left"
+            className="lg:col-span-7 flex flex-col justify-between space-y-6"
+          >
             <div className="h-full w-full rounded-[28px] bg-white p-3 sm:p-8 md:p-10 border border-gray-100 shadow-xs flex flex-col justify-between">
               <div>
                 {/* Section Badge */}
@@ -287,7 +295,7 @@ export default function Appointment({ data }: AppointmentProps) {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </div>

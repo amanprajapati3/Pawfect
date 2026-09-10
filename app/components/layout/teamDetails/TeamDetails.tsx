@@ -16,6 +16,7 @@ import { FaStethoscope } from "react-icons/fa";
 
 import { PetTeamMemberDetail, PetTeamDetailsVariant } from "@/type/typeSection";
 import Banner from "../../shared/BannerPage";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 interface TeamDetailsProps {
   data: PetTeamMemberDetail;
@@ -68,20 +69,21 @@ export default function TeamDetails({ data, variant }: TeamDetailsProps) {
       <div className="mx-auto max-w-[1240px] px-3 py-12 sm:px-6 lg:px-8 lg:py-16 space-y-12 sm:space-y-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left: Member Portrait Image */}
-          <div className="lg:col-span-5 flex justify-center">
+          <ScrollReveal direction="right" className="lg:col-span-5 flex justify-center">
             <div className="relative h-[380px] sm:h-[460px] w-full max-w-[420px] overflow-hidden rounded-[28px] bg-slate-200 shadow-lg">
               <Image
                 src={member.image}
                 alt={`${member.name.first} ${member.name.last}`}
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 420px"
                 className="object-cover object-top"
               />
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right: Member Bio & Quick Badges */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          <ScrollReveal direction="left" className="lg:col-span-7 flex flex-col justify-center">
             {/* Badge Indicator */}
             <div className="inline-flex items-center gap-2 mb-2">
               <FaPaw className="h-4 w-4 text-[#5B21B6]" />
@@ -133,11 +135,12 @@ export default function TeamDetails({ data, variant }: TeamDetailsProps) {
                 </div>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         <div className="grid grid-cols-1  lg:grid-cols-2 sm:gap-8 items-stretch">
           {/* Left Card: About */}
+          <ScrollReveal direction="up" className="h-full">
           <div className="flex flex-col justify-between rounded-[28px] bg-[#F8F6FE]/70 p-2 border border-purple-50/50">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-[#5B21B6] mb-2">
@@ -178,8 +181,10 @@ export default function TeamDetails({ data, variant }: TeamDetailsProps) {
               ))}
             </div>
           </div>
+          </ScrollReveal>
 
           {/* Right Card: Professional Skills */}
+          <ScrollReveal direction="up" className="h-full">
           <div className="flex flex-col justify-between rounded-[28px] bg-[#F8F6FE]/70 p-2  border border-purple-50/50">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-[#5B21B6] mb-6">
@@ -207,6 +212,7 @@ export default function TeamDetails({ data, variant }: TeamDetailsProps) {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
 
         <div className="text-center sm:pt-4">
@@ -224,9 +230,9 @@ export default function TeamDetails({ data, variant }: TeamDetailsProps) {
           {/* 4 Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {member.areasOfExpertise.items.map((item, idx) => (
+              <ScrollReveal key={idx} direction="up" staggerChildren={0.1} index={idx} className="h-full">
               <div
-                key={idx}
-                className="group flex flex-col items-center rounded-[24px] bg-white p-6 sm:p-7 text-center shadow-sm border border-gray-100/80 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:border-purple-200"
+                className="group flex flex-col items-center rounded-[24px] bg-white p-6 sm:p-7 text-center shadow-sm border border-gray-100/80 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:border-purple-200 h-full"
               >
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl  text-[#5B21B6] transition-transform duration-300 group-hover:scale-110">
                   {getExpertiseIcon(item.icon)}
@@ -238,6 +244,7 @@ export default function TeamDetails({ data, variant }: TeamDetailsProps) {
                   {item.description}
                 </p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

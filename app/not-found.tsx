@@ -25,6 +25,7 @@ export default function NotFoundPage() {
               alt="Mouse character"
               fill
               priority
+              sizes="(max-width: 640px) 110px, (max-width: 1024px) 170px, 220px"
               className="object-contain"
             />
           </div>

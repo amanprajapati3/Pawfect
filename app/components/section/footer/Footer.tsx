@@ -52,6 +52,7 @@ export default function Footer() {
                     alt="PawFect"
                     width={180}
                     height={60}
+                    sizes="(max-width: 640px) 168px, 336px"
                     className="h-14 sm:h-28 w-auto object-contain"
                   />
                 ) : (
@@ -100,7 +101,7 @@ export default function Footer() {
           </div>
 
           {/* Nav Links Grid & Contact (Right side) */}
-          <div className="grid grid-cols-2  flex-wrap items-center gap-2 text-center sm:grid-cols-2 sm:items-start sm:text-left lg:col-span-8 lg:grid-cols-4 lg:border-l lg:border-gray-200/80 md:pl-5">
+          <div className="grid grid-cols-2  flex-wrap items-center gap-2 text-center sm:grid-cols-2 sm:items-start sm:text-left lg:col-span-8 lg:grid-cols-4 lg:border-l lg:border-gray-200/80 sm:pl-5">
             
             {/* Dynamic Link Columns */}
             {columns?.map((col, i) => (

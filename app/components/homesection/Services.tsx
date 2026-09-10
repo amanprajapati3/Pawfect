@@ -20,6 +20,8 @@ import {
   Hotel,
 } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
+import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 export interface PetServiceItem {
   id: string;
@@ -211,44 +213,29 @@ export default function ServicesPage({ data, layout = "slider" }: ServicesPagePr
       <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
 
         {/* SECTION HEADER */}
-        <div className="relative z-10 mb-8 flex flex-col items-center text-center">
-          {badge && (
-            <div className="mb-0 inline-flex items-center gap-2">
-              <FaPaw className="h-5 w-5 fill-[#3B1264] text-[#3B1264]" />
-              <span className="text-[13px] font-bold uppercase tracking-wider text-[#3B1264]">
-                {badge}
-              </span>
-            </div>
-          )}
-
-          {title && (
-            <h1 className="text-[36px] font-extrabold tracking-tighter text-[#1C0D3F] sm:text-[48px] lg:text-[56px]">
-              {title.normal}{" "}
-              <span className="text-[#3B1264]">
-                {title.highlighted}
-              </span>
-            </h1>
-          )}
-
-          {description && (
-            <p className="mt-1 max-w-[650px] text-[15px] font-medium leading-relaxed text-gray-600 sm:text-[16px]">
-              {description}
-            </p>
-          )}
-        </div>
+        <SectionHeader badge={badge} title={title} description={description} className="mb-8" />
 
         {isGrid ? (
           /* SERVICES GRID */
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <div key={service.id}>
-                {renderCard(service)}
-              </div>
+            {services.map((service, index) => (
+              <ScrollReveal
+                key={service.id}
+                direction="up"
+                staggerChildren={0.1}
+                index={index}
+                className="h-full"
+              >
+                <div className="h-full">
+                  {renderCard(service)}
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         ) : (
           /* SERVICES SLIDER */
-          <div className="relative">
+          <ScrollReveal direction="up">
+            <div className="relative">
 
             {/* PREVIOUS BUTTON */}
             <button
@@ -302,6 +289,7 @@ export default function ServicesPage({ data, layout = "slider" }: ServicesPagePr
             )}
 
           </div>
+          </ScrollReveal>
         )}
       </div>
     </main>

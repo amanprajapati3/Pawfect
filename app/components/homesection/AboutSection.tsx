@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
 import { LiaAwardSolid } from "react-icons/lia";
+import ScrollReveal from "../shared/ScrollReveal";
 import { FaRocketchat } from "react-icons/fa6";
 
 const featureIconMap: Record<string, ElementType> = {
@@ -134,9 +135,9 @@ export default function AboutSection({ data }: AboutSectionProps) {
       <div className="mx-auto max-w-[1250px]">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-8 xl:gap-12">
           {/* LEFT CONTENT - stays on top on mobile/tablet */}
-          <div className="order-1 lg:order-1">
+          <ScrollReveal direction="right" className="order-1 lg:order-1">
             {badge && (
-              <div className="mb-4 flex items-center gap-3">
+              <div className="mb-4 flex items-center justify-center gap-3 lg:justify-start">
                 <FaPaw className="h-8 w-8 fill-[#A23BD1] text-[#A23BD1]" />
 
                 <span className="text-[13px] sm:text-[18px] font-bold uppercase tracking-wide text-[#A970E8]">
@@ -145,7 +146,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
                 </span>
               </div>
             )}
-            <h2 className="max-w-[590px] text-[40px] font-extrabold leading-[1.08] tracking-tight sm:text-[48px] lg:text-[52px] xl:text-[56px]">
+            <h2 className="max-w-[590px] text-center text-[40px] font-extrabold leading-[1.08] tracking-tight sm:text-[48px] lg:text-left lg:text-[52px] xl:text-[56px]">
               {title}
               <br />
               <span className="bg-[#A23BD1] bg-clip-text text-transparent">
@@ -153,14 +154,14 @@ export default function AboutSection({ data }: AboutSectionProps) {
               </span>
             </h2>
 
-            <div className="mt-5 mb-4 flex items-center">
+            <div className="mt-5 mb-4 flex items-center justify-center lg:justify-start">
               <div className="h-px w-[145px] bg-[#A23BD1]" />
               <FaPaw className="mx-2 h-6 w-6 fill-[#A23BD1] text-[#A23BD1]" />
               <div className="h-px w-[145px] bg-[#A23BD1]/30" />
             </div>
 
             {desc && (
-              <p className="max-w-[500px] text-[15px] font-semibold leading-[1.65] text-[#D7DCE7] sm:text-[15.5px]">
+              <p className="max-w-[500px] text-center text-[15px] font-semibold leading-[1.65] text-[#D7DCE7] sm:text-[15.5px] lg:text-left">
                 {desc}
               </p>
             )}
@@ -217,10 +218,13 @@ export default function AboutSection({ data }: AboutSectionProps) {
                 </Link>
               </div>
             )}
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT SIDE GRAPHICS & IMAGE - below content on mobile/tablet */}
-          <div className="order-2 flex justify-center lg:order-2 lg:justify-end">
+          <ScrollReveal
+            direction="left"
+            className="order-2 flex justify-center lg:order-2 lg:justify-end"
+          >
             <div className="relative flex h-[340px] w-[340px] items-center justify-center sm:h-[400px] sm:w-[400px] lg:h-[460px] lg:w-[460px] xl:h-[480px] xl:w-[480px]">
               {/* Outer dashed circle (top-left accent like reference) */}
               <div className="absolute -left-3 -top-3 h-[70%] w-[70%] rounded-full border-[2.5px] border-dashed border-[#A946D3]/70 sm:left-5 sm:top-4" />
@@ -266,15 +270,16 @@ export default function AboutSection({ data }: AboutSectionProps) {
                 />
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* BOTTOM STATS ROW */}
         {stats?.length ? (
-          <div
-            ref={statsRef}
-            className="mt-12 rounded-[17px] border border-white/5 bg-[#06255B]/80 px-0 py-5 sm:px-6 lg:mt-14 lg:px-7 lg:py-6"
-          >
+          <ScrollReveal direction="up">
+            <div
+              ref={statsRef}
+              className="mt-12 rounded-[17px] border border-white/5 bg-[#06255B]/80 px-0 py-5 sm:px-6 lg:mt-14 lg:px-7 lg:py-6"
+            >
             <div className="grid grid-cols-2 md:grid-cols-4">
               {stats.map((stat: PetAboutStat, index: number) => {
                 const Icon = statsIconMap[stat.iconName.toLowerCase()] || Users;
@@ -318,7 +323,8 @@ export default function AboutSection({ data }: AboutSectionProps) {
                 );
               })}
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         ) : null}
       </div>
     </section>

@@ -8,9 +8,10 @@ import {
   FaTimes,
   FaChevronLeft,
   FaChevronRight,
-  FaVideo,
 } from "react-icons/fa";
 import Banner from "@/app/components/shared/BannerPage";
+import SectionHeader from "@/app/components/shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import type { GalleryData, GalleryImageItem, GalleryVideoItem } from "@/type/typeSection";
 
 interface GalleryProps {
@@ -116,28 +117,12 @@ export default function Gallery({ data }: GalleryProps) {
       <div className="mx-auto max-w-[1240px] px-4 py-8 md:py-12 sm:px-6 lg:px-8">
         
         <div className="text-center">
-          {/* Section Sub-heading Badge */}
-          <div className="inline-flex items-center justify-center gap-2 mb-2">
-            <span className="h-[2px] w-6 bg-[#5B21B6]" />
-            <FaPaw className="h-3.5 w-3.5 text-[#5B21B6]" />
-            <span className="text-[12px] sm:text-[13px] font-bold uppercase tracking-widest text-[#1E1B4B]">
-              {imageGallery.badge}
-            </span>
-            <FaPaw className="h-3.5 w-3.5 text-[#5B21B6]" />
-            <span className="h-[2px] w-6 bg-[#5B21B6]" />
-          </div>
-
-          {/* Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#1E1B4B] leading-tight">
-            {imageGallery.titleFirst}
-            <span className="text-[#5B21B6]">
-              {imageGallery.titleHighlight}
-            </span>
-          </h2>
-
-          <p className="mt-2 text-[14px] sm:text-[15px] text-[#64748B]">
-            {imageGallery.subtitle}
-          </p>
+          {/* Section Header */}
+          <SectionHeader
+            badge={imageGallery.badge}
+            title={{ normal: imageGallery.titleFirst, highlighted: imageGallery.titleHighlight }}
+            description={imageGallery.subtitle}
+          />
 
           {/* Filter Buttons */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
@@ -162,10 +147,10 @@ export default function Gallery({ data }: GalleryProps) {
           {/* Images Grid */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {filteredImages.map((item: GalleryImageItem, idx: number) => (
+              <ScrollReveal key={item.id} direction="up" staggerChildren={0.1} index={idx} className="h-full">
               <div
-                key={item.id}
                 onClick={() => openImageModal(idx)}
-                className="group relative h-[240px] sm:h-[260px] w-full cursor-pointer overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="h-full group relative h-[240px] sm:h-[260px] w-full cursor-pointer overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <Image
                   src={item.src}
@@ -180,38 +165,24 @@ export default function Gallery({ data }: GalleryProps) {
                   </div>
                 </div>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
 
         <div className="mt-20 sm:mt-24 text-center">
-          {/* Section Sub-heading Badge */}
-          <div className="inline-flex items-center justify-center gap-2 mb-2">
-            <span className="h-[2px] w-6 bg-[#5B21B6]" />
-            <FaVideo className="h-3.5 w-3.5 text-[#5B21B6]" />
-            <span className="text-[12px] sm:text-[13px] font-bold uppercase tracking-widest text-[#1E1B4B]">
-              {videoGallery.badge}
-            </span>
-            <FaPaw className="h-3.5 w-3.5 text-[#5B21B6]" />
-            <span className="h-[2px] w-6 bg-[#5B21B6]" />
-          </div>
-
-          {/* Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#1E1B4B] leading-tight">
-            {videoGallery.titleFirst}
-            <span className="text-[#5B21B6]">
-              {videoGallery.titleHighlight}
-            </span>
-          </h2>
-
-          <p className="mt-2 text-[14px] sm:text-[15px] text-[#64748B]">
-            {videoGallery.subtitle}
-          </p>
+          {/* Section Header */}
+          <SectionHeader
+            badge={videoGallery.badge}
+            title={{ normal: videoGallery.titleFirst, highlighted: videoGallery.titleHighlight }}
+            description={videoGallery.subtitle}
+          />
 
           {/* Videos Grid */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {videoGallery.items.map((item: GalleryVideoItem) => (
-              <div key={item.id} className="flex flex-col text-center">
+            {videoGallery.items.map((item: GalleryVideoItem, index: number) => (
+              <ScrollReveal key={item.id} direction="up" staggerChildren={0.1} index={index} className="h-full">
+              <div className="h-full flex flex-col text-center">
                 {/* Video Card Thumbnail */}
                 <div
                   onClick={() => setSelectedVideo(item)}
@@ -243,6 +214,7 @@ export default function Gallery({ data }: GalleryProps) {
                   {item.title}
                 </h4>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -275,6 +247,7 @@ export default function Gallery({ data }: GalleryProps) {
               src={filteredImages[currentImageIndex].src}
               alt={filteredImages[currentImageIndex].alt}
               fill
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 800px"
               className="object-contain"
               priority
             />

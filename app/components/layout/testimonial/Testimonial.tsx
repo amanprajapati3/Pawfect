@@ -3,8 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import { Quote, Star, MapPin } from "lucide-react";
-import { FaPaw } from "react-icons/fa";
 import Banner from "../../shared/BannerPage";
+import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { TestimonialPageVariant } from "@/type/typeSection";
 
 interface TestimonialProps {
@@ -24,36 +25,17 @@ export default function Testimonial({ data }: TestimonialProps) {
       />
 
       <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 md:py-12">
-        <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <div className="mb-0 inline-flex items-center gap-2">
-            <FaPaw className="h-5 w-5 fill-[#3B1264] text-[#3B1264]" />
-            <span className="text-[13px] font-bold uppercase tracking-widest text-[#3B1264]">
-              {testimonialData.badge}
-            </span>
-          </div>
-
-          <h2 className="text-[36px] -mt-2 font-bold tracking-tighter text-[#1C0D3F] sm:text-[48px] lg:text-[56px]">
-            {testimonialData.heading.normal}{" "}
-            <span className="text-[#3B1264]">
-              {testimonialData.heading.highlighted}
-            </span>
-          </h2>
-
-          <div className="flex items-center gap-3 my-0">
-            <div className="h-px w-16 bg-[#C4B5FD]" />
-            <FaPaw className="h-3.5 w-3.5 fill-[#3B1264] text-[#3B1264]" />
-            <div className="h-px w-16 bg-[#C4B5FD]/40" />
-          </div>
-
-          <p className="mt-2 max-w-[650px] text-[15px] font-medium leading-relaxed text-gray-600 sm:text-[16px]">
-            {testimonialData.description}
-          </p>
-        </div>
+        <SectionHeader
+          badge={testimonialData.badge}
+          title={testimonialData.heading}
+          description={testimonialData.description}
+          className="mx-auto mb-12 max-w-2xl sm:mb-16"
+        />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {testimonialData.testimonialItems.map((testimonial) => (
+          {testimonialData.testimonialItems.map((testimonial, index) => (
+            <ScrollReveal key={testimonial.id} direction="up" staggerChildren={0.1} index={index} className="h-full">
             <div
-              key={testimonial.id}
               className="flex h-full flex-col justify-between rounded-[20px] bg-white p-5 shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all hover:shadow-[0_8px_40px_rgba(0,0,0,0.06)]"
             >
               <div className="">
@@ -106,6 +88,7 @@ export default function Testimonial({ data }: TestimonialProps) {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

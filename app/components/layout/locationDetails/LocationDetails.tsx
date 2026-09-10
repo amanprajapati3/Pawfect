@@ -19,6 +19,7 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import Banner from "../../shared/BannerPage";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   PetServiceAreaDetail,
   PetServiceAreaDetailsVariant,
@@ -119,7 +120,7 @@ export default function LocationDetails({
       <div className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16 space-y-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left Hero Box */}
-          <div className="lg:col-span-5 flex flex-col justify-between py-2">
+          <ScrollReveal direction="right" className="lg:col-span-5 flex flex-col justify-between py-2">
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-[#1E1B4B]">
                 We&apos;re Here For Pets In
@@ -160,20 +161,21 @@ export default function LocationDetails({
                 </div>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Hero Image Card */}
-          <div className="lg:col-span-7">
+          <ScrollReveal direction="left" className="lg:col-span-7">
             <div className="relative h-[320px] sm:h-[400px] lg:h-full w-full overflow-hidden rounded-[28px] shadow-sm">
               <Image
                 src={location.image}
                 alt={location.name}
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 55vw"
                 className="object-cover"
               />
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         <div>
@@ -190,9 +192,9 @@ export default function LocationDetails({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {location.services.map((srv, idx) => (
+              <ScrollReveal key={idx} direction="up" staggerChildren={0.1} index={idx} className="h-full">
               <div
-                key={idx}
-                className="group flex flex-col items-center rounded-[24px] bg-white p-6 text-center shadow-sm border border-gray-100/80 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:border-purple-200"
+                className="group flex flex-col items-center rounded-[24px] bg-white p-6 text-center shadow-sm border border-gray-100/80 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:border-purple-200 h-full"
               >
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F3F0FF] text-[#5B21B6] transition-transform duration-300 group-hover:scale-110">
                   {getServiceIcon(srv.icon)}
@@ -204,13 +206,14 @@ export default function LocationDetails({
                   {srv.description}
                 </p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch rounded-[32px] bg-[#F8F6FE]/80 p-1  border border-purple-50/60">
           {/* Left Text Block */}
-          <div className="lg:col-span-6 flex flex-col justify-between">
+          <ScrollReveal direction="right" className="lg:col-span-6 flex flex-col justify-between">
             <div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E1B4B] mb-2">
                 {location.about.title}
@@ -237,22 +240,24 @@ export default function LocationDetails({
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Image Block */}
-          <div className="lg:col-span-6 min-h-[260px]">
+          <ScrollReveal direction="left" className="lg:col-span-6 min-h-[260px]">
             <div className="relative h-full min-h-[280px] w-full overflow-hidden rounded-[24px] shadow-sm">
               <Image
                 src={location.aboutImage}
                 alt={`Pet Care in ${location.name}`}
                 fill
+                sizes="(max-width: 1024px) 100vw, 48vw"
                 className="object-cover"
               />
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         <div className="pt-2">
+          <ScrollReveal direction="up">
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-black text-[#1E1B4B]">
               Areas We Serve in {location.name}
@@ -313,6 +318,7 @@ export default function LocationDetails({
               />
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </div>

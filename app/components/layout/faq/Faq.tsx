@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import {
-  FaPaw,
   FaPlus,
   FaMinus,
   FaPhoneAlt,
@@ -12,6 +10,9 @@ import {
   FaCalendarAlt,
 } from "react-icons/fa";
 import Banner from "../../shared/BannerPage";
+import CtaBanner from "../../shared/CtaBanner";
+import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { PetFaqPageVariant } from "@/type/typeSection";
 
 interface FaqProps {
@@ -36,28 +37,20 @@ export default function Faq({ data }: FaqProps) {
       />
 
       <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 md:py-12 space-y-12">
-        <div className="text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#5B21B6] mb-2">
-            <FaPaw className="h-3 w-3" />
-            <span>{faqData.badge}</span>
-            <FaPaw className="h-3 w-3" />
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black leading-tight text-[#1E1B4B] tracking-tight">
-            {faqData.heading.normal}{" "}
-            <span className="text-[#5B21B6]">
-              {faqData.heading.highlighted}
-            </span>
-          </h2>
-
-          <p className="mt-3 text-[14px] sm:text-[15px] leading-relaxed text-[#64748B]">
-            {faqData.description}
-          </p>
-        </div>
+        <SectionHeader
+          badge={faqData.badge}
+          title={faqData.heading}
+          description={faqData.description}
+          className="mx-auto max-w-2xl lg:mx-0"
+          align="left"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* LEFT: Accordion Items (Shows First on Mobile) */}
-          <div className="lg:col-span-8 space-y-4 flex flex-col justify-start">
+          <ScrollReveal
+            direction="up"
+            className="lg:col-span-8 space-y-4 flex flex-col justify-start"
+          >
             {faqData.questions.map((item) => {
               const isOpen = openId === item.id;
               return (
@@ -104,10 +97,13 @@ export default function Faq({ data }: FaqProps) {
                 </div>
               );
             })}
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT: Contact Information Side-Card */}
-          <div className="lg:col-span-4 flex flex-col">
+          <ScrollReveal
+            direction="left"
+            className="lg:col-span-4 flex flex-col"
+          >
             <div className="h-full w-full md:rounded-[28px] md:bg-[#F8F6FE]  md:p-8 md:border md:border-purple-100/60 flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-black text-[#1E1B4B]">
@@ -185,33 +181,21 @@ export default function Faq({ data }: FaqProps) {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
-        <div className="rounded-[28px] bg-[#F8F6FE] p-6 sm:p-8 border border-purple-100/60 flex flex-col md:flex-row items-center justify-between gap-6 md:px-32">
-          <div className="flex   items-center gap-4 text-center md:text-left flex-col md:flex-row">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#5B21B6] text-white shadow-md">
-              <FaPaw className="h-7 w-7" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-[#1E1B4B]">
-                {faqData.callout.title}
-              </h3>
-              <p className="text-[13px] sm:text-[14px] text-[#64748B] mt-0.5">
-                {faqData.callout.subtitle}
-              </p>
-            </div>
-          </div>
-<div className="hidden md:block h-16 w-px bg-purple-200" />
-
-          <Link
-            href={faqData.callout.buttonHref}
-            className="shrink-0 inline-flex items-center gap-2 rounded-2xl bg-[#5B21B6] px-8 py-3.5 text-[14px] font-bold text-white shadow-sm hover:bg-[#4C1D95] transition-all hover:-translate-y-0.5"
-          >
-            <FaPaw className="h-4 w-4" />
-            <span>{faqData.callout.buttonText}</span>
-          </Link>
-        </div>
+        <CtaBanner
+          items={[
+            {
+              title: faqData.callout.title,
+              subtitle: faqData.callout.subtitle,
+              action: {
+                text: faqData.callout.buttonText,
+                href: faqData.callout.buttonHref,
+              },
+            },
+          ]}
+        />
       </div>
     </div>
   );

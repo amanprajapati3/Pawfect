@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Banner from "../../shared/BannerPage";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { SitemapVariant } from "@/type/typeSection";
 
 interface SitemapProps {
@@ -37,7 +40,14 @@ export default function Sitemap({ data }: SitemapProps) {
         {/* 4 Vertical Columns Grid Layout */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-0">
           {columns.map((columnPages, colIdx) => (
-            <div key={colIdx} className="flex flex-col">
+            <ScrollReveal
+              key={colIdx}
+              direction="up"
+              staggerChildren={0.1}
+              index={colIdx}
+              className="h-full"
+            >
+            <div className="flex flex-col">
               {columnPages.map((page, rowIdx) => {
                 // Calculate absolute index to preserve correct global 01, 02, 03... numbering vertically
                 const globalIndex = colIdx * itemsPerColumn + rowIdx;
@@ -63,6 +73,7 @@ export default function Sitemap({ data }: SitemapProps) {
                 );
               })}
             </div>
+            </ScrollReveal>
           ))}
         </div>
 

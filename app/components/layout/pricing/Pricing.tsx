@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { FaPaw, FaArrowRight, FaHeadset, FaCalendarAlt } from "react-icons/fa";
 import Banner from "../../shared/BannerPage";
+import CtaBanner from "../../shared/CtaBanner";
+import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { PricingVariant } from "@/type/typeSection";
 
 interface PricingProps {
@@ -27,35 +29,32 @@ export default function Pricing({ data }: PricingProps) {
       />
 
       <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#5B21B6] mb-3">
-            <span className="w-6 h-[2px] bg-[#5B21B6] inline-block" />
-            <FaPaw className="h-3.5 w-3.5" />
-            <span>{pricingData.badge}</span>
-            <span className="w-6 h-[2px] bg-[#5B21B6] inline-block" />
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1E1B4B] tracking-tight leading-tight">
-            {pricingData.heading.normal}{" "}
-            <span className="text-[#5B21B6]">
-              {pricingData.heading.highlighted}
-            </span>
-          </h2>
-
-          <p className="mt-3 text-[14px] sm:text-[15px] text-[#64748B] leading-relaxed">
-            {pricingData.subtitle1}
-            <br className="hidden sm:inline" />
-            {pricingData.subtitle2}
-          </p>
-        </div>
+        <SectionHeader
+          badge={pricingData.badge}
+          title={pricingData.heading}
+          description={
+            <>
+              {pricingData.subtitle1}
+              <br className="hidden sm:inline" />
+              {pricingData.subtitle2}
+            </>
+          }
+          className="mx-auto mb-12 max-w-2xl sm:mb-16"
+        />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-stretch mb-12">
-          {pricingData.plans.map((plan) => {
+          {pricingData.plans.map((plan, index) => {
             const isActive = activePlan === plan.id;
 
             return (
-              <div
+              <ScrollReveal
                 key={plan.id}
+                direction="up"
+                staggerChildren={0.1}
+                index={index}
+                className="h-full"
+              >
+              <div
                 onClick={() => setActivePlan(plan.id)}
                 className={`relative rounded-[32px] pt-10 pb-0 px-6 sm:px-8 flex flex-col justify-between transition-all duration-300 cursor-pointer overflow-hidden ${
                   isActive
@@ -136,6 +135,7 @@ export default function Pricing({ data }: PricingProps) {
                       src={plan.dogImage}
                       alt={plan.title}
                       fill
+                      sizes="(max-width: 640px) 130px, 235px"
                       className="object-contain object-bottom"
                     />
                   </div>
@@ -152,56 +152,29 @@ export default function Pricing({ data }: PricingProps) {
                   </div>
                 </div>
               </div>
+              </ScrollReveal>
             );
           })}
         </div>
 
-        <div className="rounded-[24px] bg-[#F3F0FF]/80 p-6 sm:p-8 border border-purple-100 flex flex-col lg:flex-row items-center justify-between gap-6 text-left">
-          {/* Section 1: Need something different */}
-          <div className="flex items-center gap-4 lg:w-5/12">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#5B21B6] text-white shadow-xs">
-              <FaHeadset className="h-7 w-7" />
-            </div>
-            <div>
-              <h4 className="text-[15px] font-extrabold text-[#1E1B4B]">
-                {pricingData.ctaBanner.needDifferent.title}
-              </h4>
-              <p className="text-[12px] text-[#64748B] mt-1 leading-relaxed">
-                {pricingData.ctaBanner.needDifferent.description}
-              </p>
-            </div>
-          </div>
-
-          {/* Vertical Dotted Divider */}
-          <div className="hidden lg:block h-12 w-[1px] border-l border-dashed border-purple-300" />
-          <div className="block lg:hidden w-full h-[1px] border-t border-dashed border-purple-300" />
-
-          {/* Section 2: Book a Free Consultation */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 lg:w-6/12 w-full">
-            <div className="flex items-center gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#EFEAFE] text-[#5B21B6] border border-purple-200">
-                <FaCalendarAlt className="h-7 w-7" />
-              </div>
-              <div>
-                <h4 className="text-[15px] font-extrabold text-[#1E1B4B]">
-                  {pricingData.ctaBanner.consultation.title}
-                </h4>
-                <p className="text-[12px] text-[#64748B] mt-1 leading-relaxed">
-                  {pricingData.ctaBanner.consultation.description}
-                </p>
-              </div>
-            </div>
-
-            {/* Button */}
-            <Link
-              href={pricingData.ctaBanner.consultation.buttonHref}
-              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#5B21B6] px-6 py-3.5 text-[13px] font-bold text-white shadow-md hover:bg-[#4C1D95] transition-all whitespace-nowrap self-stretch sm:self-auto text-center"
-            >
-              <span>{pricingData.ctaBanner.consultation.buttonText}</span>
-              <FaArrowRight className="h-3.5 w-3.5" />
-            </Link>
-          </div>
-        </div>
+        <CtaBanner
+          items={[
+            {
+              icon: <FaHeadset className="h-7 w-7" />,
+              title: pricingData.ctaBanner.needDifferent.title,
+              subtitle: pricingData.ctaBanner.needDifferent.description,
+            },
+            {
+              icon: <FaCalendarAlt className="h-7 w-7" />,
+              title: pricingData.ctaBanner.consultation.title,
+              subtitle: pricingData.ctaBanner.consultation.description,
+              action: {
+                text: pricingData.ctaBanner.consultation.buttonText,
+                href: pricingData.ctaBanner.consultation.buttonHref,
+              },
+            },
+          ]}
+        />
       </div>
     </div>
   );

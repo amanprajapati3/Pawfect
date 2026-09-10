@@ -3769,7 +3769,7 @@
               "title": "Still Have Questions?",
               "subtitle": "We're here to help! Our team is happy to assist you with anything you need to know.",
               "buttonText": "Contact Us Now",
-              "buttonHref": "/contact"
+              "buttonHref": "/contact-us"
             }
           }
         }
@@ -3988,7 +3988,7 @@
                 "title": "Book a Free Consultation",
                 "description": "Talk to our experts and find the perfect plan for your pet.",
                 "buttonText": "Contact Us",
-                "buttonHref": "/contact"
+                "buttonHref": "/contact-us"
               }
             }
           }
@@ -4150,7 +4150,7 @@
               "title": "Partner With Us",
               "description": "Join our growing network of pet care professionals and brands.",
               "buttonText": "Become a Partner",
-              "buttonHref": "/contact"
+              "buttonHref": "/contact-us"
             }
           }
         }

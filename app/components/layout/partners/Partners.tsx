@@ -2,17 +2,18 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
   FaPaw,
   FaTrophy,
   FaHeart,
   FaHandshake,
-  FaArrowRight,
   FaChevronLeft,
   FaChevronRight,
 } from "react-icons/fa";
 import BannerPage from "../../shared/BannerPage";
+import CtaBanner from "../../shared/CtaBanner";
+import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { PartnersVariant, PartnerFeature } from "@/type/typeSection";
 
 interface PartnersProps {
@@ -84,26 +85,14 @@ export default function Partners({ data }: PartnersProps) {
           <FaPaw className="h-32 w-32 rotate-[20deg]" />
         </div>
 
-        <div className="relative z-10 text-center max-w-2xl mx-auto mb-5">
-          <div className="inline-flex items-center gap-2 text-[12px] font-extrabold uppercase tracking-widest text-[#5B21B6] mb-2">
-            <span className="w-5 h-[2px] bg-[#5B21B6] inline-block" />
-            <FaPaw className="h-3 w-3" />
-            <span>{partnerData.badge}</span>
-            <span className="w-5 h-[2px] bg-[#5B21B6] inline-block" />
-          </div>
+        <SectionHeader
+          badge={partnerData.badge}
+          title={partnerData.heading}
+          description={partnerData.subtitle}
+          className="relative z-10 mx-auto mb-5 max-w-2xl"
+        />
 
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-black text-[#1E1B4B] tracking-tight leading-tight">
-            {partnerData.heading.normal}{" "}
-            <span className="text-[#5B21B6]">
-              {partnerData.heading.highlighted}
-            </span>
-          </h2>
-
-          <p className="mt-2.5 text-[14px] sm:text-[15px] text-[#64748B] leading-relaxed max-w-xl mx-auto">
-            {partnerData.subtitle}
-          </p>
-        </div>
-
+        <ScrollReveal direction="up">
         <div className="relative z-10 py-4 px-2 md:px-10 max-w-4xl mx-auto mb-5">
           <div className="flex flex-col sm:flex-row  justify-between gap-3 md:gap-4">
             {partnerData.features.map((feat: PartnerFeature, index: number) => (
@@ -133,7 +122,9 @@ export default function Partners({ data }: PartnersProps) {
             ))}
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal direction="up">
         <div className="relative">
           {/* Slider Navigation Buttons (Mobile / Tablet Only) */}
           <div className="flex lg:hidden justify-end gap-2 mb-4">
@@ -192,6 +183,7 @@ export default function Partners({ data }: PartnersProps) {
                     alt={item.name}
                     width={600}
                     height={250}
+                    sizes="(max-width: 640px) 200px, 220px"
                     className="max-h-full  max-w-full w-auto h-auto object-contain"
                   />
                 </div>
@@ -204,38 +196,22 @@ export default function Partners({ data }: PartnersProps) {
             ))}
           </div>
         </div>
+        </ScrollReveal>
 
-        <div className="mt-10 rounded-[24px] bg-[#F3EFFE] p-6 sm:p-7 border border-purple-100/50 flex flex-col md:flex-row items-center justify-between gap-6 text-left">
-          {/* Left Icon & Text */}
-          <div className="flex items-center gap-4">
-            <div className="flex h-13 sm:w-20 sm:h-20 w-13 shrink-0 items-center justify-center rounded-full bg-[#d8cdfa] text-[#5B21B6]">
-              <FaHandshake className="h-8 sm:w-12 sm:h-12 w-8" />
-            </div>
-            <div className="hidden md:block h-20 w-[1px] border-l-1 border border-purple-300" />
-
-            <div className="">
-              <h4 className="text-[19px] font-bold md:text-3xl text-[#08070e] tracking-tight">
-                {partnerData.ctaBanner.title}
-              </h4>
-              <p className="text-[15px] md:text-xl text-[#000000] mt-0.5">
-                {partnerData.ctaBanner.description}
-              </p>
-            </div>
-          </div>
-
-          {/* Dotted Vertical Line Separator */}
-          <div className="hidden md:block h-20 w-[1px] border-l-1 border border-purple-300" />
-
-          {/* Button */}
-          <Link
-            href={partnerData.ctaBanner.buttonHref}
-            className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#5B21B6] hover:bg-[#4C1D95] px-7 py-3.5 text-[17px] font-bold text-white shadow-md transition-all whitespace-nowrap self-stretch md:self-auto text-center shrink-0"
-          >
-            <FaPaw className="h-6 w-6" />
-            <span>{partnerData.ctaBanner.buttonText}</span>
-            <FaArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
+        <CtaBanner
+          className="mt-10"
+          items={[
+            {
+              icon: <FaHandshake className="h-7 w-7" />,
+              title: partnerData.ctaBanner.title,
+              subtitle: partnerData.ctaBanner.description,
+              action: {
+                text: partnerData.ctaBanner.buttonText,
+                href: partnerData.ctaBanner.buttonHref,
+              },
+            },
+          ]}
+        />
       </div>
     </div>
   );

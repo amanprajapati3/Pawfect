@@ -13,6 +13,8 @@ import {
   Shield,
 } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
+import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 export interface ImageRef {
   src: string;
@@ -79,38 +81,8 @@ export default function FaqSection({ data }: FaqSectionProps) {
     <section className="w-full overflow-hidden bg-[#FAFAFC] py-8 md:py-12">
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-16">
-          <div className="lg:col-span-6 xl:col-span-7">
-            {/* Badge */}
-            {badge && (
-              <div className="mb-0 inline-flex items-center gap-2">
-                <FaPaw className="h-5 w-5 fill-[#7C3AED] text-[#7C3AED]" />
-                <span className="text-[13px] font-bold uppercase tracking-wider text-[#1E1B4B]">
-                  {badge}
-                </span>
-              </div>
-            )}
-
-            {/* Title */}
-            {title && (
-              <h2 className="max-w-[520px] text-[36px] font-extrabold leading-[1.12] tracking-tight text-[#1E1B4B] sm:text-[42px] lg:text-[48px]">
-                {title.normal}{" "}
-                <span className="text-[#1E1B4B]">{title.highlighted}</span>
-              </h2>
-            )}
-
-            {/* Decorative line with diamond */}
-            <div className="my-2 flex items-center gap-3">
-              <div className="h-px w-16 bg-[#C4B5FD]" />
-              <FaPaw className="h-3 w-3 fill-[#7C3AED] text-[#7C3AED]" />
-              <div className="h-px w-16 bg-[#C4B5FD]/40" />
-            </div>
-
-            {/* Description */}
-            {description && (
-              <p className="mb-3 max-w-[480px] text-[15px] leading-[1.7] text-[#64748B]">
-                {description}
-              </p>
-            )}
+          <ScrollReveal direction="right" className="lg:col-span-6 xl:col-span-7">
+            <SectionHeader badge={badge} title={title} description={description} align="left" />
 
             {/* FAQ Accordion */}
             {faqs.length > 0 && (
@@ -218,9 +190,12 @@ export default function FaqSection({ data }: FaqSectionProps) {
                 )}
               </div>
             )}
-          </div>
+          </ScrollReveal>
 
-          <div className="relative flex justify-center lg:col-span-6 -mt-32 md:mt-28 xl:col-span-5 lg:justify-end">
+          <ScrollReveal
+            direction="left"
+            className="relative flex justify-center lg:col-span-6 -mt-32 md:mt-28 xl:col-span-5 lg:justify-end"
+          >
             <div className="relative h-[420px] w-full max-w-[420px] sm:h-[480px] sm:max-w-[460px] lg:h-[520px] lg:max-w-[500px]">
               {/* Purple Arch Background */}
               <div className="absolute bottom-0 left-1/2 md:h-[110%] h-[70%] w-[70%] -translate-x-1/2 overflow-hidden rounded-tl-4xl rounded-tr-[60px] bg-[#3b3588]">
@@ -288,7 +263,7 @@ export default function FaqSection({ data }: FaqSectionProps) {
                 </div>
               )}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

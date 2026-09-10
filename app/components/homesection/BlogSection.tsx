@@ -3,8 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaPaw } from "react-icons/fa";
 import { Calendar, User, ArrowRight } from "lucide-react";
+import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 export interface PetBlogPost {
   id: number;
@@ -156,45 +157,25 @@ export default function BlogSection({ data, layout = "home" }: BlogSectionProps)
   return (
     <section className="w-full bg-white py-8 md:py-12 font-sans">
       <div className="mx-auto max-w-[1280px] px-5 sm:px-6">
-        <div className="mb-8 flex flex-col items-center text-center">
-          {badge && (
-            <div className="mb-0 inline-flex items-center gap-2">
-              <FaPaw className="h-4 w-4 fill-[#7C3AED] text-[#7C3AED]" />
-              <span className="text-[13px] font-bold uppercase tracking-wider text-[#7C3AED]">
-                {badge}
-              </span>
-            </div>
-          )}
-
-          {title && (
-            <h2 className="text-[32px] -mt-1 font-extrabold tracking-tight text-[#1E1B4B] sm:text-[42px] lg:text-[48px]">
-              {title.normal}{" "}
-              <span className="text-[#7C3AED]">{title.highlighted}</span>
-            </h2>
-          )}
-
-          {/* Decorative Paw Divider */}
-          <div className="my-1 flex items-center gap-3">
-            <div className="h-px w-12 bg-[#E9D5FF]" />
-            <FaPaw className="h-3 w-3 fill-[#7C3AED] text-[#7C3AED]" />
-            <div className="h-px w-12 bg-[#E9D5FF]" />
-          </div>
-
-          {desc && (
-            <p className="max-w-[580px] text-[15px] leading-relaxed text-[#64748B]">
-              {desc}
-            </p>
-          )}
-        </div>
+        <SectionHeader badge={badge} title={title} description={desc} className="mb-8" />
 
         {isGrid ? (
           /* GRID: all posts, 3 per row desktop / 2 tablet / 1 mobile, vertical card design */
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
-              <div key={post.id}>{renderVerticalCard(post)}</div>
+            {posts.map((post, index) => (
+              <ScrollReveal
+                key={post.id}
+                direction="up"
+                staggerChildren={0.12}
+                index={index}
+                className="h-full"
+              >
+                <div className="h-full">{renderVerticalCard(post)}</div>
+              </ScrollReveal>
             ))}
           </div>
         ) : (
+          <ScrollReveal direction="up">
           <div className="grid grid-cols-1 gap-8 md:gap-6 lg:grid-cols-12 lg:gap-8 items-stretch">
             {/* LEFT: FEATURED MAIN POST */}
             {featuredPost && (
@@ -263,6 +244,7 @@ export default function BlogSection({ data, layout = "home" }: BlogSectionProps)
               ))}
             </div>
           </div>
+          </ScrollReveal>
         )}
       </div>
     </section>

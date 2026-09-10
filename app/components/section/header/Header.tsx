@@ -96,6 +96,7 @@ export default function Header() {
                 alt={siteInfo.siteName || "PawFect"}
                 width={180}
                 height={60}
+                sizes="(max-width: 640px) 120px, 240px"
                 className="h-10 w-auto object-contain sm:h-20"
               />
             ) : (
@@ -208,6 +209,7 @@ export default function Header() {
                 alt={siteInfo.siteName || "PawFect"}
                 width={150}
                 height={50}
+                sizes="108px"
                 className="h-9 w-auto object-contain"
               />
             ) : (

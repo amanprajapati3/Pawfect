@@ -5,6 +5,7 @@ import Link from "next/link";
 import {  ArrowRight } from "lucide-react";
 import type { PetBannerData } from "@/type/typeSection";
 import { FaPaw } from "react-icons/fa";
+import ScrollReveal from "../shared/ScrollReveal";
 
 
 interface BannerProps {
@@ -24,6 +25,7 @@ export default function Banner({ data }: BannerProps) {
             src={bgImageUrl}
             alt="PawFect Banner Background"
             fill
+            sizes="100vw"
             className="object-cover min-h-screen object-center"
             priority
           />
@@ -35,7 +37,11 @@ export default function Banner({ data }: BannerProps) {
       {/* Grid container to manage content layout, stays above image and overlay */}
       <div className="relative z-30 mx-auto grid max-w-[1400px]  grid-cols-1 items-center gap-10 px-3 py-16 sm:px-8 sm:py-20 md:grid-cols-2 md:gap-8 lg:px-20 ">
         {/* LEFT CONTENT COLUMN */}
-        <div className="flex flex-col items-start text-left md:col-span-1">
+        <ScrollReveal
+          direction="right"
+          duration={0.8}
+          className="flex flex-col items-start text-left md:col-span-1"
+        >
           {/* BADGE STYLE - Matching white pill with purple text */}
           {badge && (
             <div className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 ">
@@ -91,7 +97,7 @@ export default function Banner({ data }: BannerProps) {
               })}
             </div>
           )}
-        </div>
+        </ScrollReveal>
 
         {/* RIGHT COLUMN - Kept empty in grid to respect layout and allow gradient transition */}
         <div className="hidden md:block md:col-span-1"></div>

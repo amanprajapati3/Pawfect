@@ -18,6 +18,7 @@ import {
   FaDroplet,
 } from "react-icons/fa6";
 import Banner from "@/app/components/shared/BannerPage";
+import ScrollReveal from "../../shared/ScrollReveal";
 import {
   ServiceDetailsData,
   ServiceDetailsQuickBenefit,
@@ -91,7 +92,7 @@ export default function ServiceDetailsView({
         {/* SECTION 1: ABOUT SERVICE HERO & GALLERY */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 items-stretch">
           {/* Left Column: Image Collage */}
-          <div className="lg:col-span-6 grid grid-cols-12 gap-4 h-full">
+          <ScrollReveal direction="right" className="lg:col-span-6 grid grid-cols-12 gap-4 h-full">
             {/* Main Featured Image with Badge */}
             <div className="col-span-7 relative min-h-[380px] sm:min-h-[460px] h-full rounded-[28px] overflow-hidden shadow-sm">
               <Image
@@ -135,10 +136,10 @@ export default function ServiceDetailsView({
                 </div>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Title & Text */}
-          <div className="lg:col-span-6 flex flex-col justify-center">
+          <ScrollReveal direction="left" className="lg:col-span-6 flex flex-col justify-center">
             {/* Header Badge */}
             <div className="inline-flex items-center gap-2 mb-3">
               <span className="h-[2px] w-8 bg-[#5B21B6]" />
@@ -172,13 +173,13 @@ export default function ServiceDetailsView({
                 </div>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* SECTION 2: BENEFITS & WHAT'S INCLUDED */}
         <div className="mt-10  grid grid-cols-1 gap-8 lg:grid-cols-12 items-stretch">
           {/* Benefits Grid */}
-          <div className="lg:col-span-7 bg-[#FBF7FF] rounded-[28px] p-6 border border-[#F3E8FF] flex flex-col justify-between">
+          <ScrollReveal direction="right" className="lg:col-span-7 bg-[#FBF7FF] rounded-[28px] p-6 border border-[#F3E8FF] flex flex-col justify-between">
             <div className="inline-flex items-center gap-2 mb-0">
               <span className="h-[2px] w-8 bg-[#5B21B6]" />
               <h3 className="sm:text-2xl text-xl font-bold text-[#5B21B6]">
@@ -205,10 +206,10 @@ export default function ServiceDetailsView({
                 ),
               )}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* What's Included Card */}
-          <div className="lg:col-span-5 bg-white rounded-[28px] sm:p-6 p-3 border border-[#F3E8FF] shadow-[0_10px_35px_rgba(0,0,0,0.02)] flex flex-col justify-between">
+          <ScrollReveal direction="left" className="lg:col-span-5 bg-white rounded-[28px] sm:p-6 p-3 border border-[#F3E8FF] shadow-[0_10px_35px_rgba(0,0,0,0.02)] flex flex-col justify-between">
             <h3 className="text-2xl font-extrabold text-[#1E1B4B] mb-6">
               {whatsIncluded.title}
             </h3>
@@ -224,7 +225,7 @@ export default function ServiceDetailsView({
                 </li>
               ))}
             </ul>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* SECTION 3: PROCESS */}
@@ -243,9 +244,9 @@ export default function ServiceDetailsView({
             {/* Dashed Connecting Line */}
             <div className="hidden lg:block absolute top-9 left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-purple-200 z-0" />
 
-            {(processSection.steps as ServiceDetailsProcessStep[]).map((st) => (
+            {(processSection.steps as ServiceDetailsProcessStep[]).map((st, index) => (
+              <ScrollReveal key={st.step} direction="up" staggerChildren={0.1} index={index} className="h-full">
               <div
-                key={st.step}
                 className="relative z-10 flex flex-col items-center text-center px-2"
               >
                 <div className="flex h-18 w-18 h-[72px] w-[72px] items-center justify-center rounded-full bg-[#5B21B6] shadow-lg border-4 border-white mb-5">
@@ -261,11 +262,13 @@ export default function ServiceDetailsView({
                   {st.description}
                 </p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
 
         {/* SECTION 4: CTA BANNER */}
+        <ScrollReveal direction="up">
         <div className="mt-10 relative bg-[#F6EEFF] rounded-[32px] p-6 sm:p-10 overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Paw Watermarks */}
           <div className="absolute -left-8 -bottom-8 opacity-[0.08] pointer-events-none">
@@ -299,10 +302,10 @@ export default function ServiceDetailsView({
               fill
               sizes="(max-width: 1024px) 100vw, 400px"
               className="object-contain object-bottom"
-              priority
             />
           </div>
         </div>
+        </ScrollReveal>
       </div>
     </div>
   );

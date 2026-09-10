@@ -4,7 +4,8 @@ import React, { useState, useEffect, useCallback, ElementType } from 'react';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { PawPrint, Quote, Star, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
-import { FaPaw } from "react-icons/fa";
+import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 // --- TS Type Interfaces as specified ---
 export interface PetTestimonialItem {
@@ -105,41 +106,12 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
   return (
     <section className="w-full overflow-hidden bg-[#FAFAFC] py-8 text-[#231F20] md:py-12">
       <div className="mx-auto max-w-[1400px] px-3 sm:px-8 lg:px-12">
-        {/* SECTION HEADER: Pre-defined for replication */}
-        <div className="flex flex-col items-center text-center">
-          {badge && (
-            <div className="mb-0 inline-flex items-center gap-2">
-              <FaPaw className="h-5 w-5 fill-[#3B1264] text-[#3B1264]" />
-              <span className="text-[13px] font-bold uppercase tracking-widest text-[#3B1264]">
-                {badge}
-              </span>
-            </div>
-          )}
-
-          {title && (
-            <h2 className="text-[36px] -mt-2 font-extrabold tracking-tighter text-[#1C0D3F] sm:text-[48px] lg:text-[56px]">
-              {title.normal}{" "}
-              <span className="text-[#3B1264]">{title.highlighted}</span>
-            </h2>
-          )}
-
-          {/* Separation Paw icon as in image_17.png */}
-          <div className="flex items-center gap-3 my-0">
-             <div className="h-px w-16 bg-[#C4B5FD]" />
-             <FaPaw className="h-3.5 w-3.5 fill-[#3B1264] text-[#3B1264]" />
-             <div className="h-px w-16 bg-[#C4B5FD]/40" />
-          </div>
-
-          {desc && (
-            <p className="mt-2 max-w-[650px] text-[15px] font-medium leading-relaxed text-gray-600 sm:text-[16px]">
-              {desc}
-            </p>
-          )}
-        </div>
+        {/* SECTION HEADER */}
+        <SectionHeader badge={badge} title={title} description={desc} />
 
         {/* CAROUSEL SECTION */}
         {testimonialItems.length > 0 && (
-          <div className="relative mt-12 sm:mt-16">
+          <ScrollReveal direction="up" className="relative mt-12 sm:mt-16">
             {/* Desktop Navigation Buttons: Hidden on mobile */}
             <button
               onClick={scrollPrev}
@@ -227,7 +199,7 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
                 />
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         )}
       </div>
     </section>

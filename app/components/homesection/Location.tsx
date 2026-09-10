@@ -4,7 +4,9 @@ import React, { useState, useRef, useEffect, TouchEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { FaMapMarkerAlt, FaPaw } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 import type { PetServiceAreasData, PetServiceAreaCity } from "@/type/typeSection";
 
 interface LocationProps {
@@ -136,45 +138,29 @@ export default function Location({ data, layout = "home" }: LocationProps) {
     <section className="w-full bg-white py-8 md:py-12 overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-8 lg:px-12">
         {/* HEADER SECTION */}
-        <div className="flex flex-col items-center text-center">
-          {badge && (
-            <div className="inline-flex items-center gap-2">
-              <FaPaw className="h-4 w-4 text-[#3B1264]" />
-              <span className="text-[14px] font-bold uppercase tracking-wider text-[#3B1264]">
-                {badge}
-              </span>
-            </div>
-          )}
-
-          {title && (
-            <h2 className="text-[32px] font-extrabold tracking-tight text-[#1C0D3F] sm:text-[42px] lg:text-[48px]">
-              {title.normal}{" "}
-              <span className="text-[#3B1264]">{title.highlighted}</span>
-            </h2>
-          )}
-
-          {desc && (
-            <p className="mt-1 max-w-[600px] text-[14.5px] font-medium leading-relaxed text-gray-500 sm:text-[15.5px]">
-              {desc}
-            </p>
-          )}
-        </div>
+        <SectionHeader badge={badge} title={title} description={desc} />
 
         {isGrid ? (
           /* CITIES GRID: 4 per row desktop / 2 tablet / 1 mobile */
           <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {cities.map((city) => (
-              <div
+            {cities.map((city, index) => (
+              <ScrollReveal
                 key={city.id}
-                className="flex justify-center rounded-3xl border border-gray-200 bg-white p-5 transition-shadow duration-300 hover:shadow-lg"
+                direction="up"
+                staggerChildren={0.1}
+                index={index}
+                className="h-full"
               >
-                {renderCityCard(city)}
-              </div>
+                <div className="flex h-full justify-center rounded-3xl border border-gray-200 bg-white p-5 transition-shadow duration-300 hover:shadow-lg">
+                  {renderCityCard(city)}
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         ) : (
           /* SLIDER & CITIES CONTAINER */
-          <div className="relative mt-8" ref={containerRef}>
+          <ScrollReveal direction="up">
+            <div className="relative mt-8" ref={containerRef}>
             {/* LEFT CHEVRON BUTTON */}
             <button
               onClick={handlePrev}
@@ -230,6 +216,7 @@ export default function Location({ data, layout = "home" }: LocationProps) {
               ))}
             </div>
           </div>
+          </ScrollReveal>
         )}
       </div>
     </section>

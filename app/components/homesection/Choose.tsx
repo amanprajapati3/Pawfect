@@ -10,6 +10,8 @@ import {
   FaPhoneAlt,
   FaArrowUp,
 } from "react-icons/fa";
+import SectionHeader from "../shared/SectionHeader";
+import ScrollReveal from "../shared/ScrollReveal";
 
 // Types definition matching user specs
 export interface PetWhyChooseUsFeature {
@@ -136,10 +138,10 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
   };
 
   return (
-    <section className="w-full bg-[#FAFAFC] py-8 md:py-12 font-sans">
+    <section className="w-full overflow-hidden bg-[#FAFAFC] py-8 md:py-12 font-sans">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-stretch">
-          <div className="lg:col-span-6 relative flex flex-col justify-between">
+          <ScrollReveal direction="right" className="lg:col-span-6 relative flex flex-col justify-between">
             {/* Main Outer Image Grid Container */}
             <div className="relative w-full max-w-[540px] mx-auto lg:max-w-none min-h-[480px] sm:min-h-[540px] lg:min-h-full">
               {/* Image 1: Top Left Main Image */}
@@ -217,28 +219,11 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="lg:col-span-6 flex flex-col justify-between py-1">
+          <ScrollReveal direction="left" className="lg:col-span-6 flex flex-col justify-between py-1">
             <div>
-              {/* Category Badge */}
-              <div className="mb-2 inline-flex items-center gap-2">
-                <FaPaw className="h-4 w-4 text-[#5B34A3]" />
-                <span className="text-[13px] font-bold uppercase tracking-wider text-[#5B34A3]">
-                  {badge}
-                </span>
-              </div>
-
-              {/* Main Heading */}
-              <h2 className="text-[32px] font-extrabold leading-[1.18] tracking-tight text-[#100A26] sm:text-[40px] lg:text-[46px]">
-                {title.normal}{" "}
-                <span className="text-[#5B34A3]">{title.highlighted}</span>
-              </h2>
-
-              {/* Description */}
-              <p className="mt-4 text-[14.5px] leading-relaxed text-[#52525B] sm:text-[15.5px]">
-                {description}
-              </p>
+              <SectionHeader badge={badge} title={title} description={description} align="left" />
 
               {/* Feature Cards Grid (Vet & Facility) */}
               <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -309,7 +294,7 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -16,6 +16,9 @@ import {
   FaHeadphones,
 } from "react-icons/fa";
 import Banner from "../../shared/BannerPage";
+import CtaBanner from "../../shared/CtaBanner";
+import SectionHeader from "../../shared/SectionHeader";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { ContactPageVariant } from "@/type/typeSection";
 
 interface ContactProps {
@@ -85,30 +88,19 @@ export default function Contact({ data }: ContactProps) {
       />
 
       <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 md:py-12 space-y-12">
-        <div className="relative text-center max-w-2xl mx-auto">
-          {/* Faded Background Paw Elements matching design */}
-          <div className="absolute -left-12 -top-6 text-purple-100 opacity-60 hidden sm:block pointer-events-none">
-            <FaPaw className="h-16 w-16" />
-          </div>
-          <div className="absolute -right-12 -top-6 text-purple-100 opacity-60 hidden sm:block pointer-events-none">
-            <FaPaw className="h-16 w-16" />
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold leading-tight text-[#1E1B4B] tracking-tight">
-            {contactData.heading.normal}{" "}
-            <span className="text-[#5B21B6]">
-              {contactData.heading.highlighted}
-            </span>
-          </h2>
-
-          <p className="mt-3 text-[14px] sm:text-[15px] leading-relaxed text-[#64748B]">
-            {contactData.description}
-          </p>
-        </div>
+        <SectionHeader
+          badge={contactData.badge}
+          title={contactData.heading}
+          description={contactData.description}
+          className="relative mx-auto max-w-2xl"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* LEFT: Info Cards */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-2">
+          <ScrollReveal
+            direction="right"
+            className="lg:col-span-5 flex flex-col justify-between space-y-2"
+          >
             <div className="space-y-2 flex-1 flex flex-col justify-between">
               {contactData.infoCards.map((item, idx) => (
                 <div
@@ -155,10 +147,13 @@ export default function Contact({ data }: ContactProps) {
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT: Send Message Form */}
-          <div className="lg:col-span-7 flex flex-col">
+          <ScrollReveal
+            direction="left"
+            className="lg:col-span-7 flex flex-col"
+          >
             <div className="h-full w-full rounded-[28px] bg-[#F8F6FE] p-6 sm:p-8 border border-purple-100/60 flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-black text-[#1E1B4B] mb-1">
@@ -224,45 +219,37 @@ export default function Contact({ data }: ContactProps) {
                 </form>
               </div>
             </div>
+          </ScrollReveal>
+        </div>
+
+        <ScrollReveal direction="up">
+          <div className="w-full overflow-hidden rounded-[28px] border border-gray-200/80 shadow-xs h-[320px] sm:h-[400px]">
+            <iframe
+              src={contactData.mapUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Office Location Map"
+            />
           </div>
-        </div>
+        </ScrollReveal>
 
-        <div className="w-full overflow-hidden rounded-[28px] border border-gray-200/80 shadow-xs h-[320px] sm:h-[400px]">
-          <iframe
-            src={contactData.mapUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Office Location Map"
-          />
-        </div>
-
-        <div className="rounded-[28px] bg-[#F8F6FE] p-6 sm:p-8 border border-purple-100/60 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#A78BFA]/40 text-[#5B21B6] shadow-xs">
-              <FaHeadphones className="h-7 w-7" />
-            </div>
-            <div>
-              <h3 className="text-xl font-black text-[#1E1B4B]">
-                {contactData.immediateAssistance.title}
-              </h3>
-              <p className="text-[13px] sm:text-[14px] text-[#64748B] mt-0.5">
-                {contactData.immediateAssistance.subtitle}
-              </p>
-            </div>
-          </div>
-
-          <a
-            href={`tel:${contactData.immediateAssistance.phone}`}
-            className="shrink-0 inline-flex items-center gap-2 rounded-full bg-[#5B21B6] px-8 py-3.5 text-[14px] font-bold text-white shadow-sm hover:bg-[#4C1D95] transition-all hover:-translate-y-0.5"
-          >
-            <FaPhoneAlt className="h-3.5 w-3.5" />
-            <span>{contactData.immediateAssistance.phone}</span>
-          </a>
-        </div>
+        <CtaBanner
+          items={[
+            {
+              icon: <FaHeadphones className="h-7 w-7" />,
+              title: contactData.immediateAssistance.title,
+              subtitle: contactData.immediateAssistance.subtitle,
+              action: {
+                text: contactData.immediateAssistance.phone,
+                href: `tel:${contactData.immediateAssistance.phone}`,
+              },
+            },
+          ]}
+        />
       </div>
     </div>
   );
