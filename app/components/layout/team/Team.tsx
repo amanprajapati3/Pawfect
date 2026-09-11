@@ -1,13 +1,14 @@
 import Banner from "../../shared/BannerPage";
 import TeamSection from "../../homesection/TeamSection";
-import type { PetTeamData } from "@/data";
+import { site, type PetTeamData } from "@/data";
 
 interface TeamProps {
-  data: PetTeamData;
+  data?: PetTeamData;
 }
 
 export default function Team({ data }: TeamProps) {
-  const { banner } = data;
+  const teamData = data ?? site.team;
+  const { banner } = teamData;
 
   return (
     <main className="w-full bg-white font-sans">
@@ -17,7 +18,7 @@ export default function Team({ data }: TeamProps) {
         homeHref={banner.homeHref}
         current={banner.breadcrumbCurrent}
       />
-      <TeamSection data={data} layout="grid" />
+      <TeamSection data={teamData} layout="grid" />
     </main>
   );
 }

@@ -1,13 +1,14 @@
 import Banner from "../../shared/BannerPage";
 import Location from "../../homesection/Location";
-import type { PetServiceAreasData } from "@/data";
+import { site, type PetServiceAreasData } from "@/data";
 
 interface ServiceAreaProps {
-  data: PetServiceAreasData;
+  data?: PetServiceAreasData;
 }
 
 export default function ServiceArea({ data }: ServiceAreaProps) {
-  const { banner } = data;
+  const serviceAreaData = data ?? site.serviceAreas;
+  const { banner } = serviceAreaData;
 
   return (
     <main className="w-full bg-white font-sans">
@@ -17,7 +18,7 @@ export default function ServiceArea({ data }: ServiceAreaProps) {
         homeHref={banner.homeHref}
         current={banner.breadcrumbCurrent}
       />
-      <Location data={data} layout="grid" />
+      <Location data={serviceAreaData} layout="grid" />
     </main>
   );
 }

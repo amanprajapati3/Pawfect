@@ -6,14 +6,14 @@ import { Quote, Star, MapPin } from "lucide-react";
 import Banner from "../../shared/BannerPage";
 import SectionHeader from "../../shared/SectionHeader";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { TestimonialPageVariant } from "@/type/typeSection";
+import { site, type TestimonialPageVariant } from "@/data";
 
 interface TestimonialProps {
-  data: TestimonialPageVariant;
+  data?: TestimonialPageVariant;
 }
 
 export default function Testimonial({ data }: TestimonialProps) {
-  const testimonialData = data;
+  const testimonialData = data ?? site.testimonialPage;
 
   return (
     <div className="w-full bg-[#FAFAFC] font-sans text-[#1E1B4B]">

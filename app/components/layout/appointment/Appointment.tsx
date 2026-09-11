@@ -13,14 +13,14 @@ import {
 } from "react-icons/fa";
 import Banner from "../../shared/BannerPage";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { PetAppointmentVariant } from "@/type/typeSection";
+import { site, type PetAppointmentVariant } from "@/data";
 
 interface AppointmentProps {
-  data: PetAppointmentVariant;
+  data?: PetAppointmentVariant;
 }
 
 export default function Appointment({ data }: AppointmentProps) {
-  const appointmentData = data;
+  const appointmentData = data ?? site.appointmentPage;
 
   const [formData, setFormData] = useState({
     fullName: "",

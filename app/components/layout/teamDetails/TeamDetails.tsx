@@ -14,18 +14,18 @@ import { TbMicroscope } from "react-icons/tb";
 import { FaStethoscope } from "react-icons/fa";
 
 
-import { PetTeamMemberDetail, PetTeamDetailsVariant } from "@/type/typeSection";
+import { site, type PetTeamMemberDetail, type PetTeamDetailsVariant } from "@/data";
 import Banner from "../../shared/BannerPage";
 import ScrollReveal from "../../shared/ScrollReveal";
 
 interface TeamDetailsProps {
-  data: PetTeamMemberDetail;
-  variant: PetTeamDetailsVariant;
+  data?: PetTeamMemberDetail;
+  variant?: PetTeamDetailsVariant;
 }
 
 export default function TeamDetails({ data, variant }: TeamDetailsProps) {
-  const member = data;
-  const teamDetails = variant;
+  const member = data ?? site.teamDetails.members[0];
+  const teamDetails = variant ?? site.teamDetails;
 
   // Icon Resolver Helper
   const getInfoIcon = (iconType: string) => {

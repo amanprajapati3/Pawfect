@@ -12,51 +12,7 @@ import {
 } from "react-icons/fa";
 import SectionHeader from "../shared/SectionHeader";
 import ScrollReveal from "../shared/ScrollReveal";
-
-// Types definition matching user specs
-export interface PetWhyChooseUsFeature {
-  id: string;
-  iconName: string;
-  title: string;
-  description: string;
-}
-
-export interface PetWhyChooseUsStatBadge {
-  number: string;
-  label: string;
-}
-
-export interface PetWhyChooseUsPhone {
-  label: string;
-  number: string;
-  href: string;
-}
-
-export interface PetWhyChooseUsData {
-  badge: string;
-  title: {
-    normal: string;
-    highlighted: string;
-  };
-  banner?: {
-    breadcrumbCurrent: string;
-    breadcrumbHome: string;
-    bgImageUrl: string;
-  };
-  description: string;
-  images: {
-    main: string;
-    secondary: string;
-  };
-  statBadge: PetWhyChooseUsStatBadge;
-  features: PetWhyChooseUsFeature[];
-  bulletPoints: string[];
-  button: {
-    label: string;
-    href: string;
-  };
-  phone: PetWhyChooseUsPhone;
-}
+import { site, type PetWhyChooseUsData } from "@/data";
 
 interface ChooseSectionProps {
   data?: PetWhyChooseUsData;
@@ -77,30 +33,31 @@ const renderIcon = (iconName: string) => {
 };
 
 export default function ChooseSection({ data }: ChooseSectionProps) {
+  const chooseData = data ?? site.whyChooseUs;
   // Safe extraction with default fallbacks
-  const badge = data?.badge || "WHY CHOOSE US";
-  const title = data?.title || {
+  const badge = chooseData.badge || "WHY CHOOSE US";
+  const title = chooseData.title || {
     normal: "Trusted care,",
     highlighted: "tailored for every pet",
   };
   const description =
-    data?.description ||
+    chooseData.description ||
     "We're committed to delivering reliable care, expert guidance, and high-quality services that support your pet's health, comfort, and happiness at every stage of their life.";
 
   const mainImage =
-    data?.images?.main ||
+    chooseData.images?.main ||
     "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?q=80&w=800&auto=format&fit=crop";
   const secondaryImage =
-    data?.images?.secondary ||
+    chooseData.images?.secondary ||
     "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop";
 
-  const statBadge = data?.statBadge || {
+  const statBadge = chooseData.statBadge || {
     number: "98%",
     label: "Pets Receive Personalized Care",
   };
 
-  const features = data?.features?.length
-    ? data.features
+  const features = chooseData.features?.length
+    ? chooseData.features
     : [
         {
           id: "1",
@@ -118,20 +75,20 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
         },
       ];
 
-  const bulletPoints = data?.bulletPoints?.length
-    ? data.bulletPoints
+  const bulletPoints = chooseData.bulletPoints?.length
+    ? chooseData.bulletPoints
     : [
         "Preventive care through early detection, timely vaccinations, and wellness plans.",
         "State-of-the-art technology to deliver accurate diagnosis and effective treatment.",
         "Customized care plans tailored to your pet's unique needs and lifestyle.",
       ];
 
-  const button = data?.button || {
+  const button = chooseData.button || {
     label: "Discover More",
     href: "/about",
   };
 
-  const phone = data?.phone || {
+  const phone = chooseData.phone || {
     label: "Call Us Anytime",
     number: "+1 (123) 456-7890",
     href: "tel:+11234567890",
@@ -287,7 +244,7 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
                     className="text-[16px] font-black text-[#100A26] hover:text-[#5B34A3]"
                   >
                     {phone.number}
-                  </a>
+                  </a>~
                   <span className="text-[12px] font-semibold text-[#71717A]">
                     {phone.label}
                   </span>

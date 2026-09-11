@@ -6,28 +6,10 @@ import Link from "next/link";
 import { FaPaw } from "react-icons/fa";
 import SectionHeader from "../shared/SectionHeader";
 import ScrollReveal from "../shared/ScrollReveal";
-
-export interface PetTeamMember {
-  id: number;
-  slug: string;
-  name: string;
-  role: string;
-  description: string;
-  image: string;
-}
-
-export interface PetTeamData {
-  badge: string;
-  title: {
-    normal: string;
-    highlighted: string;
-  };
-  desc: string;
-  members: PetTeamMember[];
-}
+import { site, type PetTeamData } from "@/data";
 
 interface TeamSectionProps {
-  data: PetTeamData;
+  data?: PetTeamData;
   layout?: "home" | "grid";
 }
 
@@ -35,7 +17,7 @@ export default function TeamSection({
   data,
   layout = "home",
 }: TeamSectionProps) {
-  const { badge, title, desc, members = [] } = data || {};
+  const { badge, title, desc, members = [] } = data ?? site.team;
   const isGrid = layout === "grid";
 
   const sliderRef = useRef<HTMLDivElement>(null);

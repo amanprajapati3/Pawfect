@@ -14,14 +14,14 @@ import BannerPage from "../../shared/BannerPage";
 import CtaBanner from "../../shared/CtaBanner";
 import SectionHeader from "../../shared/SectionHeader";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { PartnersVariant, PartnerFeature } from "@/type/typeSection";
+import { site, type PartnersVariant, type PartnerFeature } from "@/data";
 
 interface PartnersProps {
-  data: PartnersVariant;
+  data?: PartnersVariant;
 }
 
 export default function Partners({ data }: PartnersProps) {
-  const partnerData = data;
+  const partnerData = data ?? site.partnersPage;
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const [canScrollLeft, setCanScrollLeft] = useState(false);

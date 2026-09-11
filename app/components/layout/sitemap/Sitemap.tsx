@@ -4,14 +4,14 @@ import React from "react";
 import Link from "next/link";
 import Banner from "../../shared/BannerPage";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { SitemapVariant } from "@/type/typeSection";
+import { site, type SitemapVariant } from "@/data";
 
 interface SitemapProps {
-  data: SitemapVariant;
+  data?: SitemapVariant;
 }
 
 export default function Sitemap({ data }: SitemapProps) {
-  const { sections } = data;
+  const { sections } = data ?? site.sitemapPage;
 
   // Flatten all pages from sections to get a single sequential list for global 01, 02, 03... numbering
   const allPages = sections.flatMap((section) => section.pages);
@@ -28,10 +28,10 @@ export default function Sitemap({ data }: SitemapProps) {
     <div className="w-full bg-[#FAF8FF] font-sans text-[#1E1B4B]">
       {/* Banner Component */}
       <Banner
-        image={data.banner.backgroundImage}
-        title={data.banner.title}
-        homeHref={data.banner.homeHref}
-        current={data.banner.breadcrumbCurrent}
+        image={(data ?? site.sitemapPage).banner.backgroundImage}
+        title={(data ?? site.sitemapPage).banner.title}
+        homeHref={(data ?? site.sitemapPage).banner.homeHref}
+        current={(data ?? site.sitemapPage).banner.breadcrumbCurrent}
       />
 
       {/* Main Content Area */}

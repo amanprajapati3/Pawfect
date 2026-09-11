@@ -6,35 +6,15 @@ import Link from "next/link";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import SectionHeader from "../shared/SectionHeader";
 import ScrollReveal from "../shared/ScrollReveal";
-
-export interface PetBlogPost {
-  id: number;
-  slug: string;
-  image: string;
-  date: string;
-  author: string;
-  title: string;
-  description?: string;
-  readMoreText: string;
-}
-
-export interface PetBlogData {
-  badge: string;
-  title: {
-    normal: string;
-    highlighted: string;
-  };
-  desc: string;
-  posts: PetBlogPost[];
-}
+import { site, type PetBlogData, type PetBlogPost } from "@/data";
 
 interface BlogSectionProps {
-  data: PetBlogData;
+  data?: PetBlogData;
   layout?: "home" | "grid";
 }
 
 export default function BlogSection({ data, layout = "home" }: BlogSectionProps) {
-  const { badge, title, desc, posts = [] } = data || {};
+  const { badge, title, desc, posts = [] } = data ?? site.blog;
   const isGrid = layout === "grid";
 
   // Restrict to 3 posts for the homepage section

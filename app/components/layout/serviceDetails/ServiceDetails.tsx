@@ -20,11 +20,12 @@ import {
 import Banner from "@/app/components/shared/BannerPage";
 import ScrollReveal from "../../shared/ScrollReveal";
 import {
-  ServiceDetailsData,
-  ServiceDetailsQuickBenefit,
-  ServiceDetailsBenefitItem,
-  ServiceDetailsProcessStep,
-} from "@/type/typeSection";
+  site,
+  type ServiceDetailsData,
+  type ServiceDetailsQuickBenefit,
+  type ServiceDetailsBenefitItem,
+  type ServiceDetailsProcessStep,
+} from "@/data";
 
 const renderBenefitIcon = (iconName: string) => {
   switch (iconName.toLowerCase()) {
@@ -59,7 +60,7 @@ const renderProcessIcon = (iconName: string) => {
 };
 
 interface ServiceDetailsProps {
-  data: ServiceDetailsData;
+  data?: ServiceDetailsData;
   serviceTitle?: string;
 }
 
@@ -67,6 +68,8 @@ export default function ServiceDetailsView({
   data,
   serviceTitle,
 }: ServiceDetailsProps) {
+  data = data ?? site.serviceDetails.services[0].detailData;
+
   const {
     badge,
     title,
@@ -104,7 +107,7 @@ export default function ServiceDetailsView({
                 priority
               />
               {/* Bottom Purple Pill Badge */}
-              <div className="absolute bottom-0 left-0 right-4 bg-[#401a7c] text-white rounded-l-2xl rounded-r-[40px] mr-[20%] py-5 px-5 opacity-80 flex items-center gap-3.5 shadow-xl">
+              <div className="absolute bottom-0 hidden sm:flex left-0 right-4 bg-[#401a7c] text-white rounded-l-2xl rounded-r-[40px] mr-[20%] py-5 px-5 opacity-80  items-center gap-3.5 shadow-xl">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
                   <FaPaw className="h-5 w-5 text-white" />
                 </div>
@@ -141,7 +144,7 @@ export default function ServiceDetailsView({
           {/* Right Column: Title & Text */}
           <ScrollReveal direction="left" className="lg:col-span-6 flex flex-col justify-center">
             {/* Header Badge */}
-            <div className="inline-flex items-center gap-2 mb-3">
+            <div className="inline-flex items-center gap-2 mb-3 mx-auto sm:mx-0">
               <span className="h-[2px] w-8 bg-[#5B21B6]" />
               <span className="text-[13px] font-bold uppercase tracking-wider text-[#5B21B6]">
                 {badge}
@@ -149,7 +152,7 @@ export default function ServiceDetailsView({
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1E1B4B] leading-[1.2]">
+            <h2 className="text-center sm:text-left text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1E1B4B] leading-[1.2]">
               {title}
             </h2>
 
@@ -233,7 +236,7 @@ export default function ServiceDetailsView({
           <div className="inline-flex items-center justify-center gap-3 mb-8">
             <span className="h-[2px] w-10 bg-[#5B21B6]" />
             <FaPaw className="h-4 w-4 text-[#5B21B6]" />
-            <h3 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[#1E1B4B]">
+            <h3 className="text-xl pt-5 sm:pt-0 sm:text-3xl lg:text-4xl font-extrabold text-[#1E1B4B]">
               {processSection.title}
             </h3>
             <FaPaw className="h-4 w-4 text-[#5B21B6]" />
@@ -269,7 +272,7 @@ export default function ServiceDetailsView({
 
         {/* SECTION 4: CTA BANNER */}
         <ScrollReveal direction="up">
-        <div className="mt-10 relative bg-[#F6EEFF] rounded-[32px] p-6 sm:p-10 overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="mt-10 relative bg-[#F6EEFF] rounded-[32px] p-6 sm:p-10 overflow-hidden flex flex-col lg:flex-row items-center justify-between sm:gap-8 gap-0">
           {/* Paw Watermarks */}
           <div className="absolute -left-8 -bottom-8 opacity-[0.08] pointer-events-none">
             <FaPaw className="h-44 w-44 text-[#5B21B6]" />
@@ -285,17 +288,28 @@ export default function ServiceDetailsView({
             </div>
 
             <div>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1E1B4B] leading-tight">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E1B4B] leading-tight">
                 {ctaBanner.title}
               </h3>
-              <p className="mt-2 text-[15px] sm:text-[16px] text-[#64748B]">
+              <p className="mt-2 sm:max-w-[300px] md:max-w-full min-h-12 text-[15px] sm:text-[16px] text-[#64748B]">
                 {ctaBanner.subtitle}
               </p>
             </div>
           </div>
 
-          {/* Right Cutout Dog Image */}
-          <div className="absolute hidden sm:flex bottom-0 right-[7%] z-20 w-[300px] md:w-[600px] h-[220px] md:h-[280px]  items-end justify-center">
+          {/* Right Cutout Dog Image - Mobile (below content, centered) */}
+          <div className="relative z-10  flex sm:hidden h-[100px] w-full items-end justify-center">
+            <Image
+              src={ctaBanner.image || "/dogs/dog1.jpg"}
+              alt="Pamper Your Pet"
+              fill
+              sizes="(max-width: 640px) 100vw, 400px"
+              className="object-contain object-bottom"
+            />
+          </div>
+
+          {/* Right Cutout Dog Image - Tab & Desktop */}
+          <div className="hidden sm:flex absolute bottom-0 md:right-[7%] right-0 z-20 w-[300px] md:w-[600px] h-[220px] md:h-[280px]  items-end justify-center">
             <Image
               src={ctaBanner.image || "/dogs/dog1.jpg"}
               alt="Pamper Your Pet"

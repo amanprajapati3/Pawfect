@@ -12,14 +12,15 @@ import {
 import Banner from "@/app/components/shared/BannerPage";
 import SectionHeader from "@/app/components/shared/SectionHeader";
 import ScrollReveal from "../../shared/ScrollReveal";
-import type { GalleryData, GalleryImageItem, GalleryVideoItem } from "@/type/typeSection";
+import { site, type GalleryData, type GalleryImageItem, type GalleryVideoItem } from "@/data";
 
 interface GalleryProps {
-  data: GalleryData;
+  data?: GalleryData;
 }
 
 export default function Gallery({ data }: GalleryProps) {
-  const { imageGallery: rawImageGallery, videoGallery: rawVideoGallery, banner } = data;
+  const { imageGallery: rawImageGallery, videoGallery: rawVideoGallery, banner } =
+    data ?? site.gallery;
 
   const imageGallery = {
     badge: rawImageGallery.badge,
@@ -28,7 +29,7 @@ export default function Gallery({ data }: GalleryProps) {
     subtitle: rawImageGallery.desc,
     categories: rawImageGallery.categories,
     items: rawImageGallery.items.map((item) => ({
-      id: String(item.id),
+      id: item.id,
       src: item.src,
       alt: item.alt,
       category: item.category,
@@ -41,7 +42,7 @@ export default function Gallery({ data }: GalleryProps) {
     titleHighlight: rawVideoGallery.title.highlighted,
     subtitle: rawVideoGallery.desc,
     items: rawVideoGallery.items.map((item) => ({
-      id: String(item.id),
+      id: item.id,
       thumbnail: item.thumbnail,
       videoUrl: item.videoUrl,
       title: item.title,
@@ -66,6 +67,7 @@ export default function Gallery({ data }: GalleryProps) {
     selectedCategory === "All"
       ? imageGallery.items
       : imageGallery.items.filter((item) => item.category === selectedCategory);
+  const filteredImageCount = filteredImages.length;
 
   // Open Image Modal
   const openImageModal = (index: number) => {
@@ -81,15 +83,15 @@ export default function Gallery({ data }: GalleryProps) {
   // Image Navigation Handlers
   const prevImage = useCallback(() => {
     setCurrentImageIndex((prev) =>
-      prev === 0 ? filteredImages.length - 1 : prev - 1
+      prev === 0 ? filteredImageCount - 1 : prev - 1
     );
-  }, [filteredImages.length]);
+  }, [filteredImageCount]);
 
   const nextImage = useCallback(() => {
     setCurrentImageIndex((prev) =>
-      prev === filteredImages.length - 1 ? 0 : prev + 1
+      prev === filteredImageCount - 1 ? 0 : prev + 1
     );
-  }, [filteredImages.length]);
+  }, [filteredImageCount]);
 
   // Keyboard navigation for image modal
   useEffect(() => {

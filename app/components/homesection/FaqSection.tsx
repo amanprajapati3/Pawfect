@@ -15,51 +15,14 @@ import {
 import { FaPaw } from "react-icons/fa";
 import SectionHeader from "../shared/SectionHeader";
 import ScrollReveal from "../shared/ScrollReveal";
-
-export interface ImageRef {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-}
-
-export interface PetFaqItem {
-  question: string;
-  answer: string;
-}
-
-export interface PetFaqSideBadge {
-  title: string;
-  desc: string;
-}
-
-export interface PetFaqContactCta {
-  title: string;
-  buttonText: string;
-  phoneLabel: string;
-  phone: string;
-  phoneHref: string;
-}
-
-export interface PetFaqData {
-  badge: string;
-  title: {
-    normal: string;
-    highlighted: string;
-  };
-  description: string;
-  faqs: PetFaqItem[];
-  sideImage: ImageRef;
-  sideBubble: string;
-  sideBadge: PetFaqSideBadge;
-  contactCta: PetFaqContactCta;
-}
+import { site, type PetFaqData } from "@/data";
 
 interface FaqSectionProps {
-  data: PetFaqData;
+  data?: PetFaqData;
 }
 
 export default function FaqSection({ data }: FaqSectionProps) {
+  const faqData = data ?? site.faq;
   const {
     badge,
     title,
@@ -69,7 +32,7 @@ export default function FaqSection({ data }: FaqSectionProps) {
     sideBubble,
     sideBadge,
     contactCta,
-  } = data || {};
+  } = faqData;
 
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 

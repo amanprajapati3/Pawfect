@@ -22,33 +22,10 @@ import {
 import { FaPaw } from "react-icons/fa";
 import SectionHeader from "../shared/SectionHeader";
 import ScrollReveal from "../shared/ScrollReveal";
-
-export interface PetServiceItem {
-  id: string;
-  slug: string;
-  iconName: string;
-  title: string;
-  description: string;
-  image: {
-    src: string;
-    alt: string;
-  };
-  href: string;
-  linkText: string;
-}
-
-export interface PetServicesData {
-  badge: string;
-  title: {
-    normal: string;
-    highlighted: string;
-  };
-  description: string;
-  services: PetServiceItem[];
-}
+import { site, type PetServiceItem, type PetServicesData } from "@/data";
 
 interface ServicesPageProps {
-  data: PetServicesData;
+  data?: PetServicesData;
   layout?: "slider" | "grid";
 }
 
@@ -83,7 +60,7 @@ const DotButton: React.FC<DotButtonPropType> = ({
 );
 
 export default function ServicesPage({ data, layout = "slider" }: ServicesPageProps) {
-  const { badge, title, description, services = [] } = data || {};
+  const { badge, title, description, services = [] } = data ?? site.services;
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,

@@ -19,14 +19,14 @@ import Banner from "../../shared/BannerPage";
 import CtaBanner from "../../shared/CtaBanner";
 import SectionHeader from "../../shared/SectionHeader";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { ContactPageVariant } from "@/type/typeSection";
+import { site, type ContactPageVariant } from "@/data";
 
 interface ContactProps {
-  data: ContactPageVariant;
+  data?: ContactPageVariant;
 }
 
 export default function Contact({ data }: ContactProps) {
-  const contactData = data;
+  const contactData = data ?? site.contactPage;
 
   const [formData, setFormData] = useState({
     name: "",

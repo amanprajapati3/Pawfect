@@ -5,10 +5,10 @@ import Image from "next/image";
 import { FaPaw, FaHeart, FaShieldAlt } from "react-icons/fa";
 import Banner from "../../shared/BannerPage"; // Adjust path according to project structure
 import ScrollReveal from "../../shared/ScrollReveal";
-import type { PetAboutUsData } from "@/data";
+import { site, type PetAboutUsData } from "@/data";
 
 interface AboutProps {
-  data: PetAboutUsData;
+  data?: PetAboutUsData;
 }
 
 const renderIcon = (iconName: string) => {
@@ -24,7 +24,7 @@ const renderIcon = (iconName: string) => {
 };
 
 export default function About({ data }: AboutProps) {
-  const { badge, title, paragraphs, images, features, banner } = data;
+  const { badge, title, paragraphs, images, features, banner } = data ?? site.aboutUs;
 
   return (
     <main className="w-full bg-white font-sans">

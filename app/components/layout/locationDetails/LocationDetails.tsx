@@ -21,19 +21,22 @@ import {
 import Banner from "../../shared/BannerPage";
 import ScrollReveal from "../../shared/ScrollReveal";
 import {
-  PetServiceAreaDetail,
-  PetServiceAreaDetailsVariant,
-} from "@/type/typeSection";
+  site,
+  type PetServiceAreaDetail,
+  type PetServiceAreaDetailsVariant,
+} from "@/data";
 
 interface LocationDetailsProps {
-  data: PetServiceAreaDetail;
-  variant: PetServiceAreaDetailsVariant;
+  data?: PetServiceAreaDetail;
+  variant?: PetServiceAreaDetailsVariant;
 }
 
 export default function LocationDetails({
   data: location,
   variant,
 }: LocationDetailsProps) {
+  const locationData = location ?? site.serviceAreaDetails.locations[0];
+  const detailsData = variant ?? site.serviceAreaDetails;
   const sliderRef = useRef<HTMLDivElement>(null);
   const [activeDot, setActiveDot] = useState(0);
 
@@ -90,7 +93,7 @@ export default function LocationDetails({
   const handleScroll = useCallback(() => {
     if (sliderRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
-      const totalDots = location.subRegions.length;
+      const totalDots = locationData.subRegions.length;
       const progress = scrollLeft / (scrollWidth - clientWidth || 1);
       const dotIndex = Math.min(
         Math.floor(progress * totalDots),
@@ -98,7 +101,7 @@ export default function LocationDetails({
       );
       setActiveDot(Math.max(0, dotIndex));
     }
-  }, [location]);
+  }, [locationData]);
 
   useEffect(() => {
     const el = sliderRef.current;
@@ -106,15 +109,15 @@ export default function LocationDetails({
       el.addEventListener("scroll", handleScroll);
       return () => el.removeEventListener("scroll", handleScroll);
     }
-  }, [location, handleScroll]);
+  }, [locationData, handleScroll]);
 
   return (
     <div className="w-full bg-[#FAFAFC] font-sans text-[#1E1B4B]">
       <Banner
-        image={variant.banner.backgroundImage}
-        title={variant.banner.title}
-        homeHref={variant.banner.homeHref}
-        current={variant.banner.breadcrumbCurrent}
+        image={detailsData.banner.backgroundImage}
+        title={detailsData.banner.title}
+        homeHref={detailsData.banner.homeHref}
+        current={detailsData.banner.breadcrumbCurrent}
       />
 
       <div className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16 space-y-16">
@@ -126,7 +129,7 @@ export default function LocationDetails({
                 We&apos;re Here For Pets In
               </h3>
               <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-bold leading-tight text-[#5B21B6] tracking-tight mt-1">
-                {location.name}
+                {locationData.name}
               </h2>
 
               <div className="mt-3 flex items-center gap-2">
@@ -136,13 +139,13 @@ export default function LocationDetails({
               </div>
 
               <p className="mt-6 text-[14px]  md:max-w-[340px] sm:text-[15px] leading-relaxed text-[#111111]">
-                {location.description}
+                {locationData.description}
               </p>
             </div>
 
             {/* Stats Row Pinned to Bottom */}
             <div className="mt-8 grid grid-cols-3 ">
-              {location.stats.map((stat, idx) => (
+              {locationData.stats.map((stat, idx) => (
                 <div
                   key={idx}
                   className="flex  flex-row items-start rounded-[20px] -ml-2  sm:-ml-7 transition-transform hover:-translate-y-0.5"
@@ -167,8 +170,8 @@ export default function LocationDetails({
           <ScrollReveal direction="left" className="lg:col-span-7">
             <div className="relative h-[320px] sm:h-[400px] lg:h-full w-full overflow-hidden rounded-[28px] shadow-sm">
               <Image
-                src={location.image}
-                alt={location.name}
+                src={locationData.image}
+                alt={locationData.name}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 55vw"
@@ -181,7 +184,7 @@ export default function LocationDetails({
         <div>
           <div className="text-center mb-10">
             <h3 className="text-2xl sm:text-3xl font-black text-[#1E1B4B]">
-              Our Services in {location.name}
+              Our Services in {locationData.name}
             </h3>
             <div className="mt-2 flex items-center justify-center gap-2">
               <span className="h-[1.5px] w-8 bg-purple-500" />
@@ -191,7 +194,7 @@ export default function LocationDetails({
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {location.services.map((srv, idx) => (
+            {locationData.services.map((srv, idx) => (
               <ScrollReveal key={idx} direction="up" staggerChildren={0.1} index={idx} className="h-full">
               <div
                 className="group flex flex-col items-center rounded-[24px] bg-white p-6 text-center shadow-sm border border-gray-100/80 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:border-purple-200 h-full"
@@ -216,7 +219,7 @@ export default function LocationDetails({
           <ScrollReveal direction="right" className="lg:col-span-6 flex flex-col justify-between">
             <div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E1B4B] mb-2">
-                {location.about.title}
+                {locationData.about.title}
               </h3>
               <div className="flex items-center gap-2 mb-6">
               <span className="h-[1.5px] w-8 bg-purple-500" />
@@ -225,12 +228,12 @@ export default function LocationDetails({
               </div>
 
               <p className="text-[14px] sm:text-[15px] leading-relaxed md:max-w-[500px] text-[#171818] mb-6">
-                {location.about.description}
+                {locationData.about.description}
               </p>
 
               {/* Checkmark List */}
               <div className="space-y-3">
-                {location.about.features.map((feat, idx) => (
+                {locationData.about.features.map((feat, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <FaCheckCircle className="h-4 w-4 text-[#5B21B6] shrink-0" />
                     <span className="text-[14px] font-bold text-[#1E1B4B]">
@@ -246,8 +249,8 @@ export default function LocationDetails({
           <ScrollReveal direction="left" className="lg:col-span-6 min-h-[260px]">
             <div className="relative h-full min-h-[280px] w-full overflow-hidden rounded-[24px] shadow-sm">
               <Image
-                src={location.aboutImage}
-                alt={`Pet Care in ${location.name}`}
+                src={locationData.aboutImage}
+                alt={`Pet Care in ${locationData.name}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 48vw"
                 className="object-cover"
@@ -260,7 +263,7 @@ export default function LocationDetails({
           <ScrollReveal direction="up">
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-black text-[#1E1B4B]">
-              Areas We Serve in {location.name}
+              Areas We Serve in {locationData.name}
             </h3>
             <div className="mt-2 flex items-center justify-center gap-2">
               <span className="h-[1.5px] w-8 bg-purple-500" />
@@ -284,7 +287,7 @@ export default function LocationDetails({
               ref={sliderRef}
               className="flex w-full gap-3.5 overflow-x-auto scrollbar-hide py-2 px-1 scroll-smooth snap-x snap-mandatory"
             >
-              {location.subRegions.map((sub, idx) => (
+              {locationData.subRegions.map((sub, idx) => (
                 <div
                   key={idx}
                   className="snap-start shrink-0 flex items-center gap-2.5 rounded-full bg-[#F3F0FF] px-5 py-3 text-[14px] font-bold text-[#1E1B4B] hover:bg-[#5B21B6] hover:text-white transition-all cursor-pointer shadow-xs"
@@ -307,7 +310,7 @@ export default function LocationDetails({
 
           {/* Mobile Bottom Dotted Indicator */}
           <div className="flex sm:hidden justify-center items-center gap-2 mt-5">
-            {location.subRegions.map((_, idx) => (
+            {locationData.subRegions.map((_, idx) => (
               <span
                 key={idx}
                 className={`h-2 rounded-full transition-all duration-300 ${

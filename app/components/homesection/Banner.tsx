@@ -3,18 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import {  ArrowRight } from "lucide-react";
-import type { PetBannerData } from "@/type/typeSection";
+import { site, type PetBannerData } from "@/data";
 import { FaPaw } from "react-icons/fa";
 import ScrollReveal from "../shared/ScrollReveal";
 
 
 interface BannerProps {
-  data: PetBannerData;
+  data?: PetBannerData;
 }
 
 export default function Banner({ data }: BannerProps) {
+  const bannerData = data ?? site.banner;
   // Using the structured data fields
-  const { badge, title, highlightedTitle, desc, buttons, bgImageUrl } = data || {};
+  const { badge, title, highlightedTitle, desc, buttons, bgImageUrl } = bannerData;
 
   return (
     <section className="relative w-full overflow-hidden bg-[#9C46C9]">

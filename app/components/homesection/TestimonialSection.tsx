@@ -6,29 +6,10 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { PawPrint, Quote, Star, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import SectionHeader from "../shared/SectionHeader";
 import ScrollReveal from "../shared/ScrollReveal";
-
-// --- TS Type Interfaces as specified ---
-export interface PetTestimonialItem {
-  id: number;
-  name: string;
-  role: string;
-  image: string;
-  quote: string;
-  rating: number;
-}
-
-export interface PetTestimonialData {
-  badge: string;
-  title: {
-    normal: string;
-    highlighted: string;
-  };
-  desc: string;
-  testimonialItems: PetTestimonialItem[];
-}
+import { site, type PetTestimonialData } from "@/data";
 
 interface TestimonialSectionProps {
-  data: PetTestimonialData;
+  data?: PetTestimonialData;
 }
 
 // Dot Button component for slider navigation
@@ -50,7 +31,7 @@ const DotButton: React.FC<DotButtonPropType> = ({ selected, onClick }) => (
 
 export default function TestimonialSection({ data }: TestimonialSectionProps) {
   // Destructure data with fallbacks
-  const { badge, title, desc, testimonialItems = [] } = data || {};
+  const { badge, title, desc, testimonialItems = [] } = data ?? site.testimonial;
 
   // Setup Embla carousel with responsive configuration
   const [emblaRef, emblaApi] = useEmblaCarousel({

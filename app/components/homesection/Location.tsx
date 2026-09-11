@@ -7,10 +7,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import SectionHeader from "../shared/SectionHeader";
 import ScrollReveal from "../shared/ScrollReveal";
-import type { PetServiceAreasData, PetServiceAreaCity } from "@/type/typeSection";
+import { site, type PetServiceAreasData, type PetServiceAreaCity } from "@/data";
 
 interface LocationProps {
-  data: PetServiceAreasData;
+  data?: PetServiceAreasData;
   layout?: "home" | "grid";
 }
 
@@ -52,11 +52,12 @@ function useSwipe(onSwipeLeft: () => void, onSwipeRight: () => void) {
 }
 
 export default function Location({ data, layout = "home" }: LocationProps) {
+  const locationData = data ?? site.serviceAreas;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(6); // Default for SSR / desktop
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const { badge, title, desc, cities = [] } = data || {};
+  const { badge, title, desc, cities = [] } = locationData;
   const isGrid = layout === "grid";
 
   // Total number of cities/cards

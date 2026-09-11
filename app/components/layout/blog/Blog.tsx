@@ -1,13 +1,14 @@
 import Banner from "../../shared/BannerPage";
 import BlogSection from "../../homesection/BlogSection";
-import type { PetBlogData } from "@/data";
+import { site, type PetBlogData } from "@/data";
 
 interface BlogProps {
-  data: PetBlogData;
+  data?: PetBlogData;
 }
 
 export default function Blog({ data }: BlogProps) {
-  const { banner } = data;
+  const blogData = data ?? site.blog;
+  const { banner } = blogData;
 
   return (
     <main className="w-full bg-white font-sans">
@@ -17,7 +18,7 @@ export default function Blog({ data }: BlogProps) {
         homeHref={banner.homeHref}
         current={banner.breadcrumbCurrent}
       />
-      <BlogSection data={data} layout="grid" />
+      <BlogSection data={blogData} layout="grid" />
     </main>
   );
 }

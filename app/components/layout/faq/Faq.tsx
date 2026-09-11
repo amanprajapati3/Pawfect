@@ -13,14 +13,14 @@ import Banner from "../../shared/BannerPage";
 import CtaBanner from "../../shared/CtaBanner";
 import SectionHeader from "../../shared/SectionHeader";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { PetFaqPageVariant } from "@/type/typeSection";
+import { site, type PetFaqPageVariant } from "@/data";
 
 interface FaqProps {
-  data: PetFaqPageVariant;
+  data?: PetFaqPageVariant;
 }
 
 export default function Faq({ data }: FaqProps) {
-  const faqData = data;
+  const faqData = data ?? site.faqPage;
   const [openId, setOpenId] = useState<string>("1");
 
   const toggleAccordion = (id: string) => {

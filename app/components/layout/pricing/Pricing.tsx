@@ -7,14 +7,14 @@ import Banner from "../../shared/BannerPage";
 import CtaBanner from "../../shared/CtaBanner";
 import SectionHeader from "../../shared/SectionHeader";
 import ScrollReveal from "../../shared/ScrollReveal";
-import { PricingVariant } from "@/type/typeSection";
+import { site, type PricingVariant } from "@/data";
 
 interface PricingProps {
-  data: PricingVariant;
+  data?: PricingVariant;
 }
 
 export default function Pricing({ data }: PricingProps) {
-  const pricingData = data;
+  const pricingData = data ?? site.pricingPage;
 
   // Active state initialized to the popular card ID ("basic")
   const [activePlan, setActivePlan] = useState<string>("basic");

@@ -3,12 +3,6 @@ import {
   // PetTeamMember,
   // PetServiceAreaCity,
   ServiceDetailsItem,
-  PetTeamMemberDetail,
-  PetTeamDetailsVariant,
-  PetBlogDetailPost,
-  PetBlogDetailsVariant,
-  PetServiceAreaDetail,
-  PetServiceAreaDetailsVariant,
   // PetFaqPageVariant,
 } from "@/type/typeSection";
 
@@ -94,6 +88,50 @@ export type PetNotFoundPageData =
 export type PetSitemapPageData =
   typeof petData.PetIndustries.sections.SitemapPage.variants.PetSitemapPage1;
 
+export type TestimonialPageVariant = PetTestimonialPageData;
+export type PetFaqPageVariant = PetFaqPageData;
+export type ContactPageVariant = ContactPageData;
+export type PetAppointmentVariant = PetAppointmentData;
+export type PricingVariant = PetPricingData;
+export type PartnersVariant = PetPartnersPageData;
+export type SitemapVariant = PetSitemapPageData;
+export type GalleryData = PetGalleryData;
+export type LegalPageData =
+  | PetTermsAndConditionsPageData
+  | PetPrivacyPolicyPageData
+  | PetCookiePolicyPageData
+  | PetDisclaimerPageData;
+
+export type PetTeamMemberDetail =
+  (typeof petData.PetIndustries.sections.TeamDetails.variants.PetTeamDetails1.members)[number];
+export type PetTeamDetailsVariant =
+  typeof petData.PetIndustries.sections.TeamDetails.variants.PetTeamDetails1;
+export type PetBlogDetailPost =
+  (typeof petData.PetIndustries.sections.BlogDetails.variants.PetBlogDetails1.posts)[number];
+export type PetBlogDetailsVariant =
+  typeof petData.PetIndustries.sections.BlogDetails.variants.PetBlogDetails1;
+export type PetServiceAreaDetail =
+  (typeof petData.PetIndustries.sections.ServiceAreaDetails.variants.PetServiceAreaDetails1.locations)[number];
+export type PetServiceAreaDetailsVariant =
+  typeof petData.PetIndustries.sections.ServiceAreaDetails.variants.PetServiceAreaDetails1;
+export type ServiceDetailsData =
+  (typeof petData.PetIndustries.sections.ServiceDetails.variants.PetServices1.services)[number]["detailData"];
+export type ServiceDetailsQuickBenefit = ServiceDetailsData["quickBenefits"][number];
+export type ServiceDetailsBenefitItem = ServiceDetailsData["benefitsSection"]["items"][number];
+export type ServiceDetailsProcessStep = ServiceDetailsData["processSection"]["steps"][number];
+export type PetMissionCard = PetMissionData["cards"][number];
+export type PetValueItem = PetMissionData["values"][number];
+export type PartnerFeature = PartnersVariant["features"][number];
+export type GalleryImageItem = GalleryData["imageGallery"]["items"][number];
+export type GalleryVideoItem = GalleryData["videoGallery"]["items"][number];
+export type PetServiceAreaCity = PetServiceAreasData["cities"][number];
+export type PetAboutFeatureItem = PetAboutSectionData["features"][number];
+export type PetAboutStat = PetAboutSectionData["stats"][number];
+export type PetServiceItem = PetServicesData["services"][number];
+export type PetTeamMember = PetTeamData["members"][number];
+export type PetTestimonialItem = PetTestimonialData["testimonialItems"][number];
+export type PetBlogPost = PetBlogData["posts"][number];
+
 const sec = petData.PetIndustries.sections;
 
 export const site = {
@@ -125,6 +163,10 @@ export const site = {
   disclaimerPage: sec.LegalPage.variants.PetDisclaimerPage1,
   notFoundPage: sec.NotFoundPage.variants.PetNotFoundPage1,
   sitemapPage: sec.SitemapPage.variants.PetSitemapPage1,
+  serviceDetails: sec.ServiceDetails.variants.PetServices1,
+  teamDetails: sec.TeamDetails.variants.PetTeamDetails1,
+  blogDetails: sec.BlogDetails.variants.PetBlogDetails1,
+  serviceAreaDetails: sec.ServiceAreaDetails.variants.PetServiceAreaDetails1,
 };
 
 // export function getFaqPageVariant(): PetFaqPageVariant {

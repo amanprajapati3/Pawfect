@@ -70,30 +70,30 @@ export default function Footer() {
             </div>
 
             {/* Bottom 3 Badges */}
-            <div className="grid grid-cols-3  gap-0 md:gap-7 pt-4 border-t border-gray-200/60">
-              <div className="flex items-center  gap-2.5">
-                <div className="flex sm:h-12 h-8 w-8 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
-                  <FaPaw className="sm:h-6 h-4 w-4 sm:w-6" />
+            <div className="grid grid-cols-3 gap-2 md:gap-7 pt-4 border-t border-gray-200/60">
+              <div className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-start sm:text-left gap-2 sm:gap-2.5">
+                <div className="flex sm:h-12 h-9 w-9 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
+                  <FaPaw className="sm:h-6 h-5 w-5 sm:w-6" />
                 </div>
-                <span className="sm:text-sm text-sm font-bold text-[#3B1578] leading-tight">
+                <span className="sm:text-sm text-[13px] font-bold text-[#3B1578] leading-tight">
                   Trusted<br />Care
                 </span>
               </div>
 
-              <div className="flex items-center  gap-2.5">
-                <div className="flex sm:h-12 h-8 w-8 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
-                  <IoShieldCheckmarkSharp className="sm:h-6 h-4 w-4 sm:w-6" />
+              <div className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-start sm:text-left gap-2 sm:gap-2.5">
+                <div className="flex sm:h-12 h-9 w-9 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
+                  <IoShieldCheckmarkSharp className="sm:h-6 h-5 w-5 sm:w-6" />
                 </div>
-                <span className="sm:text-sm text-sm font-bold text-[#3B1578] leading-tight">
+                <span className="sm:text-sm text-[13px] font-bold text-[#3B1578] leading-tight">
                   Expert<br />Veterinarians
                 </span>
               </div>
 
-              <div className="flex items-center gap-2.5 ml-4 sm:ml-0">
-                <div className="flex sm:h-12 h-8 w-8 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
-                  <FaHeart className="sm:h-6 h-4 w-4 sm:w-6" />
+              <div className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-start sm:text-left gap-2 sm:gap-2.5">
+                <div className="flex sm:h-12 h-9 w-9 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
+                  <FaHeart className="sm:h-6 h-5 w-5 sm:w-6" />
                 </div>
-                <span className="sm:text-sm text-sm font-bold text-[#3B1578] leading-tight">
+                <span className="sm:text-sm text-[13px] font-bold text-[#3B1578] leading-tight">
                   Happy<br />Pets
                 </span>
               </div>
@@ -101,34 +101,34 @@ export default function Footer() {
           </div>
 
           {/* Nav Links Grid & Contact (Right side) */}
-          <div className="grid grid-cols-2  flex-wrap items-center gap-2 text-center sm:grid-cols-2 sm:items-start sm:text-left lg:col-span-8 lg:grid-cols-4 lg:border-l lg:border-gray-200/80 sm:pl-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8 lg:gap-2 items-center text-center lg:items-start lg:text-left lg:col-span-8 lg:border-l lg:border-gray-200/80">
             
             {/* Dynamic Link Columns */}
             {columns?.map((col, i) => (
-              <div key={i} className="flex -ml-5 md:ml-3 flex-col items-center sm:items-start">
+              <div key={i} className="flex flex-col items-center lg:ml-3 lg:items-start">
                 <h3 className="mb-3 text-[15px] font-bold uppercase tracking-wider text-[#1C0D3F]">
                   {col.title}
                 </h3>
                 <div className="mb-3 h-[2px] w-8 bg-[#3B1578] sm:mb-3"></div>
 
-                <ul className="flex flex-col gap-2.5">
+                <ul className="flex flex-col items-start gap-2.5">
                   {col.links.map((link, j) => (
-                    <li key={j}>
+                    <li key={j}>  
                       <Link
                         href={link.href}
-                        className="group flex items-center text-[14px] font-medium text-[#4A4458] transition-colors duration-200 hover:text-[#3B1578]"
+                        className="group inline-flex items-center text-[14px] font-medium text-[#4A4458] transition-colors duration-200 hover:text-[#3B1578]"
                       >
                         <ChevronRight className="mr-1.5 h-3.5 w-3.5 text-[#3B1578] transition-transform duration-200 group-hover:translate-x-0.5" />
                         {link.label}
                       </Link>
                     </li>
-                  ))}
+                  ))} 
                 </ul>
               </div>
             ))}
 
             {/* Get In Touch Column */}
-            <div className="flex  flex-col items-center gap-3 sm:items-start">
+            <div className="flex flex-col items-center gap-3 lg:items-start">
               <h3 className="mb-0 text-[15px] font-bold uppercase tracking-wider text-[#1C0D3F]">
                 GET IN TOUCH
               </h3>

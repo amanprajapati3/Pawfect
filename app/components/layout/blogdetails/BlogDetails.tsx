@@ -11,23 +11,27 @@ import {
 import Banner from "../../shared/BannerPage";
 import ScrollReveal from "../../shared/ScrollReveal";
 import {
-  PetBlogDetailPost,
-  PetBlogDetailsVariant,
-} from "@/type/typeSection";
+  site,
+  type PetBlogDetailPost,
+  type PetBlogDetailsVariant,
+} from "@/data";
 
 interface BlogDetailsProps {
-  data: PetBlogDetailPost;
-  variant: PetBlogDetailsVariant;
+  data?: PetBlogDetailPost;
+  variant?: PetBlogDetailsVariant;
 }
 
-export default function BlogDetails({ data: post, variant }: BlogDetailsProps) {
+export default function BlogDetails({ data, variant }: BlogDetailsProps) {
+  const post = data ?? site.blogDetails.posts[0];
+  const blogDetails = variant ?? site.blogDetails;
+
   return (
     <div className="w-full bg-white font-sans text-[#1E1B4B]">
       <Banner
-        image={variant.banner.backgroundImage}
-        title={variant.banner.title}
-        homeHref={variant.banner.homeHref}
-        current={variant.banner.breadcrumbCurrent}
+        image={blogDetails.banner.backgroundImage}
+        title={blogDetails.banner.title}
+        homeHref={blogDetails.banner.homeHref}
+        current={blogDetails.banner.breadcrumbCurrent}
       />
 
       <div className="mx-auto max-w-[1270px] px-4 py-12 sm:px-6">

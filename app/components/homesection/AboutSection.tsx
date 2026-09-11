@@ -5,11 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
 
-import type {
-  PetAboutSectionData,
-  PetAboutFeatureItem,
-  PetAboutStat,
-} from "@/type/typeSection";
+import {
+  site,
+  type PetAboutSectionData,
+  type PetAboutFeatureItem,
+  type PetAboutStat,
+} from "@/data";
 
 import {
   ShieldCheck,
@@ -39,10 +40,11 @@ const statsIconMap: Record<string, ElementType> = {
 };
 
 interface AboutSectionProps {
-  data: PetAboutSectionData;
+  data?: PetAboutSectionData;
 }
 
 export default function AboutSection({ data }: AboutSectionProps) {
+  const aboutData = data ?? site.aboutSection;
   const {
     badge,
     title,
@@ -53,7 +55,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
     sideImage,
     statBadge,
     stats,
-  } = data || {};
+  } = aboutData;
 
   const statsRef = useRef<HTMLDivElement | null>(null);
   const animationFrameRef = useRef<number | null>(null);
@@ -142,12 +144,13 @@ export default function AboutSection({ data }: AboutSectionProps) {
 
                 <span className="text-[13px] sm:text-[18px] font-bold uppercase tracking-wide text-[#A970E8]">
                   {badge}
-                  <div className="h-[2px] mt-2 w-[85px] bg-[#A23BD1]" />
+                  {/* Centered on mobile/tablet, left-aligned on desktop */}
+                  <div className="h-[2px] mt-2 w-[85px] bg-[#A23BD1] mx-auto lg:mx-0" />
                 </span>
               </div>
             )}
 
-            <h2 className="max-w-[590px] text-center text-[40px] font-extrabold leading-[1.08] tracking-tight sm:text-[48px] lg:text-left lg:text-[52px] xl:text-[56px]">
+            <h2 className="max-w-[590px] text-center text-[40px] font-extrabold leading-[1.08] tracking-tight sm:text-[48px] lg:text-left lg:text-[52px] xl:text-[56px] mx-auto lg:mx-0">
               {title}
               <br />
               <span className="bg-[#A23BD1] bg-clip-text text-transparent">
@@ -162,7 +165,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
             </div>
 
             {desc && (
-              <p className="max-w-[500px] text-center text-[15px] font-semibold leading-[1.65] text-[#D7DCE7] sm:text-[15.5px] lg:text-left">
+              <p className="md:max-w-[500px] text-center text-[15px] font-semibold leading-[1.65] text-[#D7DCE7] sm:text-[15.5px] lg:text-left">
                 {desc}
               </p>
             )}
@@ -227,10 +230,15 @@ export default function AboutSection({ data }: AboutSectionProps) {
             className="order-2 flex justify-center lg:order-2 lg:justify-end"
           >
             <div className="relative flex h-[340px] w-[340px] items-center justify-center sm:h-[400px] sm:w-[400px] lg:h-[460px] lg:w-[460px] xl:h-[480px] xl:w-[480px]">
-              {/* Outer dashed circle (top-left accent like reference) */}
-              <div className="absolute -left-3 -top-3 h-[70%] w-[70%] rounded-full border-[2.5px] border-dashed border-[#A946D3]/70 sm:left-5 sm:top-4" />
+              {/* 1. Top-Left Dotted Accent Arc (Restored back to top-left) */}
+<div className="absolute -left-4 top-4 h-[108%] w-[108%] rounded-full border-[4px] border-dashed border-[#A946D3]/70 [mask-image:conic-gradient(from_270deg_at_center,black_0deg,black_50deg,transparent_50deg)] sm:-left-6 " />
+              {/* 2. Bottom-Left Solid Curved Line Accent (Smooth, close to circle) */}
+              <div className="absolute bottom-1 -left-3 h-[105%] w-[105%] rounded-full border-[5px] border-solid border-[#8128C1] [mask-image:conic-gradient(from_190deg_at_center,black_0deg,black_38deg,transparent_38deg)]" />
 
-              {/* Middle/inner solid purple ring */}
+              {/* 3. Top-Right Solid Curved Line Accent (Matched to bottom-left's curve style, exactly opposite) */}
+              <div className="absolute top-1 -right-3 h-[103%] w-[103%] rounded-full border-[5px] border-solid border-[#8128C1] [mask-image:conic-gradient(from_10deg_at_center,black_0deg,black_38deg,transparent_38deg)]" />
+
+              {/* Middle/inner solid purple main ring */}
               <div className="absolute inset-[12px] rounded-full border-[4px] border-[#8128C1]/90 sm:inset-[14px]" />
 
               {/* Central Image Mask */}
@@ -246,6 +254,17 @@ export default function AboutSection({ data }: AboutSectionProps) {
                   />
                 )}
               </div>
+
+              {/* 4. PawPrint Icon completely outside on the right side */}
+              <div className="absolute -right-[45px] top-[48%] z-20 sm:-right-[60px] lg:-right-[80px]">
+                <PawPrint
+                  className="h-[75px] w-[75px] text-[#8128C1]/85 sm:h-[95px] sm:w-[95px] lg:h-[115px] -rotate-[30deg] lg:w-[115px]"
+                  strokeWidth={0.8}
+                  fill="none"
+                />
+              </div>
+
+              {/* Stat Badge */}
               {statBadge && (
                 <div className="absolute -bottom-1 -right-1 z-30 flex h-[105px] w-[105px] flex-col items-center justify-center rounded-full bg-white text-center shadow-[0_12px_28px_rgba(0,0,0,0.28)] sm:bottom-0 sm:right-0 sm:h-[125px] sm:w-[125px]">
                   <Heart
@@ -263,13 +282,6 @@ export default function AboutSection({ data }: AboutSectionProps) {
                   </span>
                 </div>
               )}
-              <div className="absolute -right-[28px] top-[38%] z-20 sm:-right-[40px] lg:-right-[48px]">
-                <PawPrint
-                  className="h-[70px] w-[70px] text-[#8128C1]/75 sm:h-[90px] sm:w-[90px] lg:h-[110px] lg:w-[110px]"
-                  strokeWidth={1.1}
-                  fill="none"
-                />
-              </div>
             </div>
           </ScrollReveal>
         </div>

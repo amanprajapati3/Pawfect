@@ -6,10 +6,10 @@ import { FaPaw, FaHeart, FaShieldAlt, FaAward, FaUsers } from "react-icons/fa";
 import { LuEye, LuTarget } from "react-icons/lu";
 import Banner from "../../shared/BannerPage";
 import ScrollReveal from "../../shared/ScrollReveal";
-import type { PetMissionData, PetMissionCard, PetValueItem } from "@/type/typeSection";
+import { site, type PetMissionData, type PetMissionCard, type PetValueItem } from "@/data";
 
 interface MissionProps {
-  data: PetMissionData;
+  data?: PetMissionData;
   showBanner?: boolean;
 }
 
@@ -40,7 +40,7 @@ const renderValueIcon = (iconName: string) => {
 };
 
 export default function Mission({ data, showBanner = true }: MissionProps) {
-  const { badge, title, subtitle, cards, values, banner } = data;
+  const { badge, title, subtitle, cards, values, banner } = data ?? site.mission;
 
   return (
     <>
