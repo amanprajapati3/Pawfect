@@ -138,8 +138,8 @@ export default function Footer() {
                 {/* Phone */}
                 {footerContact?.phone && (
                   <div className="flex items-center gap-3.5">
-                    <div className=" hidden sm:flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
-                      <Phone className="h-6 w-6 fill-current stroke-none" />
+                    <div className=" hidden sm:flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
+                      <Phone className="h-5 w-5 fill-current stroke-none" />
                     </div>
                     <div>
                       <a
@@ -160,8 +160,8 @@ export default function Footer() {
                 {/* Email */}
                 {footerContact?.email && (
                   <div className="flex items-center gap-3.5">
-                    <div className="flex hidden sm:flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
-                      <Mail className="h-6 w-6" />
+                    <div className="flex hidden sm:flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
+                      <Mail className="h-5 w-5" />
                     </div>
                     <div>
                       <a
@@ -182,8 +182,8 @@ export default function Footer() {
                 {/* Address */}
                 {footerContact?.address && (
                   <div className="flex items-start gap-3.5">
-                    <div className="mt-0.5 hidden sm:flex flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
-                      <MapPin className="h-6 w-6" />
+                    <div className="mt-0.5 hidden sm:flex flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
+                      <MapPin className="h-5 w-5" />
                     </div>
                     <div className="text-sm leading-relaxed">
                       <span className="block font-bold text-[#1C0D3F]">
@@ -206,10 +206,10 @@ export default function Footer() {
 
       {/* Bottom Bar Section */}
       <div className="border-t border-gray-200/80 bg-white pt-4">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-4 px-6 md:flex-row lg:px-12">
+        <div className="mx-auto flex  flex-col items-center justify-between gap-4 md:gap-1 px-6 md:flex-row ">
           
           {/* Copyright & Tagline */}
-          <div className="flex flex-wrap items-center justify-center gap-2 text-md text-gray-600 sm:justify-start">
+          <div className="flex  flex-nowrap  justify-center gap-2 text-md text-gray-600 ">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
               <FaPaw className="h-6 w-6" />
             </div>
