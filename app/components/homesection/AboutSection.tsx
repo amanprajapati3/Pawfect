@@ -231,7 +231,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
           >
             <div className="relative flex h-[340px] w-[340px] items-center justify-center sm:h-[400px] sm:w-[400px] lg:h-[460px] lg:w-[460px] xl:h-[480px] xl:w-[480px]">
               {/* 1. Top-Left Dotted Accent Arc (Restored back to top-left) */}
-<div className="absolute -left-4 top-4 h-[108%] w-[108%] rounded-full border-[4px] border-dashed border-[#A946D3]/70 [mask-image:conic-gradient(from_270deg_at_center,black_0deg,black_50deg,transparent_50deg)] sm:-left-6 " />
+              <div className="absolute -left-4 top-4 h-[108%] w-[108%] rounded-full border-[4px] border-dashed border-[#A946D3]/70 [mask-image:conic-gradient(from_270deg_at_center,black_0deg,black_50deg,transparent_50deg)] sm:-left-6 " />
               {/* 2. Bottom-Left Solid Curved Line Accent (Smooth, close to circle) */}
               <div className="absolute bottom-1 -left-3 h-[105%] w-[105%] rounded-full border-[5px] border-solid border-[#8128C1] [mask-image:conic-gradient(from_190deg_at_center,black_0deg,black_38deg,transparent_38deg)]" />
 
@@ -309,27 +309,27 @@ export default function AboutSection({ data }: AboutSectionProps) {
                     >
                       <div className="flex sm:h-[48px] sm:w-[48px] shrink-0 items-center justify-center text-[#A23BD1] sm:h-[54px] sm:w-[54px]">
                         <Icon
-                          className="h-7 w-7 sm:h-11 sm:w-11"
+                          className="h-7 w-7 sm:h-16 sm:w-16"
                           strokeWidth={1.4}
                         />
                       </div>
 
                       <div className="min-w-0">
                         <div className="flex items-baseline">
-                          <span className="sm:text-[25px] text-[20px] font-bold leading-none text-white sm:text-[28px] lg:text-[30px]">
+                          <span className="sm:text-[25px] text-[20px] font-bold leading-none text-white sm:text-[28px] lg:text-[35px]">
                             {statsInView
                               ? (counts[stat.id] ?? 0).toLocaleString()
                               : "0"}
                           </span>
 
                           {stat.suffix && (
-                            <span className="ml-0.5 sm:text-[25px] text-[18px] font-bold leading-none text-white sm:text-[28px] lg:text-[30px]">
+                            <span className="ml-0.5  text-[18px] font-bold leading-none text-white sm:text-[28px] lg:text-[30px]">
                               {stat.suffix}
                             </span>
                           )}
                         </div>
 
-                        <span className="mt-1 block whitespace-nowrap text-[10px] font-medium leading-tight text-[#D3D8E4] sm:text-[11px] lg:text-[12px]">
+                        <span className="mt-1 block whitespace-nowrap text-[10px] font-medium leading-tight text-[#D3D8E4] sm:text-[11px] lg:text-[14px]">
                           {stat.label}
                         </span>
                       </div>

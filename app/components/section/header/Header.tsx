@@ -4,7 +4,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Mail, MapPin, Menu as MenuIcon, X, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Menu as MenuIcon,
+  X,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 import {
   FaFacebookF,
   FaTwitter,
@@ -36,29 +43,26 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full">
       {/* Top Info Bar */}
-      <div className="hidden w-full bg-[#001D4C] px-4 py-2 text-white lg:block">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between font-sans text-[13px]">
+      <div className="hidden w-full bg-[#050b58] px-4 py-1 text-white/80 lg:block">
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between font-sans text-[13.5px]">
           <div className="flex items-center gap-3">
             {siteInfo.TopBar?.address && (
-              <span className="flex items-center gap-2 text-white font-medium">
+              <span className="flex items-center gap-2 text-white/80 font-medium">
                 <span className="flex items-center justify-center h-8 w-8 rounded-full bg-[#3B1264]">
-                  <MapPin
-                    className="h-5 w-5 text-white"
-                    strokeWidth={2.5}
-                  />
+                  <MapPin className="h-5 w-5 text-white/80" strokeWidth={2.5} />
                 </span>
                 {siteInfo.TopBar.address}
               </span>
             )}
 
             {siteInfo.TopBar?.address && siteInfo.TopBar?.email && (
-              <span className="text-[#ffffff] font-bold mx-1">/</span>
+              <span className="text-white/80 font-bold mx-1">/</span>
             )}
 
             {siteInfo.TopBar?.email && (
-              <span className="flex items-center gap-2 text-white font-medium">
+              <span className="flex items-center gap-2 text-white/80 font-medium">
                 <span className="flex items-center justify-center h-8 w-8 rounded-full bg-[#3B1264]">
-                  <Mail className="h-4 w-4 text-white" strokeWidth={2.5} />
+                  <Mail className="h-4 w-4 text-white/80" strokeWidth={2.5} />
                 </span>
                 {siteInfo.TopBar.email}
               </span>
@@ -86,80 +90,81 @@ export default function Header() {
       </div>
 
       {/* Main Navbar */}
-      <div className="w-full bg-white px-4 py-3 shadow-[0_4px_20px_rgba(107,33,168,0.08)] sm:px-6 lg:px-10">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex shrink-0 flex-col items-start">
-            {siteInfo.logo?.light ? (
-              <Image
-                src={siteInfo.logo.light}
-                alt={siteInfo.siteName || "PawFect"}
-                width={180}
-                height={60}
-                sizes="(max-width: 640px) 120px, 240px"
-                className="h-16 w-auto object-contain sm:h-20"
-              />
-            ) : (
-              <span className="text-2xl font-extrabold tracking-tight text-[#6B21A8] sm:text-3xl">
-                Paw<span className="text-[#EC4899]">Fect</span>
-              </span>
-            )}
+      <div className="w-full bg-white px-4 pb-2 shadow-[0_4px_20px_rgba(107,33,168,0.08)] sm:px-6 lg:px-10">
+        <div className="mx-auto flex max-w-[1400px]  items-center justify-between">
+          <div className="flex md:gap-20 item-center">
+            {/* Logo */}
+            <Link href="/" className="flex shrink-0  flex-col items-start">
+              {siteInfo.logo?.light ? (
+                <Image
+                  src={siteInfo.logo.light}
+                  alt={siteInfo.siteName || "PawFect"}
+                  width={120}
+                  height={80}
+                  sizes="(max-width: 640px) 120px, 240px"
+                  className="h-16 w-auto object-contain sm:h-20 "
+                />
+              ) : (
+                <span className="text-2xl font-extrabold tracking-tight text-[#6B21A8] sm:text-3xl">
+                  Paw<span className="text-[#EC4899]">Fect</span>
+                </span>
+              )}
+            </Link>
 
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-8 lg:flex">
-            {nav.map((item, index) => {
-              const isActive = pathname === item.href;
-              const hasChildren = item.children && item.children.length > 0;
-              return (
-                <div key={index} className="group relative">
-                  <Link
-                    href={item.href || "#"}
-                    className={`flex items-center gap-1 py-2 text-[15px] font-semibold transition-colors duration-300 ${
-                      isActive
-                        ? "text-[#6B21A8]"
-                        : "text-gray-700 hover:text-[#6B21A8]"
-                    }`}
-                  >
-                    {item.label}
-                    {hasChildren && (
-                      <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
-                    )}
-                    <span
-                      className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-[#EC4899] transition-all duration-500 ease-out ${
-                        isActive ? "w-full" : "w-0 group-hover:w-full"
+            {/* Desktop Navigation */}
+            <nav className="hidden md:mt-5 items-center gap-8 md:flex">
+              {nav.map((item, index) => {
+                const isActive = pathname === item.href;
+                const hasChildren = item.children && item.children.length > 0;
+                return (
+                  <div key={index} className="group relative">
+                    <Link
+                      href={item.href || "#"}
+                      className={`flex items-center gap-1 py-2 text-[15px] font-semibold transition-colors duration-300 ${
+                        isActive
+                          ? "text-[#6B21A8]"
+                          : "text-gray-700 hover:text-[#6B21A8]"
                       }`}
-                    />
-                  </Link>
+                    >
+                      {item.label}
+                      {hasChildren && (
+                        <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                      )}
+                      <span
+                        className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-[#EC4899] transition-all duration-500 ease-out ${
+                          isActive ? "w-full" : "w-0 group-hover:w-full"
+                        }`}
+                      />
+                    </Link>
 
-                  {hasChildren && (
-                    <div className="invisible absolute left-0 top-full z-50 min-w-[220px] translate-y-2 rounded-2xl border border-purple-100 bg-white p-2 opacity-0 shadow-[0_20px_50px_rgba(107,33,168,0.15)] transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                      {item.children!.map((child) => {
-                        const isChildActive = pathname === child.href;
-                        return (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className={`block rounded-xl px-4 py-2.5 text-[14px] font-medium transition-colors duration-200 ${
-                              isChildActive
-                                ? "bg-[#F3E8FF] text-[#6B21A8]"
-                                : "text-gray-700 hover:bg-[#F9F5FF] hover:text-[#6B21A8]"
-                            }`}
-                          >
-                            {child.label}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </nav>
+                    {hasChildren && (
+                      <div className="invisible absolute left-0 top-full z-50 min-w-[220px] translate-y-2 rounded-2xl border border-purple-100 bg-white p-2 opacity-0 shadow-[0_20px_50px_rgba(107,33,168,0.15)] transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                        {item.children!.map((child) => {
+                          const isChildActive = pathname === child.href;
+                          return (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className={`block rounded-xl px-4 py-2.5 text-[14px] font-medium transition-colors duration-200 ${
+                                isChildActive
+                                  ? "bg-[#F3E8FF] text-[#6B21A8]"
+                                  : "text-gray-700 hover:bg-[#F9F5FF] hover:text-[#6B21A8]"
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </nav>
+          </div>
 
           {/* CTA Button */}
-          <div className="hidden rounded-full bg-gradient-to-r from-[#6B21A8] to-[#A855F7] px-6 py-3 text-[15px] font-bold text-white shadow-md transition-all duration-300 hover:shadow-[0_6px_20px_rgba(168,85,247,0.35)] lg:flex gap-2">
+          <div className="hidden rounded-full mt-3 bg-gradient-to-r from-[#683196] to-[#A855F7] px-6 py-3 text-[15px] font-bold text-white shadow-md transition-all duration-300 hover:shadow-[0_6px_20px_rgba(168,85,247,0.35)] lg:flex gap-2">
             <div className="mt-1">
               <SlCalender />
             </div>
@@ -236,7 +241,10 @@ export default function Header() {
             const hasChildren = item.children && item.children.length > 0;
             const isOpen = openNavIndex === index;
             return (
-              <div key={index} className="border-b border-gray-100 last:border-0">
+              <div
+                key={index}
+                className="border-b border-gray-100 last:border-0"
+              >
                 <div className="flex items-center justify-between">
                   <Link
                     href={item.href || "#"}
@@ -254,9 +262,7 @@ export default function Header() {
                   {hasChildren && (
                     <button
                       type="button"
-                      onClick={() =>
-                        setOpenNavIndex(isOpen ? null : index)
-                      }
+                      onClick={() => setOpenNavIndex(isOpen ? null : index)}
                       className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F3E8FF] text-[#6B21A8]"
                       aria-label={`Toggle ${item.label} menu`}
                     >

@@ -16,6 +16,7 @@ import { site, type PetWhyChooseUsData } from "@/data";
 
 interface ChooseSectionProps {
   data?: PetWhyChooseUsData;
+  hideActions?: boolean;
 }
 
 // Fallback dynamic icon mapper
@@ -32,7 +33,7 @@ const renderIcon = (iconName: string) => {
   }
 };
 
-export default function ChooseSection({ data }: ChooseSectionProps) {
+export default function ChooseSection({ data, hideActions = false }: ChooseSectionProps) {
   const chooseData = data ?? site.whyChooseUs;
   // Safe extraction with default fallbacks
   const badge = chooseData.badge || "WHY CHOOSE US";
@@ -217,15 +218,16 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
             </div>
 
             {/* Bottom Actions Row (CTA Button & Phone Number) */}
+            {!hideActions && (
             <div className="mt-8 flex flex-wrap items-center gap-6 sm:gap-8">
               {/* Button */}
               <Link
                 href={button.href}
-                className="inline-flex items-center gap-1 rounded-xl bg-[#0C1025] px-1 py-2 text-[16px] font-semibold text-white transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-[#0C1025] p-2 text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
-                <span>{button.label}</span>
-                <div className="flex h-10 w-10 items-center justify-center rounded bg-white/20 text-white">
-                  <FaArrowUp className="h-4 w-4 rotate-45" />
+                <h1 className="px-2">{button.label}</h1>
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-purple-500">
+                  <FaArrowUp className="h-5 w-5 rotate-45" />
                 </div>
               </Link>
 
@@ -251,6 +253,7 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
                 </div>
               </div>
             </div>
+            )}
           </ScrollReveal>
         </div>
       </div>

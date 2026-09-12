@@ -104,15 +104,15 @@ export default function Location({ data, layout = "home" }: LocationProps) {
       href={`${city.slug}`}
       className="group flex flex-col items-center text-center w-full"
     >
-      {/* CIRCULAR IMAGE CONTAINER */}
+      {/* CIRCULAR IMAGE CONTAINER - Fixed width/height to prevent oval collapsing */}
       <div className="relative mb-6 flex items-center justify-center w-full">
-        <div className="relative flex h-[140px] w-[140px] items-center justify-center rounded-full border border-[#3B1264] p-1.5 transition-transform duration-300 group-hover:scale-105 sm:h-[160px] sm:w-[160px] lg:h-[175px] lg:w-[175px]">
+        <div className="relative flex h-[130px] w-[130px] sm:h-[150px] sm:w-[150px] lg:h-[175px] lg:w-[175px] shrink-0 items-center justify-center rounded-full border border-[#3B1264] p-1.5 transition-transform duration-300 group-hover:scale-105">
           <div className="relative h-full w-full overflow-hidden rounded-full">
             <Image
               src={city.image}
               alt={city.name}
               fill
-              sizes="(max-width: 640px) 140px, (max-width: 1024px) 160px, 175px"
+              sizes="(max-width: 640px) 130px, (max-width: 1024px) 150px, 175px"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
               draggable="false"
             />
@@ -162,61 +162,61 @@ export default function Location({ data, layout = "home" }: LocationProps) {
           /* SLIDER & CITIES CONTAINER */
           <ScrollReveal direction="up">
             <div className="relative mt-8" ref={containerRef}>
-            {/* LEFT CHEVRON BUTTON */}
-            <button
-              onClick={handlePrev}
-              disabled={currentIndex === 0}
-              aria-label="Previous Slide"
-              className="absolute -left-2 top-[35%] z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border opacity-30 hover:opacity-100 cursor-pointer border-[#3B1264]/20 bg-white text-[#3B1264] shadow-md transition-all hover:bg-[#3B1264] hover:text-white sm:-left-5 sm:h-12 sm:w-12 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#3B1264]"
-            >
-              <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
-
-            {/* RIGHT CHEVRON BUTTON */}
-            <button
-              onClick={handleNext}
-              disabled={currentIndex >= maxIndex}
-              aria-label="Next Slide"
-              className="absolute -right-2 top-[35%] z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border opacity-30 hover:opacity-100 cursor-pointer border-[#3B1264]/20 bg-white text-[#3B1264] shadow-md transition-all hover:bg-[#3B1264] hover:text-white sm:-right-5 sm:h-12 sm:w-12 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#3B1264]"
-            >
-              <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
-
-            <div className="overflow-hidden py-6">
-              <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{
-                  transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-                }}
-                {...swipeHandlers}
+              {/* LEFT CHEVRON BUTTON */}
+              <button
+                onClick={handlePrev}
+                disabled={currentIndex === 0}
+                aria-label="Previous Slide"
+                className="absolute -left-4 hidden sm:flex top-[38%] z-20  h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#3B1264]/20 bg-white text-[#3B1264] shadow-md transition-all hover:bg-[#3B1264] hover:text-white sm:-left-9 sm:h-10 sm:w-10 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#3B1264]"
               >
-                {cities.map((city) => (
-                  <div
-                    key={city.id}
-                    className="w-1/2 sm:w-1/4 lg:w-1/6 shrink-0 aspect-[4/5] sm:aspect-auto px-2 sm:px-3 flex justify-center items-center"
-                  >
-                    {renderCityCard(city)}
-                  </div>
+                <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+              </button>
+
+              {/* RIGHT CHEVRON BUTTON */}
+              <button
+                onClick={handleNext}
+                disabled={currentIndex >= maxIndex}
+                aria-label="Next Slide"
+                className="absolute hidden sm:flex -right-2 top-[38%] z-20  h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#3B1264]/20 bg-white text-[#3B1264] shadow-md transition-all hover:bg-[#3B1264] hover:text-white sm:-right-9 sm:h-10 sm:w-10 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#3B1264]"
+              >
+                <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+              </button>
+
+              <div className="overflow-hidden py-6">
+                <div
+                  className="flex transition-transform duration-500 ease-out"
+                  style={{
+                    transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
+                  }}
+                  {...swipeHandlers}
+                >
+                  {cities.map((city) => (
+                    <div
+                      key={city.id}
+                      className="w-1/2 sm:w-1/4 lg:w-1/6 shrink-0 px-2 sm:px-3 flex justify-center items-center"
+                    >
+                      {renderCityCard(city)}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* BOTTOM PAGINATION DOTS (HIDDEN ON DESKTOP `lg:hidden`) */}
+              <div className="mt-3 flex items-center justify-center gap-2 lg:hidden">
+                {cities.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => handleDotClick(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                    className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                      currentIndex === idx
+                        ? "w-2.5 bg-[#3B1264]"
+                        : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                    }`}
+                  />
                 ))}
               </div>
             </div>
-
-            {/* BOTTOM PAGINATION DOTS (HIDDEN ON DESKTOP `lg:hidden`) */}
-            <div className="mt-3 flex items-center justify-center gap-2 lg:hidden">
-              {cities.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => handleDotClick(idx)}
-                  aria-label={`Go to slide ${idx + 1}`}
-                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    currentIndex === idx
-                      ? "w-2.5 bg-[#3B1264]"
-                      : "w-2.5 bg-gray-300 hover:bg-gray-400"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
           </ScrollReveal>
         )}
       </div>

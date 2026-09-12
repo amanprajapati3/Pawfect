@@ -169,10 +169,11 @@
               { "label": "Home", "href": "/" },
               {
                 "label": "About",
-                "href": "/about",
+                "href": "#",
                 "children": [
+                  { "label": "About Us", "href": "/about" },
                   { "label": "Mission & Vision", "href": "/mission" },
-                  { "label": "Why Choose", "href": "/whychoose" }
+                  { "label": "Why Choose us", "href": "/whychoose" }
                 ]
               },
               { "label": "Services", "href": "/service" },
@@ -2590,7 +2591,7 @@
               {
                 "id": 1,
                 "slug": "10-essential-grooming-tips-for-a-happy-healthy-pet",
-                "image": "/dogs/dog6.jpg",
+                "image": "/dogs/dog12.jpg",
                 "date": "May 20, 2025",
                 "author": "Admin",
                 "title": "10 Essential Grooming Tips for a Happy, Healthy Pet",
@@ -2619,7 +2620,7 @@
               },
               {
                 "id": 4,
-                "slug": "blogs/best-foods-to-keep-your-pet-healthy-and-active",
+                "slug": "best-foods-to-keep-your-pet-healthy-and-active",
                 "image": "/dogs/dog3.jpg",
                 "date": "May 12, 2025",
                 "author": "Admin",
@@ -2659,7 +2660,7 @@
               "breadcrumbHome": "Home",
               "breadcrumbCurrent": "Blogs Detail",
               "title": "Blogs Detail",
-              "backgroundImage": "/dogs/dog1.jpg",
+              "backgroundImage": "/dogs/dog12.jpg",
               "homeHref": "/"
             },
             "posts": [
@@ -2674,7 +2675,7 @@
                 "date": "24 Jun, 2025",
                 "category": "Health Care",
                 "readTime": "8 Min Read",
-                "mainImage": "/dogs/dog6.jpg",
+                "mainImage": "/dogs/dog12.jpg",
                 "content": [
                   "Our pets rely on us for their health, happiness, and overall well-being. Just like humans, they need consistent care throughout the year to stay healthy and active. A little attention every day can go a long way in ensuring a longer, happier life for your furry companions.",
                   "A balanced diet is one of the most important factors in your pet's health. Choose high-quality food that suits their age, size, and activity level. Proper nutrition helps maintain a healthy weight, strong immunity, and good energy levels.",
@@ -3380,8 +3381,8 @@
                 "slug": "faridabad",
                 "name": "Faridabad",
                 "state": "Haryana",
-                "image": "/cityImage/faridabad.jpg",
-                "aboutImage": "/cityImage/faridabad.jpg",
+                "image": "/cityImage/Faridabad.jpg",
+                "aboutImage": "/cityImage/Faridabad.jpg",
                 "description": "Dedicated pet welfare and vet consultation centers servicing pet owners throughout Faridabad.",
                 "stats": [
                   { "icon": "location", "value": "10+", "label": "Locations" },
@@ -3707,7 +3708,7 @@
               "breadcrumbHome": "Home",
               "breadcrumbCurrent": "FAQS",
               "title": "FAQS",
-              "backgroundImage": "/dogs/dog4.jpg",
+              "backgroundImage": "/dogs/dog12.jpg",
               "homeHref": "/"
             },
             "heading": {

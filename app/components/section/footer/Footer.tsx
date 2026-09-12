@@ -70,8 +70,8 @@ export default function Footer() {
             </div>
 
             {/* Bottom 3 Badges */}
-            <div className="grid grid-cols-3 gap-2 md:gap-7 pt-4 border-t border-gray-200/60">
-              <div className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-start sm:text-left gap-2 sm:gap-2.5">
+            <div className="grid grid-cols-3 gap-2 md:gap-0  pt-4 border-t border-gray-200/60">
+              <div className="flex flex-col items-center  text-center sm:flex-row sm:items-center sm:justify-start sm:text-left gap-2 sm:gap-2.5">
                 <div className="flex sm:h-12 h-9 w-9 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
                   <FaPaw className="sm:h-6 h-5 w-5 sm:w-6" />
                 </div>
@@ -209,20 +209,20 @@ export default function Footer() {
         <div className="mx-auto flex  flex-col items-center justify-between gap-4 md:gap-1 px-6 md:flex-row ">
           
           {/* Copyright & Tagline */}
-          <div className="flex flex-nowrap  justify-center gap-2 text-sm text-gray-600 ">
+          <div className="flex flex-nowrap item-center justify-center gap-2 text-sm text-gray-900 ">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
               <FaPaw className="h-6 w-6" />
             </div>
             <div>            
-            <span>{copyright}</span> <br />
-            <p className="font-semibold text-[#3B1578] ml-1">
+            <p className="pt-3 font-medium">{copyright}</p> <br />
+            {/* <p className="font-semibold text-[#3B1578] ml-1">
               Happy Pets. Happy Lives.
-            </p>
+            </p> */}
             </div>
           </div>
 
           {/* Legal Links */}
-          <div className="flex flex-wrap items-center justify-center gap-x-2 md:-mt-5 gap-y-1 text-sm font-medium text-gray-600">
+          <div className="flex flex-wrap md:-mt-2 items-center justify-center gap-x-2 gap-y-1 text-sm font-medium text-gray-900">
             {legalLinks?.map((link, i) => (
               <React.Fragment key={i}>
                 <Link
@@ -239,7 +239,7 @@ export default function Footer() {
           </div>
 
           {/* Social Media Links */}
-          <div className="flex items-center gap-2 md:-mt-5">
+          <div className="flex items-center gap-2 md:-mt-2">
             <span className="text-sm font-bold text-[#3B1578]">Follow Us</span>
             <div className="flex gap-2">
               {socialLinks?.map((s, i) => {

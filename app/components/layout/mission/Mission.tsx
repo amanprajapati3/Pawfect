@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { FaPaw, FaHeart, FaShieldAlt, FaAward, FaUsers } from "react-icons/fa";
 import { LuEye, LuTarget } from "react-icons/lu";
+import { TbTargetArrow } from "react-icons/tb";
 import Banner from "../../shared/BannerPage";
 import ScrollReveal from "../../shared/ScrollReveal";
 import { site, type PetMissionData, type PetMissionCard, type PetValueItem } from "@/data";
@@ -18,7 +19,7 @@ const renderBadgeIcon = (iconName: string) => {
     case "eye":
       return <LuEye className="h-6 sm:h-12 sm:w-12 w-6 text-white" />;
     case "target":
-      return <LuTarget className="h-6 sm:h-12 sm:w-12 w-6 text-white" />;
+      return <TbTargetArrow className="h-6 sm:h-12 sm:w-12 w-6 text-white" />;
     default:
       return <FaPaw className="h-6 sm:h-12 sm:w-12 w-6 text-white" />;
   }
@@ -27,15 +28,15 @@ const renderBadgeIcon = (iconName: string) => {
 const renderValueIcon = (iconName: string) => {
   switch (iconName.toLowerCase()) {
     case "heart":
-      return <FaHeart className="h-9 w-9 sm:w-10 sm:h-10 text-purple-700" />;
+      return <FaHeart className="h-9 w-9 sm:w-10 sm:h-10 text-purple-900" />;
     case "shield":
-      return <FaShieldAlt className="h-9 w-9 sm:w-10 sm:h-10 text-purple-700" />;
+      return <FaShieldAlt className="h-9 w-9 sm:w-10 sm:h-10 text-purple-900" />;
     case "award":
-      return <FaAward className="h-9 w-9 sm:w-10 sm:h-10 text-purple-700" />;
+      return <FaAward className="h-9 w-9 sm:w-12 sm:h-12 text-purple-900" />;
     case "users":
-      return <FaUsers className="h-9 w-9 sm:w-10 sm:h-10 text-purple-700" />;
+      return <FaUsers className="h-9 w-9 sm:w-10 sm:h-10 text-purple-900" />;
     default:
-      return <FaPaw className="h-9 w-9 sm:w-10 sm:h-10 text-purple-700" />;
+      return <FaPaw className="h-9 w-9 sm:w-10 sm:h-10 text-purple-900" />;
   }
 };
 
@@ -54,7 +55,7 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
       <section className="relative w-full bg-white py-8 md:py-12 pb-8 md:pb-12 overflow-hidden font-sans">
       
       {/* Top Left Dot Matrix Background SVG */}
-      <div className="absolute top-0 left-6 grid grid-cols-6 gap-2 opacity-30 pointer-events-none">
+      <div className="absolute top-10 left-6 grid grid-cols-6 gap-2 opacity-30 pointer-events-none">
         {Array.from({ length: 24 }).map((_, i) => (
           <span key={i} className="h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
         ))}
@@ -144,7 +145,7 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
                 {/* Decorative Top Bar & Paw */}
                 <div className="flex flex-col md:items-start items-center gap-1 mb-2">
                   <span className="h-[2px] w-8 bg-[#6B21A8]" />
-                  <h3 className="text-2xl sm:text-4xl font-bold text-[#6B21A8] mt-1">
+                  <h3 className="text-2xl sm:text-4xl font-semibold text-[#6B21A8] mt-1">
                     {card.title}
                   </h3>
                   <div className="flex items-center gap-2 mt-1">
@@ -172,7 +173,7 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
 
         {/* CORE VALUES BOTTOM BAR */}
         <div className="bg-white rounded-2xl border border-purple-100 p-6 sm:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
             {(values as PetValueItem[]).map((val, idx) => (
               <ScrollReveal key={val.id} direction="up" staggerChildren={0.1} index={idx} className="h-full">
               <div
@@ -190,10 +191,10 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
 
                 {/* Value Content */}
                 <div>
-                  <h4 className="text-[16px] font-bold text-[#0F172A]">
+                  <h4 className="text-[18px] font-bold text-[#6B21A8]">
                     {val.title}
                   </h4>
-                  <p className="text-[13px] text-[#64748B] mt-1 leading-snug">
+                  <p className="text-[15px] text-[#282b30] mt-1 leading-snug">
                     {val.description}
                   </p>
                 </div>

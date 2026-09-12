@@ -41,8 +41,8 @@ export default function Faq({ data }: FaqProps) {
           badge={faqData.badge}
           title={faqData.heading}
           description={faqData.description}
-          className="mx-auto max-w-2xl lg:mx-0"
-          align="left"
+          className="mx-auto  lg:mx-0"
+          align="center"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
@@ -104,7 +104,7 @@ export default function Faq({ data }: FaqProps) {
             direction="left"
             className="lg:col-span-4 flex flex-col"
           >
-            <div className="h-full w-full md:rounded-[28px] md:bg-[#F8F6FE]  md:p-8 md:border md:border-purple-100/60 flex flex-col justify-between">
+            <div className="h-full w-full md:rounded-[28px] md:bg-[#F8F6FE]  md:p-4 md:border md:border-purple-100/60 flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-black text-[#1E1B4B]">
                   {faqData.contactBox.title}

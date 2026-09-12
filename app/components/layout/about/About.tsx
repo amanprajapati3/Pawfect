@@ -14,12 +14,12 @@ interface AboutProps {
 const renderIcon = (iconName: string) => {
   switch (iconName.toLowerCase()) {
     case "shield":
-      return <FaShieldAlt className="h-5 md:w-10 md:h-10 w-5 text-[#5B21B6]" />;
+      return <FaShieldAlt className="h-5 md:w-9 md:h-9 w-5 text-[#5B21B6]" />;
     case "heart":
-      return <FaHeart className="h-5 w-5 md:w-10 md:h-10 text-[#5B21B6]" />;
+      return <FaHeart className="h-5 w-5 md:w-9 md:h-9 text-[#5B21B6]" />;
     case "paw":
     default:
-      return <FaPaw className="h-5 w-5 md:w-10 md:h-10 text-[#5B21B6]" />;
+      return <FaPaw className="h-5 w-5 md:w-9 md:h-9 text-[#5B21B6]" />;
   }
 };
 
@@ -107,13 +107,13 @@ export default function About({ data }: AboutProps) {
             </div>
 
             {/* Main Title */}
-            <h2 className="text-[32px] font-black leading-[1.18] tracking-tight text-[#1E1B4B] sm:text-[42px] lg:text-[46px]">
+            <h2 className="text-[32px] font-bold leading-[1.18] tracking-tight text-[#1E1B4B] sm:text-[42px] md:text-[50px]">
               {title.normal}{" "}
               <span className="text-[#5B21B6]">{title.highlighted}</span>
             </h2>
 
             {/* Paragraphs */}
-            <div className="mt-5 space-y-4 text-[14.5px] leading-relaxed text-[#64748B] sm:text-[15.5px]">
+            <div className="mt-5 space-y-4 text-[14.5px] leading-relaxed text-[#060707] sm:text-[15.5px]">
               {paragraphs.map((p, idx) => (
                 <p key={idx}>{p}</p>
               ))}
@@ -125,18 +125,18 @@ export default function About({ data }: AboutProps) {
               {features.map((feature, index) => (
                 <ScrollReveal key={feature.id} direction="up" staggerChildren={0.1} index={index} className="h-full">
                 <div
-                  className="h-full flex flex-col border-r-1 border-r-gray-200 last:border-r-white items-center text-center sm:items-start sm:text-left"
+                  className="h-full flex flex-col border-r-[2px] border-r-gray-400 last:border-r-white items-center text-center sm:items-start sm:text-left"
                 >
                   {" "}
                   <div className="mb-3.5 flex h-12 w-12 md:w-16 md:h-16 items-center justify-center rounded-full bg-[#F3E8FF]">
                     {" "}
                     {renderIcon(feature.iconName)}{" "}
                   </div>{" "}
-                  <h3 className="text-[15px] font-bold text-[#1E1B4B]">
+                  <h3 className="text-[19px]  font-bold text-[#1E1B4B]">
                     {" "}
                     {feature.title}{" "}
                   </h3>{" "}
-                  <p className="mt-1.5 text-[14px] leading-snug text-[#404347]">
+                  <p className="mt-1.5 text-[15px] leading-snug text-[#2f3030]">
                     {" "}
                     {feature.description}{" "}
                   </p>{" "}

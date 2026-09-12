@@ -67,16 +67,17 @@ export default function BlogDetails({ data, variant }: BlogDetailsProps) {
 
         {/* Featured Image */}
         <ScrollReveal direction="up">
-        <div className="relative mt-8 h-[300px] sm:h-[420px] md:h-[500px] w-full overflow-hidden rounded-[24px] shadow-sm">
-          <Image
-            src={post.mainImage}
-            alt={`${post.title.normal} ${post.title.highlighted}`}
-            fill
-            priority
-            sizes="(max-width: 1270px) 100vw, 1200px"
-            className="object-cover"
-          />
-        </div>
+<div className="relative mt-8 w-full overflow-hidden rounded-[24px] shadow-sm">
+  <Image
+    src={post.mainImage}
+    alt={`${post.title.normal} ${post.title.highlighted}`}
+    width={1200}
+    height={530} // Replace with your image's standard aspect ratio height (or keep it proportional)
+    priority
+    sizes="(max-width: 1270px) 100vw, 1200px"
+    className="w-full h-auto object-cover"
+  />
+</div>
         </ScrollReveal>
 
         {/* Blog Paragraphs */}

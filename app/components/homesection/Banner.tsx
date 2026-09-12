@@ -31,7 +31,7 @@ export default function Banner({ data }: BannerProps) {
             priority
           />
           {/* GRADIENT OVERLAY - Applies the deep purple wash on the left */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#9C46C9] via-[#9C46C9]/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#723c8f] via-[#9C46C9]/40 to-transparent"></div>
         </div>
       )}
 
@@ -55,13 +55,13 @@ export default function Banner({ data }: BannerProps) {
           )}
 
           {/* TITLE STYLE - Large, thick font in all white */}
-          <h1 className="mt-3 ml-4 max-w-[560px] text-[40px] font-extrabold leading-[1.05] tracking-tight text-white sm:text-[50px] lg:text-[60px] xl:text-[68px]">
+          <h1 className="mt-3 ml-4 max-w-[560px] text-[40px] font-bold leading-[1.05] tracking-tight text-white sm:text-[50px] lg:text-[60px] xl:text-[68px]">
             {title} <br /> {highlightedTitle}
           </h1>
 
           {/* DESCRIPTION STYLE - White, larger font weight */}
           {desc && (
-            <p className="mt-6 ml-4 max-w-[500px] text-[15.5px] font-semibold leading-[1.7] text-white sm:text-[16.5px] lg:text-[17.5px]">
+            <p className="mt-6 ml-4 max-w-[500px] text-[15.5px] font-semibold leading-[1.7] text-white sm:text-[16.5px] ">
               {desc}
             </p>
           )}
@@ -79,7 +79,7 @@ export default function Banner({ data }: BannerProps) {
                     href={btn.href}
                     className={`inline-flex items-center gap-4 rounded-xl px-2 py-2 text-[15px] font-bold transition-all duration-300 ${
                       isPrimary
-                        ? "bg-[#0A1D56] text-white shadow-lg hover:bg-[#030E30]" // Dark blue with special icon box
+                        ? "bg-[#172d6d] text-white shadow-lg hover:bg-[#030E30]" // Dark blue with special icon box
                         : "border-[1.5px] border-white/40 bg-transparent text-white hover:bg-white/10" // Simplified secondary for match
                     }`}
                   >

@@ -13,7 +13,7 @@ export default function WhyChoosePage(){
           title={banner.breadcrumbHome}
           current={banner.breadcrumbCurrent}
         />
-        <ChooseSection data={site.whyChooseUs}/>
+        <ChooseSection data={site.whyChooseUs} hideActions />
         <FaqSection data={site.faq}/>
         </>
     )
