@@ -221,11 +221,11 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
               {/* Button */}
               <Link
                 href={button.href}
-                className="inline-flex items-center gap-3 rounded-xl bg-[#0C1025] px-6 py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-1 rounded-xl bg-[#0C1025] px-1 py-2 text-[16px] font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
                 <span>{button.label}</span>
-                <div className="flex h-6 w-6 items-center justify-center rounded bg-white/20 text-white">
-                  <FaArrowUp className="h-3 w-3 rotate-45" />
+                <div className="flex h-10 w-10 items-center justify-center rounded bg-white/20 text-white">
+                  <FaArrowUp className="h-4 w-4 rotate-45" />
                 </div>
               </Link>
 
@@ -244,7 +244,7 @@ export default function ChooseSection({ data }: ChooseSectionProps) {
                     className="text-[16px] font-black text-[#100A26] hover:text-[#5B34A3]"
                   >
                     {phone.number}
-                  </a>~
+                  </a>
                   <span className="text-[12px] font-semibold text-[#71717A]">
                     {phone.label}
                   </span>

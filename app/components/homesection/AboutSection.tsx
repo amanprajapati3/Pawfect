@@ -133,13 +133,13 @@ export default function AboutSection({ data }: AboutSectionProps) {
   }, [statsInView, stats]);
 
   return (
-    <section className="w-full overflow-hidden bg-[#001D4C] px-5 py-14 text-white sm:px-8 sm:py-16 lg:px-10 lg:py-[70px]">
+    <section className="w-full overflow-hidden bg-[#001D4C] px-5 py-8 text-white sm:px-8 sm:py-12 lg:px-10 ">
       <div className="mx-auto max-w-[1250px]">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-8 xl:gap-12">
+        <div className="grid grid-cols-1  lg:grid-cols-[1fr_0.9fr] lg:items-center  ">
           {/* LEFT CONTENT - stays on top on mobile/tablet */}
           <ScrollReveal direction="right" className="order-1 lg:order-1">
             {badge && (
-              <div className="mb-4 flex items-center justify-center gap-3 lg:justify-start">
+              <div className="mb-4 flex items-center  justify-center gap-3 lg:justify-start">
                 <FaPaw className="h-8 w-8 fill-[#A23BD1] text-[#A23BD1]" />
 
                 <span className="text-[13px] sm:text-[18px] font-bold uppercase tracking-wide text-[#A970E8]">
@@ -227,7 +227,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
           {/* RIGHT SIDE GRAPHICS & IMAGE - below content on mobile/tablet */}
           <ScrollReveal
             direction="left"
-            className="order-2 flex justify-center lg:order-2 lg:justify-end"
+            className="order-2  flex justify-center lg:order-2 "
           >
             <div className="relative flex h-[340px] w-[340px] items-center justify-center sm:h-[400px] sm:w-[400px] lg:h-[460px] lg:w-[460px] xl:h-[480px] xl:w-[480px]">
               {/* 1. Top-Left Dotted Accent Arc (Restored back to top-left) */}
@@ -256,7 +256,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
               </div>
 
               {/* 4. PawPrint Icon completely outside on the right side */}
-              <div className="absolute -right-[45px] top-[48%] z-20 sm:-right-[60px] lg:-right-[80px]">
+              <div className="absolute -right-[45px] top-[48%] z-20 sm:-right-[60px] md:-right-[80px]">
                 <PawPrint
                   className="h-[75px] w-[75px] text-[#8128C1]/85 sm:h-[95px] sm:w-[95px] lg:h-[115px] -rotate-[30deg] lg:w-[115px]"
                   strokeWidth={0.8}

@@ -85,7 +85,7 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
   );
 
   return (
-    <section className="w-full overflow-hidden bg-[#FAFAFC] py-8 text-[#231F20] md:py-12">
+    <section className="w-full overflow-hidden bg-[#f7f4f4] py-8 text-[#231F20] md:py-12">
       <div className="mx-auto max-w-[1400px] px-3 sm:px-8 lg:px-12">
         {/* SECTION HEADER */}
         <SectionHeader badge={badge} title={title} description={desc} />

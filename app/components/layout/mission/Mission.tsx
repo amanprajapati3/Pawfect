@@ -51,7 +51,7 @@ export default function Mission({ data, showBanner = true }: MissionProps) {
           current={banner.breadcrumbCurrent}
         />
       )}
-      <section className="relative w-full bg-white py-8  pb-8 md:pb-12 overflow-hidden font-sans">
+      <section className="relative w-full bg-white py-8 md:py-12 pb-8 md:pb-12 overflow-hidden font-sans">
       
       {/* Top Left Dot Matrix Background SVG */}
       <div className="absolute top-0 left-6 grid grid-cols-6 gap-2 opacity-30 pointer-events-none">

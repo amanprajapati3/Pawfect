@@ -41,7 +41,7 @@ export default function FaqSection({ data }: FaqSectionProps) {
   };
 
   return (
-    <section className="w-full overflow-hidden bg-[#FAFAFC] py-8 md:py-12">
+    <section className="w-full overflow-hidden bg-white py-8 md:py-12">
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-16">
           <ScrollReveal direction="right" className="lg:col-span-6 xl:col-span-7">
@@ -122,13 +122,13 @@ export default function FaqSection({ data }: FaqSectionProps) {
                 {/* Still Have Questions button */}
                 <Link
                   href={contactCta.phoneHref || "#"}
-                  className="flex h-[52px] w-[60%] border items-center justify-center gap-2.5 rounded-xl bg-[#1E1B4B] px-1 text-[14px] font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
+                  className="flex h-[52px] w-[60%] border items-center justify-center gap-2.5 rounded-xl bg-[#1E1B4B]  text-[14px] font-bold text-white transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   <p className="text-md md:text-lg font-semibold">
                     {contactCta.title}
                   </p>
-                  <div className="h-6 w-6 bg-white p-1 rounded-lg flex items-center">
-                    <MoveRight className="h-4 w-4 text-[#1E1B4B]" />
+                  <div className="h-10 w-10 bg-white pl-2  rounded-lg flex items-center">
+                    <MoveRight className="h-5 w-5 text-[#1E1B4B] -rotate-45" />
                   </div>
                 </Link>
 
