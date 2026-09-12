@@ -85,7 +85,7 @@ export default function Footer() {
                   <IoShieldCheckmarkSharp className="sm:h-6 h-5 w-5 sm:w-6" />
                 </div>
                 <span className="sm:text-sm text-[13px] font-bold text-[#3B1578] leading-tight">
-                  Expert<br />Veterinarians
+                  Expert<br />Vets
                 </span>
               </div>
 
@@ -209,7 +209,7 @@ export default function Footer() {
         <div className="mx-auto flex  flex-col items-center justify-between gap-4 md:gap-1 px-6 md:flex-row ">
           
           {/* Copyright & Tagline */}
-          <div className="flex  flex-nowrap  justify-center gap-2 text-md text-gray-600 ">
+          <div className="flex flex-nowrap  justify-center gap-2 text-sm text-gray-600 ">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ECE7F8] text-[#3B1578]">
               <FaPaw className="h-6 w-6" />
             </div>
@@ -222,7 +222,7 @@ export default function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-md font-medium text-gray-600">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 md:-mt-5 gap-y-1 text-sm font-medium text-gray-600">
             {legalLinks?.map((link, i) => (
               <React.Fragment key={i}>
                 <Link
@@ -239,8 +239,8 @@ export default function Footer() {
           </div>
 
           {/* Social Media Links */}
-          <div className="flex items-center gap-3">
-            <span className="text-md font-bold text-[#3B1578]">Follow Us</span>
+          <div className="flex items-center gap-2 md:-mt-5">
+            <span className="text-sm font-bold text-[#3B1578]">Follow Us</span>
             <div className="flex gap-2">
               {socialLinks?.map((s, i) => {
                 const Icon = socialIconMap[s.label.toLowerCase()] ?? FaFacebookF;
